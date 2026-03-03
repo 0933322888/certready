@@ -24,7 +24,7 @@ export default function CheckoutCancelPage() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="flex flex-col gap-5 mt-2">
           <Link to="/courses">
             <Button size="lg" className="w-full">
               {t('checkout.returnToCourse')}
