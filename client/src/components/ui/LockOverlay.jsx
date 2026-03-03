@@ -2,12 +2,16 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Button from './Button';
 
-export default function LockOverlay({ courseSlug, price }) {
+export default function LockOverlay({ courseSlug, price, onPurchase, purchasing = false }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const handlePurchase = () => {
-    navigate(`/courses/${courseSlug}`);
+  const handleClick = () => {
+    if (onPurchase) {
+      onPurchase();
+    } else {
+      navigate(`/courses/${courseSlug}`);
+    }
   };
 
   return (
@@ -34,8 +38,8 @@ export default function LockOverlay({ courseSlug, price }) {
         <p className="text-text-muted mb-6">
           {t('lockOverlay.description')}
         </p>
-        <Button onClick={handlePurchase} size="lg">
-          {t('lockOverlay.getAccess')} — {price}
+        <Button onClick={handleClick} size="lg" disabled={purchasing}>
+          {purchasing ? t('course.processing') : `${t('lockOverlay.getAccess')} — ${price}`}
         </Button>
       </div>
     </div>

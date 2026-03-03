@@ -11,8 +11,10 @@ import { getLearnPageSEO } from '../utils/seo';
 import ChapterSidebar from '../components/course/ChapterSidebar';
 import ChapterContent from '../components/course/ChapterContent';
 import LockOverlay from '../components/ui/LockOverlay';
+import Button from '../components/ui/Button';
 import Spinner from '../components/ui/Spinner';
 import { formatPrice } from '../utils/formatters';
+import api from '../utils/api';
 import toast from 'react-hot-toast';
 
 export default function LearnPage() {
@@ -22,6 +24,7 @@ export default function LearnPage() {
   const { user, loading: authLoading } = useAuth();
   const { pricing } = useCoursePricingBySlug(slug);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [purchasing, setPurchasing] = useState(false);
   const [currentChapterId, setCurrentChapterId] = useState(null);
   const [currentChapter, setCurrentChapter] = useState(null);
   const [hasAccess, setHasAccess] = useState(false);
@@ -86,6 +89,24 @@ export default function LearnPage() {
     }
   };
 
+  const handlePurchase = async () => {
+    if (!user) {
+      navigate('/login', { state: { from: { pathname: `/learn/${slug}` } } });
+      return;
+    }
+    setPurchasing(true);
+    try {
+      const res = await api.post('/payments/create-checkout-session', { courseSlug: slug });
+      if (res.data?.url) {
+        window.location.href = res.data.url;
+        return;
+      }
+    } catch (err) {
+      toast.error(err.response?.data?.message || t('course.checkoutFailed'));
+    }
+    setPurchasing(false);
+  };
+
   if (authLoading || loading || !course) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -142,6 +163,24 @@ export default function LearnPage() {
               {course.title}
             </h1>
             <p className="text-sm text-text-muted">{currentChapter.title}</p>
+            {/* Purchase CTA when previewing without access */}
+            {!hasAccess && (
+              <div className="mt-3 pt-3 border-t border-border flex flex-wrap items-center justify-between gap-3">
+                <span className="text-sm text-text-muted">
+                  {t('lockOverlay.title')}
+                </span>
+                <Button
+                  onClick={handlePurchase}
+                  disabled={purchasing}
+                  size="sm"
+                  className="flex-shrink-0"
+                >
+                  {user
+                    ? (purchasing ? t('course.processing') : `${t('lockOverlay.getAccess')} — ${formatPrice(pricing?.currentPrice ?? course.price, pricing?.currency ?? course.currency)}`)
+                    : t('course.signInToPurchase')}
+                </Button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -166,6 +205,8 @@ export default function LearnPage() {
                 <LockOverlay
                   courseSlug={slug}
                   price={formatPrice(pricing?.currentPrice ?? course.price, pricing?.currency ?? course.currency)}
+                  onPurchase={handlePurchase}
+                  purchasing={purchasing}
                 />
               </div>
             )}

@@ -47,10 +47,10 @@ export function CertReadyLogoFull({ className = '', width = 280, height = 60 }) 
         fill="#F1F5F9"
         letterSpacing="-1"
       >
-        Cert
+        CERT
       </text>
       <text
-        x="138"
+        x="152"
         y="35"
         fontFamily="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
         fontWeight="900"
@@ -58,7 +58,7 @@ export function CertReadyLogoFull({ className = '', width = 280, height = 60 }) 
         fill="#0EA5E9"
         letterSpacing="-1"
       >
-        Ready
+        READY
       </text>
       <text
         x="68"
@@ -130,10 +130,10 @@ export function CertReadyLogoCompact({ className = '', width = 200, height = 42 
         fill="#F1F5F9"
         letterSpacing="-0.5"
       >
-        Cert
+        CERT
       </text>
       <text
-        x="101"
+        x="111"
         y="26"
         fontFamily="'Arial Black', Arial, sans-serif"
         fontWeight="900"
@@ -141,7 +141,7 @@ export function CertReadyLogoCompact({ className = '', width = 200, height = 42 
         fill="#0EA5E9"
         letterSpacing="-0.5"
       >
-        Ready
+        READY
       </text>
     </svg>
   );
