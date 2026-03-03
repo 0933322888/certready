@@ -1,0 +1,25 @@
+{
+  "name": "certready-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CertReady backend API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "seed": "node seed.js",
+    "simulate-purchase": "node scripts/manualPurchase.js",
+    "check-env": "node check-env.js",
+    "test-env": "node test-env.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "stripe": "^14.9.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "nodemailer": "^6.9.7"
+  }
+}

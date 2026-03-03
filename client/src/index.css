@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0B1120;
+  --color-surface: #111827;
+  --color-surface-2: #1C2A3A;
+  --color-border: #1E3A5F;
+  --color-accent: #eb8512;
+  --color-accent-warm: #F59E0B;
+  --color-success: #10B981;
+  --color-danger: #EF4444;
+  --color-text-primary: #F1F5F9;
+  --color-text-muted: #64748B;
+  --color-text-dim: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+code, kbd, samp {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Focus rings */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Transitions */
+.transition-default {
+  transition: all 0.2s ease-out;
+}
+
+/* Glow shadows */
+.shadow-glow {
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.2);
+}
+
+.shadow-glow-hover:hover {
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.3);
+}

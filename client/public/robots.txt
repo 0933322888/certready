@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /register
+Disallow: /checkout
+Disallow: /learn/
+
+Sitemap: https://www.certready.ca/sitemap.xml
