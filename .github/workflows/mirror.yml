@@ -1,34 +1,45 @@
-name: Mirror to Vercel Repo
+name: Mirror to Deployment Repositories
 
 on:
   push:
     branches:
-      - main   
+      - main   # change if your default branch is different
+
+permissions:
+  contents: write
 
 jobs:
   mirror:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Debug secret presence
-        run: |
-          if [ -z "${{ secrets.MIRROR_TOKEN }}" ]; then
-            echo "TOKEN IS EMPTY"
-            exit 1
-          else
-            echo "TOKEN EXISTS"
-          fi
-    
-      - name: Checkout source repo
+      - name: Checkout source repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # required for mirror
 
-      - name: Mirror push
+      - name: Verify token exists
         run: |
-           git push --mirror https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/0933322888/certready-client.git
+          if [ -z "${{ secrets.MIRROR_TOKEN }}" ]; then
+            echo "MIRROR_TOKEN is not set"
+            exit 1
+          else
+            echo "MIRROR_TOKEN detected"
+          fi
 
-      - name: Push to Repo C
+      - name: Configure Git identity
         run: |
-          git remote add mirror-c https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/0933322888/certready-api.git
-          git push mirror-c main --force
+          git config --global user.name "mirror-bot"
+          git config --global user.email "mirror@example.com"
+
+      - name: Mirror to certready-client
+        env:
+          TOKEN: ${{ secrets.MIRROR_TOKEN }}
+        run: |
+          git push --mirror https://x-access-token:$TOKEN@github.com/0933322888/certready-client.git
+
+      - name: Mirror to certready-api
+        env:
+          TOKEN: ${{ secrets.MIRROR_TOKEN }}
+        run: |
+          git push --mirror https://x-access-token:$TOKEN@github.com/0933322888/certready-api.git
