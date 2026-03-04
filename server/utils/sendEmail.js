@@ -79,14 +79,19 @@ export async function sendContactEmail({ name, email, subject, message }) {
   if (useNodemailer) {
     try {
       const nodemailer = await import('nodemailer');
+      const port = parseInt(process.env.SMTP_PORT || process.env.NODEMAILER_PORT || '587', 10);
+      const secure = process.env.SMTP_SECURE === 'true' || port === 465;
       const transporter = nodemailer.default.createTransport({
         host: process.env.SMTP_HOST || process.env.NODEMAILER_HOST,
-        port: parseInt(process.env.SMTP_PORT || process.env.NODEMAILER_PORT || '587', 10),
-        secure: process.env.SMTP_SECURE === 'true',
+        port,
+        secure,
         auth: (process.env.SMTP_USER || process.env.NODEMAILER_USER) ? {
           user: process.env.SMTP_USER || process.env.NODEMAILER_USER,
           pass: process.env.SMTP_PASS || process.env.NODEMAILER_PASS,
         } : undefined,
+        ...(process.env.SMTP_REJECT_UNAUTHORIZED === 'false' && {
+          tls: { rejectUnauthorized: false },
+        }),
       });
       await transporter.sendMail({
         from: process.env.SMTP_FROM || process.env.NODEMAILER_FROM || '"CertReady" <noreply@certready.ca>',

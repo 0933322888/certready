@@ -28,7 +28,8 @@ export default function ContactPage() {
       setSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
-      const msg = err.response?.data?.message || t('contact.error');
+      const data = err.response?.data;
+      const msg = data?.error || data?.message || t('contact.error');
       setError(msg);
     } finally {
       setLoading(false);
