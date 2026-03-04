@@ -224,7 +224,7 @@ const electricianCourse = {
             number: 2,
             title: 'Tools, Equipment, and Work Organization',
             subtitle: 'MWA A-2, A-3, A-4 · Tools (24%) · Organization (18%) · Support Components (21%)',
-            isFree: false,
+            isFree: true,
             estimatedMinutes: 55,
             sections: [
               {

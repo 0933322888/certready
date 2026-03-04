@@ -224,7 +224,7 @@ const electricianCourseFR = {
           number: 2,
           title: 'Outils, équipement et organisation du travail',
           subtitle: 'AMT A-2, A-3, A-4 · Outils (24 %) · Organisation (18 %) · Composants de support (21 %)',
-          isFree: false,
+          isFree: true,
           estimatedMinutes: 55,
           sections: [
             {
