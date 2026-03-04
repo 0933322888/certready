@@ -6,6 +6,7 @@ import { Toaster } from 'react-hot-toast';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import PageWrapper from './components/layout/PageWrapper';
+import ScrollToTop from './components/layout/ScrollToTop';
 import ProtectedRoute from './components/ui/ProtectedRoute';
 import Spinner from './components/ui/Spinner';
 
@@ -38,6 +39,7 @@ export default function App() {
     <GoogleOAuthProvider clientId={googleClientId}>
       <AuthProvider>
         <BrowserRouter>
+        <ScrollToTop />
         <Toaster 
           position="top-right" 
           toastOptions={{ 

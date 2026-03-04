@@ -36,21 +36,21 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-text-muted hover:text-text-primary transition-colors">
+            <Link to="/" className="text-white hover:text-accent transition-colors">
               {t('nav.home')}
             </Link>
-            <Link to="/courses" className="text-text-muted hover:text-text-primary transition-colors">
+            <Link to="/courses" className="text-white hover:text-accent transition-colors">
               {t('nav.courses')}
             </Link>
-            <Link to="/about" className="text-text-muted hover:text-text-primary transition-colors">
+            <Link to="/about" className="text-white hover:text-accent transition-colors">
               {t('nav.about')}
             </Link>
             {user && (
               <>
-                <Link to="/dashboard" className="text-text-muted hover:text-text-primary transition-colors">
+                <Link to="/dashboard" className="text-white hover:text-accent transition-colors">
                   {t('nav.dashboard')}
                 </Link>
-                <Link to="/profile" className="text-text-muted hover:text-text-primary transition-colors">
+                <Link to="/profile" className="text-white hover:text-accent transition-colors">
                   {t('nav.profile')}
                 </Link>
               </>
@@ -62,7 +62,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center space-x-1 px-3 py-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface-2 transition-colors text-sm"
+                className="flex items-center space-x-1 px-3 py-2 rounded-lg text-white hover:text-accent hover:bg-surface-2 transition-colors text-sm"
                 aria-label={t('common.ariaLabelSelectLanguage')}
               >
                 <span className="uppercase font-medium">{i18n.language}</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
                     {user.name.charAt(0).toUpperCase()}
                   </div>
                   <span className="text-text-primary">{user.name}</span>
-                  <svg className="w-4 h-4 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
