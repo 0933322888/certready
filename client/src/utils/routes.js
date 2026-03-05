@@ -6,6 +6,7 @@ const BASE = 'https://www.certready.ca';
 export const paths = {
   home: '/',
   redSealExam: '/red-seal-exam',
+  redSealReadinessTest: '/red-seal-readiness-test',
   trades: '/trades',
   trade: (slug) => `/trades/${slug}`,
   /** Trade guide page (exam overview, MWAs, sample questions) — canonical URL for the guide */
@@ -18,9 +19,10 @@ export const paths = {
   guides: '/guides',
   guideArticle: (slug) => `/guides/${slug}`,
   tools: {
-    readinessTest: '/tools/red-seal-readiness-test',
+    readinessTest: '/red-seal-readiness-test',
   },
   blog: '/blog',
+  blogPost: (path) => `/${path}`,
   // Legacy (for redirects and learn flow)
   courses: '/courses',
   course: (slug) => `/courses/${slug}`,
@@ -41,6 +43,7 @@ export const paths = {
 export const fullUrl = {
   home: `${BASE}/`,
   redSealExam: `${BASE}/red-seal-exam`,
+  redSealReadinessTest: `${BASE}/red-seal-readiness-test`,
   trades: `${BASE}/trades`,
   trade: (slug) => `${BASE}/trades/${slug}`,
   tradeGuide: (slug) => `${BASE}/trades/${slug}-red-seal`,
@@ -51,8 +54,9 @@ export const fullUrl = {
   guides: `${BASE}/guides`,
   guideArticle: (slug) => `${BASE}/guides/${slug}`,
   blog: `${BASE}/blog`,
+  blogPost: (path) => `${BASE}/${path}`,
   tools: {
-    readinessTest: `${BASE}/tools/red-seal-readiness-test`,
+    readinessTest: `${BASE}/red-seal-readiness-test`,
   },
 };
 

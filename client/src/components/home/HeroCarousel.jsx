@@ -5,6 +5,7 @@ import Button from '../ui/Button';
 import Badge from '../ui/Badge';
 import { formatPrice } from '../../utils/formatters';
 import { CertReadyLogoFull } from '../brand/CertReadyLogo';
+import { paths } from '../../utils/routes';
 
 const AUTOPLAY_MS = 6000;
 
@@ -56,9 +57,14 @@ export default function HeroCarousel() {
               {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/trades">
+              <Link to={paths.practiceTests}>
                 <Button size="lg" className="w-full sm:w-auto">
-                  {t('hero.browseCourses')} →
+                  {t('hero.startPracticeQuestions')}
+                </Button>
+              </Link>
+              <Link to={paths.redSealReadinessTest}>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  {t('hero.takeReadinessTest')}
                 </Button>
               </Link>
             </div>

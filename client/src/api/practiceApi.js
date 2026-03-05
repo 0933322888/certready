@@ -7,6 +7,15 @@ const PRACTICE_SESSION_KEY = 'tradePrep_practiceSession';
 
 /**
  * @param {string} tradeSlug
+ * @returns {Promise<{ questions: Array<{ id: string, tradeSlug: string, topicId: string, topicLabel: string, question: string, options: string[], correctIndex: number, explanation: string }> }>}
+ */
+export async function getReadinessQuestions(tradeSlug) {
+  const { data } = await api.get(`/practice/${encodeURIComponent(tradeSlug)}/readiness-questions`);
+  return data;
+}
+
+/**
+ * @param {string} tradeSlug
  * @param {{ limit?: number, topics?: string[] }} [opts]
  * @returns {Promise<{ questions: Array<{ id: string, tradeSlug: string, topicId: string, topicLabel: string, question: string, options: string[], correctIndex: number, explanation: string }> }>}
  */

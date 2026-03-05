@@ -52,6 +52,25 @@ export default function PracticeTestsListPage() {
           ))}
         </div>
 
+        <section className="mt-10" aria-labelledby="readiness-heading">
+          <h2 id="readiness-heading" className="text-2xl font-display font-bold text-text-primary mb-4">
+            {t('practiceTestsPage.readinessSectionTitle')}
+          </h2>
+          <Card hover className="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <p className="text-text-muted mb-2">
+                {t('practiceTestsPage.readinessSectionDesc')}
+              </p>
+              <Link to={paths.redSealReadinessTest} className="text-accent hover:text-accent/80 font-medium">
+                {t('practiceTestsPage.takeReadinessTest')} →
+              </Link>
+            </div>
+            <Link to={paths.redSealReadinessTest}>
+              <Button variant="outline">{t('practiceTestsPage.takeReadinessTest')}</Button>
+            </Link>
+          </Card>
+        </section>
+
         <Card className="mt-8 bg-surface border-accent/20">
           <p className="text-text-primary mb-4">
             {t('practiceTestsPage.ctaText')}

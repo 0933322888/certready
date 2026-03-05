@@ -322,6 +322,7 @@ export const TRADE_DATA = {
       { icon: "🔬", tip: "Study scalp and hair pathology", body: "MWA B includes contraindicated conditions (tinea capitis, psoriasis, impetigo) that require service refusal and referral. Know the visual presentation, cause, and correct action for each." },
       { icon: "📋", tip: "Don't skip Salon Operations", body: "MWA H (Salon Operations, 6%) is often under-studied. Questions on WHMIS, sanitation levels (sterilization, disinfection, sanitization), provincial regulations, and basic business math appear regularly." },
     ],
+    courseSlug: "hairstylist-332a",
     courseUrl: "/courses/hairstylist-332a",
     practiceUrl: "/practice/hairstylist",
   },

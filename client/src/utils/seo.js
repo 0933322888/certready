@@ -287,12 +287,41 @@ export function getBlogPageSEO() {
   };
 }
 
-/** SEO for /tools/red-seal-readiness-test */
+/** SEO for blog posts at custom URLs (e.g. /how-to-pass-red-seal-exam) */
+export function getBlogPostSEO(post) {
+  if (!post) return null;
+  const canonical = `/${post.path}`;
+  return {
+    title: post.seoTitle || post.title,
+    description: post.description || post.excerpt,
+    keywords: post.keywords || 'Red Seal, exam prep, Canadian trades, blog',
+    canonical,
+    ogType: 'article',
+  };
+}
+
+/** Article schema for blog posts (custom URL) */
+export function getBlogPostStructuredData(post) {
+  if (!post) return null;
+  const url = `https://www.certready.ca/${post.path}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description || post.excerpt,
+    author: { '@type': 'Organization', name: 'CertReady' },
+    publisher: { '@type': 'Organization', name: 'CertReady', url: 'https://www.certready.ca' },
+    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  };
+}
+
+/** SEO for /red-seal-readiness-test */
 export function getReadinessTestSEO() {
   return {
     title: 'Red Seal Readiness Test — Are You Ready for the Exam?',
     description: 'Take our free Red Seal readiness quiz to see if you\'re prepared for the interprovincial exam. Quick assessment with personalized tips. No sign-up required.',
     keywords: 'Red Seal readiness test, exam readiness quiz, Red Seal practice, Canadian trades',
-    canonical: '/tools/red-seal-readiness-test',
+    canonical: '/red-seal-readiness-test',
   };
 }

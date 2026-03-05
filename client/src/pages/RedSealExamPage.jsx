@@ -50,7 +50,7 @@ export default function RedSealExamPage() {
           <h2 id="next-steps-heading" className="text-2xl font-display font-bold text-text-primary mb-6">
             {t('redSealExam.nextStepsHeading')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card hover className="flex flex-col">
               <h3 className="text-lg font-semibold text-text-primary mb-2">
                 {t('redSealExam.cardTradesTitle')}
@@ -60,6 +60,17 @@ export default function RedSealExamPage() {
               </p>
               <Link to={paths.trades}>
                 <Button variant="outline" className="w-full">{t('redSealExam.browseTrades')}</Button>
+              </Link>
+            </Card>
+            <Card hover className="flex flex-col">
+              <h3 className="text-lg font-semibold text-text-primary mb-2">
+                {t('redSealExam.cardReadinessTitle')}
+              </h3>
+              <p className="text-text-muted text-sm flex-1 mb-4">
+                {t('redSealExam.cardReadinessDesc')}
+              </p>
+              <Link to={paths.redSealReadinessTest}>
+                <Button variant="outline" className="w-full">{t('redSealExam.takeReadinessTest')}</Button>
               </Link>
             </Card>
             <Card hover className="flex flex-col">

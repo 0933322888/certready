@@ -9,7 +9,7 @@ export const tradeGuides = [
     courseSlug: 'hairstylist-332a',
     tradeName: 'Hairstylist',
     tradeCode: '332A',
-    examQuestions: 100,
+    examQuestions: 120,
     passMark: 70,
     apprenticeshipHours: 3640,
     apprenticeshipLevels: 2,

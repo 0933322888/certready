@@ -18,6 +18,9 @@ const plumberCourse = {
   },
 
   parts: [
+
+
+
     // ============================================================
     // PART 1 — FOUNDATIONS
     // MWA A: Performs Common Occupational Skills (11%)
@@ -29,18 +32,83 @@ const plumberCourse = {
       description: 'Safety, tools, work organization, and routine trade activities — the backbone of every plumbing job.',
       chapters: [
 
-        // CHAPTER 1 — Safety (MWA A-1) — FREE
+            // CHAPTER 0 — KEY TERMS AND GLOSSARY
+    {
+      id: 'ch-1',
+      number: 1,
+      title: 'Glossary',
+      subtitle: 'Definitions and acronyms for every major concept in the Plumber trade',
+      isFree: true,
+      estimatedMinutes: 30,
+      sections: [
         {
-          id: 'ch-01',
-          number: 1,
+          id: 'ch1-s1',
+          title: '1.1 Core Plumbing Terms',
+          content: [
+            {
+              type: 'table',
+              headers: ['Term', 'Definition'],
+              rows: [
+                ['Appliance', 'A piece of equipment that may require connection to a plumbing system'],
+                ['Backflow', 'Flowing back or reversal of the normal direction of flow'],
+                ['Backflow preventer', 'A device used to prevent backflow due to back pressure or back siphonage'],
+                ['Backing', 'A layer of material that forms, protects, and strengthens the supports for plumbing fixtures'],
+                ['Backwater valve', 'A check valve designed for use in a gravity drainage system, permitting flow in only one direction'],
+                ['Benchmark', 'A predetermined elevation used as a reference point'],
+                ['Check valve', 'A valve that permits flow in only one direction'],
+                ['Cleanout', 'Access point in drainage and venting systems for cleaning and inspection'],
+                ['Cross connection', 'A connection between a potable water source and a non-potable water source'],
+                ['Developed length', 'The length of pipe measured along its centre line'],
+                ['Dielectric protection', 'A method of isolating dissimilar metals to prevent electrolysis and galvanic corrosion'],
+                ['Drainage system', 'Assembly of pipes, fittings, fixtures, traps, and appurtenances that conveys sewage or waste'],
+                ['Embedded components', 'Components of a plumbing system encased in concrete or other materials'],
+                ['Expansion tank', 'A device used to accept expansion of water in a closed system'],
+                ['Fire stopping', 'Construction assembly acting as a barrier against spread of fire and smoke'],
+                ['Fixture', 'A receptacle or device that discharges sewage or clear-water waste'],
+                ['Fixture unit — drainage', 'Unit of measure expressing the hydraulic load of a fixture on the drainage system'],
+                ['Fixture unit — water supply', 'Unit of measure expressing the hydraulic load of a fixture on the water distribution system'],
+                ['Flashing', 'Component used to seal around exterior pipe penetrations to prevent water infiltration'],
+                ['Maintenance hole', 'Opening to a confined space allowing access to underground piping for inspection and maintenance'],
+                ['Offset', 'Piping that connects the ends of two pipes that are parallel or perpendicular'],
+                ['Pitless adaptor', 'A fitting that allows connection and removal of a pump from a well casing without tools'],
+                ['Potable', 'Safe for human consumption'],
+                ['Purge', 'To pass inert gas inside pipe to displace oxygen and prevent oxidation during brazing and welding'],
+                ['Rough-in', 'Placement of pipes to allow for future installation of fixtures and equipment'],
+                ['Sanitary sewer', 'A sewer that conducts sewage'],
+                ['Sewage', 'Any liquid waste other than clear-water waste or storm water'],
+                ['Sleeve', 'A component used to create a penetration through walls, floors, and ceilings prior to pipe installation'],
+                ['Sounding', 'A method of detecting cracks in cast iron pipe and fittings using a hammer tap'],
+                ['Storm sewer', 'A sewer that conveys storm water'],
+                ['Swing joint', 'A piping arrangement to allow for movement without putting strain on piping'],
+                ['Thrust block', 'A formed concrete block used to prevent movement of a fitting at a change of direction in buried piping'],
+                ['Torque arrestor', 'A device installed on a pipe in a well casing to prevent the pipe from spinning'],
+                ['Trap', 'A fitting designed to hold a liquid seal preventing gas passage without affecting liquid flow'],
+                ['Tube', 'Measured by inside diameter'],
+                ['Tubing', 'Measured by outside diameter (OD) and wall thickness'],
+                ['Vent piping', 'Pipe that is part of a venting system'],
+                ['Venting system', 'Assembly of pipes connecting the drainage system with outside air for air circulation and trap seal protection'],
+                ['Water distribution system', 'Assembly of pipes, fittings, valves, and appurtenances conveying water from the service pipe to outlets, fixtures, and appliances'],
+                ['Water service pipe', 'Pipe conveying water from the water main or private source to the inside of a building, up to and including the main isolation valve'],
+              ],
+            },
+          ],
+        },
+      ],
+      practiceQuestions:  [],
+    },
+
+        // CHAPTER 2 — Safety (MWA A-1) — FREE
+        {
+          id: 'ch-02',
+          number: 2,
           title: 'Safety on the Job',
           subtitle: 'MWA A-1 · Performs Safety-Related Functions (19% of MWA A)',
           isFree: true,
           estimatedMinutes: 45,
           sections: [
             {
-              id: 'ch01-s1',
-              title: '1.1 The Safe Work Environment',
+              id: 'ch02-s1',
+              title: '2.1 The Safe Work Environment',
               content: [
                 {
                   type: 'paragraph',
@@ -84,8 +152,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch01-s2',
-              title: '1.2 Personal Protective Equipment (PPE)',
+              id: 'ch02-s2',
+              title: '2.2 Personal Protective Equipment (PPE)',
               content: [
                 {
                   type: 'paragraph',
@@ -124,8 +192,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch01-s3',
-              title: '1.3 Lock-Out / Tag-Out (LOTO) Procedures',
+              id: 'ch02-s3',
+              title: '2.3 Lock-Out / Tag-Out (LOTO) Procedures',
               content: [
                 {
                   type: 'paragraph',
@@ -177,18 +245,18 @@ const plumberCourse = {
           practiceQuestions:  [],
         },
 
-        // CHAPTER 2 — Tools & Equipment (MWA A-2)
+        // CHAPTER 3 — Tools & Equipment (MWA A-2)
         {
-          id: 'ch-02',
-          number: 2,
+          id: 'ch-03',
+          number: 3,
           title: 'Tools and Equipment',
           subtitle: 'MWA A-2 · Uses and Maintains Tools and Equipment (23% of MWA A)',
           isFree: true,
           estimatedMinutes: 50,
           sections: [
             {
-              id: 'ch02-s1',
-              title: '2.1 Common Hand and Power Tools',
+              id: 'ch03-s1',
+              title: '3.1 Common Hand and Power Tools',
               content: [
                 {
                   type: 'paragraph',
@@ -224,8 +292,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch02-s2',
-              title: '2.2 Access Equipment',
+              id: 'ch03-s2',
+              title: '3.2 Access Equipment',
               content: [
                 {
                   type: 'paragraph',
@@ -247,8 +315,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch02-s3',
-              title: '2.3 Rigging, Hoisting, Lifting and Positioning Equipment',
+              id: 'ch03-s3',
+              title: '3.3 Rigging, Hoisting, Lifting and Positioning Equipment',
               content: [
                 {
                   type: 'paragraph',
@@ -290,8 +358,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch02-s4',
-              title: '2.4 Welding, Soldering and Brazing Equipment',
+              id: 'ch03-s4',
+              title: '3.4 Welding, Soldering and Brazing Equipment',
               content: [
                 {
                   type: 'paragraph',
@@ -330,18 +398,18 @@ const plumberCourse = {
           practiceQuestions:  [],
         },
 
-        // CHAPTER 3 — Organizing Work & Documentation (MWA A-3)
+        // CHAPTER 4 — Organizing Work & Documentation (MWA A-3)
         {
-          id: 'ch-03',
-          number: 3,
+          id: 'ch-04',
+          number: 4,
           title: 'Organizing Work and Documentation',
           subtitle: 'MWA A-3 · Organizes Work (20% of MWA A)',
           isFree: false,
           estimatedMinutes: 40,
           sections: [
             {
-              id: 'ch03-s1',
-              title: '3.1 Planning and Organizing Project Tasks',
+              id: 'ch04-s1',
+              title: '4.1 Planning and Organizing Project Tasks',
               content: [
                 {
                   type: 'paragraph',
@@ -365,8 +433,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch03-s2',
-              title: '3.2 Technical Documentation',
+              id: 'ch04-s2',
+              title: '4.2 Technical Documentation',
               content: [
                 {
                   type: 'paragraph',
@@ -401,18 +469,18 @@ const plumberCourse = {
           practiceQuestions:  [],
         },
 
-        // CHAPTER 4 — Routine Trade Activities (MWA A-4)
+        // CHAPTER 5 — Routine Trade Activities (MWA A-4)
         {
-          id: 'ch-04',
-          number: 4,
+          id: 'ch-05',
+          number: 5,
           title: 'Routine Trade Activities',
           subtitle: 'MWA A-4 · Performs Routine Trade Activities (34% of MWA A)',
           isFree: false,
           estimatedMinutes: 55,
           sections: [
             {
-              id: 'ch04-s1',
-              title: '4.1 Planning Layout for Piping Systems',
+              id: 'ch05-s1',
+              title: '5.1 Planning Layout for Piping Systems',
               content: [
                 {
                   type: 'paragraph',
@@ -434,8 +502,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch04-s2',
-              title: '4.2 Calculating Pipe Lengths and Offsets',
+              id: 'ch05-s2',
+              title: '5.2 Calculating Pipe Lengths and Offsets',
               content: [
                 {
                   type: 'paragraph',
@@ -471,8 +539,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch04-s3',
-              title: '4.3 Piping Supports, Sleeves and Fire Stopping',
+              id: 'ch05-s3',
+              title: '5.3 Piping Supports, Sleeves and Fire Stopping',
               content: [
                 {
                   type: 'paragraph',
@@ -516,18 +584,18 @@ const plumberCourse = {
       description: 'Cutting, bending, and joining all pipe materials — the hands-on core of plumbing installation.',
       chapters: [
 
-        // CHAPTER 5 — Pipe Preparation (MWA B-6)
+        // CHAPTER 6 — Pipe Preparation (MWA B-6)
         {
-          id: 'ch-05',
-          number: 5,
+          id: 'ch-06',
+          number: 6,
           title: 'Preparing Tube, Tubing and Pipe',
           subtitle: 'MWA B-6 · Task B-6: Prepares Tube, Tubing and Pipe (46% of MWA B)',
           isFree: false,
           estimatedMinutes: 45,
           sections: [
             {
-              id: 'ch05-s1',
-              title: '5.1 Inspecting Pipe and Fittings Before Installation',
+              id: 'ch06-s1',
+              title: '6.1 Inspecting Pipe and Fittings Before Installation',
               content: [
                 {
                   type: 'paragraph',
@@ -548,8 +616,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch05-s2',
-              title: '5.2 Cutting Pipe',
+              id: 'ch06-s2',
+              title: '6.2 Cutting Pipe',
               content: [
                 {
                   type: 'paragraph',
@@ -570,8 +638,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch05-s3',
-              title: '5.3 Bending Pipe and Tubing',
+              id: 'ch06-s3',
+              title: '6.3 Bending Pipe and Tubing',
               content: [
                 {
                   type: 'paragraph',
@@ -599,18 +667,18 @@ const plumberCourse = {
           practiceQuestions:  [],
         },
 
-        // CHAPTER 6 — Joining Pipe (MWA B-7)
+        // CHAPTER 7 — Joining Pipe (MWA B-7)
         {
-          id: 'ch-06',
-          number: 6,
+          id: 'ch-07',
+          number: 7,
           title: 'Joining Tube, Tubing and Pipe',
           subtitle: 'MWA B-7 · Task B-7: Joins Tube, Tubing and Pipe (54% of MWA B)',
           isFree: false,
           estimatedMinutes: 55,
           sections: [
             {
-              id: 'ch06-s1',
-              title: '6.1 Joining Copper Tube and Tubing',
+              id: 'ch07-s1',
+              title: '7.1 Joining Copper Tube and Tubing',
               content: [
                 {
                   type: 'paragraph',
@@ -631,8 +699,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch06-s2',
-              title: '6.2 Joining Plastic Tube and Pipe',
+              id: 'ch07-s2',
+              title: '7.2 Joining Plastic Tube and Pipe',
               content: [
                 {
                   type: 'paragraph',
@@ -666,8 +734,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch06-s3',
-              title: '6.3 Joining Steel and Cast Iron Pipe',
+              id: 'ch07-s3',
+              title: '7.3 Joining Steel and Cast Iron Pipe',
               content: [
                 {
                   type: 'paragraph',
@@ -709,18 +777,18 @@ const plumberCourse = {
       description: 'The largest portion of the Red Seal exam — DWV design, installation, testing, and service.',
       chapters: [
 
-        // CHAPTER 7 — Sewers (MWA C-8)
+        // CHAPTER 8 — Sewers (MWA C-8)
         {
-          id: 'ch-07',
-          number: 7,
+          id: 'ch-08',
+          number: 8,
           title: 'Sewers and Sewage Treatment Systems',
           subtitle: 'MWA C-8 & C-9 · Installs, Tests and Services Sewers (20% of MWA C) and Sewage Treatment (17% of MWA C)',
           isFree: false,
           estimatedMinutes: 50,
           sections: [
             {
-              id: 'ch07-s1',
-              title: '7.1 Sewer Layout and Sizing',
+              id: 'ch08-s1',
+              title: '8.1 Sewer Layout and Sizing',
               content: [
                 {
                   type: 'paragraph',
@@ -748,8 +816,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch07-s2',
-              title: '7.2 Sewage Treatment Systems',
+              id: 'ch08-s2',
+              title: '8.2 Sewage Treatment Systems',
               content: [
                 {
                   type: 'paragraph',
@@ -779,16 +847,16 @@ const plumberCourse = {
 
         // CHAPTER 8 — Interior DWV Systems (MWA C-10)
         {
-          id: 'ch-08',
-          number: 8,
+          id: 'ch-09',
+          number: 9,
           title: 'Interior Drainage, Waste and Vent (DWV) Systems',
           subtitle: 'MWA C-10 · Installs, Tests and Services Interior DWV Systems (63% of MWA C)',
           isFree: false,
           estimatedMinutes: 65,
           sections: [
             {
-              id: 'ch08-s1',
-              title: '8.1 Understanding the DWV System',
+              id: 'ch09-s1',
+              title: '9.1 Understanding the DWV System',
               content: [
                 {
                   type: 'paragraph',
@@ -826,8 +894,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch08-s2',
-              title: '8.2 DWV Layout, Sizing and Installation',
+              id: 'ch09-s2',
+              title: '9.2 DWV Layout, Sizing and Installation',
               content: [
                 {
                   type: 'paragraph',
@@ -851,8 +919,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch08-s3',
-              title: '8.3 Testing and Servicing DWV Systems',
+              id: 'ch09-s3',
+              title: '9.3 Testing and Servicing DWV Systems',
               content: [
                 {
                   type: 'paragraph',
@@ -892,16 +960,16 @@ const plumberCourse = {
 
         // CHAPTER 9 — Water Service and Distribution (MWA D-11, D-12, D-13)
         {
-          id: 'ch-09',
-          number: 9,
+          id: 'ch-10',
+          number: 10,
           title: 'Water Service and Potable Water Distribution',
           subtitle: 'MWA D-11, D-12 & D-13 · Water Service (24%), Potable Water Distribution (49%), Private Water Pressure (27%)',
           isFree: false,
           estimatedMinutes: 60,
           sections: [
             {
-              id: 'ch09-s1',
-              title: '9.1 Water Service',
+              id: 'ch10-s1',
+              title: '10.1 Water Service',
               content: [
                 {
                   type: 'paragraph',
@@ -928,8 +996,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch09-s2',
-              title: '9.2 Potable Water Distribution — Sizing and Design',
+              id: 'ch10-s2',
+              title: '10.2 Potable Water Distribution — Sizing and Design',
               content: [
                 {
                   type: 'paragraph',
@@ -959,8 +1027,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch09-s3',
-              title: '9.3 Cross Connection Control',
+              id: 'ch10-s3',
+              title: '10.3 Cross Connection Control',
               content: [
                 {
                   type: 'paragraph',
@@ -994,8 +1062,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch09-s4',
-              title: '9.4 Private Water Pressure Systems',
+              id: 'ch10-s4',
+              title: '10.4 Private Water Pressure Systems',
               content: [
                 {
                   type: 'paragraph',
@@ -1042,16 +1110,16 @@ const plumberCourse = {
 
         // CHAPTER 10 — Fixtures and Appliances (MWA E-14, E-15)
         {
-          id: 'ch-10',
-          number: 10,
+          id: 'ch-11',
+          number: 11,
           title: 'Plumbing Fixtures, Appliances and Water Treatment',
           subtitle: 'MWA E-14 (63% of MWA E) & E-15 · Installs, Tests and Services Fixtures, Appliances and Water Treatment Systems',
           isFree: false,
           estimatedMinutes: 55,
           sections: [
             {
-              id: 'ch10-s1',
-              title: '10.1 Plumbing Fixtures and Appliances',
+              id: 'ch11-s1',
+              title: '11.1 Plumbing Fixtures and Appliances',
               content: [
                 {
                   type: 'paragraph',
@@ -1078,8 +1146,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch10-s2',
-              title: '10.2 Water Treatment Systems',
+              id: 'ch11-s2',
+              title: '11.2 Water Treatment Systems',
               content: [
                 {
                   type: 'paragraph',
@@ -1137,15 +1205,15 @@ const plumberCourse = {
 
         // CHAPTER 11 — Hydronic Systems (MWA F-17, F-18)
         {
-          id: 'ch-11',
-          number: 11,
+          id: 'ch-12',
+          number: 12,
           title: 'Hydronic Systems',
           subtitle: 'MWA F-17 (58% of MWA F) & F-18 (42% of MWA F) · Installs, Tests and Services Hydronic Systems and Equipment',
           isFree: false,
           estimatedMinutes: 65,
           sections: [
             {
-              id: 'ch11-s1',
+              id: 'ch12-s1',
               title: '11.1 Hydronic System Fundamentals',
               content: [
                 {
@@ -1172,8 +1240,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch11-s2',
-              title: '11.2 Hydronic System Components',
+              id: 'ch12-s2',
+              title: '12.2 Hydronic System Components',
               content: [
                 {
                   type: 'paragraph',
@@ -1196,8 +1264,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch11-s3',
-              title: '11.3 Hydronic Thermal Calculations',
+              id: 'ch12-s3',
+              title: '12.3 Hydronic Thermal Calculations',
               content: [
                 {
                   type: 'paragraph',
@@ -1234,16 +1302,16 @@ const plumberCourse = {
 
         // CHAPTER 12 — Specialized Systems (MWA G)
         {
-          id: 'ch-12',
-          number: 12,
+          id: 'ch-13',
+          number: 13,
           title: 'Specialized Plumbing Systems',
           subtitle: 'MWA G-19, G-20 & G-21 · Installs, Tests and Services Specialized Systems (8% of Red Seal Exam)',
           isFree: false,
           estimatedMinutes: 50,
           sections: [
             {
-              id: 'ch12-s1',
-              title: '12.1 Overview of Specialized Systems',
+              id: 'ch13-s1',
+              title: '13.1 Overview of Specialized Systems',
               content: [
                 {
                   type: 'paragraph',
@@ -1268,8 +1336,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch12-s2',
-              title: '12.2 Medical Gas Systems',
+              id: 'ch13-s2',  
+              title: '13.2 Medical Gas Systems',
               content: [
                 {
                   type: 'paragraph',
@@ -1312,16 +1380,16 @@ const plumberCourse = {
 
         // CHAPTER 13 — Formulas Reference (from official document)
         {
-          id: 'ch-13',
-          number: 13,
+          id: 'ch-14',
+          number: 14,
           title: 'Plumber Formulas Reference Sheet',
           subtitle: 'Complete reference based on the official Ontario Plumber Formulas document',
           isFree: false,
           estimatedMinutes: 40,
           sections: [
             {
-              id: 'ch13-s1',
-              title: '13.1 Measurement Unit Abbreviations',
+              id: 'ch14-s1',
+              title: '14.1 Measurement Unit Abbreviations',
               content: [
                 {
                   type: 'table',
@@ -1353,8 +1421,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch13-s2',
-              title: '13.2 Constants',
+              id: 'ch14-s2',
+              title: '14.2 Constants',
               content: [
                 {
                   type: 'table',
@@ -1371,8 +1439,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch13-s3',
-              title: '13.3 Coefficients of Linear Expansion',
+              id: 'ch14-s3',
+              title: '14.3 Coefficients of Linear Expansion',
               content: [
                 {
                   type: 'table',
@@ -1389,8 +1457,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch13-s4',
-              title: '13.4 Conversion Factors',
+              id: 'ch14-s4',
+              title: '14.4 Conversion Factors',
               content: [
                 {
                   type: 'table',
@@ -1416,8 +1484,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch13-s5',
-              title: '13.5 General Formulas',
+              id: 'ch14-s5',
+              title: '14.5 General Formulas',
               content: [
                 {
                   type: 'table',
@@ -1444,8 +1512,8 @@ const plumberCourse = {
               ],
             },
             {
-              id: 'ch13-s6',
-              title: '13.6 Area, Volume and Geometry Formulas',
+              id: 'ch14-s6',
+              title: '14.6 Area, Volume and Geometry Formulas',
               content: [
                 {
                   type: 'table',
@@ -1473,75 +1541,12 @@ const plumberCourse = {
           practiceQuestions:  [],
         },
 
-        // CHAPTER 14 — Glossary
-        {
-          id: 'ch-14',
-          number: 14,
-          title: 'Key Terms and Glossary',
-          subtitle: 'Essential plumbing terminology from the Red Seal Occupational Standard',
-          isFree: false,
-          estimatedMinutes: 30,
-          sections: [
-            {
-              id: 'ch14-s1',
-              title: '14.1 Core Plumbing Terms',
-              content: [
-                {
-                  type: 'table',
-                  headers: ['Term', 'Definition'],
-                  rows: [
-                    ['Appliance', 'A piece of equipment that may require connection to a plumbing system'],
-                    ['Backflow', 'Flowing back or reversal of the normal direction of flow'],
-                    ['Backflow preventer', 'A device used to prevent backflow due to back pressure or back siphonage'],
-                    ['Backing', 'A layer of material that forms, protects, and strengthens the supports for plumbing fixtures'],
-                    ['Backwater valve', 'A check valve designed for use in a gravity drainage system, permitting flow in only one direction'],
-                    ['Benchmark', 'A predetermined elevation used as a reference point'],
-                    ['Check valve', 'A valve that permits flow in only one direction'],
-                    ['Cleanout', 'Access point in drainage and venting systems for cleaning and inspection'],
-                    ['Cross connection', 'A connection between a potable water source and a non-potable water source'],
-                    ['Developed length', 'The length of pipe measured along its centre line'],
-                    ['Dielectric protection', 'A method of isolating dissimilar metals to prevent electrolysis and galvanic corrosion'],
-                    ['Drainage system', 'Assembly of pipes, fittings, fixtures, traps, and appurtenances that conveys sewage or waste'],
-                    ['Embedded components', 'Components of a plumbing system encased in concrete or other materials'],
-                    ['Expansion tank', 'A device used to accept expansion of water in a closed system'],
-                    ['Fire stopping', 'Construction assembly acting as a barrier against spread of fire and smoke'],
-                    ['Fixture', 'A receptacle or device that discharges sewage or clear-water waste'],
-                    ['Fixture unit — drainage', 'Unit of measure expressing the hydraulic load of a fixture on the drainage system'],
-                    ['Fixture unit — water supply', 'Unit of measure expressing the hydraulic load of a fixture on the water distribution system'],
-                    ['Flashing', 'Component used to seal around exterior pipe penetrations to prevent water infiltration'],
-                    ['Maintenance hole', 'Opening to a confined space allowing access to underground piping for inspection and maintenance'],
-                    ['Offset', 'Piping that connects the ends of two pipes that are parallel or perpendicular'],
-                    ['Pitless adaptor', 'A fitting that allows connection and removal of a pump from a well casing without tools'],
-                    ['Potable', 'Safe for human consumption'],
-                    ['Purge', 'To pass inert gas inside pipe to displace oxygen and prevent oxidation during brazing and welding'],
-                    ['Rough-in', 'Placement of pipes to allow for future installation of fixtures and equipment'],
-                    ['Sanitary sewer', 'A sewer that conducts sewage'],
-                    ['Sewage', 'Any liquid waste other than clear-water waste or storm water'],
-                    ['Sleeve', 'A component used to create a penetration through walls, floors, and ceilings prior to pipe installation'],
-                    ['Sounding', 'A method of detecting cracks in cast iron pipe and fittings using a hammer tap'],
-                    ['Storm sewer', 'A sewer that conveys storm water'],
-                    ['Swing joint', 'A piping arrangement to allow for movement without putting strain on piping'],
-                    ['Thrust block', 'A formed concrete block used to prevent movement of a fitting at a change of direction in buried piping'],
-                    ['Torque arrestor', 'A device installed on a pipe in a well casing to prevent the pipe from spinning'],
-                    ['Trap', 'A fitting designed to hold a liquid seal preventing gas passage without affecting liquid flow'],
-                    ['Tube', 'Measured by inside diameter'],
-                    ['Tubing', 'Measured by outside diameter (OD) and wall thickness'],
-                    ['Vent piping', 'Pipe that is part of a venting system'],
-                    ['Venting system', 'Assembly of pipes connecting the drainage system with outside air for air circulation and trap seal protection'],
-                    ['Water distribution system', 'Assembly of pipes, fittings, valves, and appurtenances conveying water from the service pipe to outlets, fixtures, and appliances'],
-                    ['Water service pipe', 'Pipe conveying water from the water main or private source to the inside of a building, up to and including the main isolation valve'],
-                  ],
-                },
-              ],
-            },
-          ],
-          practiceQuestions:  [],
-        },
+        
 
         // CHAPTER 15 — Full Mock Exam and Exam Strategy
         {
-          id: 'ch-15',
-          number: 15,
+          id: 'ch-16',
+          number: 16,
           title: 'Red Seal Mock Exam and Exam Strategy',
           subtitle: '125-question timed practice exam (3 hours 45 min), plus tips for exam success',
           isFree: false,
@@ -1549,8 +1554,8 @@ const plumberCourse = {
           isMockExam: true,
           sections: [
             {
-              id: 'ch15-s1',
-              title: '15.1 Red Seal Exam Overview',
+              id: 'ch16-s1',
+              title: '16.1 Red Seal Exam Overview',
               content: [
                 {
                   type: 'paragraph',

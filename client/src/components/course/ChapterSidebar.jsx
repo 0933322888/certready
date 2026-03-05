@@ -105,15 +105,15 @@ export default function ChapterSidebar({ course, currentChapterId, onChapterSele
                               isActive
                                 ? 'bg-accent/20 border-l-4 border-accent text-accent font-medium'
                                 : isAccessible
-                                ? 'hover:bg-surface-2 text-text-primary'
+                                ? 'hover:bg-surface-2 text-text-muted'
                                 : 'text-text-dim cursor-not-allowed opacity-50'
                             }
                           `}
                         >
                           <div className="flex items-center justify-between">
                             <div className="flex items-center space-x-2">
-                              <span className="font-medium">
-                                {chapter.number}. {chapter.title}
+                              <span className="text-sm">
+                                 {chapter.number}. {chapter.title}
                               </span>
                               {isCompleted && (
                                 <svg className="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ export default function ChapterSidebar({ course, currentChapterId, onChapterSele
                               )}
                             </div>
                             <div className="flex items-center space-x-1">
-                              {chapter.isFree && (
+                              {chapter.isFree && !hasAccess && (
                                 <Badge variant="accent" className="text-xs">{t('course.freePreview')}</Badge>
                               )}
                               {!isAccessible && (

@@ -34,7 +34,7 @@ export default function BlogPage() {
             {t('blogPage.guidesHeading')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link to={paths.guideArticle('how-to-pass-red-seal-exam')}>
+            <Link to={paths.blogPost('how-to-pass-red-seal-exam')}>
               <Card hover className="h-full">
                 <h3 className="text-xl font-display font-bold text-text-primary mb-2">
                   {t('blogPage.howToPassTitle')}
@@ -45,7 +45,18 @@ export default function BlogPage() {
                 <span className="text-accent font-medium mt-2 inline-block">{t('blogPage.readMore')}</span>
               </Card>
             </Link>
-            <Link to={paths.guideArticle('red-seal-exam-format')}>
+            <Link to={paths.blogPost('how-hard-is-red-seal-exam')}>
+              <Card hover className="h-full">
+                <h3 className="text-xl font-display font-bold text-text-primary mb-2">
+                  {t('blogPage.howHardTitle')}
+                </h3>
+                <p className="text-text-muted text-sm">
+                  {t('blogPage.howHardExcerpt')}
+                </p>
+                <span className="text-accent font-medium mt-2 inline-block">{t('blogPage.readMore')}</span>
+              </Card>
+            </Link>
+            <Link to={paths.blogPost('red-seal-exam-format')}>
               <Card hover className="h-full">
                 <h3 className="text-xl font-display font-bold text-text-primary mb-2">
                   {t('blogPage.examFormatTitle')}
@@ -56,7 +67,7 @@ export default function BlogPage() {
                 <span className="text-accent font-medium mt-2 inline-block">{t('blogPage.readMore')}</span>
               </Card>
             </Link>
-            <Link to={paths.guideArticle('red-seal-exam-cost')}>
+            <Link to={paths.blogPost('red-seal-exam-cost')}>
               <Card hover className="h-full">
                 <h3 className="text-xl font-display font-bold text-text-primary mb-2">
                   {t('blogPage.examCostTitle')}

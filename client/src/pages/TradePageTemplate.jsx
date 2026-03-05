@@ -77,7 +77,7 @@ export default function TradePage({ trade }) {
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 <Link to={paths.learn(trade.courseSlug)}>
-                  <Button size="lg">Start Practicing →</Button>
+                  <Button size="lg">Start Studying →</Button>
                 </Link>
                 <Link to={paths.practiceTest(trade.slug)}>
                   <Button variant="outline" size="lg">Free Sample Test</Button>

@@ -22,6 +22,7 @@ const PracticeTestsListPage = lazy(() => import('./pages/PracticeTestsListPage')
 const GuidesSlugPage = lazy(() => import('./pages/GuidesSlugPage'));
 const RedSealReadinessTestPage = lazy(() => import('./pages/RedSealReadinessTestPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 
 const AllCoursesPage = lazy(() => import('./pages/AllCoursesPage'));
 const CoursePage = lazy(() => import('./pages/CoursePage'));
@@ -73,6 +74,7 @@ export default function App() {
             <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/red-seal-exam" element={<RedSealExamPage />} />
+            <Route path="/red-seal-readiness-test" element={<RedSealReadinessTestPage />} />
             <Route path="/trades" element={<TradesPage />} />
             <Route path="/trades/:tradeSlug" element={<TradePageRoute />} />
             <Route path="/practice-tests" element={<PracticeTestsListPage />} />
@@ -83,8 +85,12 @@ export default function App() {
             <Route path="/hairstylist-red-seal-practice-questions" element={<FreePracticeQuestionsLandingPage />} />
             <Route path="/guides" element={<GuidesPage />} />
             <Route path="/guides/:slug" element={<GuidesSlugPage />} />
-            <Route path="/tools/red-seal-readiness-test" element={<RedSealReadinessTestPage />} />
+            <Route path="/tools/red-seal-readiness-test" element={<Navigate to="/red-seal-readiness-test" replace />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/how-to-pass-red-seal-exam" element={<BlogPostPage path="how-to-pass-red-seal-exam" />} />
+            <Route path="/how-hard-is-red-seal-exam" element={<BlogPostPage path="how-hard-is-red-seal-exam" />} />
+            <Route path="/red-seal-exam-format" element={<BlogPostPage path="red-seal-exam-format" />} />
+            <Route path="/red-seal-exam-cost" element={<BlogPostPage path="red-seal-exam-cost" />} />
             {/* Legacy redirects for SEO */}
             <Route path="/courses" element={<Navigate to="/trades" replace />} />
             <Route path="/courses/:slug" element={<CourseToTradeRedirect />} />
