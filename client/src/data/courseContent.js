@@ -41,5 +41,5 @@ export function getCourse(slug, lang = 'en') {
 export const SUPPORTED_LANGUAGES = [
   { code: 'en', label: 'English' },
   { code: 'fr', label: 'Français' },
-  { code: 'ru', label: 'Русский' },
+  // { code: 'ru', label: 'Русский' },
 ];
