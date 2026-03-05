@@ -7,7 +7,7 @@ import ru from './locales/ru.json';
 
 const resources = {
   en: { translation: en },
-  fr: { translation: fr },
+  // fr: { translation: fr },
   // ru: { translation: ru },
 };
 

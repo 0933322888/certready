@@ -66,7 +66,7 @@ export default function Navbar() {
 
           {/* Desktop: Language + Auth */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
                 className="flex items-center space-x-1 px-3 py-2 rounded-lg text-white hover:text-accent hover:bg-surface-2 transition-colors text-sm"
@@ -92,7 +92,7 @@ export default function Navbar() {
                   ))}
                 </div>
               )}
-            </div>
+            </div> */}
             {user ? (
               <div className="relative">
                 <button
@@ -214,7 +214,7 @@ export default function Navbar() {
             >
               {t('nav.about')}
             </Link>
-            <div className="flex items-center gap-2 py-2 border-t border-border mt-2">
+            {/* <div className="flex items-center gap-2 py-2 border-t border-border mt-2">
               <span className="text-text-muted text-sm">{t('nav.language')}:</span>
               {SUPPORTED_LANGUAGES.map(({ code, label }) => (
                 <button
@@ -225,7 +225,7 @@ export default function Navbar() {
                   {label}
                 </button>
               ))}
-            </div>
+            </div> */}
             {user ? (
               <>
                 <Link
