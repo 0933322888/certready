@@ -2,6 +2,7 @@ import express from 'express';
 import PracticeQuestion from '../models/PracticeQuestion.js';
 import Course from '../models/Course.js';
 import { optionalProtect } from '../middleware/auth.js';
+import { userOwnsCourse, userHasMockExamAccess } from '../utils/userPurchases.js';
 
 const router = express.Router();
 
@@ -12,6 +13,8 @@ const TRADE_SLUG_TO_COURSE_SLUG = {
   plumber: 'plumber-306a',
   hairstylist: 'hairstylist-332a',
   welder: 'welder-456a',
+  hvac: 'refrigeration-air-conditioning-mechanic-313a',
+  'refrigeration-air-conditioning-mechanic': 'refrigeration-air-conditioning-mechanic-313a',
 };
 
 /** Full mock exam question count per trade (for readiness 20% calculation) */
@@ -21,12 +24,15 @@ const EXAM_QUESTIONS_BY_TRADE = {
   plumber: 125,
   hairstylist: 120,
   welder: 125,
+  hvac: 125,
+  'refrigeration-air-conditioning-mechanic': 125,
 };
 
 /**
  * GET /api/practice/:tradeSlug/questions
  * - Free users (not logged in or no course purchase): first 20 questions by order/_id (same every time).
- * - Paid users (logged in + purchased course for this trade): random set, limit 1–200.
+ * - Course access including free-window: random set for practice (capped below full exam size).
+ * - Paid / non free-window: full random set up to 200 (mock exam).
  * Query: limit (default 20), topics (optional comma-separated topicIds to filter)
  */
 router.get('/:tradeSlug/questions', optionalProtect, async (req, res) => {
@@ -44,20 +50,41 @@ router.get('/:tradeSlug/questions', optionalProtect, async (req, res) => {
     }
 
     const courseSlug = TRADE_SLUG_TO_COURSE_SLUG[tradeSlug];
-    let hasFullAccess = false;
+    let hasCourseAccess = false;
+    let hasMockExamAccessFlag = false;
     if (req.user && courseSlug) {
       const course = await Course.findOne({ slug: courseSlug, isPublished: true }).select('_id');
-      if (course && req.user.purchases) {
-        const purchaseIds = req.user.purchases.map((id) => id.toString());
-        hasFullAccess = purchaseIds.includes(course._id.toString());
+      if (course) {
+        hasCourseAccess = userOwnsCourse(req.user, course._id);
+        if (hasCourseAccess) {
+          hasMockExamAccessFlag = await userHasMockExamAccess(req.user._id, course._id);
+        }
       }
     }
 
     let questions;
-    if (hasFullAccess) {
+    if (hasMockExamAccessFlag) {
       questions = await PracticeQuestion.aggregate([
         { $match: match },
         { $sample: { size: limit } },
+        {
+          $project: {
+            _id: 1,
+            tradeSlug: 1,
+            topicId: 1,
+            topicLabel: 1,
+            question: 1,
+            options: 1,
+            correctIndex: 1,
+            explanation: 1,
+          },
+        },
+      ]);
+    } else if (hasCourseAccess) {
+      const practiceLimit = Math.min(limit, 50);
+      questions = await PracticeQuestion.aggregate([
+        { $match: match },
+        { $sample: { size: practiceLimit } },
         {
           $project: {
             _id: 1,
@@ -103,7 +130,11 @@ router.get('/:tradeSlug/questions', optionalProtect, async (req, res) => {
       explanation: q.explanation || '',
     }));
 
-    res.json({ questions: normalized });
+    res.json({
+      questions: normalized,
+      hasFullAccess: hasMockExamAccessFlag,
+      hasMockExamAccess: hasMockExamAccessFlag,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message || 'Failed to load questions' });
   }

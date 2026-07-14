@@ -5,6 +5,7 @@ import { OAuth2Client } from 'google-auth-library';
 import User from '../models/User.js';
 import { protect } from '../middleware/auth.js';
 import { getResetExpiry, sendPasswordResetEmail } from '../utils/sendEmail.js';
+import { getMockExamCourseSlugs } from '../utils/userPurchases.js';
 
 const router = express.Router();
 const googleClient = process.env.GOOGLE_CLIENT_ID
@@ -20,12 +21,14 @@ async function buildAuthUser(userId) {
     .select('-password')
     .populate('purchases', 'slug title tradeCode');
   if (!user) return null;
+  const mockExamSlugs = await getMockExamCourseSlugs(userId);
   return {
     id: user._id,
     _id: user._id,
     name: user.name,
     email: user.email,
     purchases: (user.purchases || []).filter(Boolean),
+    mockExamSlugs,
     createdAt: user.createdAt,
   };
 }

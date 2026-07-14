@@ -23,7 +23,7 @@ function formatInlineBold(str) {
 
 export default function ChapterContent({ course, chapter, onQuestionComplete }) {
   const { t } = useTranslation();
-  const { user } = useAuth();
+  const { user, hasMockExamAccess } = useAuth();
   const [savedAnswers, setSavedAnswers] = useState({});
   const [loadingAnswers, setLoadingAnswers] = useState(true);
 
@@ -196,6 +196,7 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
         const tradeSlug = getGuideSlugFromCourseSlug(course.id);
         const trade = getTradeBySlug(tradeSlug);
         if (!trade) return null;
+        const canStartMock = hasMockExamAccess(course.slug || course.id);
         return (
           <div className="mb-8">
             <Card className="p-6 border-2 border-accent/30 bg-accent/5">
@@ -203,11 +204,19 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
                 {t('mockExam.title')}
               </h2>
               <p className="text-text-muted mb-4">
-                {t('mockExam.instructionQuestions', { count: trade.examQuestions })} · {t('mockExam.instructionTime', { duration: trade.examDuration })} · {t('mockExam.instructionPassing', { percent: trade.passingScore })}
+                {canStartMock
+                  ? `${t('mockExam.instructionQuestions', { count: trade.examQuestions })} · ${t('mockExam.instructionTime', { duration: trade.examDuration })} · ${t('mockExam.instructionPassing', { percent: trade.passingScore })}`
+                  : t('mockExam.requiresPaidAccess')}
               </p>
-              <Link to={paths.mockExam(tradeSlug)}>
-                <Button size="lg">{t('mockExam.startExam')}</Button>
-              </Link>
+              {canStartMock ? (
+                <Link to={paths.mockExam(tradeSlug)}>
+                  <Button size="lg">{t('mockExam.startExam')}</Button>
+                </Link>
+              ) : (
+                <Button size="lg" disabled>
+                  {t('mockExam.lockedCta')}
+                </Button>
+              )}
             </Card>
           </div>
         );

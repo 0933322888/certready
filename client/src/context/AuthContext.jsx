@@ -111,6 +111,17 @@ export function AuthProvider({ children }) {
     );
   };
 
+  // Full mock exam is excluded from free-window grants
+  const hasMockExamAccess = (courseSlug) => {
+    if (!state.user || !courseSlug) return false;
+    const slugs = state.user.mockExamSlugs;
+    if (Array.isArray(slugs)) {
+      return slugs.includes(courseSlug);
+    }
+    // Fallback: older sessions without mockExamSlugs — treat paid-only unknown as no mock access
+    return false;
+  };
+
   return (
     <AuthContext.Provider value={{ 
       ...state, 
@@ -121,6 +132,7 @@ export function AuthProvider({ children }) {
       refreshUser,
       hasPurchased,
       hasPurchasedBySlug,
+      hasMockExamAccess,
       dispatch,
     }}>
       {children}

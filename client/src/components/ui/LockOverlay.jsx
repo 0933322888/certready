@@ -4,7 +4,14 @@ import { getGuideSlugFromCourseSlug } from '../../data/tradeGuides';
 import { paths } from '../../utils/routes';
 import Button from './Button';
 
-export default function LockOverlay({ courseSlug, price, onPurchase, purchasing = false }) {
+export default function LockOverlay({
+  courseSlug,
+  price,
+  onPurchase,
+  purchasing = false,
+  title,
+  description,
+}) {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -36,10 +43,10 @@ export default function LockOverlay({ courseSlug, price, onPurchase, purchasing 
           </svg>
         </div>
         <h3 className="text-2xl font-display font-bold mb-3">
-          {t('lockOverlay.title')}
+          {title || t('lockOverlay.title')}
         </h3>
         <p className="text-text-muted mb-6">
-          {t('lockOverlay.description')}
+          {description || t('lockOverlay.description')}
         </p>
         <Button onClick={handleClick} size="lg" disabled={purchasing}>
           {purchasing ? t('course.processing') : `${t('lockOverlay.getAccess')} — ${price}`}

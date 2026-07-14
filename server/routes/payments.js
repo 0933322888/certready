@@ -6,7 +6,7 @@ import Purchase from '../models/Purchase.js';
 import User from '../models/User.js';
 import { getCoursePricing } from '../utils/coursePricing.js';
 import { getValidPromo } from '../utils/promoService.js';
-import { userOwnsCourse } from '../utils/userPurchases.js';
+import { userOwnsCourse, userHasMockExamAccess } from '../utils/userPurchases.js';
 
 const router = express.Router();
 
@@ -100,7 +100,20 @@ router.post('/create-checkout-session', protect, async (req, res) => {
     }
 
     const { currentPrice: basePrice, isFreeWindowActive, freeUntil } = await getCoursePricing(course, user);
-    let chargeAmountCents = basePrice;
+    const ownsCourse = userOwnsCourse(user, course._id);
+    const hasMockExam = ownsCourse
+      ? await userHasMockExamAccess(user._id, course._id)
+      : false;
+
+    // Full ownership (includes mock exam) — block duplicate checkout
+    if (ownsCourse && hasMockExam) {
+      return res.status(400).json({ message: 'You already own this course' });
+    }
+
+    // Free-window holders upgrading for mock exam: charge full price (ignore free-window $0)
+    let chargeAmountCents = (ownsCourse && !hasMockExam)
+      ? course.price
+      : basePrice;
     let promo = null;
     if (rawPromoCode) {
       const result = await getValidPromo(rawPromoCode, course._id);
@@ -118,14 +131,18 @@ router.post('/create-checkout-session', protect, async (req, res) => {
       }
     }
 
-    // Check if user already owns the course
-    if (userOwnsCourse(user, course._id)) {
-      return res.status(400).json({ message: 'You already own this course' });
+    // Free-window content only + no promo: must pay to unlock mock exam
+    if (ownsCourse && !hasMockExam && chargeAmountCents === 0 && !promo) {
+      return res.status(400).json({
+        message: 'You already have free course access. Purchase to unlock the full mock exam.',
+      });
     }
 
     // Free promo / free window: grant access without Stripe
     if (chargeAmountCents === 0) {
-      const freeSource = promo?.code ?? (isFreeWindowActive ? 'free_window' : 'promo');
+      // Upgrading mock access with a free promo — use a distinct session id (not free_window)
+      const freeSource = promo?.code
+        ?? (ownsCourse && !hasMockExam ? 'mock_unlock' : (isFreeWindowActive ? 'free_window' : 'promo'));
       const freeSessionId = `free_${freeSource}_${req.user._id}_${course._id}`;
 
       let purchase = await Purchase.findOne({ stripeSessionId: freeSessionId });

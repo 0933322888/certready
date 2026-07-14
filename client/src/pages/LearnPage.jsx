@@ -21,7 +21,7 @@ export default function LearnPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const { i18n, t } = useTranslation();
-  const { user, loading: authLoading, refreshUser } = useAuth();
+  const { user, loading: authLoading, refreshUser, hasMockExamAccess } = useAuth();
   const { pricing } = useCoursePricingBySlug(slug);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [purchasing, setPurchasing] = useState(false);
@@ -38,6 +38,7 @@ export default function LearnPage() {
   const userHasAccess = Boolean(
     user?.purchases?.some((p) => p && p.slug === slug) || pricing?.ownsCourse
   );
+  const userHasMockExam = hasMockExamAccess(slug);
 
   useEffect(() => {
     if (!course) {
@@ -66,9 +67,15 @@ export default function LearnPage() {
     const chapter = getChapterById(chapterId, course);
     if (!chapter) return;
 
-    const isAccessible = chapter.isFree || hasAccess;
+    const isAccessible = chapter.isMockExam
+      ? userHasMockExam
+      : (chapter.isFree || hasAccess);
     if (!isAccessible) {
-      toast.error(t('learn.chapterRequiresAccess'));
+      toast.error(
+        chapter.isMockExam
+          ? t('mockExam.requiresPaidAccess')
+          : t('learn.chapterRequiresAccess')
+      );
       return;
     }
 
@@ -168,7 +175,9 @@ export default function LearnPage() {
     );
   }
 
-  const isChapterAccessible = currentChapter.isFree || hasAccess;
+  const isChapterAccessible = currentChapter.isMockExam
+    ? userHasMockExam
+    : (currentChapter.isFree || hasAccess);
   const learnSeo = getLearnPageSEO(course, currentChapter);
   const purchaseLabel = isFreeOffer
     ? t('course.claimFreeAccess')
@@ -197,6 +206,7 @@ export default function LearnPage() {
         onChapterSelect={handleChapterSelect}
         onClose={sidebarOpen}
         hasAccess={hasAccess}
+        hasMockExamAccess={userHasMockExam}
       />
 
       <div className="flex-1 md:ml-80 min-h-screen">
@@ -273,9 +283,16 @@ export default function LearnPage() {
                 </div>
                 <LockOverlay
                   courseSlug={slug}
-                  price={formatPrice(displayPrice, displayCurrency)}
+                  price={formatPrice(
+                    currentChapter.isMockExam
+                      ? (pricing?.fullPrice ?? course.price)
+                      : displayPrice,
+                    displayCurrency
+                  )}
                   onPurchase={handlePurchase}
                   purchasing={purchasing}
+                  title={currentChapter.isMockExam ? t('mockExam.lockedTitle') : undefined}
+                  description={currentChapter.isMockExam ? t('mockExam.requiresPaidAccess') : undefined}
                 />
               </div>
             )}

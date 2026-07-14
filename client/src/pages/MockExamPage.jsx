@@ -2,12 +2,15 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getTradeBySlug, examDurationMinutes } from '../data/tradeGuideContent';
+import { getGuideBySlug } from '../data/tradeGuides';
+import { useAuth } from '../context/AuthContext';
 import { getQuestions } from '../api/practiceApi';
 import { getTopicStats, getStrongAndWeakTopics } from '../hooks/usePracticeSession';
 import SEO from '../components/seo/SEO';
 import Breadcrumb from '../components/layout/Breadcrumb';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import Spinner from '../components/ui/Spinner';
 import { paths } from '../utils/routes';
 import NotFoundPage from './NotFoundPage';
 
@@ -24,7 +27,11 @@ function formatTime(seconds) {
 export default function MockExamPage() {
   const { tradeSlug } = useParams();
   const { t } = useTranslation();
+  const { hasMockExamAccess, loading: authLoading } = useAuth();
   const trade = getTradeBySlug(tradeSlug);
+  const guide = getGuideBySlug(tradeSlug);
+  const courseSlug = guide?.courseSlug;
+  const canTakeMockExam = courseSlug ? hasMockExamAccess(courseSlug) : false;
 
   const [phase, setPhase] = useState('idle'); // 'idle' | 'loading' | 'exam' | 'results'
   const [loadError, setLoadError] = useState(null);
@@ -52,12 +59,17 @@ export default function MockExamPage() {
   }, [currentQuestion]);
 
   const handleStartExam = useCallback(async () => {
-    if (!trade) return;
+    if (!trade || !canTakeMockExam) return;
     setLoadError(null);
     setPhase('loading');
     try {
       const limit = Math.min(trade.examQuestions || 100, 200);
-      const { questions: qs } = await getQuestions(tradeSlug, { limit });
+      const { questions: qs, hasMockExamAccess: apiAllowsMock } = await getQuestions(tradeSlug, { limit });
+      if (apiAllowsMock === false) {
+        setLoadError(t('mockExam.requiresPaidAccess'));
+        setPhase('idle');
+        return;
+      }
       if (!qs?.length) {
         setLoadError(t('mockExam.noQuestions'));
         setPhase('idle');
@@ -75,7 +87,7 @@ export default function MockExamPage() {
       setLoadError(t('mockExam.loadError'));
       setPhase('idle');
     }
-  }, [trade, tradeSlug, totalSeconds, t]);
+  }, [trade, tradeSlug, totalSeconds, t, canTakeMockExam]);
 
   const handleSubmitExam = useCallback(() => {
     setPhase('results');
@@ -131,6 +143,14 @@ export default function MockExamPage() {
     return <NotFoundPage />;
   }
 
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Spinner size="lg" />
+      </div>
+    );
+  }
+
   const breadcrumbItems = [
     { name: t('practicePage.home'), url: paths.home },
     { name: t('practiceTestsPage.breadcrumb'), url: paths.practiceTests },
@@ -167,17 +187,30 @@ export default function MockExamPage() {
             )}
             <Card className="mb-6 p-6">
               <h2 className="text-xl font-semibold text-text-primary mb-4">{t('mockExam.instructions')}</h2>
-              <ul className="space-y-2 text-text-muted mb-6">
-                <li>• {t('mockExam.instructionQuestions', { count: trade.examQuestions })}</li>
-                <li>• {t('mockExam.instructionTime', { duration: trade.examDuration })}</li>
-                <li>• {t('mockExam.instructionPassing', { percent: trade.passingScore })}</li>
-                <li>• {t('mockExam.instructionUnanswered')}</li>
-                <li>• {t('mockExam.instructionOneQuestion')}</li>
-                <li>• {t('mockExam.instructionMarkReview')}</li>
-              </ul>
-              <Button onClick={handleStartExam} size="lg">
-                {t('mockExam.startExam')}
-              </Button>
+              {canTakeMockExam ? (
+                <>
+                  <ul className="space-y-2 text-text-muted mb-6">
+                    <li>• {t('mockExam.instructionQuestions', { count: trade.examQuestions })}</li>
+                    <li>• {t('mockExam.instructionTime', { duration: trade.examDuration })}</li>
+                    <li>• {t('mockExam.instructionPassing', { percent: trade.passingScore })}</li>
+                    <li>• {t('mockExam.instructionUnanswered')}</li>
+                    <li>• {t('mockExam.instructionOneQuestion')}</li>
+                    <li>• {t('mockExam.instructionMarkReview')}</li>
+                  </ul>
+                  <Button onClick={handleStartExam} size="lg">
+                    {t('mockExam.startExam')}
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <p className="text-text-muted mb-6">{t('mockExam.requiresPaidAccess')}</p>
+                  <Link to={courseSlug ? paths.learn(courseSlug) : paths.practiceTest(tradeSlug)}>
+                    <Button size="lg" variant="outline">
+                      {t('mockExam.backToCourse')}
+                    </Button>
+                  </Link>
+                </>
+              )}
             </Card>
             <Link to={paths.practiceTest(tradeSlug)} className="text-accent hover:text-accent/80 text-sm font-medium">
               ← {t('mockExam.backToPractice')}

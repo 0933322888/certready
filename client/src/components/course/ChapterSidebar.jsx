@@ -6,11 +6,19 @@ import { getProgress } from '../../utils/progress';
 import Badge from '../ui/Badge';
 import ProgressBar from '../ui/ProgressBar';
 
-export default function ChapterSidebar({ course, currentChapterId, onChapterSelect, onClose = null, hasAccess: hasAccessProp }) {
+export default function ChapterSidebar({
+  course,
+  currentChapterId,
+  onChapterSelect,
+  onClose = null,
+  hasAccess: hasAccessProp,
+  hasMockExamAccess: hasMockExamAccessProp,
+}) {
   const { t } = useTranslation();
   const [expandedParts, setExpandedParts] = useState(new Set(course.parts.map(p => p.id)));
-  const { hasPurchasedBySlug } = useAuth();
+  const { hasPurchasedBySlug, hasMockExamAccess } = useAuth();
   const hasAccess = hasAccessProp ?? hasPurchasedBySlug(course.slug);
+  const canAccessMockExam = hasMockExamAccessProp ?? hasMockExamAccess(course.slug);
   const progress = getProgress(course.id);
   const allChapters = getAllChapters(course);
   const completedCount = progress.completed.length;
@@ -27,6 +35,9 @@ export default function ChapterSidebar({ course, currentChapterId, onChapterSele
   };
 
   const isChapterAccessible = (chapter) => {
+    if (chapter.isMockExam) {
+      return canAccessMockExam;
+    }
     return chapter.isFree || hasAccess;
   };
 
