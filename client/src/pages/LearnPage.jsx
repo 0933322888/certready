@@ -95,12 +95,18 @@ export default function LearnPage() {
 
   const fullPrice = pricing?.fullPrice ?? pricing?.currentPrice ?? course?.price;
   const fullCurrency = pricing?.currency ?? course?.currency ?? 'CAD';
+  const unlockingMockExam = Boolean(userHasAccess && !userHasMockExam);
   const isFreeOffer = Boolean(
-    appliedPromo?.amountCents === 0 || (!appliedPromo && pricing?.isFreeWindowActive)
+    !unlockingMockExam && (
+      appliedPromo?.amountCents === 0 || (!appliedPromo && pricing?.isFreeWindowActive)
+    )
   );
+  const mockUnlockBasePrice = pricing?.fullPrice ?? course?.price ?? fullPrice;
   const displayPrice = appliedPromo
     ? appliedPromo.amountCents
-    : (pricing?.currentPrice ?? course?.price ?? fullPrice);
+    : unlockingMockExam
+      ? mockUnlockBasePrice
+      : (pricing?.currentPrice ?? course?.price ?? fullPrice);
   const displayCurrency = appliedPromo ? appliedPromo.currency : fullCurrency;
 
   const handleApplyPromo = async () => {
@@ -283,16 +289,18 @@ export default function LearnPage() {
                 </div>
                 <LockOverlay
                   courseSlug={slug}
-                  price={formatPrice(
-                    currentChapter.isMockExam
-                      ? (pricing?.fullPrice ?? course.price)
-                      : displayPrice,
-                    displayCurrency
-                  )}
+                  price={formatPrice(displayPrice, displayCurrency)}
                   onPurchase={handlePurchase}
                   purchasing={purchasing}
                   title={currentChapter.isMockExam ? t('mockExam.lockedTitle') : undefined}
                   description={currentChapter.isMockExam ? t('mockExam.requiresPaidAccess') : undefined}
+                  showPromo={Boolean(currentChapter.isMockExam)}
+                  promoCode={promoCode}
+                  onPromoCodeChange={handlePromoInputChange}
+                  onApplyPromo={handleApplyPromo}
+                  applyingPromo={applyingPromo}
+                  appliedPromo={appliedPromo}
+                  promoHint={t('course.promoCodeHint')}
                 />
               </div>
             )}

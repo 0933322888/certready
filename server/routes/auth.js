@@ -5,7 +5,7 @@ import { OAuth2Client } from 'google-auth-library';
 import User from '../models/User.js';
 import { protect } from '../middleware/auth.js';
 import { getResetExpiry, sendPasswordResetEmail } from '../utils/sendEmail.js';
-import { getMockExamCourseSlugs } from '../utils/userPurchases.js';
+import { getAccessibleCourseSummaries, getMockExamCourseSlugs } from '../utils/userPurchases.js';
 
 const router = express.Router();
 const googleClient = process.env.GOOGLE_CLIENT_ID
@@ -15,19 +15,20 @@ const googleClient = process.env.GOOGLE_CLIENT_ID
 const generateToken = (id) =>
   jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 
-/** Auth responses must include populated course purchases (slug) for client access checks. */
+/** Auth responses must include accessible course purchases (slug) for client access checks. */
 async function buildAuthUser(userId) {
-  const user = await User.findById(userId)
-    .select('-password')
-    .populate('purchases', 'slug title tradeCode');
+  const user = await User.findById(userId).select('-password');
   if (!user) return null;
-  const mockExamSlugs = await getMockExamCourseSlugs(userId);
+  const [purchases, mockExamSlugs] = await Promise.all([
+    getAccessibleCourseSummaries(userId, user.createdAt),
+    getMockExamCourseSlugs(userId),
+  ]);
   return {
     id: user._id,
     _id: user._id,
     name: user.name,
     email: user.email,
-    purchases: (user.purchases || []).filter(Boolean),
+    purchases,
     mockExamSlugs,
     createdAt: user.createdAt,
   };

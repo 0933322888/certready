@@ -2,7 +2,7 @@ import express from 'express';
 import Course from '../models/Course.js';
 import { protect } from '../middleware/auth.js';
 import { getCoursePricing } from '../utils/coursePricing.js';
-import { userOwnsCourse } from '../utils/userPurchases.js';
+import { userHasContentAccess } from '../utils/userPurchases.js';
 
 const router = express.Router();
 
@@ -35,10 +35,13 @@ router.get('/', async (req, res) => {
     const withPricing = await Promise.all(
       courses.map(async (c) => {
         const pricing = await getCoursePricing(c, authUser);
+        const ownsCourse = authUser
+          ? await userHasContentAccess(authUser._id, c._id, authUser.createdAt)
+          : false;
         return {
           ...c.toObject(),
           ...pricing,
-          ownsCourse: Boolean(authUser && userOwnsCourse(authUser, c._id)),
+          ownsCourse,
         };
       })
     );
@@ -75,11 +78,9 @@ router.get('/:slug', async (req, res) => {
     const authUser = await getOptionalAuthUser(req);
     const pricing = await getCoursePricing(course, authUser);
 
-    // Check if user owns the course (if authenticated)
-    let ownsCourse = false;
-    if (authUser && userOwnsCourse(authUser, course._id)) {
-      ownsCourse = true;
-    }
+    const ownsCourse = authUser
+      ? await userHasContentAccess(authUser._id, course._id, authUser.createdAt)
+      : false;
 
     res.json({
       ...course.toObject(),
@@ -103,7 +104,7 @@ router.get('/:slug/access', protect, async (req, res) => {
     }
 
     const user = await import('../models/User.js').then(m => m.default.findById(req.user._id));
-    const hasAccess = userOwnsCourse(user, course._id);
+    const hasAccess = await userHasContentAccess(user._id, course._id, user.createdAt);
 
     if (!hasAccess) {
       return res.status(403).json({ message: 'Access denied. Purchase required.' });

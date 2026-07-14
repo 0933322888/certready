@@ -3,6 +3,7 @@ import User from '../models/User.js';
 import Purchase from '../models/Purchase.js';
 import { protect } from '../middleware/auth.js';
 import studyPlanRoutes from './studyPlans.js';
+import { getAccessibleCourseSummaries } from '../utils/userPurchases.js';
 
 const router = express.Router();
 
@@ -13,11 +14,24 @@ router.use('/study-plans', studyPlanRoutes);
 // @access  Private
 router.get('/dashboard', protect, async (req, res) => {
   try {
-    const user = await User.findById(req.user._id)
-      .select('-password')
-      .populate('purchases', 'slug title subtitle tradeCode totalChapters totalQuestions');
-    
-    res.json(user);
+    const user = await User.findById(req.user._id).select('-password');
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    const purchases = await getAccessibleCourseSummaries(user._id, user.createdAt);
+    // Enrich with fields dashboard may show
+    const Course = (await import('../models/Course.js')).default;
+    const enriched = await Course.find({
+      _id: { $in: purchases.map((p) => p._id) },
+      isPublished: true,
+    })
+      .select('slug title subtitle tradeCode totalChapters totalQuestions')
+      .lean();
+
+    res.json({
+      ...user.toObject(),
+      purchases: enriched,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -57,10 +71,18 @@ router.put('/profile', protect, async (req, res) => {
     }
 
     await user.save();
-    const updated = await User.findById(user._id)
-      .select('-password')
-      .populate('purchases', 'slug title subtitle tradeCode totalChapters totalQuestions');
-    res.json(updated);
+    const purchases = await getAccessibleCourseSummaries(user._id, user.createdAt);
+    const Course = (await import('../models/Course.js')).default;
+    const enriched = await Course.find({
+      _id: { $in: purchases.map((p) => p._id) },
+      isPublished: true,
+    })
+      .select('slug title subtitle tradeCode totalChapters totalQuestions')
+      .lean();
+    res.json({
+      ...user.toObject(),
+      purchases: enriched,
+    });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

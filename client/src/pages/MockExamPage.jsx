@@ -1,9 +1,12 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import toast from 'react-hot-toast';
 import { getTradeBySlug, examDurationMinutes } from '../data/tradeGuideContent';
 import { getGuideBySlug } from '../data/tradeGuides';
+import { getCourse } from '../data/courseContent';
 import { useAuth } from '../context/AuthContext';
+import { useCoursePricingBySlug } from '../hooks/useCoursePricing';
 import { getQuestions } from '../api/practiceApi';
 import { getTopicStats, getStrongAndWeakTopics } from '../hooks/usePracticeSession';
 import SEO from '../components/seo/SEO';
@@ -11,7 +14,9 @@ import Breadcrumb from '../components/layout/Breadcrumb';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import Spinner from '../components/ui/Spinner';
+import { formatPrice } from '../utils/formatters';
 import { paths } from '../utils/routes';
+import api from '../utils/api';
 import NotFoundPage from './NotFoundPage';
 
 function formatTime(seconds) {
@@ -26,12 +31,16 @@ function formatTime(seconds) {
 
 export default function MockExamPage() {
   const { tradeSlug } = useParams();
-  const { t } = useTranslation();
-  const { hasMockExamAccess, loading: authLoading } = useAuth();
+  const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const { user, hasMockExamAccess, hasPurchasedBySlug, refreshUser, loading: authLoading } = useAuth();
   const trade = getTradeBySlug(tradeSlug);
   const guide = getGuideBySlug(tradeSlug);
   const courseSlug = guide?.courseSlug;
+  const course = courseSlug ? getCourse(courseSlug, i18n.language) : null;
+  const { pricing } = useCoursePricingBySlug(courseSlug);
   const canTakeMockExam = courseSlug ? hasMockExamAccess(courseSlug) : false;
+  const ownsCourse = courseSlug ? hasPurchasedBySlug(courseSlug) : false;
 
   const [phase, setPhase] = useState('idle'); // 'idle' | 'loading' | 'exam' | 'results'
   const [loadError, setLoadError] = useState(null);
@@ -41,6 +50,71 @@ export default function MockExamPage() {
   const [markedForReview, setMarkedForReview] = useState(new Set());
   const [timeRemainingSeconds, setTimeRemainingSeconds] = useState(null);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
+  const [promoCode, setPromoCode] = useState('');
+  const [appliedPromo, setAppliedPromo] = useState(null);
+  const [applyingPromo, setApplyingPromo] = useState(false);
+  const [purchasing, setPurchasing] = useState(false);
+
+  const fullPrice = pricing?.fullPrice ?? course?.price ?? 4999;
+  const currency = appliedPromo?.currency || pricing?.currency || course?.currency || 'CAD';
+  const displayPrice = appliedPromo ? appliedPromo.amountCents : fullPrice;
+
+  const handlePromoInputChange = (value) => {
+    setPromoCode(value);
+    setAppliedPromo(null);
+  };
+
+  const handleApplyPromo = async () => {
+    const code = promoCode.trim();
+    if (!code || !user || !courseSlug) return;
+    setApplyingPromo(true);
+    try {
+      const res = await api.post('/payments/validate-promo', { promoCode: code, courseSlug });
+      if (res.data?.valid) {
+        setAppliedPromo({ code, amountCents: res.data.amountCents, currency: res.data.currency });
+        toast.success(res.data.amountCents === 0 ? t('course.promoAppliedFree') : t('course.promoApplied'));
+      } else {
+        setAppliedPromo(null);
+        toast.error(res.data?.message || t('course.invalidPromoCode'));
+      }
+    } catch (err) {
+      setAppliedPromo(null);
+      toast.error(err.response?.data?.message || t('course.invalidPromoCode'));
+    }
+    setApplyingPromo(false);
+  };
+
+  const handlePurchase = async () => {
+    if (!courseSlug) return;
+    if (!user) {
+      navigate(paths.login, { state: { from: paths.mockExam(tradeSlug) } });
+      return;
+    }
+    setPurchasing(true);
+    try {
+      const res = await api.post('/payments/create-checkout-session', {
+        courseSlug,
+        promoCode: appliedPromo?.code || undefined,
+      });
+      if (res.data?.isFree || res.data?.sessionId?.startsWith('free_')) {
+        await refreshUser();
+        toast.success(t('checkout.successTitle'));
+        setPurchasing(false);
+        return;
+      }
+      if (res.data?.url) {
+        window.location.href = res.data.url;
+        return;
+      }
+    } catch (err) {
+      if (err.response?.status === 400) {
+        await refreshUser();
+      } else {
+        toast.error(err.response?.data?.message || t('course.checkoutFailed'));
+      }
+    }
+    setPurchasing(false);
+  };
 
   const durationMinutes = trade ? examDurationMinutes(trade) : 180;
   const totalSeconds = durationMinutes * 60;
@@ -203,12 +277,55 @@ export default function MockExamPage() {
                 </>
               ) : (
                 <>
-                  <p className="text-text-muted mb-6">{t('mockExam.requiresPaidAccess')}</p>
-                  <Link to={courseSlug ? paths.learn(courseSlug) : paths.practiceTest(tradeSlug)}>
-                    <Button size="lg" variant="outline">
-                      {t('mockExam.backToCourse')}
+                  <p className="text-text-muted mb-4">{t('mockExam.requiresPaidAccess')}</p>
+                  {user && (
+                    <div className="mb-4 text-left space-y-2">
+                      <label htmlFor="mock-promo-code" className="block text-sm font-medium text-text-primary">
+                        {t('course.promoCodeLabel')}
+                      </label>
+                      <div className="flex gap-2">
+                        <input
+                          id="mock-promo-code"
+                          type="text"
+                          value={promoCode}
+                          onChange={(e) => handlePromoInputChange(e.target.value)}
+                          placeholder={t('course.promoCodePlaceholder')}
+                          className="flex-1 min-w-0 px-3 py-2 rounded-lg border border-border bg-surface text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent"
+                          aria-label={t('course.promoCodeLabel')}
+                        />
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={handleApplyPromo}
+                          disabled={applyingPromo || !promoCode.trim()}
+                        >
+                          {applyingPromo ? t('course.processing') : t('course.promoCodeApply')}
+                        </Button>
+                      </div>
+                      <p className="text-sm text-accent-warm font-medium">{t('course.promoCodeHint')}</p>
+                      {appliedPromo && (
+                        <p className="text-sm text-accent-warm font-medium">
+                          {appliedPromo.amountCents === 0
+                            ? t('course.promoAppliedFree')
+                            : t('course.promoApplied')}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Button onClick={handlePurchase} size="lg" disabled={purchasing || !courseSlug}>
+                      {purchasing
+                        ? t('course.processing')
+                        : user
+                          ? `${t('lockOverlay.getAccess')} — ${formatPrice(displayPrice, currency)}`
+                          : t('course.signInToPurchase')}
                     </Button>
-                  </Link>
+                    <Link to={courseSlug ? paths.learn(courseSlug) : paths.practiceTest(tradeSlug)}>
+                      <Button size="lg" variant="outline" className="w-full">
+                        {ownsCourse ? t('mockExam.backToCourse') : t('mockExam.backToPractice')}
+                      </Button>
+                    </Link>
+                  </div>
                 </>
               )}
             </Card>

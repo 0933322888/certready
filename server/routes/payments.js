@@ -6,7 +6,7 @@ import Purchase from '../models/Purchase.js';
 import User from '../models/User.js';
 import { getCoursePricing } from '../utils/coursePricing.js';
 import { getValidPromo } from '../utils/promoService.js';
-import { userOwnsCourse, userHasMockExamAccess } from '../utils/userPurchases.js';
+import { userOwnsCourse, userHasMockExamAccess, userHasContentAccess } from '../utils/userPurchases.js';
 
 const router = express.Router();
 
@@ -55,11 +55,17 @@ router.post('/validate-promo', protect, async (req, res) => {
     if (!course) {
       return res.status(404).json({ valid: false, message: 'Course not found' });
     }
-    const user = await User.findById(req.user._id).select('createdAt');
+    const user = await User.findById(req.user._id).select('createdAt purchases');
     if (!user) {
       return res.status(404).json({ valid: false, message: 'User not found' });
     }
-    const { currentPrice: basePrice, isFreeWindowActive, freeUntil } = await getCoursePricing(course, user);
+    const { currentPrice: windowPrice, isFreeWindowActive, freeUntil } = await getCoursePricing(course, user);
+    const hasContentAccess = await userHasContentAccess(user._id, course._id, user.createdAt);
+    const hasMockExam = hasContentAccess
+      ? await userHasMockExamAccess(user._id, course._id)
+      : false;
+    // Mock-exam upgrade: price against full course price, not free-window $0
+    const basePrice = (hasContentAccess && !hasMockExam) ? course.price : windowPrice;
     const { promo, message } = await getValidPromo(rawPromoCode, course._id);
     if (!promo) {
       return res.json({ valid: false, message: message || 'Invalid promo code' });
@@ -100,18 +106,17 @@ router.post('/create-checkout-session', protect, async (req, res) => {
     }
 
     const { currentPrice: basePrice, isFreeWindowActive, freeUntil } = await getCoursePricing(course, user);
-    const ownsCourse = userOwnsCourse(user, course._id);
-    const hasMockExam = ownsCourse
-      ? await userHasMockExamAccess(user._id, course._id)
-      : false;
+    const hasContentAccess = await userHasContentAccess(user._id, course._id, user.createdAt);
+    const hasMockExam = await userHasMockExamAccess(user._id, course._id);
 
     // Full ownership (includes mock exam) — block duplicate checkout
-    if (ownsCourse && hasMockExam) {
+    if (hasContentAccess && hasMockExam) {
       return res.status(400).json({ message: 'You already own this course' });
     }
 
     // Free-window holders upgrading for mock exam: charge full price (ignore free-window $0)
-    let chargeAmountCents = (ownsCourse && !hasMockExam)
+    // Paid mock unlock also keeps course access after the free window ends.
+    let chargeAmountCents = (hasContentAccess && !hasMockExam)
       ? course.price
       : basePrice;
     let promo = null;
@@ -132,7 +137,7 @@ router.post('/create-checkout-session', protect, async (req, res) => {
     }
 
     // Free-window content only + no promo: must pay to unlock mock exam
-    if (ownsCourse && !hasMockExam && chargeAmountCents === 0 && !promo) {
+    if (hasContentAccess && !hasMockExam && chargeAmountCents === 0 && !promo) {
       return res.status(400).json({
         message: 'You already have free course access. Purchase to unlock the full mock exam.',
       });
@@ -142,7 +147,7 @@ router.post('/create-checkout-session', protect, async (req, res) => {
     if (chargeAmountCents === 0) {
       // Upgrading mock access with a free promo — use a distinct session id (not free_window)
       const freeSource = promo?.code
-        ?? (ownsCourse && !hasMockExam ? 'mock_unlock' : (isFreeWindowActive ? 'free_window' : 'promo'));
+        ?? (hasContentAccess && !hasMockExam ? 'mock_unlock' : (isFreeWindowActive ? 'free_window' : 'promo'));
       const freeSessionId = `free_${freeSource}_${req.user._id}_${course._id}`;
 
       let purchase = await Purchase.findOne({ stripeSessionId: freeSessionId });

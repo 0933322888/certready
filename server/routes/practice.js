@@ -2,7 +2,7 @@ import express from 'express';
 import PracticeQuestion from '../models/PracticeQuestion.js';
 import Course from '../models/Course.js';
 import { optionalProtect } from '../middleware/auth.js';
-import { userOwnsCourse, userHasMockExamAccess } from '../utils/userPurchases.js';
+import { userHasContentAccess, userHasMockExamAccess } from '../utils/userPurchases.js';
 
 const router = express.Router();
 
@@ -55,7 +55,7 @@ router.get('/:tradeSlug/questions', optionalProtect, async (req, res) => {
     if (req.user && courseSlug) {
       const course = await Course.findOne({ slug: courseSlug, isPublished: true }).select('_id');
       if (course) {
-        hasCourseAccess = userOwnsCourse(req.user, course._id);
+        hasCourseAccess = await userHasContentAccess(req.user._id, course._id, req.user.createdAt);
         if (hasCourseAccess) {
           hasMockExamAccessFlag = await userHasMockExamAccess(req.user._id, course._id);
         }
