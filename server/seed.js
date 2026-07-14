@@ -9,7 +9,7 @@ dotenv.config();
 
 const promos = [
   {
-    code: 'SPRING2026',
+    code: 'GET40',
     type: 'fixed_price',
     amountCents: 2999,
     public: true,
@@ -39,6 +39,11 @@ connectDB().then(async () => {
         { upsert: true, new: true }
       );
     }
+    // Retire renamed code so SPRING2026 no longer works at checkout
+    await Promo.updateOne(
+      { code: 'SPRING2026' },
+      { $set: { isActive: false } }
+    );
     console.log('Seeded promos successfully');
     process.exit(0);
   } catch (error) {
