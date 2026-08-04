@@ -176,6 +176,71 @@ export const TRADE_DATA = {
     practiceUrl: "/practice-tests/plumber",
   },
 
+  "automotive-service-technician": {
+    slug: "automotive-service-technician",
+    name: "Automotive Service Technician",
+    tradeCode: "310S",
+    apprenticeshipHours: 7200,
+    examQuestions: 125,
+    examDuration: "3 hours 45 min",
+    passingScore: 70,
+    overviewShort:
+      "Prepare for the Automotive Service Technician certification exam with a focus on engine systems, electrical diagnostics, brakes, suspension, HVAC, and service practices.",
+    overview:
+      "The Automotive Service Technician certification validates your ability to diagnose, service, and repair modern vehicles across mechanical, electrical, and electronic systems. This guide helps you master the trade-specific exam topics, from OBD diagnostics to braking systems, while building the speed and strategy needed for 125 multiple-choice questions.",
+    mwas: [
+      { id: "A", title: "Common Occupational Skills", weight: 10, items: ["Applies safety procedures", "Uses tools and test equipment", "Interprets service documents", "Communicates with customers and team members"] },
+      { id: "B", title: "Engine Systems", weight: 20, items: ["Diagnoses engine performance", "Services fuel and induction systems", "Inspects ignition and emission systems", "Performs maintenance procedures"] },
+      { id: "C", title: "Vehicle Electrical Systems", weight: 15, items: ["Diagnoses charging and starting systems", "Troubleshoots wiring and controls", "Tests sensors and actuators", "Works with multiplexed electronics"] },
+      { id: "D", title: "Brakes and Suspension", weight: 15, items: ["Services braking systems", "Inspects suspension components", "Performs wheel alignment principles", "Identifies steering system faults"] },
+      { id: "E", title: "Heating, Ventilation & Air Conditioning", weight: 10, items: ["Diagnoses HVAC system issues", "Handles refrigerant safely", "Tests blowers and controls", "Performs cabin comfort service checks"] },
+      { id: "F", title: "Diagnosis and Repair", weight: 20, items: ["Uses diagnostic strategies", "Applies fault-finding methodology", "Verifies repairs and road tests", "Resolves intermittent and electronic faults"] },
+      { id: "G", title: "Service Practices & Communication", weight: 10, items: ["Documents work clearly", "Follows environmental regulations", "Provides customer service", "Maintains quality standards"] },
+    ],
+    difficultyRating: 4,
+    difficultyNote:
+      "The Automotive Service Technician exam combines mechanical, electrical, and electronic systems under time pressure. Mastering fault diagnosis, system integration, and safe service practice is essential for scoring above 70%.",
+    challengePoints: [
+      { icon: "🔌", heading: "Electronics and diagnostics", body: "Modern vehicles rely heavily on sensors and control modules. You need to understand OBD systems, wiring, and sensor troubleshooting." },
+      { icon: "🧰", heading: "Broad mechanical scope", body: "From engine performance to brakes and HVAC, the exam covers many systems. Effective study means connecting the dots across the vehicle." },
+      { icon: "🧮", heading: "Problem-solving under pressure", body: "Intermittent faults and diagnostic trees are common. Learn structured fault-finding and avoid guessing." },
+      { icon: "⏱", heading: "125 questions in 3h45", body: "Manage your time carefully and practice full-length exams to build confidence and speed." },
+    ],
+    sampleQuestions: [
+      {
+        question: "Which instrument is best for verifying the condition of a vehicle battery before a hard start?",
+        options: ["Voltmeter", "Hydrometer", "Oscilloscope", "Infrared thermometer"],
+        correct: 1,
+        explanation: "A hydrometer measures the specific gravity of the battery electrolyte, which directly indicates the battery's state of charge and health. Voltage alone does not reveal the battery's internal condition.",
+        mwa: "C",
+      },
+      {
+        question: "A vehicle exhibits rough idle, poor fuel economy, and a persistent misfire code for cylinder 3. Which component should be tested first?",
+        options: ["Ignition coil", "O2 sensor", "Mass airflow sensor", "Throttle position sensor"],
+        correct: 0,
+        explanation: "A single-cylinder misfire code commonly points to an ignition issue such as a faulty coil or spark plug. The ignition coil is the fastest and most likely component to verify first.",
+        mwa: "B",
+      },
+      {
+        question: "What is the main purpose of a service technician’s final road test after a repair?",
+        options: ["Verify the repair under real conditions", "Confirm the service invoice", "Inspect the vehicle’s cosmetics", "Ensure the battery is fully charged"],
+        correct: 0,
+        explanation: "The final road test confirms that the repair has resolved the fault under actual driving conditions and that no new issues have appeared. It is the last step in a proper service procedure.",
+        mwa: "F",
+      },
+    ],
+    studyTips: [
+      { icon: "🔧", tip: "Start with diagnostics", body: "Good diagnostic strategy reduces wasted time. Learn how to isolate faults quickly using symptoms, test data, and service information." },
+      { icon: "⚡", tip: "Know electrical fundamentals", body: "Battery, charging, and starting systems appear constantly. Practice voltage, resistance, and current checks with wiring diagrams." },
+      { icon: "❄️", tip: "Understand HVAC basics", body: "Refrigerant handling, airflow, and system controls are important for both comfort and safety questions." },
+      { icon: "📋", tip: "Practice full exam pacing", body: "Run at least one 125-question mock exam. Time management is critical on the Automotive Service Technician exam.",
+      },
+    ],
+    courseSlug: "autoservtech",
+    courseUrl: "/trades/autoservtech",
+    practiceUrl: "/practice-tests/autoservtech",
+  },
+
   carpenter: {
     slug: "carpenter",
     name: "Carpenter",
@@ -490,7 +555,7 @@ export const ALL_TRADES = [
   { name: "Appliance Service Technician", code: "445A", slug: "appliance-service-technician", live: false },
   { name: "Auto Body & Collision Technician", code: "310B", slug: "auto-body-collision-technician", live: false },
   { name: "Automotive Refinishing Technician", code: "310J", slug: "automotive-refinishing-technician", live: false },
-  { name: "Automotive Service Technician", code: "310S", slug: "automotive-service-technician", live: false },
+  { name: "Automotive Service Technician", code: "310S", slug: "automotive-service-technician", live: true },
   { name: "Baker", code: "312D", slug: "baker", live: false },
   { name: "Boilermaker", code: "428A", slug: "boilermaker", live: false },
   { name: "Bricklayer", code: "402A", slug: "bricklayer", live: false },

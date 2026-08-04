@@ -92,6 +92,50 @@ export const tradeGuides = [
     ],
   },
   {
+    slug: 'autoservtech',
+    courseSlug: 'autoservtech',
+    tradeName: 'Automotive Service Technician',
+    tradeCode: '310S',
+    examQuestions: 125,
+    passMark: 70,
+    apprenticeshipHours: 7200,
+    apprenticeshipLevels: 4,
+    examWeighting: [
+      { area: 'Common Occupational Skills', percent: 10 },
+      { area: 'Engine Systems', percent: 20 },
+      { area: 'Vehicle Electrical Systems', percent: 15 },
+      { area: 'Brakes and Suspension', percent: 15 },
+      { area: 'Heating, Ventilation & Air Conditioning', percent: 10 },
+      { area: 'Diagnosis and Repair', percent: 20 },
+      { area: 'Service Practices & Communication', percent: 10 },
+    ],
+    faqs: [
+      {
+        question: 'How many questions are on the Automotive Service Technician exam?',
+        answer: 'The Automotive Service Technician exam contains 125 multiple-choice questions. You must achieve at least 70% to pass.',
+      },
+      {
+        question: 'What is the most important part of the Automotive Service Technician exam?',
+        answer: 'Engine systems and diagnostic/problem-solving questions are the most heavily weighted, so mastering fault diagnosis and engine performance is critical.',
+      },
+      {
+        question: 'How long is the Automotive Service Technician apprenticeship?',
+        answer: 'The Automotive Service Technician apprenticeship typically requires roughly 7,200 hours of combined work and technical training.',
+      },
+      {
+        question: 'Can I use tools or reference materials during the exam?',
+        answer: 'No. The exam is closed-book and closed-tools, so you should practice using only memory and quick calculation techniques.',
+      },
+    ],
+    topStudyTips: [
+      'Learn OBD and electrical system diagnostics thoroughly — they appear throughout the exam',
+      'Memorize common engine performance formulas and service procedures',
+      'Practice brake, steering, and suspension troubleshooting using symptom-based reasoning',
+      'Understand HVAC service, refrigerant handling, and air distribution system principles',
+      'Drill time management with full-length 125-question practice tests',
+    ],
+  },
+  {
     slug: 'carpenter',
     courseSlug: 'carpenter-403a',
     tradeName: 'Carpenter',

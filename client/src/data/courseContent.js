@@ -9,11 +9,13 @@ import electricianCourseData from './constructionElectrician';
 import electricianCourseDataFR from './constructionElectrician.fr';
 import hvacCourse from './hvacCourse';
 import welderCourseData from './welderCourse';
+import autoservtechCourseData from './autoservtechCourse';
 
 const coursesByLang = {
   en: {
     'hairstylist-332a': courseEn,
     'plumber-306a': plumberCourseData,
+    'autoservtech-310s': autoservtechCourseData,
     'carpenter-403a': carpenterCourseData,
     'construction-electrician-309a': electricianCourseData,
     'refrigeration-air-conditioning-mechanic-313a': hvacCourse,
@@ -22,6 +24,7 @@ const coursesByLang = {
   fr: {
     'hairstylist-332a': hairstylistCourseFr,
     'plumber-306a': plumberCourseDataFR,
+    'autoservtech-310s': autoservtechCourseData,
     'carpenter-403a': carpenterCourseData,
     'construction-electrician-309a': electricianCourseDataFR,
     'refrigeration-air-conditioning-mechanic-313a': hvacCourse,
@@ -30,6 +33,7 @@ const coursesByLang = {
   ru: {
     'hairstylist-332a': hairstylistCourseRU,
     'plumber-306a': plumberCourseDataRU,
+    'autoservtech-310s': autoservtechCourseData,
     'carpenter-403a': carpenterCourseData,
     'construction-electrician-309a': electricianCourseData,
     'refrigeration-air-conditioning-mechanic-313a': hvacCourse,
@@ -38,7 +42,7 @@ const coursesByLang = {
 };
 
 /** All course slugs available for purchase (single source of truth) */
-export const COURSE_SLUGS = ['hairstylist-332a', 'plumber-306a', 'carpenter-403a', 'construction-electrician-309a', 'refrigeration-air-conditioning-mechanic-313a', 'welder-456a'];
+export const COURSE_SLUGS = ['hairstylist-332a', 'plumber-306a', 'autoservtech-310s', 'carpenter-403a', 'construction-electrician-309a', 'refrigeration-air-conditioning-mechanic-313a', 'welder-456a'];
 
 /**
  * Get course data for a given slug and language.

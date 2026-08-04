@@ -40,6 +40,12 @@ export const STUDY_PLAN_PHASES = {
     { title: 'Thermal cutting, gouging, and welding', key: 'cutting-welding' },
     { title: 'Practice exams and review', key: 'practice-exams' },
   ],
+  'autoservtech': [
+  { title: 'Safety and fundamentals', key: 'safety-fundamentals' },
+  { title: 'Vehicle systems and diagnostics', key: 'systems-diagnostics' },
+  { title: 'Powertrain, brakes, and HVAC', key: 'powertrain-brakes-hvac' },
+  { title: 'Practice exams and review', key: 'practice-exams' },
+],
 };
 
 /** Fallback when a published course has no trade-specific phases yet */

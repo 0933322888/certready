@@ -15,6 +15,7 @@ const TRADE_SLUG_TO_COURSE_SLUG = {
   welder: 'welder-456a',
   hvac: 'refrigeration-air-conditioning-mechanic-313a',
   'refrigeration-air-conditioning-mechanic': 'refrigeration-air-conditioning-mechanic-313a',
+  autoservtech: 'autoservtech',
 };
 
 /** Full mock exam question count per trade (for readiness 20% calculation) */
@@ -26,6 +27,7 @@ const EXAM_QUESTIONS_BY_TRADE = {
   welder: 125,
   hvac: 125,
   'refrigeration-air-conditioning-mechanic': 125,
+  autoservtech: 125,
 };
 
 /**

@@ -10,6 +10,7 @@ import plumberQuestions from './plumber.js';
 import hairstylistQuestions from './hairstylist.js';
 import hvacQuestions from './hvac.js';
 import welderQuestions from './welder.js';
+import autoservtechQuestions from './autoservtech.js';
 
 export { TRADE_TOPICS, getTopicLabel };
 
@@ -21,4 +22,5 @@ export const QUESTIONS = [
   ...hairstylistQuestions,
   ...hvacQuestions,
   ...welderQuestions,
+  ...autoservtechQuestions
 ];
