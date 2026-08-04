@@ -528,7 +528,13 @@ export const TRADE_DATA = {
 
 /** Get trade guide data by slug, or null if not found */
 export function getTradeBySlug(slug) {
-  return TRADE_DATA[slug] ?? null;
+  if (!slug) return null;
+  const direct = TRADE_DATA[slug];
+  if (direct) return direct;
+
+  // Accept course slugs too (e.g. autoservtech-310s -> autoservtech)
+  const base = slug.split('-')[0];
+  return TRADE_DATA[base] ?? null;
 }
 
 /**

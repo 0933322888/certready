@@ -126,16 +126,7 @@ export function AuthProvider({ children }) {
       return purchaseSlug === courseSlug || purchaseId?.toString() === courseSlug?.toString();
     });
 
-    const result = explicitAccess || hasCoursePurchase;
-    console.log('[mock-access]', {
-      courseSlug,
-      explicitAccess,
-      hasCoursePurchase,
-      mockExamSlugs: slugs,
-      purchases: state.user.purchases,
-      result,
-    });
-    return result;
+    return explicitAccess || hasCoursePurchase;
   };
 
   return (

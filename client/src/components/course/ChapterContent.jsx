@@ -216,15 +216,6 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
         const trade = getTradeBySlug(tradeSlug);
         if (!trade) return null;
         const canStartMock = hasMockExamAccess(course.slug || course.id) || hasPurchasedBySlug(course.slug || course.id);
-        console.log('[chapter-cta]', {
-          courseId: course?.id,
-          courseSlug: course?.slug,
-          chapterId: chapter?.id,
-          chapterTitle: chapter?.title,
-          canStartMock,
-          hasPurchasedBySlug: hasPurchasedBySlug(course.slug || course.id),
-          mockExamAccess: hasMockExamAccess(course.slug || course.id),
-        });
         return (
           <div className="mb-8">
             <Card className="p-6 border-2 border-accent/30 bg-accent/5">
