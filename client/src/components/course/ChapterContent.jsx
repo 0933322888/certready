@@ -13,6 +13,8 @@ import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
 import api from '../../utils/api';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 /** Renders string with **bold** segments as inline <strong> (for list items) */
 function formatInlineBold(str) {
@@ -54,16 +56,32 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
     switch (content.type) {
       case 'paragraph':
         return (
-          <p className="text-text-primary leading-relaxed mb-4 text-base">
-            {content.text}
-          </p>
+          <div className="text-text-primary leading-relaxed mb-4 text-base">
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
+              p: ({node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
+              ul: ({node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
+              ol: ({node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
+              table: ({node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
+              th: ({node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
+              td: ({node, ...props}) => <td className="border px-2 py-1" {...props} />,
+              strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
+            }}>{content.text}</ReactMarkdown>
+          </div>
         );
 
       case 'text':
         return (
-          <p className="text-text-primary leading-relaxed mb-4 text-base">
-            {content.text}
-          </p>
+          <div className="text-text-primary leading-relaxed mb-4 text-base">
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
+              p: ({node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
+              ul: ({node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
+              ol: ({node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
+              table: ({node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
+              th: ({node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
+              td: ({node, ...props}) => <td className="border px-2 py-1" {...props} />,
+              strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
+            }}>{content.text}</ReactMarkdown>
+          </div>
         );
       
       case 'keyTerm':
