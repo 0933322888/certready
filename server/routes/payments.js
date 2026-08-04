@@ -175,6 +175,13 @@ router.post('/create-checkout-session', protect, async (req, res) => {
         await user.save();
       }
 
+      // Free promo / free-window completions should also unlock the mock exam.
+      if (!user.mockExamSlugs?.includes(course.slug)) {
+        user.mockExamSlugs = user.mockExamSlugs || [];
+        user.mockExamSlugs.push(course.slug);
+        await user.save();
+      }
+
       const successUrl = `${process.env.CLIENT_URL}/checkout/success?session_id=${encodeURIComponent(freeSessionId)}`;
       return res.json({ sessionId: freeSessionId, url: successUrl, isFree: true, isFreeWindowActive, freeUntil });
     }
@@ -269,10 +276,19 @@ router.post('/webhook', async (req, res) => {
       purchase.stripePaymentIntent = session.payment_intent;
       await purchase.save();
 
-      // Add course to user's purchases
+      // Add course to user's purchases and unlock the mock exam for completed purchases.
       const user = await User.findById(purchase.user);
-      if (user && !userOwnsCourse(user, purchase.course)) {
-        user.purchases.push(purchase.course);
+      if (user) {
+        if (!userOwnsCourse(user, purchase.course)) {
+          user.purchases.push(purchase.course);
+        }
+
+        const course = await Course.findById(purchase.course).select('slug');
+        if (course?.slug && !user.mockExamSlugs?.includes(course.slug)) {
+          user.mockExamSlugs = user.mockExamSlugs || [];
+          user.mockExamSlugs.push(course.slug);
+        }
+
         await user.save();
       }
 
@@ -314,10 +330,19 @@ router.get('/verify/:sessionId', protect, async (req, res) => {
           purchase.stripePaymentIntent = session.payment_intent;
           await purchase.save();
 
-          // Add course to user's purchases
+          // Add course to user's purchases and unlock the mock exam for completed purchases.
           const user = await User.findById(req.user._id);
-          if (user && !userOwnsCourse(user, purchase.course._id)) {
-            user.purchases.push(purchase.course._id);
+          if (user) {
+            if (!userOwnsCourse(user, purchase.course._id)) {
+              user.purchases.push(purchase.course._id);
+            }
+
+            const course = await Course.findById(purchase.course._id).select('slug');
+            if (course?.slug && !user.mockExamSlugs?.includes(course.slug)) {
+              user.mockExamSlugs = user.mockExamSlugs || [];
+              user.mockExamSlugs.push(course.slug);
+            }
+
             await user.save();
           }
 
