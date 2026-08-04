@@ -4969,27 +4969,54 @@ export const autoservtechCourse = {
                 {
                     "id": "ch-38",
                     "number": 38,
-                    "title": "Mock Exam — 125 Questions",
-                    "subtitle": "Full-Length Practice Exam Matching Official Distribution",
+                    "title": "Red Seal Mock Exam and Exam Strategy",
+                    "subtitle": "125-question timed practice exam (4 hours), plus tips for exam success",
                     "isFree": false,
-                    "estimatedMinutes": 240,
+                    "estimatedMinutes": 5,
+                    "isMockExam": true,
                     "sections": [
                         {
                             "id": "ch-38-s1",
-                            "title": "Mock Exam — 125 Questions",
+                            "title": "Red Seal Exam Overview",
                             "content": [
                                 {
-                                    "type": "text",
-                                    "text": "This mock exam contains 125 questions proportional to the official MWA weighting and cognitive level split. Set a 4-hour timer. Answer all questions. Review explanations for every question — especially ones you got right by guessing. The explanations teach the reasoning."
+                                    "type": "paragraph",
+                                    "text": "The Automotive Service Technician Red Seal Interprovincial Examination consists of 125 multiple-choice questions. The exam is based on the Red Seal Occupational Standard (RSOS) and tests knowledge across all eight Major Work Activities (MWAs). The time allowed is 4 hours. Use the \"Start exam\" button above to launch the full timed mock exam simulation."
                                 },
                                 {
-                                    "type": "callout",
-                                    "style": "exam-tip",
-                                    "text": "MOCK EXAM INSTRUCTIONS: Use scratch paper. No reference materials. Flag questions. After completing, score yourself. 88+ = passing range. 75-87 = borderline — review weak MWAs. <75 = significant gaps — revisit course parts. Review ALL explanations."
+                                    "type": "table",
+                                    "headers": [
+                                        "MWA",
+                                        "Title",
+                                        "Approx. Questions (of 125)"
+                                    ],
+                                    "rows": [
+                                        ["A", "Common Occupational Skills", "9"],
+                                        ["B", "Engine & Engine Support Systems", "22"],
+                                        ["C", "Vehicle Module Communications", "12"],
+                                        ["D", "Driveline Systems", "17"],
+                                        ["E", "Electrical & Comfort Control", "23"],
+                                        ["F", "Steering, Suspension, Brakes, Tires", "23"],
+                                        ["G", "Restraints, Body, Accessories, Trim", "10"],
+                                        ["H", "Hybrid & EV Systems", "9"]
+                                    ]
+                                },
+                                {
+                                    "type": "infoBox",
+                                    "title": "Red Seal Exam Strategy",
+                                    "items": [
+                                        "Focus study time proportionally — MWAs B, E, and F make up the largest share of the exam.",
+                                        "Always read the full question stem before reviewing the options — many mistakes come from rushing or misreading.",
+                                        "Use the \"Start exam\" button above to complete the full mock exam under timed conditions.",
+                                        "Do not leave any question blank — there is no penalty for guessing.",
+                                        "Review your results by MWA and cognitive level to target weak areas after the exam.",
+                                        "Practice pacing at roughly 1.9 minutes per question so you can finish the full exam on time."
+                                    ]
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "practiceQuestions": []
                 }
             ]
         }
