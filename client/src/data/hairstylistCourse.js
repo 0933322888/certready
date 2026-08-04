@@ -29,7 +29,7 @@ export const hairstylistCourse = {
         '70+ term glossary (Chapter 14)',
         'Exam strategy and study tips (Chapter 15)',
         'Covers both Level 1 and Level 2 curriculum (480 hrs total)',
-        'Lifetime access — study at your own pace',
+        '5-year access — study at your own pace',
         'Based on official Skilled Trades Ontario 332A standard',
     ],
 

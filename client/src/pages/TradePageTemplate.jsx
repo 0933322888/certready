@@ -354,7 +354,7 @@ export default function TradePage({ trade }) {
                   "Full timed mock exam",
                   "Formula & glossary reference",
                   "Exam strategy guide",
-                  "Lifetime access",
+                  "5-year access — study at your own pace",
                 ].map((f) => (
                   <li key={f} className="flex items-center gap-1.5">
                     <span className="text-success">✓</span> {f}

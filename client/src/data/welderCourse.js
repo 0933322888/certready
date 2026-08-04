@@ -1926,7 +1926,7 @@ const welderCourse = {
       'Red Seal–style mock exam and exam strategy',
       'Formulas reference and key terms glossary',
       'Based on Red Seal Occupational Standard (RSOS) – Welder 2023',
-      'Lifetime access — study at your own pace',
+      '5-year access — study at your own pace',
     ],
     parts: _parts,
   };

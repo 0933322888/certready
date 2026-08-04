@@ -2147,7 +2147,7 @@ export const carpenterCourseData = {
         '100-question timed Red Seal mock exam and exam strategy',
         'Key terms glossary and trade acronyms (exam reference)',
         'Based on Red Seal Occupational Standard (RSOS) – Carpenter 2022',
-        'Lifetime access — study at your own pace',
+        '5-year access — study at your own pace',
     ],
     parts: _parts,
 };

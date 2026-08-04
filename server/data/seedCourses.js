@@ -17,7 +17,7 @@ export const seedCourses = [
       'Full 50-question mock exam',
       '60+ term glossary',
       'Covers STO Levels 1 & 2 (480 hrs)',
-      'Lifetime access',
+      '5-year access',
     ],
   },
   {
@@ -38,7 +38,7 @@ export const seedCourses = [
       'Red Seal–style mock exam and exam strategy',
       'Formulas reference and key terms glossary',
       'Based on Red Seal Occupational Standard (RSOS) – Plumber 2023',
-      'Lifetime access',
+      '5-year access',
     ],
   },
   {
@@ -59,7 +59,7 @@ export const seedCourses = [
       'Full mock exam matching the 125-question exam distribution',
       'Diagnostic workflows for OBD, electrical, brakes, suspension, and HVAC',
       'Glossary of key automotive terms and acronyms',
-      'Lifetime access',
+      '5-year access — study at your own pace',
     ],
   },
   {
@@ -79,7 +79,7 @@ export const seedCourses = [
       '100-question timed Red Seal mock exam and exam strategy',
       'Key terms glossary and trade acronyms (exam reference)',
       'Based on Red Seal Occupational Standard (RSOS) – Carpenter 2022',
-      'Lifetime access',
+      '5-year access',
     ],
   },
   {
@@ -101,7 +101,7 @@ export const seedCourses = [
       'Red Seal exam strategy and MWA weighting breakdown',
       'Based on Red Seal Occupational Standard (RSOS) — Construction Electrician 2025',
       'CEC-referenced content throughout',
-      'Lifetime access',
+      '5-year access',
     ],
   },
   {
@@ -123,7 +123,7 @@ export const seedCourses = [
       'Mock exam with annotated answer key',
       'Exam strategy guide and timing tips',
       'Covers CSA B52, B149, ASHRAE, WHMIS, and CEC references',
-      'Lifetime access',
+      '5-year access — study at your own pace',
     ],
   },
   {
@@ -144,7 +144,7 @@ export const seedCourses = [
       'Red Seal-style mock exam and exam strategy',
       'Formulas reference and key terms glossary',
       'Based on Red Seal Occupational Standard (RSOS) – Welder 2023',
-      'Lifetime access',
+      '5-year access — study at your own pace',
     ],
   },
 ];

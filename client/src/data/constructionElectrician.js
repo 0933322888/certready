@@ -2402,7 +2402,7 @@ export const electricianCourseData = {
     'Red Seal exam strategy and MWA weighting breakdown',
     'Based on Red Seal Occupational Standard (RSOS) — Construction Electrician 2025',
     'CEC-referenced content throughout',
-    'Lifetime access — study at your own pace',
+    '5-year access — study at your own pace',
   ],
   parts: _elecParts,
 };

@@ -12,7 +12,7 @@ export function getCoursePageSEO(course, tradeSlug, locale = 'en') {
   const canonical = tradeSlug ? `/trades/${tradeSlug}` : `/trades`;
   const isFrench = locale === 'fr';
   const title = (isFrench ? course.frSeoTitle : course.seoTitle) || `${tradeName} Red Seal Exam Prep — ${tradeCode} Study Guide`;
-  const description = (isFrench ? course.frSeoDescription : course.seoDescription) || `Prepare for your ${tradeName} Red Seal certification exam with confidence. ${totalChapters} chapters, ${totalQuestions}+ practice questions, and a full mock exam. Based on the official ${tradeCode} standard. Study at your own pace — one-time purchase, lifetime access.`;
+  const description = (isFrench ? course.frSeoDescription : course.seoDescription) || `Prepare for your ${tradeName} Red Seal certification exam with confidence. ${totalChapters} chapters, ${totalQuestions}+ practice questions, and a full mock exam. Based on the official ${tradeCode} standard. Study at your own pace — one-time purchase, 5-year access.`;
   const keywords = (isFrench ? course.frSeoKeywords : course.seoKeywords) || `${tradeName}, Red Seal, ${tradeCode}, exam prep, study guide, practice questions, certification, Canadian trades`;
 
   return {
@@ -170,7 +170,7 @@ export function getBreadcrumbStructuredData(items) {
 export function getAllCoursesPageSEO() {
   return {
     title: 'Red Seal Exam Prep Courses — All Trades',
-    description: "Browse CertReady's Red Seal exam preparation courses for Canadian trades. Hairstylist (332A), Plumber (306A), and more. One-time purchase, lifetime access, and the first 5 days free after registration.",
+    description: "Browse CertReady's Red Seal exam preparation courses for Canadian trades. Hairstylist (332A), Plumber (306A), and more. One-time purchase, 5-year access, and the first 5 days free after registration.",
     keywords: 'Red Seal courses, exam prep, Canadian trades, Hairstylist, Plumber, 332A, 306A, certification, study guide',
     canonical: '/trades',
   };

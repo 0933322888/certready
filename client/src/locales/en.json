@@ -75,7 +75,7 @@
     "view": "View",
     "whatsIncluded": "What's Included",
     "signInToPurchase": "Sign In to Purchase",
-    "lifetimeAccess": "Lifetime access",
+    "lifetimeAccess": "5-year access",
     "noSubscription": "No subscription",
     "studyPace": "Study at your own pace",
     "choosePath": "Choose your certification path",
@@ -377,9 +377,9 @@
     "comingSoon": "Coming Soon",
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
-      { "question": "What's included in the course?", "answer": "Each course includes comprehensive chapters covering all exam topics, 75+ practice questions with detailed explanations, a full-length mock exam, key term glossary, and lifetime access to all materials." },
+      { "question": "What's included in the course?", "answer": "Each course includes comprehensive chapters covering all exam topics, 75+ practice questions with detailed explanations, a full-length mock exam, key term glossary, and 5-year access to all materials." },
       { "question": "How long do I have access?", "answer": "You have 5 years access to the course materials. You can study at your own pace and revisit the content anytime." },
-      { "question": "What if I fail the exam?", "answer": "While we can't guarantee you'll pass, our courses are designed to give you the best possible preparation. You'll have lifetime access to review the materials and retake the exam as needed." },
+      { "question": "What if I fail the exam?", "answer": "While we can't guarantee you'll pass, our courses are designed to give you the best possible preparation. You'll have 5-year access to review the materials and retake the exam as needed." },
       { "question": "Is this official STO material?", "answer": "Our courses are based on the official Skilled Trades Ontario curriculum standards and are designed to help you prepare for the certification exam. However, we are not affiliated with STO." },
       { "question": "What payment methods are accepted?", "answer": "We accept all major credit cards through our secure Stripe payment processor. Payment is processed securely and you'll receive immediate access upon purchase." },
       { "question": "Can I get a refund?", "answer": "Due to the digital nature of our courses, we do not offer refunds. However, your first 5 days after registration are free, so you can explore the course before purchasing." }
@@ -387,7 +387,7 @@
   },
   "coursesPage": {
     "title": "Red Seal Exam Prep Courses — Canadian Trades Certification",
-    "subtitle": "Browse CertReady's Red Seal exam preparation courses. One-time purchase, lifetime access, and first 5 days free after registration for every trade. Based on the official Red Seal Occupational Standard.",
+    "subtitle": "Browse CertReady's Red Seal exam preparation courses. One-time purchase, 5-year access, and first 5 days free after registration for every trade. Based on the official Red Seal Occupational Standard.",
     "courseTitleSuffix": "Red Seal Exam Prep",
     "learnMoreAbout": "Learn more about the {{trade}} Red Seal exam →",
     "comingSoonTitle": "More Courses Coming Soon",
@@ -462,7 +462,7 @@
     "intro": "The {{tradeName}} ({{tradeCode}}) Red Seal exam is a {{count}}-question multiple-choice test. You need {{passMark}}% to pass. Try the sample questions below with instant feedback and explanations — no sign-up required.",
     "introSub": "These are the same style of questions you'll see on the real exam. Answer each question to see the correct answer and a short explanation.",
     "ctaHeading": "Unlock 500+ additional practice questions",
-    "ctaSubtext": "Get full access to the {{tradeName}} exam prep course: hundreds of practice questions, study chapters, and a timed mock exam. One-time purchase, lifetime access.",
+    "ctaSubtext": "Get full access to the {{tradeName}} exam prep course: hundreds of practice questions, study chapters, and a timed mock exam. One-time purchase, 5-year access.",
     "ctaButton": "Unlock full exam prep →"
   },
   "mockExam": {
@@ -537,7 +537,7 @@
   "tradesPage": {
     "breadcrumb": "Trades",
     "title": "Red Seal Exam Prep by Trade",
-    "subtitle": "Choose your trade to see exam prep courses, study guides, and free practice questions. One-time purchase, lifetime access.",
+    "subtitle": "Choose your trade to see exam prep courses, study guides, and free practice questions. One-time purchase, 5-year access.",
     "tryFreePractice": "Try free practice questions →",
     "liveGuidesHint": "Guides with a dot are live — exam guide, sample questions & study tips available."
   },
