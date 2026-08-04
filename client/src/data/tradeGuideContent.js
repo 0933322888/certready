@@ -534,7 +534,16 @@ export function getTradeBySlug(slug) {
 
   // Accept course slugs too (e.g. autoservtech-310s -> autoservtech)
   const base = slug.split('-')[0];
-  return TRADE_DATA[base] ?? null;
+  if (TRADE_DATA[base]) return TRADE_DATA[base];
+
+  // Known alias mappings for guide slugs to trade data keys
+  const aliasMap = {
+    autoservtech: 'automotive-service-technician',
+  };
+  const alias = aliasMap[base];
+  if (alias && TRADE_DATA[alias]) return TRADE_DATA[alias];
+
+  return null;
 }
 
 /**
