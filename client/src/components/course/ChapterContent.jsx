@@ -85,6 +85,7 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
         );
       
       case 'keyTerm':
+      case 'acronym':
         return (
           <KeyTermCard term={content.term} definition={content.definition} />
         );

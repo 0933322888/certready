@@ -129,262 +129,262 @@ export const autoservtechCourse = {
                   "definition": "Power (P) = Voltage (V) × Current (I). Used to calculate electrical load, fuse sizing, alternator output, and parasitic draw in watts."
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "ABS",
                   "definition": "Anti-lock Brake System"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "AEB",
                   "definition": "Automatic Emergency Braking"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "ACC",
                   "definition": "Adaptive Cruise Control"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "ADAS",
                   "definition": "Advanced Driver Assistance Systems"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "AVR",
                   "definition": "Alternating Voltage Regulator"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "AWD",
                   "definition": "All-Wheel Drive"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "BCM",
                   "definition": "Body Control Module"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "BEV",
                   "definition": "Battery Electric Vehicle"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "CAN",
                   "definition": "Controller Area Network"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "CVT",
                   "definition": "Continuously Variable Transmission"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "DCT",
                   "definition": "Dual-Clutch Transmission"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "DLC",
                   "definition": "Data Link Connector"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "DOC",
                   "definition": "Diesel Oxidation Catalyst"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "DMM",
                   "definition": "Digital Multimeter"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "DPF",
                   "definition": "Diesel Particulate Filter"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "DSC",
                   "definition": "Dynamic Stability Control"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "DTC",
                   "definition": "Diagnostic Trouble Code"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "EBCM",
                   "definition": "Electronic Brake Control Module"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "EV",
                   "definition": "Electric Vehicle"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "EVAP",
                   "definition": "Evaporative Emission Control System"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "GDI",
                   "definition": "Gasoline Direct Injection"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "GHS",
                   "definition": "Globally Harmonized System (of Classification and Labelling of Chemicals)"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "HEV",
                   "definition": "Hybrid Electric Vehicle"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "HID",
                   "definition": "High-Intensity Discharge"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "HUD",
                   "definition": "Head-Up Display"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "HVAC",
                   "definition": "Heating, Ventilation, and Air Conditioning"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "ISO",
                   "definition": "International Organization for Standardization"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "LIN",
                   "definition": "Local Interconnect Network"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "MIG",
                   "definition": "Metal Inert Gas (welding)"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "NVH",
                   "definition": "Noise, Vibration, and Harshness"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "OBD",
                   "definition": "On-Board Diagnostics"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "OCS",
                   "definition": "Occupant Classification System"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "OEM",
                   "definition": "Original Equipment Manufacturer"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "OH&S",
                   "definition": "Occupational Health and Safety"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "PCM",
                   "definition": "Powertrain Control Module"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "PCV",
                   "definition": "Positive Crankcase Ventilation"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "PHEV",
                   "definition": "Plug-in Hybrid Electric Vehicle"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "PPE",
                   "definition": "Personal Protective Equipment"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "PTC",
                   "definition": "Positive Temperature Coefficient"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "PTU",
                   "definition": "Power Transfer Unit"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "SAE",
                   "definition": "Society of Automotive Engineers"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "SCR",
                   "definition": "Selective Catalytic Reduction"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "SDS",
                   "definition": "Safety Data Sheet"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "TCM",
                   "definition": "Transmission Control Module"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "TCS",
                   "definition": "Traction Control System"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "TPMS",
                   "definition": "Tire Pressure Monitoring System"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "TSB",
                   "definition": "Technical Service Bulletin"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "VCT",
                   "definition": "Variable Cam Timing"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "VGT",
                   "definition": "Variable Geometry Turbocharger"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "VIN",
                   "definition": "Vehicle Identification Number"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "VVT",
                   "definition": "Variable Valve Timing"
                 },
                 {
-                  "type": "acronym",
+                  "type": "keyTerm",
                   "term": "WHMIS",
                   "definition": "Workplace Hazardous Materials Information System"
                 }
@@ -434,12 +434,30 @@ export const autoservtechCourse = {
                   "text": "HIGH-RISK: Lifting vehicles — use OEM lift points only. Chock wheels. Engage parking brake (or chocks for EVs in service mode). Verify stability before working underneath. Jack stands rated for vehicle weight."
                 },
                 {
-                  "type": "text",
-                  "text": "**Personal Protective Equipment (PPE) — Minimum Requirements per Task**\n\n• Safety glasses (CSA Z94.3) — ALWAYS in shop\n• Steel-toe boots (CSA Green Patch) — ALWAYS\n• Nitrile gloves — chemicals, fluids, HV insulation (Class 0, 1000 V rated for HV)\n• Face shield — grinding, pressing, battery service\n• Hearing protection — impact tools, pneumatic equipment >85 dB\n• Respirator (N95 minimum; N100/P100 for brake dust, welding fumes, isocyanate paints)\n• HV insulated gloves + leather protectors — HEV/EV work\n• Arc-rated clothing (CAT 2 minimum) — HV battery service\n• Fall protection — work >3 m (10 ft) or on vehicle roofs"
+                  "type": "bullets",
+                  "items": [
+                    "**Safety glasses (CSA Z94.3)** — ALWAYS in shop",
+                    "**Steel-toe boots (CSA Green Patch)** — ALWAYS",
+                    "**Nitrile gloves** — chemicals, fluids, HV insulation (Class 0, 1000 V rated for HV)",
+                    "**Face shield** — grinding, pressing, battery service",
+                    "**Hearing protection** — impact tools, pneumatic equipment >85 dB",
+                    "Respirator (N95 minimum; N100/P100 for brake dust, welding fumes, isocyanate paints)",
+                    "**HV insulated gloves + leather protectors** — HEV/EV work",
+                    "**Arc-rated clothing (CAT 2 minimum)** — HV battery service",
+                    "**Fall protection** — work >3 m (10 ft) or on vehicle roofs"
+                  ],
+                  "title": "Personal Protective Equipment (PPE) — Minimum Requirements per Task"
                 },
                 {
-                  "type": "text",
-                  "text": "**WHMIS 2015 (GHS-Aligned) — Key Points**\n\n• SDS (Safety Data Sheet) — 16 sections; Section 2 (Hazards), 4 (First Aid), 7 (Handling), 8 (PPE) are critical\n• Pictograms: Flame (flammable), Skull (toxic), Corrosion (acids/bases), Health Hazard (carcinogen/sensitizer), Gas Cylinder (compressed gas), Environment (aquatic toxicity)\n• Labels: Product identifier, signal word (Danger/Warning), hazard statements, precautionary statements, supplier ID\n• Worker rights: Know hazards, participate in safety, refuse unsafe work\n• Employer duties: Provide SDS, labels, training, PPE, ventilation"
+                  "type": "bullets",
+                  "items": [
+                    "**SDS (Safety Data Sheet)** — 16 sections; Section 2 (Hazards), 4 (First Aid), 7 (Handling), 8 (PPE) are critical",
+                    "**Pictograms**: Flame (flammable), Skull (toxic), Corrosion (acids/bases), Health Hazard (carcinogen/sensitizer), Gas Cylinder (compressed gas), Environment (aquatic toxicity)",
+                    "**Labels**: Product identifier, signal word (Danger/Warning), hazard statements, precautionary statements, supplier ID",
+                    "**Worker rights**: Know hazards, participate in safety, refuse unsafe work",
+                    "**Employer duties**: Provide SDS, labels, training, PPE, ventilation"
+                  ],
+                  "title": "WHMIS 2015 (GHS-Aligned) — Key Points"
                 },
                 {
                   "type": "text",
@@ -476,20 +494,55 @@ export const autoservtechCourse = {
                   "text": "EXAM TIP: Tool questions test application — not just names. Know: Which tool for which measurement (micrometer vs. dial indicator vs. feeler gauge), torque sequence/angle vs. torque-to-yield, scan tool vs. DMM vs. scope for specific circuits, and calibration intervals (torque wrenches annually, DMM per ISO 17025)."
                 },
                 {
-                  "type": "text",
-                  "text": "**Precision Measuring Tools**\n\n• Micrometers (outside, inside, depth) — crank journals, rotor thickness, piston diameter. Resolution 0.001 mm / 0.0001 in. Zero before use. Store open.\n• Dial indicators — runout (rotors, crank, wheels), end play, backlash. Magnetic base. Read in mm or thousandths.\n• Feeler gauges — valve lash, spark plug gap, injector shim clearance. Go/No-Go.\n• Bore gauges — cylinder taper/out-of-round, main bearing bores.\n• Torque wrenches (click, beam, digital, angle) — ±4% accuracy. Calibrate annually. Never use to break loose. Store at lowest setting.\n• Angle gauges / torque-angle adapters — torque-to-yield (TTY) fasteners (head bolts, main caps, CV axle nuts)."
+                  "type": "bullets",
+                  "items": [
+                    "**Micrometers (outside, inside, depth)** — crank journals, rotor thickness, piston diameter. Resolution 0.001 mm / 0.0001 in. Zero before use. Store open.",
+                    "**Dial indicators** — runout (rotors, crank, wheels), end play, backlash. Magnetic base. Read in mm or thousandths.",
+                    "**Feeler gauges** — valve lash, spark plug gap, injector shim clearance. Go/No-Go.",
+                    "**Bore gauges** — cylinder taper/out-of-round, main bearing bores.",
+                    "**Torque wrenches (click, beam, digital, angle)** — ±4% accuracy. Calibrate annually. Never use to break loose. Store at lowest setting.",
+                    "**Angle gauges / torque-angle adapters** — torque-to-yield (TTY) fasteners (head bolts, main caps, CV axle nuts)."
+                  ],
+                  "title": "Precision Measuring Tools"
                 },
                 {
-                  "type": "text",
-                  "text": "**Electrical Diagnostic Equipment**\n\n• Digital Multimeter (DMM) — Cat III 1000 V minimum. True RMS for automotive waveforms. Functions: V DC/AC, Ω, A (fused), Hz, duty cycle, diode test, capacitance, temperature. Leads: Kelvin (4-wire) for low-Ω.\n• Oscilloscope (lab scope) — 2+ channel, 20 MHz+ bandwidth. Essential for: injector current ramps, ignition primary/secondary, CAN bus waveforms, sensor signals (CKP, CMP, MAF, APP), HV inverter waveforms.\n• Scan Tool (OEM / aftermarket J2534 pass-thru) — Bi-directional control, live data, coding/programming, DTCs, freeze frame, readiness monitors. Know: Global OBD-II vs. manufacturer-specific PIDs.\n• Current clamps (Hall effect / Rogowski coil) — parasitic draw (mA), starter current, fuel pump, injector, HV battery pack current. No circuit intrusion.\n• Insulation tester (Megger) — 500/1000 V DC. Motor phase insulation, HV cable integrity, charging cable. >1 MΩ per 100 V rating.\n• Battery testers (conductance / load) — CCA, state of health, internal resistance. AGM/EFB/Lead-acid/Li-ion modes."
+                  "type": "bullets",
+                  "items": [
+                    "**Digital Multimeter (DMM)** — Cat III 1000 V minimum. True RMS for automotive waveforms. Functions: V DC/AC, Ω, A (fused), Hz, duty cycle, diode test, capacitance, temperature. Leads: Kelvin (4-wire) for low-Ω.",
+                    "**Oscilloscope (lab scope)** — 2+ channel, 20 MHz+ bandwidth. Essential for: injector current ramps, ignition primary/secondary, CAN bus waveforms, sensor signals (CKP, CMP, MAF, APP), HV inverter waveforms.",
+                    "**Scan Tool (OEM / aftermarket J2534 pass-thru)** — Bi-directional control, live data, coding/programming, DTCs, freeze frame, readiness monitors. Know: Global OBD-II vs. manufacturer-specific PIDs.",
+                    "**Current clamps (Hall effect / Rogowski coil)** — parasitic draw (mA), starter current, fuel pump, injector, HV battery pack current. No circuit intrusion.",
+                    "**Insulation tester (Megger)** — 500/1000 V DC. Motor phase insulation, HV cable integrity, charging cable. >1 MΩ per 100 V rating.",
+                    "**Battery testers (conductance / load)** — CCA, state of health, internal resistance. AGM/EFB/Lead-acid/Li-ion modes."
+                  ],
+                  "title": "Electrical Diagnostic Equipment"
                 },
                 {
-                  "type": "text",
-                  "text": "**Pressure & Temperature Test Equipment**\n\n• Fuel pressure gauges — mechanical (0-100 psi) and digital. Adapters for Schrader, quick-connect, banjo. Relief valve.\n• Transmission line pressure gauge set — 0-300 psi, multiple ports (line, lube, cooler, converter).\n• A/C manifold gauge set — R-134a / R-1234yf specific. High/low side. Recovery/recycle machine (SAE J2788/J2843).\n• Compression tester — gasoline (300 psi), diesel (600-1000 psi). Adapter per cylinder type.\n• Cylinder leak-down tester — regulated air source, % leakage. Identifies valve vs. ring vs. head gasket.\n• Vacuum gauge — intake manifold vacuum, booster check, MAP sensor correlation.\n• Exhaust gas analyzer (5-gas) — HC, CO, CO₂, O₂, NOx. Emissions diagnostics, catalyst efficiency.\n• Infrared pyrometer / thermal imager — catalyst light-off, brake drag, HV connections, HVAC vents, cylinder balance (exhaust port temps).\n• Refractometer — coolant freeze point, DEF concentration (32.5%), battery specific gravity (lead-acid)."
+                  "type": "bullets",
+                  "items": [
+                    "**Fuel pressure gauges** — mechanical (0-100 psi) and digital. Adapters for Schrader, quick-connect, banjo. Relief valve.",
+                    "**Transmission line pressure gauge set** — 0-300 psi, multiple ports (line, lube, cooler, converter).",
+                    "**A/C manifold gauge set** — R-134a / R-1234yf specific. High/low side. Recovery/recycle machine (SAE J2788/J2843).",
+                    "**Compression tester** — gasoline (300 psi), diesel (600-1000 psi). Adapter per cylinder type.",
+                    "**Cylinder leak-down tester** — regulated air source, % leakage. Identifies valve vs. ring vs. head gasket.",
+                    "**Vacuum gauge** — intake manifold vacuum, booster check, MAP sensor correlation.",
+                    "**Exhaust gas analyzer (5-gas)** — HC, CO, CO₂, O₂, NOx. Emissions diagnostics, catalyst efficiency.",
+                    "**Infrared pyrometer / thermal imager** — catalyst light-off, brake drag, HV connections, HVAC vents, cylinder balance (exhaust port temps).",
+                    "**Refractometer** — coolant freeze point, DEF concentration (32.5%), battery specific gravity (lead-acid)."
+                  ],
+                  "title": "Pressure & Temperature Test Equipment"
                 },
                 {
-                  "type": "text",
-                  "text": "**Pneumatic & Hydraulic Tools**\n\n• Impact wrenches (3/8\", 1/2\", 3/4\") — torque limiting extensions (torque sticks) for wheel nuts ONLY. Never for critical fasteners.\n• Air ratchets, die grinders, cut-off tools — 90-120 psi regulated supply. Oil daily.\n• Hydraulic presses — bearing installation, bushing removal, frame straightening. Tonnage rating. Safety cage.\n• Floor jacks / jack stands — rated capacity. Chocks. Lift points.\n• Vehicle lifts (2-post, 4-post, scissor) — ALI certified. Annual inspection. Adapters for EVs (battery protection).\n• Transmission jacks / engine supports — cradle, bar, chain types. Center of gravity alignment."
+                  "type": "bullets",
+                  "items": [
+                    "**Impact wrenches (3/8\", 1/2\", 3/4\")** — torque limiting extensions (torque sticks) for wheel nuts ONLY. Never for critical fasteners.",
+                    "**Air ratchets, die grinders, cut-off tools** — 90-120 psi regulated supply. Oil daily.",
+                    "**Hydraulic presses** — bearing installation, bushing removal, frame straightening. Tonnage rating. Safety cage.",
+                    "**Floor jacks / jack stands** — rated capacity. Chocks. Lift points.",
+                    "**Vehicle lifts (2-post, 4-post, scissor)** — ALI certified. Annual inspection. Adapters for EVs (battery protection).",
+                    "**Transmission jacks / engine supports** — cradle, bar, chain types. Center of gravity alignment."
+                  ],
+                  "title": "Pneumatic & Hydraulic Tools"
                 },
                 {
                   "type": "text",
@@ -501,8 +554,19 @@ export const autoservtechCourse = {
                   "text": "CRITICAL: Never use standard (non-insulated) hand tools on energized HEV/EV high-voltage components. Insulated tools must meet IEC 60900 / ASTM F1505. Visually inspect insulation before EVERY use. Discard if nicked, cut, or cracked."
                 },
                 {
-                  "type": "text",
-                  "text": "**Equipment Calibration & Maintenance Schedule**\n\n• Torque wrenches — annual calibration (ISO 6789), after drop/impact\n• DMM — annual ISO 17025 accredited lab; verify with known source monthly\n• Scan tools — software updates quarterly; hardware self-test per OEM\n• A/C machines — annual refrigerant identifier calibration; scale verification\n• Pressure gauges — compare to master gauge quarterly\n• Lifts — annual ALI inspection; daily operator check (locks, cables, hydraulic leaks)\n• Micrometers/dial indicators — annual; zero check daily\n• Insulation testers — annual; verify on known good motor\n• Battery testers — verify on known-good battery monthly"
+                  "type": "bullets",
+                  "items": [
+                    "**Torque wrenches** — annual calibration (ISO 6789), after drop/impact",
+                    "**DMM** — annual ISO 17025 accredited lab; verify with known source monthly",
+                    "**Scan tools** — software updates quarterly; hardware self-test per OEM",
+                    "**A/C machines** — annual refrigerant identifier calibration; scale verification",
+                    "**Pressure gauges** — compare to master gauge quarterly",
+                    "**Lifts** — annual ALI inspection; daily operator check (locks, cables, hydraulic leaks)",
+                    "**Micrometers/dial indicators** — annual; zero check daily",
+                    "**Insulation testers** — annual; verify on known good motor",
+                    "**Battery testers** — verify on known-good battery monthly"
+                  ],
+                  "title": "Equipment Calibration & Maintenance Schedule"
                 }
               ]
             }
@@ -604,8 +668,15 @@ export const autoservtechCourse = {
                   "text": "SAFETY: Compression/leak-down tests require cranking engine. Disable fuel (pump relay/fuse) and ignition (coil primary disconnect or COP unplug) to prevent flooding/fire. For GDI: also disable high-pressure pump. Verify no fuel spray before cranking."
                 },
                 {
-                  "type": "text",
-                  "text": "**CKP/CMP Correlation & VVT Diagnosis**\n\n• CKP (Crankshaft Position) — reference for RPM & cylinder identification (missing tooth/gap).\n• CMP (Camshaft Position) — identifies bank/which cylinder at TDC compression.\n• VVT fault: P0010-P0025 range. Scope test: Command OCV duty cycle (bi-directional) while monitoring CMP phase shift. No movement = stuck phaser, clogged screen, bad OCV, low oil pressure.\n• Timing chain stretch: CKP/CMP correlation DTC (P0016/P0017). Measure chain slack or use scope to count teeth between reference gaps.\n• GDI high-pressure pump lobe on camshaft — wear causes low rail pressure. Scope CMP for lobe profile anomaly."
+                  "type": "bullets",
+                  "items": [
+                    "**CKP (Crankshaft Position)** — reference for RPM & cylinder identification (missing tooth/gap).",
+                    "**CMP (Camshaft Position)** — identifies bank/which cylinder at TDC compression.",
+                    "**VVT fault**: P0010-P0025 range. Scope test: Command OCV duty cycle (bi-directional) while monitoring CMP phase shift. No movement = stuck phaser, clogged screen, bad OCV, low oil pressure.",
+                    "**Timing chain stretch**: CKP/CMP correlation DTC (P0016/P0017). Measure chain slack or use scope to count teeth between reference gaps.",
+                    "**GDI high-pressure pump lobe on camshaft** — wear causes low rail pressure. Scope CMP for lobe profile anomaly."
+                  ],
+                  "title": "CKP/CMP Correlation & VVT Diagnosis"
                 },
                 {
                   "type": "callout",
@@ -824,8 +895,18 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Diesel Compression Test — Procedure & Interpretation**\n\n• Adapter per glow plug or injector port (glow plug preferred — less volume).\n• Disable fuel: unplug SCV/FPR or fuel pump relay. Disable glow plugs.\n• Crank 5-6 compression strokes per cylinder. Battery fully charged.\n• Spec: typically 30-40 bar (435-580 psi) MIN. Variation <10% between cylinders.\n• Low all cylinders: timing gear train, camshaft, crankshaft, wrong thickness head gasket.\n• Low single cylinder: valve, piston, ring, head gasket.\n• Wet test: inject 5-10 mL oil. Pressure rise = rings. No rise = valves/head gasket.\n• Leak-down: use 100 psi shop air at TDC. Listen at intake (intake valve), exhaust (exhaust valve), oil fill (rings), coolant (head gasket)."
+                  "type": "bullets",
+                  "items": [
+                    "Adapter per glow plug or injector port (glow plug preferred — less volume).",
+                    "**Disable fuel**: unplug SCV/FPR or fuel pump relay. Disable glow plugs.",
+                    "Crank 5-6 compression strokes per cylinder. Battery fully charged.",
+                    "**Spec**: typically 30-40 bar (435-580 psi) MIN. Variation <10% between cylinders.",
+                    "**Low all cylinders**: timing gear train, camshaft, crankshaft, wrong thickness head gasket.",
+                    "**Low single cylinder**: valve, piston, ring, head gasket.",
+                    "**Wet test**: inject 5-10 mL oil. Pressure rise = rings. No rise = valves/head gasket.",
+                    "**Leak-down**: use 100 psi shop air at TDC. Listen at intake (intake valve), exhaust (exhaust valve), oil fill (rings), coolant (head gasket)."
+                  ],
+                  "title": "Diesel Compression Test — Procedure & Interpretation"
                 },
                 {
                   "type": "callout",
@@ -833,8 +914,16 @@ export const autoservtechCourse = {
                   "text": "EXAM TIP: Diesel compression specs are MUCH higher than gasoline. Do not confuse bar vs. psi (1 bar ≈ 14.5 psi). Typical diesel cranking compression = 30-40 bar (435-580 psi). Gasoline = 8-14 bar (120-200 psi). Questions may give readings in mixed units — convert. Also: diesel has no throttle, so vacuum gauge is not used for engine mechanical diagnosis (used for brake booster, EGR valve vacuum, etc.)."
                 },
                 {
-                  "type": "text",
-                  "text": "**Turbocharger Mechanical Diagnosis**\n\n• Shaft play: radial (in/out) <0.10 mm typical; axial (push/pull) <0.15 mm typical. Excess = oil seal failure → blue smoke, oil in intake/exhaust.\n• Vane actuation (VGT): scan tool command vs. actual position. Stuck = overboost (whistle, codes) or underboost (lag, smoke). Carbon buildup common.\n• Compressor wheel: inspect for fin damage (foreign object), oil contamination.\n• Turbine wheel: inspect for cracks, housing contact.\n• Wastegate (if equipped): vacuum/pressure actuator test, rod movement.\n• Oil supply/return: check for restriction (coked feed line), kinks, sludge. Prime new turbo with oil before start."
+                  "type": "bullets",
+                  "items": [
+                    "**Shaft play**: radial (in/out) <0.10 mm typical; axial (push/pull) <0.15 mm typical. Excess = oil seal failure → blue smoke, oil in intake/exhaust.",
+                    "**Vane actuation (VGT)**: scan tool command vs. actual position. Stuck = overboost (whistle, codes) or underboost (lag, smoke). Carbon buildup common.",
+                    "**Compressor wheel**: inspect for fin damage (foreign object), oil contamination.",
+                    "**Turbine wheel**: inspect for cracks, housing contact.",
+                    "**Wastegate (if equipped)**: vacuum/pressure actuator test, rod movement.",
+                    "**Oil supply/return**: check for restriction (coked feed line), kinks, sludge. Prime new turbo with oil before start."
+                  ],
+                  "title": "Turbocharger Mechanical Diagnosis"
                 }
               ]
             }
@@ -1120,8 +1209,16 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Serpentine Belt Drive — Diagnosis & Repair Details**\n\n• Belt wear: use Gates/Conti gauge — measures rib depth. Visual: transverse cracks (aging), missing chunks (pulleys), glazing (slip), pilling (misalignment).\n• Tensioner: automatic (spring) — check indicator mark in range. Measure torque to rotate (spec ~20-30 Nm). Weak spring = slip. Seized = no give = belt break.\n• Idler pulleys: spin — smooth, no lateral play, no noise. Replace if rough.\n• Alignment: laser tool or straight edge across pulleys. Misalignment >1 mm = belt wear, noise, throw-off.\n• Decoupler pulley (alternator): one-way clutch. Test: rotate inner ring — free one way, locked other. Failed = locked both ways (no decoupling = vibration) or free both ways (no charge).\n• Belt routing: photograph before removal. Diagram under hood. Directional belts (arrows) — install correctly."
+                  "type": "bullets",
+                  "items": [
+                    "**Belt wear**: use Gates/Conti gauge — measures rib depth. Visual: transverse cracks (aging), missing chunks (pulleys), glazing (slip), pilling (misalignment).",
+                    "**Tensioner**: automatic (spring) — check indicator mark in range. Measure torque to rotate (spec ~20-30 Nm). Weak spring = slip. Seized = no give = belt break.",
+                    "**Idler pulleys**: spin — smooth, no lateral play, no noise. Replace if rough.",
+                    "**Alignment**: laser tool or straight edge across pulleys. Misalignment >1 mm = belt wear, noise, throw-off.",
+                    "**Decoupler pulley (alternator)**: one-way clutch. Test: rotate inner ring — free one way, locked other. Failed = locked both ways (no decoupling = vibration) or free both ways (no charge).",
+                    "**Belt routing**: photograph before removal. Diagram under hood. Directional belts (arrows) — install correctly."
+                  ],
+                  "title": "Serpentine Belt Drive — Diagnosis & Repair Details"
                 },
                 {
                   "type": "callout",
@@ -1244,8 +1341,14 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Gateway Modules — The Bridge Between Buses**\n\n• Gateway (Central Gateway Module / CGM) routes messages between HS-CAN, MS-CAN, LIN, Ethernet.\n• Translates signal formats, manages sleep/wake, enforces security (firewall).\n• Gateway failure = multiple bus \"U\" codes, loss of cross-system functions (e.g., engine torque request to transmission lost).\n• Diagnostic: scan tool must connect through gateway to reach all buses. Some OEMs require gateway \"unlock\" for programming."
+                  "type": "bullets",
+                  "items": [
+                    "Gateway (Central Gateway Module / CGM) routes messages between HS-CAN, MS-CAN, LIN, Ethernet.",
+                    "Translates signal formats, manages sleep/wake, enforces security (firewall).",
+                    "Gateway failure = multiple bus \"U\" codes, loss of cross-system functions (e.g., engine torque request to transmission lost).",
+                    "**Diagnostic**: scan tool must connect through gateway to reach all buses. Some OEMs require gateway \"unlock\" for programming."
+                  ],
+                  "title": "Gateway Modules — The Bridge Between Buses"
                 },
                 {
                   "type": "callout",
@@ -1372,8 +1475,16 @@ export const autoservtechCourse = {
                   "text": "EXAM TIP: \"Module isolation\" (unplugging modules one by one) is the standard procedure for a shorted bus. Order: aftermarket accessories first, then non-safety modules (radio, amp, door modules), then safety-critical last (ABS, PCM, airbag). Document each unplug. Bus voltage returns to 2.5 V/2.5 V? The last unplugged module or its harness is the fault. Never unplug airbag modules with key on."
                 },
                 {
-                  "type": "text",
-                  "text": "**Wiring Repair — CAN Bus Specifics**\n\n• Twisted pair: maintain twist rate (1 twist per 20-25 mm). Untwist only at connector.\n• Shield: if OEM uses shielded CAN, reconnect shield at ONE end only (usually gateway) to avoid ground loops.\n• Solder + heat shrink preferred. Crimp with sealed butt connectors acceptable if OEM spec.\n• NO wire nuts, electrical tape only, or non-twisted repair wire.\n• Length: keep repair section short. Total bus length limits apply (HS-CAN ~40 m max).\n• After repair: verify 60 Ω termination, scope waveform clean, clear codes, road test all functions."
+                  "type": "bullets",
+                  "items": [
+                    "**Twisted pair**: maintain twist rate (1 twist per 20-25 mm). Untwist only at connector.",
+                    "**Shield**: if OEM uses shielded CAN, reconnect shield at ONE end only (usually gateway) to avoid ground loops.",
+                    "Solder + heat shrink preferred. Crimp with sealed butt connectors acceptable if OEM spec.",
+                    "NO wire nuts, electrical tape only, or non-twisted repair wire.",
+                    "**Length**: keep repair section short. Total bus length limits apply (HS-CAN ~40 m max).",
+                    "**After repair**: verify 60 Ω termination, scope waveform clean, clear codes, road test all functions."
+                  ],
+                  "title": "Wiring Repair — CAN Bus Specifics"
                 }
               ]
             }
@@ -1499,8 +1610,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Common Programming Scenarios & Pitfalls**\n\n• PCM/ECM replacement: Flash → VIN → Injector coding (diesel) → Immobilizer key learn → Crank/cam relearn → Throttle body relearn → Transmission adaptive reset.\n• TCM replacement: Flash → VIN → Clutch/trans adaptive learn (may require drive cycle).\n• BCM/Gateway: Flash → VIN → Option configuration → LIN slave programming (door modules) → Immobilizer sync.\n• ABS/ESC module: Flash → VIN → Steering angle sensor calibration → Yaw/lat accel sensor calibration → Brake pressure sensor calibration.\n• Instrument cluster: Flash → VIN → Odometer sync (dealer only if mileage mismatch) → Configuration.\n\nPitfalls: Using \"charge\" mode on maintainer (pulses voltage). Wrong calibration for engine/trans/axle combo. Skipping injector coding (diesel) = rough run, smoke, catalyst damage. Forgetting steering angle calibration = ESC/ABS lights, pull. Not clearing codes after flash = false \"U\" codes from old software."
+                  "type": "bullets",
+                  "items": [
+                    "**PCM/ECM replacement**: Flash → VIN → Injector coding (diesel) → Immobilizer key learn → Crank/cam relearn → Throttle body relearn → Transmission adaptive reset.",
+                    "**TCM replacement**: Flash → VIN → Clutch/trans adaptive learn (may require drive cycle).",
+                    "**BCM/Gateway**: Flash → VIN → Option configuration → LIN slave programming (door modules) → Immobilizer sync.",
+                    "**ABS/ESC module**: Flash → VIN → Steering angle sensor calibration → Yaw/lat accel sensor calibration → Brake pressure sensor calibration.",
+                    "**Instrument cluster**: Flash → VIN → Odometer sync (dealer only if mileage mismatch) → Configuration. Pitfalls: Using \"charge\" mode on maintainer (pulses voltage). Wrong calibration for engine/trans/axle combo. Skipping injector coding (diesel) = rough run, smoke, catalyst damage. Forgetting steering angle calibration = ESC/ABS lights, pull. Not clearing codes after flash = false \"U\" codes from old software."
+                  ],
+                  "title": "Common Programming Scenarios & Pitfalls"
                 },
                 {
                   "type": "callout",
@@ -1588,8 +1706,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Data Logging & Intermittent Network Faults**\n\n• Intermittent bus faults (loose pin, temperature-sensitive short) may not appear during static test.\n• Use scan tool \"Data Logger\" / \"Flight Recorder\" — record bus voltage, error frames, module online/offline status during road test.\n• Some VCIs support \"long-term logging\" (hours) — plug in, customer drives, retrieve log.\n• Analyze: CAN error frames (ACK error, form error, stuff error, CRC error) = physical layer issue. Module \"goes to sleep\" unexpectedly = power/ground/wake circuit.\n• Gateway logs: \"Bus-off recovery\" events = module caused bus-off (too many errors). Identify by source address."
+                  "type": "bullets",
+                  "items": [
+                    "Intermittent bus faults (loose pin, temperature-sensitive short) may not appear during static test.",
+                    "**Use scan tool \"Data Logger\" / \"Flight Recorder\"** — record bus voltage, error frames, module online/offline status during road test.",
+                    "**Some VCIs support \"long-term logging\" (hours)** — plug in, customer drives, retrieve log.",
+                    "**Analyze**: CAN error frames (ACK error, form error, stuff error, CRC error) = physical layer issue. Module \"goes to sleep\" unexpectedly = power/ground/wake circuit.",
+                    "**Gateway logs**: \"Bus-off recovery\" events = module caused bus-off (too many errors). Identify by source address."
+                  ],
+                  "title": "Data Logging & Intermittent Network Faults"
                 },
                 {
                   "type": "callout",
@@ -1723,8 +1848,17 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Clutch Hydraulic System — Bleed Procedures**\n\n• Standard bleed: slave bleed screw, helper pumps pedal, hold, open/close. Repeat.\n• Gravity bleed: open slave bleed, reservoir full, wait — slow but effective.\n• Pressure bleed: pressurized reservoir (1-1.5 bar) at master, open slave bleed.\n• Vacuum bleed: vacuum pump at slave bleed screw — pulls fluid through.\n• Bench bleed master cylinder before install (critical — avoids trapped air).\n• Self-adjusting slave cylinders (CSC): no bleed screw — cycle pedal 50+ times per OEM procedure.\n• Fluid: DOT 3/4/5.1 per OEM. NEVER DOT 5 (silicone) in DOT 3/4 system. DOT 4 LV for some modern."
+                  "type": "bullets",
+                  "items": [
+                    "**Standard bleed**: slave bleed screw, helper pumps pedal, hold, open/close. Repeat.",
+                    "**Gravity bleed**: open slave bleed, reservoir full, wait — slow but effective.",
+                    "**Pressure bleed**: pressurized reservoir (1-1.5 bar) at master, open slave bleed.",
+                    "**Vacuum bleed**: vacuum pump at slave bleed screw — pulls fluid through.",
+                    "Bench bleed master cylinder before install (critical — avoids trapped air).",
+                    "**Self-adjusting slave cylinders (CSC)**: no bleed screw — cycle pedal 50+ times per OEM procedure.",
+                    "**Fluid**: DOT 3/4/5.1 per OEM. NEVER DOT 5 (silicone) in DOT 3/4 system. DOT 4 LV for some modern."
+                  ],
+                  "title": "Clutch Hydraulic System — Bleed Procedures"
                 },
                 {
                   "type": "callout",
@@ -1861,8 +1995,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Air Check Procedure — Clutch/Servo Application**\n\n• Remove valve body or use external ports. Low-pressure regulated air (10-20 psi).\n• Apply to each clutch/band port: hear distinct \"thunk\" = piston moves. No sound = leak (seal, piston, case passage). Hiss = seal leak.\n• Forward clutch, direct clutch, reverse clutch, low/reverse band servo, 2nd gear band servo, etc.\n• Compare both sides (left/right) for dual-clutch packs.\n• Safety: air pressure LOW. Wear face shield. Plug other ports."
+                  "type": "bullets",
+                  "items": [
+                    "Remove valve body or use external ports. Low-pressure regulated air (10-20 psi).",
+                    "**Apply to each clutch/band port**: hear distinct \"thunk\" = piston moves. No sound = leak (seal, piston, case passage). Hiss = seal leak.",
+                    "Forward clutch, direct clutch, reverse clutch, low/reverse band servo, 2nd gear band servo, etc.",
+                    "Compare both sides (left/right) for dual-clutch packs.",
+                    "**Safety**: air pressure LOW. Wear face shield. Plug other ports."
+                  ],
+                  "title": "Air Check Procedure — Clutch/Servo Application"
                 },
                 {
                   "type": "callout",
@@ -1986,12 +2127,25 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**CVT Fluid & Belt/Chain Inspection**\n\n• Fluid: check level at specific temp (e.g., 40°C) per OEM. Color: green/amber (NS-2), blue (NS-3), clear (some). Dark = oxidized. Metal = belt/chain wear.\n• Belt: steel bands + elements. Inspect via borescope (plug port). Look for: element cracking, band separation, glazing, edge wear.\n• Chain: link plates, pins, rocker pins. Stretch gauge or pin-to-pin measurement. Noise = stretch or guide wear.\n• Pulley bearings: primary/secondary/input/output. Stethoscope at operating temp.\n• Stepper motor: scan tool command vs. actual position. Current draw. Learn/adaptation reset after fluid change."
+                  "type": "bullets",
+                  "items": [
+                    "**Fluid**: check level at specific temp (e.g., 40°C) per OEM. Color: green/amber (NS-2), blue (NS-3), clear (some). Dark = oxidized. Metal = belt/chain wear.",
+                    "**Belt**: steel bands + elements. Inspect via borescope (plug port). Look for: element cracking, band separation, glazing, edge wear.",
+                    "**Chain**: link plates, pins, rocker pins. Stretch gauge or pin-to-pin measurement. Noise = stretch or guide wear.",
+                    "**Pulley bearings**: primary/secondary/input/output. Stethoscope at operating temp.",
+                    "**Stepper motor**: scan tool command vs. actual position. Current draw. Learn/adaptation reset after fluid change."
+                  ],
+                  "title": "CVT Fluid & Belt/Chain Inspection"
                 },
                 {
-                  "type": "text",
-                  "text": "**DCT Clutch Adaptation & Mechatronic Service**\n\n• Clutch adaptation: TCM learns kiss point (touch point) and fill time for each clutch. Values stored. Max adaptation = clutch worn out.\n• Reset adaptation ONLY after clutch replacement or mechatronic replacement. Then re-learn: ignition on, brake, shift N→D→N→R→N cycles per OEM.\n• Mechatronic: solenoids (clutch 1, clutch 2, gear selection 1-2, 3-4, 5-R, etc.), pressure sensors, temperature sensor. Solenoid resistance ~5-8 Ω typical. Current draw monitored by TCM.\n• Gear position sensors: Hall effect on shift rails. Signal: voltage vs. position. Calibration may be required after mechatronic R&R."
+                  "type": "bullets",
+                  "items": [
+                    "**Clutch adaptation**: TCM learns kiss point (touch point) and fill time for each clutch. Values stored. Max adaptation = clutch worn out.",
+                    "Reset adaptation ONLY after clutch replacement or mechatronic replacement. Then re-learn: ignition on, brake, shift N→D→N→R→N cycles per OEM.",
+                    "**Mechatronic**: solenoids (clutch 1, clutch 2, gear selection 1-2, 3-4, 5-R, etc.), pressure sensors, temperature sensor. Solenoid resistance ~5-8 Ω typical. Current draw monitored by TCM.",
+                    "**Gear position sensors**: Hall effect on shift rails. Signal: voltage vs. position. Calibration may be required after mechatronic R&R."
+                  ],
+                  "title": "DCT Clutch Adaptation & Mechatronic Service"
                 },
                 {
                   "type": "callout",
@@ -2224,8 +2378,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Driveshaft Angle Measurement & U-Joint Working Angles**\n\n• Working angle = angle between transmission output shaft and driveshaft, and between driveshaft and pinion.\n• Ideal: both angles equal and opposite (cancels 2nd order vibration). Max per joint: typically 3-5° (check OEM).\n• Measure: inclinometer on trans output, driveshaft, pinion flange. Calculate.\n• Two-piece shaft: center support bearing angle = 0° (level).\n• Adjust: engine/trans mounts, shims under rear axle (leaf spring), or adjustable control arms (link suspension)."
+                  "type": "bullets",
+                  "items": [
+                    "Working angle = angle between transmission output shaft and driveshaft, and between driveshaft and pinion.",
+                    "**Ideal**: both angles equal and opposite (cancels 2nd order vibration). Max per joint: typically 3-5° (check OEM).",
+                    "**Measure**: inclinometer on trans output, driveshaft, pinion flange. Calculate.",
+                    "**Two-piece shaft**: center support bearing angle = 0° (level).",
+                    "**Adjust**: engine/trans mounts, shims under rear axle (leaf spring), or adjustable control arms (link suspension)."
+                  ],
+                  "title": "Driveshaft Angle Measurement & U-Joint Working Angles"
                 },
                 {
                   "type": "text",
@@ -2363,8 +2524,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**48V Mild-Hybrid (MHEV) System Basics**\n\n• 48V Li-ion battery (typically 0.5-1 kWh), DC-DC converter (48V ↔ 12V), Belt-driven Starter Generator (BSG / ISG).\n• 48V system isolated from 12V — separate grounds. Service plug disconnects 48V.\n• BSG: cranking assist, regen braking, torque fill, start-stop. 3-phase AC, inverter integrated.\n• Diagnosis: scan tool for 48V system (separate ECU). 48V voltage, current, SOC, cell balance. Insulation resistance test (Megger) >1 MΩ per 100 V.\n• Safety: 48V = shock hazard. Class 0 gloves, insulated tools. De-energize via service plug + wait (capacitor discharge)."
+                  "type": "bullets",
+                  "items": [
+                    "48V Li-ion battery (typically 0.5-1 kWh), DC-DC converter (48V ↔ 12V), Belt-driven Starter Generator (BSG / ISG).",
+                    "**48V system isolated from 12V** — separate grounds. Service plug disconnects 48V.",
+                    "**BSG**: cranking assist, regen braking, torque fill, start-stop. 3-phase AC, inverter integrated.",
+                    "**Diagnosis**: scan tool for 48V system (separate ECU). 48V voltage, current, SOC, cell balance. Insulation resistance test (Megger) >1 MΩ per 100 V.",
+                    "**Safety**: 48V = shock hazard. Class 0 gloves, insulated tools. De-energize via service plug + wait (capacitor discharge)."
+                  ],
+                  "title": "48V Mild-Hybrid (MHEV) System Basics"
                 },
                 {
                   "type": "callout",
@@ -2591,8 +2759,17 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Automatic Climate Control — Control Logic & Sensors**\n\n• Target temperature = driver setpoint + sunload compensation + ambient compensation.\n• Blower: PWM controlled. Speed based on delta-T (target vs. in-car).\n• Blend door: actuator (stepper or DC motor with potentiometer/Hall). Position feedback.\n• Mode door: panel/floor/defrost. Recirc door: fresh/recirc.\n• Sensors: In-car (aspirated), Ambient (front bumper), Evaporator (fin), Sunload (dash), Discharge (vent).\n• Scan tool: desired vs. actual for each actuator, sensor voltages, compressor duty cycle, blower duty cycle.\n• Calibration: \"HVAC actuator calibration\" — cycles all doors to end-stops, learns positions."
+                  "type": "bullets",
+                  "items": [
+                    "Target temperature = driver setpoint + sunload compensation + ambient compensation.",
+                    "**Blower**: PWM controlled. Speed based on delta-T (target vs. in-car).",
+                    "**Blend door**: actuator (stepper or DC motor with potentiometer/Hall). Position feedback.",
+                    "**Mode door**: panel/floor/defrost. Recirc door: fresh/recirc.",
+                    "**Sensors**: In-car (aspirated), Ambient (front bumper), Evaporator (fin), Sunload (dash), Discharge (vent).",
+                    "**Scan tool**: desired vs. actual for each actuator, sensor voltages, compressor duty cycle, blower duty cycle.",
+                    "**Calibration**: \"HVAC actuator calibration\" — cycles all doors to end-stops, learns positions."
+                  ],
+                  "title": "Automatic Climate Control — Control Logic & Sensors"
                 },
                 {
                   "type": "text",
@@ -2708,8 +2885,18 @@ export const autoservtechCourse = {
                   "text": "**HVAC Actuator Calibration — Scan Tool Procedure**\n\nRequired after: battery disconnect, actuator replacement, module replacement, HVAC module flash.\n\nTypical steps:\n1. Ignition ON, engine OFF.\n2. Scan tool: HVAC module → \"Actuator Calibration\" / \"Door Calibration\".\n3. System cycles each door: blend (hot-cold), mode (panel-floor-defrost), recirc (fresh-recirc).\n4. Doors hit mechanical stops — motor current spikes — module learns end-points.\n5. Complete = \"Calibration Successful\".\n6. Verify: command each position, confirm actual position follows.\n\nManual calibration (some older): ignition ON, press specific button combo (e.g., AUTO + RECIRC 3 sec) — refer to service info."
                 },
                 {
-                  "type": "text",
-                  "text": "**Electrical Wiring Repair — Best Practices**\n\n• CAN/LIN: twisted pair (maintain 1 twist/20-25 mm). Solder + adhesive heat shrink. Shield: reconnect at ONE end.\n• Power/ground: solder or crimp (ratchet tool, correct die). Heat shrink with adhesive liner.\n• Terminal extraction: OEM-specific tool (flat blade, round, Microsert, etc.). Never force.\n• Connector repair: replace terminal AND seal. Cavity plug if unused.\n• Ground: clean to bare metal. Star washer. Torque. Dielectric grease.\n• Fuse tap / add-a-circuit: max 5 A added. Proper fuse rating.\n• Aftermarket: no T-taps, no Scotchlocks. Solder + shrink. Relay for loads >10 A.\n• Documentation: photograph before, label, wiring diagram reference."
+                  "type": "bullets",
+                  "items": [
+                    "**CAN/LIN**: twisted pair (maintain 1 twist/20-25 mm). Solder + adhesive heat shrink. Shield: reconnect at ONE end.",
+                    "**Power/ground**: solder or crimp (ratchet tool, correct die). Heat shrink with adhesive liner.",
+                    "**Terminal extraction**: OEM-specific tool (flat blade, round, Microsert, etc.). Never force.",
+                    "**Connector repair**: replace terminal AND seal. Cavity plug if unused.",
+                    "**Ground**: clean to bare metal. Star washer. Torque. Dielectric grease.",
+                    "**Fuse tap / add-a-circuit**: max 5 A added. Proper fuse rating.",
+                    "**Aftermarket**: no T-taps, no Scotchlocks. Solder + shrink. Relay for loads >10 A.",
+                    "**Documentation**: photograph before, label, wiring diagram reference."
+                  ],
+                  "title": "Electrical Wiring Repair — Best Practices"
                 },
                 {
                   "type": "callout",
@@ -2979,8 +3166,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Ball Joint Inspection — Loaded vs. Unloaded**\n\n• Loaded (weight on wheel): use pry bar under tire, lift. Measure vertical play at ball joint. Spec: typically <1.5 mm (0.060 in).\n• Unloaded (wheel off ground, suspension hanging): check horizontal play (steering axis). Some OEMs spec unloaded only.\n• Follow OEM procedure — wrong method = false pass/fail.\n• Integrated ball joint (control arm): replace arm.\n• Bolt-in: replace joint. Torque castle nut + cotter pin (or prevailing torque nut)."
+                  "type": "bullets",
+                  "items": [
+                    "**Loaded (weight on wheel)**: use pry bar under tire, lift. Measure vertical play at ball joint. Spec: typically <1.5 mm (0.060 in).",
+                    "**Unloaded (wheel off ground, suspension hanging)**: check horizontal play (steering axis). Some OEMs spec unloaded only.",
+                    "**Follow OEM procedure** — wrong method = false pass/fail.",
+                    "**Integrated ball joint (control arm)**: replace arm.",
+                    "**Bolt-in**: replace joint. Torque castle nut + cotter pin (or prevailing torque nut)."
+                  ],
+                  "title": "Ball Joint Inspection — Loaded vs. Unloaded"
                 },
                 {
                   "type": "text",
@@ -3119,8 +3313,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Brake Bleeding Procedures — Modern Systems**\n\n• Sequence: typically RR, LR, RF, LF (furthest to closest) — check OEM.\n• Methods: 1) Manual (helper) — pedal pump, hold, open bleed. 2) Pressure bleeder (1-1.5 bar at reservoir) — preferred, no pedal pump. 3) Vacuum bleeder — at bleed screw. 4) Scan tool \"ABS Bleed\" / \"HCU Bleed\" — cycles pump/valves to purge HCU. REQUIRED after HCU/master replacement.\n• EPB: service mode retract → bleed → service mode extend → calibrate.\n• Regenerative: pedal stroke sensor calibration after bleed.\n• Fluid: DOT 3/4/5.1 per spec. NEVER DOT 5 (silicone) in DOT 3/4 system. DOT 4 LV for some."
+                  "type": "bullets",
+                  "items": [
+                    "**Sequence**: typically RR, LR, RF, LF (furthest to closest) — check OEM.",
+                    "**Methods**: 1) Manual (helper) — pedal pump, hold, open bleed. 2) Pressure bleeder (1-1.5 bar at reservoir) — preferred, no pedal pump. 3) Vacuum bleeder — at bleed screw. 4) Scan tool \"ABS Bleed\" / \"HCU Bleed\" — cycles pump/valves to purge HCU. REQUIRED after HCU/master replacement.",
+                    "**EPB**: service mode retract → bleed → service mode extend → calibrate.",
+                    "**Regenerative**: pedal stroke sensor calibration after bleed.",
+                    "**Fluid**: DOT 3/4/5.1 per spec. NEVER DOT 5 (silicone) in DOT 3/4 system. DOT 4 LV for some."
+                  ],
+                  "title": "Brake Bleeding Procedures — Modern Systems"
                 },
                 {
                   "type": "callout",
@@ -3232,8 +3433,14 @@ export const autoservtechCourse = {
                   "text": "**Wheel Bearing Diagnosis — Gen 3 Hub Unit**\n\n1. Road test: growl proportional to speed, changes pitch on turns (load/unload).\n2. Lift vehicle. Spin wheel — feel/hear roughness.\n3. Check play: grasp tire 12/6 and 3/9 — rock. Spec: typically <0.05 mm (0.002 in) end-play.\n4. Scan tool: wheel speed sensor — dropouts, erratic signal, 0 km/h at speed.\n5. Infrared: hub temp after drive — hot = failing bearing or brake drag.\n6. Replace: axle nut torque critical (e.g., 250 Nm + 90°). STAKE nut. ABS harness: route per clip, no tension.\n7. Post-replace: clear codes. Road test. Verify wheel speed normal."
                 },
                 {
-                  "type": "text",
-                  "text": "**Road Force Balancing vs. Traditional Balance**\n\n• Traditional: static/dynamic balance (weight distribution). Corrects imbalance only.\n• Road Force (Hunter GSP9700 etc.): applies 1200+ lb roller — measures radial force variation (stiff spots), lateral force (conicity), and runout. Matches tire high point to rim low point (match mounting). Solves vibration balance cannot.\n• Spec: radial force <15-20 lb (varies). Lateral force <15 lb.\n• Required for: low-profile tires, persistent vibration after balance, new tire install."
+                  "type": "bullets",
+                  "items": [
+                    "**Traditional**: static/dynamic balance (weight distribution). Corrects imbalance only.",
+                    "**Road Force (Hunter GSP9700 etc.)**: applies 1200+ lb roller — measures radial force variation (stiff spots), lateral force (conicity), and runout. Matches tire high point to rim low point (match mounting). Solves vibration balance cannot.",
+                    "**Spec**: radial force <15-20 lb (varies). Lateral force <15 lb.",
+                    "**Required for**: low-profile tires, persistent vibration after balance, new tire install."
+                  ],
+                  "title": "Road Force Balancing vs. Traditional Balance"
                 },
                 {
                   "type": "callout",
@@ -3365,8 +3572,18 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Alignment Angle Adjustment Methods**\n\n• Camber (front): camber bolt (eccentric), slotted strut hole, shim (frame), adjustable control arm.\n• Caster (front): camber/caster bolt, slotted frame, adjustable tension/strut rod, shim.\n• Toe (front): tie rod sleeve (rotate), inner tie rod (rack), eccentric cam.\n• Camber (rear): cam bolt (trailing arm), shim (knuckle), adjustable control arm.\n• Toe (rear): tie rod (link), cam bolt, eccentric cam.\n• Thrust angle: rear toe difference. Adjust rear toe to zero thrust.\n• SAI / Included Angle: non-adjustable — indicates bent parts (strut, knuckle, control arm).\n• Setback: front wheel fore/aft diff — indicates cradle shift or bent lower arm."
+                  "type": "bullets",
+                  "items": [
+                    "**Camber (front)**: camber bolt (eccentric), slotted strut hole, shim (frame), adjustable control arm.",
+                    "**Caster (front)**: camber/caster bolt, slotted frame, adjustable tension/strut rod, shim.",
+                    "**Toe (front)**: tie rod sleeve (rotate), inner tie rod (rack), eccentric cam.",
+                    "**Camber (rear)**: cam bolt (trailing arm), shim (knuckle), adjustable control arm.",
+                    "**Toe (rear)**: tie rod (link), cam bolt, eccentric cam.",
+                    "**Thrust angle**: rear toe difference. Adjust rear toe to zero thrust.",
+                    "**SAI / Included Angle**: non-adjustable — indicates bent parts (strut, knuckle, control arm).",
+                    "**Setback**: front wheel fore/aft diff — indicates cradle shift or bent lower arm."
+                  ],
+                  "title": "Alignment Angle Adjustment Methods"
                 },
                 {
                   "type": "text",
@@ -3732,8 +3949,18 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**Trim Clip Types & Removal**\n\n• Push-in (round/rectangular): panel clip pliers — pull straight.\n• Screw-in (plastic screw): unscrew.\n• Christmas tree (barbed): trim tool under flange — pry.\n• Fir tree (multi-barb): trim tool — pry.\n• Metal clips (door panel): door panel remover (fork).\n• Adhesive (mouldings): heat gun + fishing line/floss → adhesive remover.\n• Reuse: inspect barbs — replace if bent/broken. Cost: pennies vs. comeback.\n• Felt tape (Tesa 51608) for buzz/squeak/rattle prevention."
+                  "type": "bullets",
+                  "items": [
+                    "**Push-in (round/rectangular)**: panel clip pliers — pull straight.",
+                    "**Screw-in (plastic screw)**: unscrew.",
+                    "**Christmas tree (barbed)**: trim tool under flange — pry.",
+                    "**Fir tree (multi-barb)**: trim tool — pry.",
+                    "**Metal clips (door panel)**: door panel remover (fork).",
+                    "**Adhesive (mouldings)**: heat gun + fishing line/floss → adhesive remover.",
+                    "**Reuse**: inspect barbs — replace if bent/broken. Cost: pennies vs. comeback.",
+                    "Felt tape (Tesa 51608) for buzz/squeak/rattle prevention."
+                  ],
+                  "title": "Trim Clip Types & Removal"
                 },
                 {
                   "type": "callout",
@@ -3980,8 +4207,15 @@ export const autoservtechCourse = {
                   ]
                 },
                 {
-                  "type": "text",
-                  "text": "**HV Interlock Loop (HVIL) — Safety Circuit**\n\n• Continuous low-voltage loop through ALL HV connectors and components.\n• Any connector unlatched → loop opens → contactors open → HV disabled.\n• Diagnosis: scan tool \"HVIL Status\" (OK/OPEN). Measure continuity (12V side) through loop.\n• Fault: connector not fully seated, damaged HVIL pin, wiring break, service plug switch.\n• Never bypass HVIL — defeats safety."
+                  "type": "bullets",
+                  "items": [
+                    "Continuous low-voltage loop through ALL HV connectors and components.",
+                    "Any connector unlatched → loop opens → contactors open → HV disabled.",
+                    "**Diagnosis**: scan tool \"HVIL Status\" (OK/OPEN). Measure continuity (12V side) through loop.",
+                    "**Fault**: connector not fully seated, damaged HVIL pin, wiring break, service plug switch.",
+                    "**Never bypass HVIL** — defeats safety."
+                  ],
+                  "title": "HV Interlock Loop (HVIL) — Safety Circuit"
                 },
                 {
                   "type": "callout",
@@ -4461,8 +4695,18 @@ export const autoservtechCourse = {
                   "text": "EXAM DAY: Arrive 30 min early. Bring government photo ID. No personal items in exam room (locker provided). You get: scratch paper, pencil, calculator (on-screen). No reference materials. Flag questions for review. No penalty for guessing — answer every question."
                 },
                 {
-                  "type": "text",
-                  "text": "**Exam Structure Overview**\n\n• Format: 125 multiple-choice questions, 4 options each (A, B, C, D)\n• Time: 4 hours (240 minutes) = ~1.9 min/question average\n• Passing: 70% (88/125 correct)\n• Cognitive Levels:\n  - Knowledge & Recall: 5-15% (6-19 questions) — facts, definitions, specs\n  - Procedural & Application: 40-50% (50-63 questions) — steps, sequences, tool selection\n  - Critical Thinking: 40-50% (50-63 questions) — diagnosis, data interpretation, root cause\n• All questions weighted equally. No partial credit."
+                  "type": "bullets",
+                  "items": [
+                    "**Format**: 125 multiple-choice questions, 4 options each (A, B, C, D)",
+                    "**Time**: 4 hours (240 minutes) = ~1.9 min/question average",
+                    "**Passing**: 70% (88/125 correct)",
+                    "Cognitive Levels:",
+                    "**Knowledge & Recall**: 5-15% (6-19 questions) — facts, definitions, specs",
+                    "**Procedural & Application**: 40-50% (50-63 questions) — steps, sequences, tool selection",
+                    "**Critical Thinking**: 40-50% (50-63 questions) — diagnosis, data interpretation, root cause",
+                    "All questions weighted equally. No partial credit."
+                  ],
+                  "title": "Exam Structure Overview"
                 },
                 {
                   "type": "text",
@@ -4474,8 +4718,15 @@ export const autoservtechCourse = {
                   "text": "STRATEGY: MWAs B, E, F = 59.4% of exam (74 questions). Master these first. MWA C (9.6%) is high-yield for study time — networking is systematic. MWA H (7.2%) is growing — know safety + battery/inverter basics. MWA A (7%) = free chapters (glossary, safety, tools). MWA G (8%) = SRS safety + body basics. MWA D (13.6%) = know fluid analysis + pressure tests."
                 },
                 {
-                  "type": "text",
-                  "text": "**Time Management Strategy**\n\n• First Pass (90 min): Answer all questions you know immediately. Flag: \"Mark for Review\" — calculation-heavy, long scenario, unsure.\n• Second Pass (60 min): Return to flagged. Use scratch paper for calculations (voltage drop, gear ratios, pressure conversions). Eliminate obviously wrong options.\n• Third Pass (30 min): Remaining flagged. Educated guess — no penalty for wrong answers.\n• Final Review (15 min): Verify answer sheet matches screen. Check flagged count = 0.\n• Buffer (45 min): Technical issues, breaks, tough questions.\n\nPace: ~50 questions/hour. If stuck >2 min → flag, move on."
+                  "type": "bullets",
+                  "items": [
+                    "**First Pass (90 min)**: Answer all questions you know immediately. Flag: \"Mark for Review\" — calculation-heavy, long scenario, unsure.",
+                    "**Second Pass (60 min)**: Return to flagged. Use scratch paper for calculations (voltage drop, gear ratios, pressure conversions). Eliminate obviously wrong options.",
+                    "**Third Pass (30 min)**: Remaining flagged. Educated guess — no penalty for wrong answers.",
+                    "**Final Review (15 min)**: Verify answer sheet matches screen. Check flagged count = 0.",
+                    "**Buffer (45 min)**: Technical issues, breaks, tough questions. Pace: ~50 questions/hour. If stuck >2 min → flag, move on."
+                  ],
+                  "title": "Time Management Strategy"
                 },
                 {
                   "type": "text",
