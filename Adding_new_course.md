@@ -8,7 +8,7 @@ This document lists the steps required to make the new Automotive Service Techni
 2. Register the course in `client/src/data/courseContent.js`:
    - import the course: `import { autoservtechCourse } from './autoservtechCourse';`
    - add it to `coursesByLang.en` (and other language maps if you add translations).
-   - add `'autoservtech'` to `COURSE_SLUGS`.
+   - add `'autoservtech-310s'` to `COURSE_SLUGS`.
 3. Confirm the course appears on course listing pages and selection lists by being included in `COURSE_SLUGS`.
 
 ## 2. Add trade guide registration
@@ -37,7 +37,7 @@ The purchase page route uses `client/src/data/tradeGuides.js` to resolve `/trade
 1. Verify `server/scripts/practiceQuestions/autoservtech.js` contains your question data.
 2. Confirm `server/scripts/practiceQuestions/index.js` imports and includes `autoservtechQuestions` in `QUESTIONS`.
 3. Update backend practice route mappings in `server/routes/practice.js`:
-   - add `autoservtech: 'autoservtech'` to `TRADE_SLUG_TO_COURSE_SLUG`.
+   - add `autoservtech: 'autoservtech-310s'` to `TRADE_SLUG_TO_COURSE_SLUG`.
    - add `autoservtech: 125` to `EXAM_QUESTIONS_BY_TRADE`.
 
 ## 5. Optional: Add study-plan support
@@ -62,7 +62,7 @@ From the `server/` folder:
 ```bash
 cd server
 npm install
-npm run seed:course -- --slug autoservtech
+npm run seed:course -- --slug autoservtech-310s
 ```
 
 Then seed practice questions:

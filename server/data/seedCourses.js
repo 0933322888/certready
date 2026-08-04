@@ -42,7 +42,7 @@ export const seedCourses = [
     ],
   },
   {
-    slug: 'autoservtech',
+    slug: 'autoservtech-310s',
     title: 'Automotive Service Technician Certification Exam Prep',
     subtitle: 'Complete Study Guide — Skilled Trades Ontario Trade 310S',
     description: 'Prepare for the Automotive Service Technician certification exam with a complete course of chapters, practice questions, exam strategy, and diagnostic workflows.',
