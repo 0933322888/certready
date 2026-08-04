@@ -25,7 +25,7 @@ function formatInlineBold(str) {
 
 export default function ChapterContent({ course, chapter, onQuestionComplete }) {
   const { t } = useTranslation();
-  const { user, hasMockExamAccess } = useAuth();
+  const { user, hasMockExamAccess, hasPurchasedBySlug } = useAuth();
   const [savedAnswers, setSavedAnswers] = useState({});
   const [loadingAnswers, setLoadingAnswers] = useState(true);
 
@@ -215,7 +215,7 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
         const tradeSlug = getGuideSlugFromCourseSlug(course.id);
         const trade = getTradeBySlug(tradeSlug);
         if (!trade) return null;
-        const canStartMock = hasMockExamAccess(course.slug || course.id);
+        const canStartMock = hasMockExamAccess(course.slug || course.id) || hasPurchasedBySlug(course.slug || course.id);
         return (
           <div className="mb-8">
             <Card className="p-6 border-2 border-accent/30 bg-accent/5">
