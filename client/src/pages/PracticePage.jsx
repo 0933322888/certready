@@ -95,6 +95,13 @@ export default function PracticePage() {
     tradeCode: guide.tradeCode,
     tradeSlug: guide.slug,
     questionCount: 20,
+    seoTitle: guide.seoTitle,
+    seoDescription: guide.seoDescription,
+    seoKeywords: guide.seoKeywords,
+    frSeoTitle: guide.frSeoTitle,
+    frSeoDescription: guide.frSeoDescription,
+    frSeoKeywords: guide.frSeoKeywords,
+    locale: i18n.language,
   });
   const breadcrumbItems = [
     { name: t('practicePage.home'), url: paths.home },

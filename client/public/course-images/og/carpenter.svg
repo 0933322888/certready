@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#122028"/>
+  <rect x="28" y="28" width="1144" height="574" rx="36" fill="#203c3f"/>
+  <rect x="140" y="176" width="280" height="280" rx="32" fill="#d4963d"/>
+  <rect x="182" y="218" width="196" height="196" rx="24" fill="#ffffff" opacity="0.95"/>
+  <path d="M238 234h84v82h-84zM232 332h96v30a12 12 0 0 1-12 12h-72a12 12 0 0 1-12-12v-30Z" fill="#1f2f35"/>
+  <path d="M214 238h132" stroke="#1f2f35" stroke-width="12" stroke-linecap="round"/>
+  <text x="470" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff">CertReady</text>
+  <text x="470" y="345" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="700" fill="#f2c56d">Carpenter</text>
+  <text x="470" y="402" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#dfeee5">Red Seal Exam Prep • Trade 403A</text>
+  <text x="470" y="452" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#a8c2ba">Hands-on study content for framing, layout, and site work</text>
+</svg>

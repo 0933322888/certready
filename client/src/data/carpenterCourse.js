@@ -11,6 +11,10 @@ const carpenterCourse = {
     meta: {
         trade: 'Carpenter',
         redSealCode: '403A',
+        seoTitle: 'Carpenter Red Seal Exam Prep — 403A Study Guide',
+        seoDescription: 'Prepare for the Carpenter Red Seal exam with focused study content, exam weighting, and practical practice resources for Trade 403A.',
+        seoKeywords: 'Carpenter, 403A, Red Seal, exam prep, study guide, practice questions, Canadian trades certification',
+        ogImage: '/course-images/og/carpenter.svg',
         totalExamQuestions: 100,
         apprenticeshipLevels: 4,
         totalHours: 7200,

@@ -3,21 +3,25 @@
  * Adding a new trade course automatically gets correct SEO via getCoursePageSEO(course).
  */
 
-export function getCoursePageSEO(course, tradeSlug) {
+export function getCoursePageSEO(course, tradeSlug, locale = 'en') {
   if (!course) return null;
   const tradeName = course.trade;
   const tradeCode = course.tradeCode || '';
   const totalChapters = course.totalChapters ?? 0;
   const totalQuestions = course.totalQuestions ?? 0;
   const canonical = tradeSlug ? `/trades/${tradeSlug}` : `/trades`;
+  const isFrench = locale === 'fr';
+  const title = (isFrench ? course.frSeoTitle : course.seoTitle) || `${tradeName} Red Seal Exam Prep — ${tradeCode} Study Guide`;
+  const description = (isFrench ? course.frSeoDescription : course.seoDescription) || `Prepare for your ${tradeName} Red Seal certification exam with confidence. ${totalChapters} chapters, ${totalQuestions}+ practice questions, and a full mock exam. Based on the official ${tradeCode} standard. Study at your own pace — one-time purchase, lifetime access.`;
+  const keywords = (isFrench ? course.frSeoKeywords : course.seoKeywords) || `${tradeName}, Red Seal, ${tradeCode}, exam prep, study guide, practice questions, certification, Canadian trades`;
 
   return {
-    title: `${tradeName} Red Seal Exam Prep — ${tradeCode} Study Guide`,
-    description: `Prepare for your ${tradeName} Red Seal certification exam with confidence. ${totalChapters} chapters, ${totalQuestions}+ practice questions, and a full mock exam. Based on the official ${tradeCode} standard. Study at your own pace — one-time purchase, lifetime access.`,
-    keywords: `${tradeName}, Red Seal, ${tradeCode}, exam prep, study guide, practice questions, certification, Canadian trades`,
+    title,
+    description,
+    keywords,
     canonical,
     ogType: 'product',
-    ogImage: `/og-courses/${course.slug}.png`,
+    ogImage: course.ogImage || '/og-default.png',
     structuredData: getCourseStructuredData(course, tradeSlug),
   };
 }
@@ -46,15 +50,20 @@ export function getHomePageSEO() {
 }
 
 /** Guide object: { tradeName, slug, ... } or { name, slug, ... } */
-export function getTradeGuideSEO(guide) {
+export function getTradeGuideSEO(guide, locale = 'en') {
   if (!guide) return null;
   const tradeName = guide.tradeName || guide.name;
+  const isFrench = locale === 'fr';
+  const title = (isFrench ? guide.frSeoTitle : guide.seoTitle) || `${tradeName} Red Seal Exam — Complete Study Guide`;
+  const description = (isFrench ? guide.frSeoDescription : guide.seoDescription) || `Everything you need to know about the ${tradeName} Red Seal interprovincial exam. Exam weighting, what to study, pass rates, and free practice questions.`;
+  const keywords = (isFrench ? guide.frSeoKeywords : guide.seoKeywords) || `${tradeName}, Red Seal, study guide, interprovincial exam, exam weighting, Canadian trades, certification`;
 
   return {
-    title: `${tradeName} Red Seal Exam — Complete Study Guide`,
-    description: `Everything you need to know about the ${tradeName} Red Seal interprovincial exam. Exam weighting, what to study, pass rates, and free practice questions.`,
-    keywords: `${tradeName}, Red Seal, study guide, interprovincial exam, exam weighting, Canadian trades, certification`,
+    title,
+    description,
+    keywords,
     canonical: `/guides/${guide.slug}`,
+    ogImage: guide.ogImage || '/og-default.png',
   };
 }
 
@@ -168,11 +177,12 @@ export function getAllCoursesPageSEO() {
 }
 
 /** SEO for free practice page — pass tradeName, tradeCode, tradeSlug, questionCount */
-export function getPracticePageSEO({ tradeName, tradeCode, tradeSlug, questionCount = 5 }) {
+export function getPracticePageSEO({ tradeName, tradeCode, tradeSlug, questionCount = 5, seoTitle, seoDescription, seoKeywords, frSeoTitle, frSeoDescription, frSeoKeywords, locale = 'en' }) {
+  const isFrench = locale === 'fr';
   return {
-    title: `Free ${tradeName} Red Seal Practice Questions`,
-    description: `Try ${questionCount} free ${tradeName} Red Seal exam practice questions with full explanations. No account required. Based on the official ${tradeCode} standard.`,
-    keywords: `${tradeName}, Red Seal, practice questions, free, ${tradeCode}, exam prep, Canadian trades`,
+    title: (isFrench ? frSeoTitle : seoTitle) || `Free ${tradeName} Red Seal Practice Questions`,
+    description: (isFrench ? frSeoDescription : seoDescription) || `Try ${questionCount} free ${tradeName} Red Seal exam practice questions with full explanations. No account required. Based on the official ${tradeCode} standard.`,
+    keywords: (isFrench ? frSeoKeywords : seoKeywords) || `${tradeName}, Red Seal, practice questions, free, ${tradeCode}, exam prep, Canadian trades`,
     canonical: `/practice-tests/${tradeSlug}`,
   };
 }
@@ -198,15 +208,21 @@ export function getTradesPageSEO() {
 }
 
 /** SEO for trade guide page (/trades/:slug-red-seal). Pass trade object from TRADE_DATA (name, overviewShort, slug, tradeCode). */
-export function getTradeGuidePageSEO(trade) {
+export function getTradeGuidePageSEO(trade, locale = 'en') {
   if (!trade || !trade.name) return null;
+  const isFrench = locale === 'fr';
+  const title = (isFrench ? trade.frSeoTitle : trade.seoTitle) || `${trade.name} Red Seal Exam Guide — ${trade.tradeCode} Study & Practice`;
+  const description = (isFrench ? trade.frSeoDescription : trade.seoDescription) || (trade.overviewShort
+    ? `${trade.overviewShort} Red Seal exam format: ${trade.examQuestions} questions, ${trade.examDuration}, ${trade.passingScore}% to pass. Free sample questions and study strategy.`
+    : `${trade.name} Red Seal exam guide. Format, major work activities, sample questions, and study tips.`);
+  const keywords = (isFrench ? trade.frSeoKeywords : trade.seoKeywords) || `${trade.name}, Red Seal, ${trade.tradeCode}, exam guide, study guide, practice questions, Canadian trades, certification`;
+
   return {
-    title: `${trade.name} Red Seal Exam Guide — ${trade.tradeCode} Study & Practice`,
-    description: trade.overviewShort
-      ? `${trade.overviewShort} Red Seal exam format: ${trade.examQuestions} questions, ${trade.examDuration}, ${trade.passingScore}% to pass. Free sample questions and study strategy.`
-      : `${trade.name} Red Seal exam guide. Format, major work activities, sample questions, and study tips.`,
-    keywords: `${trade.name}, Red Seal, ${trade.tradeCode}, exam guide, study guide, practice questions, Canadian trades, certification`,
+    title,
+    description,
+    keywords,
     canonical: `/trades/${trade.slug}-red-seal`,
+    ogImage: trade.ogImage || '/og-default.png',
   };
 }
 

@@ -40,7 +40,7 @@ export default function TradePage({ trade }) {
   const [openMwa, setOpenMwa] = useState(null);
   const [answers, setAnswers] = useState({});
   const maxWeight = Math.max(...trade.mwas.map((m) => m.weight));
-  const seo = getTradeGuidePageSEO(trade);
+  const seo = getTradeGuidePageSEO(trade, 'en');
   const breadcrumbs = [
     { name: "Home", url: paths.home },
     { name: "Red Seal Trades", url: paths.trades },

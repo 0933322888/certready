@@ -10,6 +10,10 @@ const plumberCourse = {
   meta: {
     trade: 'Plumber',
     redSealCode: '306A',
+    seoTitle: 'Plumber Red Seal Exam Prep — 306A Study Guide',
+    seoDescription: 'Build confidence for the Plumber Red Seal exam with detailed study material, practice questions, and exam-focused preparation for Trade 306A.',
+    seoKeywords: 'Plumber, 306A, Red Seal, exam prep, study guide, practice questions, Canadian trades certification',
+    ogImage: '/course-images/og/plumber.png',
     totalExamQuestions: 125,
     apprenticeshipLevels: 4,
     totalHours: 7200,

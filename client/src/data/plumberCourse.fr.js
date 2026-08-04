@@ -11,6 +11,13 @@ const plumberCourseFR = {
     meta: {
       trade: 'Plombier',
       redSealCode: '306A',
+      seoTitle: 'Préparation à l’examen Sceau rouge de plombier — guide d’étude 306A',
+      seoDescription: 'Renforcez votre préparation à l’examen Sceau rouge de plombier avec des études détaillées, des questions pratiques et du contenu ciblé pour le métier 306A.',
+      seoKeywords: 'plombier, 306A, examen Sceau rouge, guide d’étude, questions pratiques, certification métier Canada',
+      frSeoTitle: 'Préparation à l’examen Sceau rouge de plombier — guide d’étude 306A',
+      frSeoDescription: 'Renforcez votre préparation à l’examen Sceau rouge de plombier avec des études détaillées, des questions pratiques et du contenu ciblé pour le métier 306A.',
+      frSeoKeywords: 'plombier, 306A, examen Sceau rouge, guide d’étude, questions pratiques, certification métier Canada',
+      ogImage: '/course-images/og/plumber.png',
       totalExamQuestions: 125,
       apprenticeshipLevels: 4,
       totalHours: 7200,

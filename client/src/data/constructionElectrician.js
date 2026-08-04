@@ -10,6 +10,10 @@ const electricianCourse = {
   meta: {
     trade: 'Construction Electrician',
     redSealCode: '309A',
+    seoTitle: 'Construction Electrician Red Seal Exam Prep — 309A Study Guide',
+    seoDescription: 'Prepare for the Construction Electrician Red Seal exam with detailed study modules, practice questions, and exam-ready content for Trade 309A.',
+    seoKeywords: 'Construction Electrician, 309A, Red Seal, exam prep, study guide, practice questions, Canadian trades certification',
+    ogImage: '/course-images/og/construction-electrician.svg',
     totalExamQuestions: 100,
     apprenticeshipLevels: 4,
     totalHours: 7200,

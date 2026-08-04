@@ -9,6 +9,10 @@ const welderCourse = {
     meta: {
       trade: 'Welder',
       redSealCode: '456A',
+      seoTitle: 'Welder Red Seal Exam Prep — 456A Study Guide',
+      seoDescription: 'Prepare for the Welder Red Seal exam with practical study content, exam strategy, and realistic practice resources for Trade 456A.',
+      seoKeywords: 'Welder, 456A, Red Seal, exam prep, study guide, practice questions, Canadian trades certification',
+      ogImage: '/course-images/og/welder.svg',
       totalExamQuestions: 125,
       apprenticeshipLevels: 3,
       totalHours: 5400,

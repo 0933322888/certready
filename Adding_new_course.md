@@ -11,7 +11,24 @@ This document lists the steps required to make the new Automotive Service Techni
    - add `'autoservtech-310s'` to `COURSE_SLUGS`.
 3. Confirm the course appears on course listing pages and selection lists by being included in `COURSE_SLUGS`.
 
-## 2. Add trade guide registration
+## 2. Add SEO metadata and social preview assets
+
+When a new course is added, SEO should be configured in the course data itself so the shared SEO helpers can populate page titles, descriptions, keywords, canonical URLs, and Open Graph metadata automatically.
+
+1. In `client/src/data/<course>.js`, add or update:
+   - `seoTitle`
+   - `seoDescription`
+   - `seoKeywords`
+   - `frSeoTitle` / `frSeoDescription` / `frSeoKeywords` if you want localized French SEO
+   - `ogImage` for social sharing previews
+2. If the course has a French version file (for example `client/src/data/<course>.fr.js`), add the matching French SEO fields there as well.
+3. Add a custom Open Graph image asset under `client/public/course-images/og/` and point `ogImage` to it. If you skip this, the app will use the generic fallback image.
+4. If the course also has a trade guide/SEO page, ensure the guide data in `client/src/data/tradeGuides.js` and `client/src/data/tradeGuideContent.js` includes SEO-friendly fields as well.
+5. Update `client/public/sitemap.xml` so the new course pages, practice pages, and guide pages are discoverable by search engines.
+
+> The shared SEO utility in `client/src/utils/seo.js` already reads the course/guide metadata automatically; you usually do not need to change the SEO helper itself unless the new course needs a completely different page type.
+
+## 3. Add trade guide registration
 
 The purchase page route uses `client/src/data/tradeGuides.js` to resolve `/trades/:tradeSlug`.
 

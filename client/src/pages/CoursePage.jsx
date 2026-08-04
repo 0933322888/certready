@@ -114,7 +114,7 @@ export default function CoursePage() {
   }
 
   const tradeSlug = getGuideSlugFromCourseSlug(slug);
-  const seo = getCoursePageSEO(course, tradeSlug);
+  const seo = getCoursePageSEO(course, tradeSlug, i18n.language);
   const breadcrumbs = getBreadcrumbStructuredData([
     { name: t('nav.home'), url: '/' },
     { name: t('nav.trades'), url: '/trades' },

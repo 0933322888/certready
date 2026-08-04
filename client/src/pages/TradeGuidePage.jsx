@@ -21,7 +21,7 @@ export default function TradeGuidePage({ tradeSlug: tradeSlugProp }) {
     return <NotFoundPage />;
   }
 
-  const seo = getTradeGuideSEO(guide);
+  const seo = getTradeGuideSEO(guide, i18n.language);
   const breadcrumbs = [
     { name: t('tradeGuidePage.home'), url: paths.home },
     { name: t('tradeGuidePage.studyGuides'), url: paths.guides },
