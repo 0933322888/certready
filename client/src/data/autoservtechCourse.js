@@ -4969,10 +4969,10 @@ export const autoservtechCourse = {
                 {
                     "id": "ch-38",
                     "number": 38,
-                    "title": "Red Seal Mock Exam and Exam Strategy",
-                    "subtitle": "125-question timed practice exam (4 hours), plus tips for exam success",
+                    "title": "Red Seal Mock Exam",
+                    "subtitle": "125-question timed practice exam (4 hours)",
                     "isFree": false,
-                    "estimatedMinutes": 5,
+                    "estimatedMinutes": 240,
                     "isMockExam": true,
                     "sections": [
                         {
@@ -5001,18 +5001,7 @@ export const autoservtechCourse = {
                                         ["H", "Hybrid & EV Systems", "9"]
                                     ]
                                 },
-                                {
-                                    "type": "infoBox",
-                                    "title": "Red Seal Exam Strategy",
-                                    "items": [
-                                        "Focus study time proportionally — MWAs B, E, and F make up the largest share of the exam.",
-                                        "Always read the full question stem before reviewing the options — many mistakes come from rushing or misreading.",
-                                        "Use the \"Start exam\" button above to complete the full mock exam under timed conditions.",
-                                        "Do not leave any question blank — there is no penalty for guessing.",
-                                        "Review your results by MWA and cognitive level to target weak areas after the exam.",
-                                        "Practice pacing at roughly 1.9 minutes per question so you can finish the full exam on time."
-                                    ]
-                                }
+                               
                             ]
                         }
                     ],

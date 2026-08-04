@@ -111,15 +111,25 @@ export function AuthProvider({ children }) {
     );
   };
 
-  // Full mock exam is excluded from free-window grants
+  // Full mock exam is excluded from free-window grants, but a purchased course should also unlock it.
   const hasMockExamAccess = (courseSlug) => {
     if (!state.user || !courseSlug) return false;
+
     const slugs = state.user.mockExamSlugs;
-    if (Array.isArray(slugs)) {
-      return slugs.includes(courseSlug);
+    if (Array.isArray(slugs) && slugs.includes(courseSlug)) {
+      return true;
     }
-    // Fallback: older sessions without mockExamSlugs — treat paid-only unknown as no mock access
-    return false;
+
+    const hasCoursePurchase = (state.user.purchases || []).some((purchase) => {
+      if (!purchase) return false;
+      if (typeof purchase === 'string') return purchase === courseSlug;
+
+      const purchaseSlug = purchase.slug || purchase.courseSlug || purchase.course?.slug;
+      const purchaseId = purchase._id || purchase.id || purchase.courseId || purchase.course?.id;
+      return purchaseSlug === courseSlug || purchaseId?.toString() === courseSlug?.toString();
+    });
+
+    return hasCoursePurchase;
   };
 
   return (
