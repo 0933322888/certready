@@ -223,20 +223,27 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
       })()}
 
       {/* Sections */}
-      {chapter.sections && chapter.sections.map((section) => (
-        <div key={section.id} className="mb-8">
-          <h2 className="text-2xl font-display font-semibold text-text-primary mb-4">
-            {section.title}
-          </h2>
-          <div className="space-y-4">
-            {section.content && section.content.map((contentBlock, index) => (
-              <div key={index}>
-                {renderContent(contentBlock) }
-              </div>
-            ))}
+      {chapter.sections && chapter.sections.map((section, sIdx) => {
+        const contentBlocks = section.content && Array.isArray(section.content)
+          ? section.content
+          : (section.type ? [section] : []);
+        return (
+          <div key={section.id || `sec-${sIdx}`} className="mb-8">
+            {section.title && (
+              <h2 className="text-2xl font-display font-semibold text-text-primary mb-4">
+                {section.title}
+              </h2>
+            )}
+            <div className="space-y-4">
+              {contentBlocks.map((contentBlock, index) => (
+                <div key={index}>
+                  {renderContent(contentBlock)}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {/* Practice Questions */}
       {chapter.practiceQuestions && chapter.practiceQuestions.length > 0 && (

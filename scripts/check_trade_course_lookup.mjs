@@ -1,0 +1,11 @@
+import { getGuideBySlug } from '../client/src/data/tradeGuides.js';
+import { getCourse } from '../client/src/data/courseContent.js';
+const guide = getGuideBySlug('autoservtech');
+console.log('guide:', guide ? Object.keys(guide) : null);
+console.log('guide.courseSlug:', guide?.courseSlug);
+const course = guide ? getCourse(guide.courseSlug, 'en') : null;
+console.log('course id/slug:', course?.id, course?.slug);
+console.log('course title:', course?.title);
+const chapters = (course?.parts || []).flatMap(p => p.chapters || []);
+console.log('chapters count:', chapters.length);
+if (chapters.length>0) console.log('first chapter title:', chapters[0].title);
