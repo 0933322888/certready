@@ -1,6 +1,6 @@
 export const autoservtechCourse = {
-    id: 'autoservtech',
-    slug: 'autoservtech',
+    id: 'autoservtech-310s',
+    slug: 'autoservtech-310s',
     title: 'Automotive Service Technician Certification Exam Prep',
     subtitle: 'Complete Study Guide — Skilled Trades Ontario Trade 310S',
     trade: 'Automotive Service Technician',
