@@ -93,7 +93,7 @@ export const tradeGuides = [
   },
   {
     slug: 'autoservtech',
-    courseSlug: 'autoservtech',
+    courseSlug: 'autoservtech-310s',
     tradeName: 'Automotive Service Technician',
     tradeCode: '310S',
     examQuestions: 125,

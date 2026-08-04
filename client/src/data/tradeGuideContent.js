@@ -236,7 +236,7 @@ export const TRADE_DATA = {
       { icon: "📋", tip: "Practice full exam pacing", body: "Run at least one 125-question mock exam. Time management is critical on the Automotive Service Technician exam.",
       },
     ],
-    courseSlug: "autoservtech",
+    courseSlug: "autoservtech-310s",
     courseUrl: "/trades/autoservtech",
     practiceUrl: "/practice-tests/autoservtech",
   },
