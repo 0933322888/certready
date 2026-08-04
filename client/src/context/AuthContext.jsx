@@ -116,10 +116,7 @@ export function AuthProvider({ children }) {
     if (!state.user || !courseSlug) return false;
 
     const slugs = state.user.mockExamSlugs;
-    if (Array.isArray(slugs) && slugs.includes(courseSlug)) {
-      return true;
-    }
-
+    const explicitAccess = Array.isArray(slugs) && slugs.includes(courseSlug);
     const hasCoursePurchase = (state.user.purchases || []).some((purchase) => {
       if (!purchase) return false;
       if (typeof purchase === 'string') return purchase === courseSlug;
@@ -129,7 +126,16 @@ export function AuthProvider({ children }) {
       return purchaseSlug === courseSlug || purchaseId?.toString() === courseSlug?.toString();
     });
 
-    return hasCoursePurchase;
+    const result = explicitAccess || hasCoursePurchase;
+    console.log('[mock-access]', {
+      courseSlug,
+      explicitAccess,
+      hasCoursePurchase,
+      mockExamSlugs: slugs,
+      purchases: state.user.purchases,
+      result,
+    });
+    return result;
   };
 
   return (
