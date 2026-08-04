@@ -351,19 +351,18 @@
     "whatsInside": "What's Inside",
     "whatsInsideDesc": "Everything you need to pass your Skilled Trades Ontario certification exam",
     "features": [
-      { "icon": "📚", "title": "15 Comprehensive Chapters", "description": "Covering all exam topics from professional ethics to advanced colouring techniques" },
-      { "icon": "❓", "title": "75+ Practice Questions", "description": "Interactive questions with detailed explanations to test your understanding" },
-      { "icon": "📖", "title": "Key Term Glossary", "description": "60+ definitions of essential hairstyling terminology" },
-      { "icon": "📝", "title": "Full Mock Exam", "description": "50-question practice exam matching the official STO format" },
-      { "icon": "⏱️", "title": "480 Hours Coverage", "description": "Complete coverage of both Level 1 and Level 2 curriculum" },
-      { "icon": "♾️", "title": "Lifetime Access", "description": "Study at your own pace with no expiration date" }
+      { "icon": "📚", "title": "Structured Study Chapters", "description": "Clear chapter-by-chapter lessons aligned to each trade’s exam blueprint" },
+      { "icon": "❓", "title": "Practice Questions", "description": "Exam-style questions with explanations to help you build confidence and check your understanding" },
+      { "icon": "📖", "title": "Trade-Specific Glossary", "description": "Key terms and definitions tailored to the trade you’re preparing for" },
+      { "icon": "📝", "title": "Full Mock Exam", "description": "A complete timed practice exam with the same number of questions as the official course exam" },
+      { "icon": "⏱️", "title": "Exam-Focused Prep", "description": "Study content organized around major work activities, weighting, and core trade knowledge" },
+      { "icon": "📈", "title": "Flexible Study Support", "description": "Review the materials at your own pace whenever you need a refresher" }
     ],
     "testimonials": "What Students Say",
     "pricing": "Simple, Transparent Pricing",
-    "pricingSub": "One-time payment per course. Lifetime access. No subscription.",
+    "pricingSub": "One-time payment per course. Ongoing access to your course materials. No subscription.",
     "pricingFeatures": [
       "One-time payment per course — no recurring fees",
-      "Lifetime access to all course materials",
       "No subscription — study at your own pace",
       "Based on official Skilled Trades Ontario curriculum standards",
       "First 5 days free after registration before you buy"
@@ -371,7 +370,7 @@
     "viewCourses": "View Courses",
     "oneTime": "One-time payment",
     "getFullAccess": "Get Full Access",
-    "lifetimeNote": "Lifetime access. No subscription. Study at your own pace.",
+    "lifetimeNote": "Flexible access to your course materials. No subscription. Study at your own pace.",
     "launchOfferNote": "Limited-time launch offer: $29.99 per course.",
     "continueLearning": "Continue Learning",
     "previewFreeBtn": "Preview Free",
