@@ -5,7 +5,7 @@ export const hvacCourse = {
   description: 'Prepare for the Refrigeration & Air Conditioning Mechanic Red Seal exam with targeted study content, glossary support, and a robust mock exam for Trade 313A.',
   seoTitle: 'Refrigeration & Air Conditioning Mechanic Red Seal Exam Prep — 313A Study Guide',
   seoDescription: 'Master the Refrigeration & Air Conditioning Mechanic Red Seal exam with detailed study modules and practice resources for Trade 313A.',
-  seoKeywords: 'Refrigeration and Air Conditioning Mechanic, 313A, Red Seal, exam prep, study guide, practice questions, Canadian trades certification',
+  seoKeywords: 'Refrigeration and Air Conditioning Mechanic, 313A, 313A practice exam, Refrigeration and Air Conditioning Mechanic Red Seal exam, 313A exam prep, HVAC Red Seal practice test, HVAC certification Canada, HVAC apprenticeship exam, HVAC study guide, HVAC practice questions, HVAC mock exam, Red Seal HVAC exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam',
   ogImage: '/course-images/og/hvac.png',
   subtitle: 'Complete Study Guide — Skilled Trades Ontario Trade 313A',
   trade: 'Refrigeration & Air Conditioning Mechanic',

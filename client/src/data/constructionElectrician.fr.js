@@ -16,7 +16,7 @@ const electricianCourseFR = {
     frSeoTitle: 'Préparation à l’examen Sceau rouge d’électricien en construction — guide d’étude 309A',
     frSeoDescription: 'Préparez-vous à l’examen Sceau rouge d’électricien en construction avec des modules d’étude détaillés et des questions pratiques pour le métier 309A.',
     frSeoKeywords: 'électricien en construction, 309A, examen Sceau rouge, guide d’étude, questions pratiques, certification métier Canada',
-    ogImage: '/course-images/og/construction-electrician.svg',
+    ogImage: '/course-images/og/construction-electrician.png',
     totalExamQuestions: 100,
     apprenticeshipLevels: 4,
     totalHours: 7200,

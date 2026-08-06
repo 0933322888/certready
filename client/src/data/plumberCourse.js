@@ -12,7 +12,7 @@ const plumberCourse = {
     redSealCode: '306A',
     seoTitle: 'Plumber Red Seal Exam Prep — 306A Study Guide',
     seoDescription: 'Build confidence for the Plumber Red Seal exam with detailed study material, practice questions, and exam-focused preparation for Trade 306A.',
-    seoKeywords: 'Plumber, 306A, Red Seal, exam prep, study guide, practice questions, Canadian trades certification',
+    seoKeywords: 'Plumber, 306A, 306A practice exam, Plumber Red Seal exam, 306A exam prep, Plumbing Red Seal practice test, Plumbing certification Canada, Plumber apprenticeship exam, Plumbing study guide, Plumbing practice questions, Plumber mock exam, Red Seal plumber exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam',
     ogImage: '/course-images/og/plumber.png',
     totalExamQuestions: 125,
     apprenticeshipLevels: 4,

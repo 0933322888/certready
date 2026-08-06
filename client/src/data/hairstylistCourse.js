@@ -14,7 +14,7 @@ export const hairstylistCourse = {
     description: 'Prepare for the Hairstylist Red Seal exam with practical study content, detailed exam coverage, and a mock exam aligned to Skilled Trades Ontario Trade 332A.',
     seoTitle: 'Hairstylist Red Seal Exam Prep — 332A Study Guide',
     seoDescription: 'Master the Hairstylist Red Seal exam with chapter-based study material, glossary support, and a full practice exam for Trade 332A.',
-    seoKeywords: 'Hairstylist, 332A, Red Seal, exam prep, study guide, practice questions, Ontario trade certification',
+    seoKeywords: 'Hairstylist, 332A, 332A practice exam, Hairstylist Red Seal exam, 332A exam prep, Hairstylist Red Seal practice test, Hairstylist certification Canada, Hairstylist apprenticeship exam, Hairstylist study guide, Hairstylist practice questions, Hairstylist mock exam, Red Seal hairstylist exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam',
     ogImage: '/course-images/og/hairstylist.png',
     price: 4999,
     currency: 'CAD',
