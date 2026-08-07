@@ -9,7 +9,7 @@ export const autoservtechCourse = {
     "seoTitle": "Automotive Service Technician Red Seal Exam Prep — 310S Study Guide",
     "seoDescription": "Master the Automotive Service Technician Red Seal exam with focused study content, realistic practice questions, and a full mock exam for Trade 310S.",
     "seoKeywords": "Automotive Service Technician, 310S, 310S practice exam, Automotive Service Technician Red Seal exam, 310S exam prep, Automotive Red Seal practice test, Automotive certification Canada, Automotive Service Technician apprenticeship exam, Automotive study guide, Automotive practice questions, Automotive mock exam, Red Seal automotive exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam",
-    "ogImage": "/course-images/og/automotive-service-technician.svg",
+    "ogImage": "/course-images/og/automotive-service-technician.png",
     "price": 4999,
     "currency": "CAD",
     "totalChapters": 38,

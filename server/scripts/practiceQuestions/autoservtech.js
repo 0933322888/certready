@@ -3582,5 +3582,754 @@ export default [
         topicId: 'mwa-h-battery-init',
         topicLabel: 'MWA H — HEV/EV Systems',
         order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-a-sds-01',
+        topicLabel: 'MWA A — Performs Common Occupational Skills',
+        question: 'Which section of an SDS (Safety Data Sheet) provides information on first-aid measures?',
+        options: [
+            'Section 2: Hazard Identification',
+            'Section 4: First-Aid Measures',
+            'Section 7: Handling and Storage',
+            'Section 8: Exposure Controls/Personal Protection'
+        ],
+        correctIndex: 1,
+        explanation: 'SDS Section 4 specifically covers first-aid measures for exposure (inhalation, skin contact, eye contact, ingestion). Section 2 is hazards, Section 7 is handling/storage, Section 8 is PPE/exposure limits.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-a-lift-safety-01',
+        topicLabel: 'MWA A — Performs Common Occupational Skills',
+        question: 'When lifting a vehicle on a two-post lift, what is the correct procedure for engaging the lift arms?',
+        options: [
+            'Position arms under any convenient frame spot',
+            'Use only the OEM-designated lift points',
+            'Place arms under the suspension control arms',
+            'Center the vehicle by eye, no lift points needed'
+        ],
+        correctIndex: 1,
+        explanation: 'ALWAYS use the OEM-designated lift points. These are reinforced areas designed to support the vehicle weight. Lifting on suspension components, floor pans, or non-designated points can cause damage or vehicle instability.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-a-fire-extinguisher-01',
+        topicLabel: 'MWA A — Performs Common Occupational Skills',
+        question: 'What class of fire extinguisher is required for a gasoline fuel fire?',
+        options: [
+            'Class A',
+            'Class B',
+            'Class C',
+            'Class D'
+        ],
+        correctIndex: 1,
+        explanation: 'Class B extinguishers are for flammable liquids (gasoline, diesel, oil, grease). Class A = ordinary combustibles (wood, paper). Class C = electrical equipment. Class D = combustible metals.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-a-ohsa-01',
+        topicLabel: 'MWA A — Performs Common Occupational Skills',
+        question: 'Under OH&S legislation, what are the three basic rights of workers?',
+        options: [
+            'Right to know, right to participate, right to refuse unsafe work',
+            'Right to pay, right to benefits, right to vacation',
+            'Right to tools, right to training, right to breaks',
+            'Right to unionize, right to strike, right to grieve'
+        ],
+        correctIndex: 0,
+        explanation: 'The three fundamental worker rights under OH&S: 1) Right to KNOW about workplace hazards (WHMIS, training). 2) Right to PARTICIPATE in health and safety (committees, reporting). 3) Right to REFUSE unsafe work without reprisal.',
+        order: 0
+    },
+
+    // MWA B - 9 questions (17.6%)
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-vacuum-gauge-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'A vacuum gauge at idle shows a steady reading of 15 in-Hg (spec 18-22 in-Hg). The needle is steady. What does this indicate?',
+        options: [
+            'Normal engine',
+            'Retarded ignition or valve timing',
+            'Worn piston rings',
+            'Stuck open EGR valve'
+        ],
+        correctIndex: 1,
+        explanation: 'Steady low vacuum (below spec) at idle typically indicates retarded ignition timing or retarded valve timing (camshaft timing retarded). Worn rings would show low but steady vacuum. Stuck open EGR would cause a rough idle and fluctuating needle.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-cylinder-leakdown-02',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'During a leak-down test, air bubbles appear in the coolant reservoir. The engine is at TDC on the compression stroke for that cylinder. What does this indicate?',
+        options: [
+            'Intake valve leak',
+            'Exhaust valve leak',
+            'Head gasket leak or cracked head/block',
+            'Piston ring leak'
+        ],
+        correctIndex: 2,
+        explanation: 'Bubbles in the coolant reservoir during a leak-down test (at TDC compression) indicate combustion pressure entering the cooling system = head gasket leak, cracked cylinder head, or cracked block. This is a definitive test for internal coolant leaks.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-vvt-phaser-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'A VVT system uses a cam phaser controlled by an oil control valve (OCV). The phaser is stuck in the fully advanced position. What is the most likely cause?',
+        options: [
+            'OCV stuck open (advance)',
+            'OCV stuck closed (retard)',
+            'Low engine oil pressure',
+            'Faulty camshaft position sensor'
+        ],
+        correctIndex: 0,
+        explanation: 'Phaser stuck advanced = OCV stuck in the advance position (supplying oil to the advance chamber continuously). Stuck retard would hold it retarded. Low oil pressure would prevent movement. CMP sensor fault sets a code but doesn\'t mechanically stick the phaser.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-gdi-carbon-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'A GDI engine has rough idle and misfire codes (P0300, P0302). Compression and leak-down are normal. What is a common GDI-specific cause?',
+        options: [
+            'Carbon buildup on intake valves',
+            'Faulty high-pressure pump',
+            'Low fuel rail pressure',
+            'Faulty ignition coils'
+        ],
+        correctIndex: 0,
+        explanation: 'GDI engines lack fuel wash on intake valves (fuel injected directly into cylinder). Carbon buildup on intake valves is common, causing misfire, rough idle, and power loss. Walnut blasting or chemical cleaning is required. Normal compression/leak-down rules out mechanical issues.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-diesel-hpfp-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'A diesel high-pressure fuel pump (CP4) fails and contaminates the fuel system with metal debris. What components MUST be replaced?',
+        options: [
+            'High-pressure pump only',
+            'High-pressure pump, fuel rail, injectors, lines, and fuel tank',
+            'High-pressure pump and fuel filter',
+            'High-pressure pump, injectors, and fuel filter'
+        ],
+        correctIndex: 1,
+        explanation: 'CP4 failure generates microscopic metal debris that contaminates the ENTIRE high-pressure fuel system. The pump, rail, injectors, high-pressure lines, and fuel tank must be replaced. Low-pressure lines and filter should also be replaced. Flushing is insufficient.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-dpf-regen-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'A diesel vehicle requires frequent DPF regeneration (every 100 km). The differential pressure sensor reads normal. What is a likely cause?',
+        options: [
+            'Faulty DPF pressure sensor',
+            'EGR cooler leaking coolant into exhaust',
+            'Turbocharger oil seal leaking',
+            'All of the above'
+        ],
+        correctIndex: 3,
+        explanation: 'Frequent regens with normal DPF pressure indicate excess soot load from upstream sources: EGR cooler leaking coolant (creates soot), turbo oil seal leaking (oil burns to soot), or injector dribble. All increase particulate matter, loading the DPF faster.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-timing-chain-guides-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'A timing chain engine has a rattle noise at cold startup that disappears after 2-3 seconds. The tensioner is hydraulic. What is the most likely cause?',
+        options: [
+            'Timing chain stretch',
+            'Worn timing chain guides',
+            'Hydraulic tensioner bleed-down (check valve failure)',
+            'Camshaft phaser failure'
+        ],
+        correctIndex: 2,
+        explanation: 'Cold-start rattle that disappears quickly = hydraulic tensioner bleed-down. The tensioner\'s check valve fails, allowing oil to drain back. At startup, it takes 2-3 seconds to repressurize and tension the chain. Chain stretch causes constant noise and correlation codes.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-cooling-system-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'An engine overheats. The upper radiator hose is hot, lower hose is hot. The cooling fan operates. What is the most likely cause?',
+        options: [
+            'Stuck closed thermostat',
+            'Restricted radiator (internal)',
+            'Failed water pump impeller',
+            'Blown head gasket'
+        ],
+        correctIndex: 2,
+        explanation: 'Both hoses hot = coolant circulating. Overheat with circulation = insufficient heat rejection. Failed water pump impeller (plastic separation, corrosion) cannot move enough coolant at high RPM. Restricted radiator typically shows hot inlet, cooler outlet (cold spots). Head gasket = pressure rise, combustion gas in coolant.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-b-oil-consumption-01',
+        topicLabel: 'MWA B — Diagnoses and Repairs Engine and Engine Support Systems',
+        question: 'An engine consumes 1 L of oil per 1000 km. No external leaks. Blue smoke on startup and deceleration. Compression test is normal. What is the most likely cause?',
+        options: [
+            'Worn piston rings',
+            'Worn valve guide seals',
+            'PCV system fault',
+            'Turbocharger seal failure'
+        ],
+        correctIndex: 1,
+        explanation: 'Blue smoke on startup (valve seals drain oil into cylinders overnight) and deceleration (high manifold vacuum pulls oil past seals) with normal compression = worn valve guide seals. Worn rings would show low compression. PCV fault typically causes smoke at all times. Turbo seal failure = smoke at high load.',
+        order: 0
+    },
+
+    // MWA C - 5 questions (9.6%)
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-c-can-fd-01',
+        topicLabel: 'MWA C — Diagnoses and Repairs Vehicle Module Communications Systems',
+        question: 'What is the key difference between CAN FD and classic CAN?',
+        options: [
+            'CAN FD uses three wires instead of two',
+            'CAN FD supports faster data phase (up to 5 Mbps) and larger payload (64 bytes vs 8 bytes)',
+            'CAN FD operates at 12V instead of 5V',
+            'CAN FD is a wireless protocol'
+        ],
+        correctIndex: 1,
+        explanation: 'CAN FD (Flexible Data-rate) extends classic CAN: same two-wire physical layer, but supports switchable bit rate (up to 5 Mbps in data phase) and larger payload (up to 64 bytes vs 8 bytes). Backward compatible with classic CAN.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-c-gateway-01',
+        topicLabel: 'MWA C — Diagnoses and Repairs Vehicle Module Communications Systems',
+        question: 'A vehicle has multiple U-codes across different buses (HS-CAN, MS-CAN, LIN). The gateway module has power and ground. What is the next test?',
+        options: [
+            'Replace the gateway',
+            'Check gateway communication with each bus using scan tool "Bus Health" or "Network Test"',
+            'Check all module power/grounds',
+            'Replace the DLC'
+        ],
+        correctIndex: 1,
+        explanation: 'Gateway failure is a common cause of multi-bus U-codes. Use scan tool to check gateway\'s communication status with each bus (HS-CAN, MS-CAN, LIN). The gateway may have lost communication on one bus internally, or a bus fault is preventing gateway routing.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-c-flexray-01',
+        topicLabel: 'MWA C — Diagnoses and Repairs Vehicle Module Communications Systems',
+        question: 'FlexRay protocol is primarily used for which automotive applications?',
+        options: [
+            'Body control (windows, locks)',
+            'Powertrain (engine, transmission)',
+            'Safety-critical x-by-wire (active suspension, steer-by-wire)',
+            'Infotainment'
+        ],
+        correctIndex: 2,
+        explanation: 'FlexRay (10 Mbps, deterministic, fault-tolerant) was designed for safety-critical x-by-wire systems (active suspension, steer-by-wire, brake-by-wire). It is largely superseded by CAN FD and Ethernet in modern vehicles but still found in some legacy applications.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-c-scope-can-01',
+        topicLabel: 'MWA C — Diagnoses and Repairs Vehicle Module Communications Systems',
+        question: 'When scoping a CAN bus, what indicates a healthy recessive-to-dominant transition?',
+        options: [
+            'CAN_H rises to 3.5 V, CAN_L falls to 1.5 V, differential ~2 V, clean square wave',
+            'Both lines stay at 2.5 V',
+            'CAN_H goes to 5 V, CAN_L goes to 0 V',
+            'Both lines go to 0 V'
+        ],
+        correctIndex: 0,
+        explanation: 'Healthy dominant bit: CAN_H rises from 2.5 V to ~3.5 V, CAN_L falls from 2.5 V to ~1.5 V, differential voltage ~2 V. Clean square wave with sharp edges. Ringing, slow edges, or incorrect voltages indicate wiring or transceiver faults.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-c-ota-01',
+        topicLabel: 'MWA C — Diagnoses and Repairs Vehicle Module Communications Systems',
+        question: 'What is the technician\'s role in Over-the-Air (OTA) updates?',
+        options: [
+            'Perform the update manually via scan tool',
+            'Verify update status, force check, troubleshoot failed installs, perform post-update relearns',
+            'Disable OTA updates',
+            'OTA updates do not involve technicians'
+        ],
+        correctIndex: 1,
+        explanation: 'OTA updates are delivered wirelessly by the OEM. Technician role: check software version vs. latest, force update check via scan tool, troubleshoot failed installations (check logs), and perform any required post-update relearns/calibrations (steering angle, ADAS, etc.).',
+        order: 0
+    },
+
+    // MWA D - 7 questions (13.6%)
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-d-at-solenoid-01',
+        topicLabel: 'MWA D — Diagnoses and Repairs Driveline Systems',
+        question: 'An automatic transmission has no 3rd gear. Scan tool shows 3rd gear solenoid commanded ON but actual gear remains 2nd. Line pressure is normal. What is the most likely cause?',
+        options: [
+            '3rd gear clutch pack failed',
+            '3rd gear shift solenoid mechanically stuck closed',
+            'TCM failed',
+            'Vehicle speed sensor failed'
+        ],
+        correctIndex: 1,
+        explanation: 'Solenoid commanded ON but no gear change = solenoid mechanically stuck closed (no hydraulic flow to 3rd clutch). Electrical fault would set a circuit code. Clutch failure would show slip (RPM flare). VSS fault affects all shifts.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-d-cvt-step-motor-01',
+        topicLabel: 'MWA D — Diagnoses and Repairs Driveline Systems',
+        question: 'A CVT has a P1778 code (Stepper Motor Circuit). The stepper motor current is 0 mA commanded, but actual is 0 mA. What is the most likely cause?',
+        options: [
+            'Stepper motor open circuit',
+            'Stepper motor short to ground',
+            'TCM driver failed',
+            'All of the above possible'
+        ],
+        correctIndex: 3,
+        explanation: 'P1778 with 0 mA actual current (commanded 0) could be: open circuit in motor windings, short to ground, or TCM driver failure. Resistance test of stepper motor coils (typically 20-30 Ω each) and wiring check required to isolate.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-d-dct-mechatronic-01',
+        topicLabel: 'MWA D — Diagnoses and Repairs Driveline Systems',
+        question: 'A DCT has harsh shifts and a "Mechatronic Communication" code. The mechatronic unit is the integrated hydraulic/electronic module. What does it contain?',
+        options: [
+            'Only solenoids',
+            'Solenoids, pressure sensors, position sensors, and TCM',
+            'Only the TCM',
+            'Only pressure sensors'
+        ],
+        correctIndex: 1,
+        explanation: 'The mechatronic unit integrates: solenoids (clutch control, gear selection), pressure sensors (clutch, line), position sensors (shift rail), and the TCM (transmission control module) in one housing. Failure of any component often requires mechatronic replacement or repair.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-d-transfer-case-encoder-01',
+        topicLabel: 'MWA D — Diagnoses and Repairs Driveline Systems',
+        question: 'A 4WD system won\'t engage 4HI. The encoder motor on the transfer case does not run. Scan tool shows encoder motor circuit code. What is the first test?',
+        options: [
+            'Replace the encoder motor',
+            'Check encoder motor power and ground at the connector',
+            'Replace the transfer case control module',
+            'Manually shift the transfer case'
+        ],
+        correctIndex: 1,
+        explanation: 'Encoder motor circuit code = check power and ground at the motor connector first. No power = wiring, fuse, or control module. Power/ground good but no run = motor failure. Manual shift lever (if equipped) can verify mechanical function.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-d-driveshaft-phase-01',
+        topicLabel: 'MWA D — Diagnoses and Repairs Driveline Systems',
+        question: 'A two-piece driveshaft has a vibration at highway speed. The center support bearing is good. What is a critical installation requirement?',
+        options: [
+            'Both U-joint yokes must be in phase (arrows aligned)',
+            'The slip yoke must be fully extended',
+            'The driveshaft must be installed upside down',
+            'Phase does not matter on two-piece shafts'
+        ],
+        correctIndex: 0,
+        explanation: 'Driveshaft phasing is critical: both U-joint yokes must be in phase (in the same plane, arrows aligned). Out-of-phase = 2nd order vibration (2x driveshaft RPM). Two-piece shafts have phasing marks on the slip yoke and center section.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-d-diff-pattern-01',
+        topicLabel: 'MWA D — Diagnoses and Repairs Driveline Systems',
+        question: 'During a differential gear pattern check, the contact pattern is high on the tooth face (toward heel) on the drive side. What adjustment is needed?',
+        options: [
+            'Decrease pinion depth shim (move pinion toward ring gear)',
+            'Increase pinion depth shim (move pinion away from ring gear)',
+            'Increase backlash',
+            'Decrease backlash'
+        ],
+        correctIndex: 1,
+        explanation: 'Pattern high on tooth (toward heel) on drive side = pinion too close to ring gear. Increase pinion depth shim thickness to move pinion away from ring gear. Backlash adjustment moves pattern lengthwise but depth shim moves it across the face.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-d-awd-clutch-01',
+        topicLabel: 'MWA D — Diagnoses and Repairs Driveline Systems',
+        question: 'An AWD vehicle has a shudder on tight turns. The AWD clutch pack current is commanded 0 A but actual current reads 0.5 A. What does this indicate?',
+        options: [
+            'Clutch pack worn',
+            'Clutch pack seized/mechanically dragging',
+            'Current sensor fault',
+            'Normal operation'
+        ],
+        correctIndex: 1,
+        explanation: 'Commanded 0 A but actual 0.5 A = clutch pack mechanically dragging (seized plates, contaminated fluid, worn friction material causing constant engagement). The control module detects the current draw. Worn clutch would show high slip, not drag. Current sensor fault would be erratic.',
+        order: 0
+    },
+
+    // MWA E - 9 questions (18.4%)
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-alternator-ripple-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'An alternator AC ripple voltage measures 1.2 V peak-to-peak at the battery (spec <0.5 V). What does this indicate?',
+        options: [
+            'Normal alternator operation',
+            'Failed diode or stator winding',
+            'Voltage regulator failure',
+            'Battery sulfation'
+        ],
+        correctIndex: 1,
+        explanation: 'Excessive AC ripple (>0.5 V p-p) at the battery indicates a failed diode (open or shorted) or stator winding fault in the alternator. The rectifier is not converting AC to clean DC. Voltage regulator failure typically causes high/low DC voltage, not ripple.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-bcm-programming-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'After replacing a BCM, the vehicle will not start (no crank). The BCM was programmed with the correct VIN. What is the most likely missing step?',
+        options: [
+            'Key programming / immobilizer synchronization',
+            'Relearn the steering angle sensor',
+            'Calibrate the TPMS sensors',
+            'Reset the adaptive cruise control'
+        ],
+        correctIndex: 0,
+        explanation: 'BCM replacement requires: 1) Programming (software flash). 2) VIN write. 3) Configuration (options). 4) Key programming / immobilizer sync (PATS, KESSY, etc.). Without key programming, the immobilizer prevents crank/start.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-hvac-evap-temp-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'An auto climate control system cycles the compressor off prematurely. The evaporator temperature sensor reads -10°C (actual evaporator temp is 5°C). What is the cause?',
+        options: [
+            'Evaporator temperature sensor failed (reading low)',
+            'Low refrigerant charge',
+            'Faulty compressor',
+            'Blend door actuator failed'
+        ],
+        correctIndex: 0,
+        explanation: 'Evaporator temp sensor reading -10°C (actual 5°C) = sensor failed low (high resistance). The controller thinks the evaporator is freezing and cycles the compressor off to protect it. Actual low charge would cause insufficient cooling, not false freeze signal.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-r1234yf-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'R-1234yf refrigerant is classified as A2L. What does this mean for service procedures?',
+        options: [
+            'Non-flammable, standard procedures apply',
+            'Mildly flammable — no open flames, use J2843 certified equipment, ventilate area',
+            'Highly flammable — explosion-proof equipment required',
+            'Toxic — full respirator required'
+        ],
+        correctIndex: 1,
+        explanation: 'R-1234yf is A2L (mildly flammable). Service requires: no open flames/sparks, J2843 certified recovery machine, proper ventilation, leak detector rated for A2L (J2913). Not highly flammable (A3) like propane. Not toxic like ammonia.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-heat-pump-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'A heat pump HVAC system provides no heat in winter. The reversing valve is commanded to heating mode but the discharge line remains cold. What is the most likely cause?',
+        options: [
+            'Reversing valve stuck in cooling position',
+            'Compressor failed',
+            'Low refrigerant charge',
+            'Outdoor temperature too low'
+        ],
+        correctIndex: 0,
+        explanation: 'Reversing valve commanded to heat but discharge line cold = valve stuck in cooling position (diverting hot gas to outdoor coil). The compressor runs but heat is rejected outside. Low charge would show low pressures. Modern heat pumps operate to -20°C or lower.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-can-gateway-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'A body control function (power windows) works but the scan tool cannot communicate with the BCM. The BCM is on the MS-CAN. What is the likely cause?',
+        options: [
+            'BCM failed',
+            'Gateway module not routing diagnostic messages to MS-CAN',
+            'DLC pins 6/14 fault',
+            'HS-CAN bus off'
+        ],
+        correctIndex: 1,
+        explanation: 'Function works but no scan tool communication = gateway not routing diagnostic messages to that bus. The gateway acts as a firewall/router for diagnostic traffic. HS-CAN (DLC pins 6/14) works for scan tool, but gateway must bridge to MS-CAN for BCM access.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-tpms-indirect-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'An indirect TPMS system (uses ABS wheel speed sensors) sets a low pressure warning after a tire rotation. What is required?',
+        options: [
+            'Relearn sensor IDs with trigger tool',
+            'Initialize/reset the TPMS system via menu or scan tool, then drive cycle',
+            'Replace all wheel speed sensors',
+            'Reprogram the ABS module'
+        ],
+        correctIndex: 1,
+        explanation: 'Indirect TPMS uses ABS WSS to detect rolling circumference differences. After rotation, the system must be initialized/reset (via menu or scan tool) and then a drive cycle allows it to relearn the new wheel positions. No sensor IDs to program.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-door-module-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'A power window works from the driver\'s master switch but not from the passenger door switch. The passenger door module communicates on LIN. What is the first test?',
+        options: [
+            'Replace passenger door switch',
+            'Scope LIN bus at passenger door module: 12 V recessive, master header + slave response',
+            'Replace passenger door module',
+            'Check LIN bus at driver door module'
+        ],
+        correctIndex: 1,
+        explanation: 'LIN diagnosis: master (driver door module) polls slave (passenger door module). Scope LIN wire at slave: should see 12 V recessive, master header, slave response. No response = slave fault, wiring, or master not polling. Switch input is read by the door module.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-e-terminal-repair-01',
+        topicLabel: 'MWA E — Diagnoses and Repairs Electrical and Comfort Control Systems',
+        question: 'When repairing a connector terminal on a CAN bus circuit, what crimp tool is required?',
+        options: [
+            'Standard crimp tool',
+            'Ratchet crimp tool with correct die for the terminal type',
+            'Pliers',
+            'Solder only, no crimp'
+        ],
+        correctIndex: 1,
+        explanation: 'Terminal crimping requires a ratchet crimp tool with the correct die for the specific terminal series (Deutsch, Metri-Pack, JAE, etc.). Standard tools or pliers do not provide consistent crimp force. Solder alone is not acceptable for vibration environments.',
+        order: 0
+    },
+
+    // MWA F - 9 questions (18.4%)
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-eps-cal-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'After replacing an EPS rack, what calibration is REQUIRED before the vehicle is driven?',
+        options: [
+            'Torque sensor calibration (zero point)',
+            'Steering angle sensor calibration only',
+            'No calibration needed',
+            'ABS module calibration'
+        ],
+        correctIndex: 0,
+        explanation: 'EPS rack replacement requires torque sensor calibration (zero point / kiss point learn) via scan tool. The torque sensor (torsion bar + Hall/MR) must learn the zero-torque position. Steering angle sensor calibration is also required but is separate.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-suspension-noise-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'A clunk noise occurs over bumps. The sway bar links and bushings are good. The strut mounts are good. What is a commonly missed cause?',
+        options: [
+            'Lower control arm rear bushing (hydraulic) failed',
+            'Spring insulator missing',
+            'Strut bearing plate',
+            'All of the above'
+        ],
+        correctIndex: 3,
+        explanation: 'Clunk over bumps with good links/bushings/mounts: check hydraulic control arm bushings (fluid leak = failure), spring insulators (missing = metal-on-metal), strut bearing plate (binding = clunk on turn), and subframe mounting bolts (loose). All are commonly missed.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-brake-hose-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'A front brake drags after hard braking. The caliper slides freely. The piston retracts when the bleeder is opened. What is the cause?',
+        options: [
+            'Caliper piston seal failed',
+            'Brake hose internal restriction (check valve effect)',
+            'Master cylinder pushrod too long',
+            'Proportioning valve fault'
+        ],
+        correctIndex: 1,
+        explanation: 'Piston retracts when bleeder opened = pressure trapped in caliper. Brake hose internal liner can separate, acting as a check valve: allows pressure to caliper but blocks return flow. Common on older hoses. Master cylinder pushrod affects all brakes. Proportioning valve affects rear bias.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-abs-sensor-air-gap-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'A passive wheel speed sensor has an air gap of 2.5 mm (spec 0.5-1.5 mm). The tone ring is intact. What symptom will this cause?',
+        options: [
+            'ABS activates at low speed (false activation)',
+            'ABS does not activate when needed',
+            'Speedometer reads high',
+            'No symptoms'
+        ],
+        correctIndex: 0,
+        explanation: 'Excessive air gap on passive WSS = weak AC signal at low speeds. The ABS module loses the signal at low speed, interprets it as wheel lock, and activates ABS falsely (typically <10 km/h). At higher speeds, signal amplitude is sufficient.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-epb-cal-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'After replacing EPB brake pads, what is the mandatory procedure?',
+        options: [
+            'Pump brake pedal 20 times',
+            'Scan tool: EPB service mode retract → install pads → service mode extend → calibration',
+            'Manually wind the piston back with pliers',
+            'No procedure needed'
+        ],
+        correctIndex: 1,
+        explanation: 'EPB pad replacement: 1) Scan tool "EPB Service Mode" → retract piston. 2) Install pads. 3) Scan tool "Service Mode" → extend piston to contact pads. 4) Calibration (apply/release cycles to learn end-stops). Never manually force the motor — damages gears.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-tire-conicity-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'A vehicle pulls left. Front tires swapped side-to-side: pull moves to right. Alignment is within spec. What is the diagnosis?',
+        options: [
+            'Left front brake drag',
+            'Right front tire conicity (radial pull)',
+            'Steering rack internal leak',
+            'Left front lower control arm bushing failed'
+        ],
+        correctIndex: 1,
+        explanation: 'Pull follows the tire when swapped side-to-side = tire conicity (radial pull). The tire\'s internal construction creates a lateral force. Alignment pull stays with the vehicle. Brake drag is constant. Rack leak causes steering effort difference, not constant pull.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-cdc-sensor-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'A CDC (Continuous Damping Control) system has a "Vertical Acceleration Sensor" code. The sensor reads 0 V at rest (spec 2.5 V). What is the cause?',
+        options: [
+            'Sensor failed',
+            'Sensor unplugged',
+            'Sensor short to ground',
+            'All of the above possible'
+        ],
+        correctIndex: 3,
+        explanation: 'Vertical G sensor at rest should read ~2.5 V (mid-range). 0 V = short to ground, unplugged (pulled low), or internal sensor failure. All three produce 0 V. Check connector, wiring, then sensor.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-wheel-bearing-gen2-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'A Gen 2 wheel bearing (flange + bearing pressed into knuckle) is being replaced. What is a critical step?',
+        options: [
+            'Press bearing in with force on outer race only',
+            'Press bearing in with force on inner race only',
+            'Use a hydraulic press with correct adapters supporting the knuckle',
+            'Heat the knuckle to 200°C'
+        ],
+        correctIndex: 2,
+        explanation: 'Gen 2 bearing replacement: hydraulic press with correct adapters supporting the knuckle (not the bearing). Force must be applied evenly. Heating the knuckle (not bearing) aids installation. Never force on inner race (damages bearing). Never hammer.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-f-brake-fluid-dot4lv-01',
+        topicLabel: 'MWA F — Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings',
+        question: 'A vehicle requires DOT 4 LV brake fluid. The technician uses DOT 4 instead. What is the consequence?',
+        options: [
+            'No consequence, they are interchangeable',
+            'ABS/ESC valve cycling may be impaired at low temperatures',
+            'Brake pedal feel will be softer',
+            'Boiling point will be higher'
+        ],
+        correctIndex: 1,
+        explanation: 'DOT 4 LV (Low Viscosity) is required for modern ABS/ESC (especially Bosch) for proper valve cycling at low temperatures. DOT 4 has higher viscosity at cold temps, causing sluggish or failed valve operation. DOT 4 LV is backward compatible; DOT 4 is NOT a substitute for DOT 4 LV.',
+        order: 0
+    },
+
+    // MWA G - 4 questions (8%)
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-g-seat-belt-01',
+        topicLabel: 'MWA G — Diagnoses and Repairs Restraint Systems, Body Components, Accessories and Trim',
+        question: 'A seat belt pretensioner has deployed. What is the repair?',
+        options: [
+            'Reset the pretensioner with a scan tool',
+            'Replace the pretensioner (and seat belt assembly)',
+            'Replace the gas generator only',
+            'No repair needed, it will reset after 10 key cycles'
+        ],
+        correctIndex: 1,
+        explanation: 'Deployed pretensioners are single-use pyrotechnic devices. They MUST be replaced (typically as part of the seat belt assembly). Cannot be reset. The SRS ECU will also have crash data locked.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-g-side-airbag-01',
+        topicLabel: 'MWA G — Diagnoses and Repairs Restraint Systems, Body Components, Accessories and Trim',
+        question: 'A side curtain airbag deploys in a side impact. What other components MUST be inspected/replaced?',
+        options: [
+            'Only the curtain airbag module',
+            'Curtain airbag, headliner, A/B/C pillar trim, and any damaged wiring',
+            'Curtain airbag and seat belt pretensioners',
+            'Curtain airbag and SRS ECU'
+        ],
+        correctIndex: 1,
+        explanation: 'Curtain airbag deployment tears through the headliner and pillar trim. All damaged trim, headliner, and wiring in the deployment path must be replaced. The SRS ECU may have crash data locked (requires replacement). Pretensioners may or may not deploy depending on impact severity.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-g-body-sectioning-01',
+        topicLabel: 'MWA G — Diagnoses and Repairs Restraint Systems, Body Components, Accessories and Trim',
+        question: 'When sectioning a quarter panel, where must the cut be made?',
+        options: [
+            'At the most convenient location',
+            'At the OEM-specified sectioning joint location',
+            'At the center of the panel',
+            'At the wheel opening'
+        ],
+        correctIndex: 1,
+        explanation: 'OEMs specify exact sectioning locations (joints) for structural integrity. Cutting at random locations compromises crash performance. The repair manual shows the approved joint location, joint type (butt, lap, plug weld), and adhesive/weld requirements.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-g-audio-anti-theft-01',
+        topicLabel: 'MWA G — Diagnoses and Repairs Restraint Systems, Body Components, Accessories and Trim',
+        question: 'An aftermarket battery disconnect causes the factory radio to display "CODE" or "LOCKED". What is required?',
+        options: [
+            'Replace the radio',
+            'Enter the anti-theft code (from owner\'s manual or dealer)',
+            'Disconnect battery for 1 hour',
+            'Reprogram the radio with J2534'
+        ],
+        correctIndex: 1,
+        explanation: 'Factory radios have anti-theft protection: power loss triggers lock. The unique code (from owner\'s manual card or dealer VIN lookup) must be entered. Some newer radios use VIN-lock and require J2534 programming, but most still use code entry.',
+        order: 0
+    },
+
+    // MWA H - 3 questions (7.2%)
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-h-48v-mhev-01',
+        topicLabel: 'MWA H — Diagnoses and Repairs Hybrid and Electric Vehicle (EV) Systems',
+        question: 'A 48V MHEV (Mild Hybrid) has a "48V System Fault" code. The 48V battery SOC is 0%. The DC-DC converter is not charging the 12V battery. What is the first safety step?',
+        options: [
+            'Jump start the 12V battery',
+            'De-energize the 48V system (service plug, wait, verify <60V)',
+            'Replace the 48V battery',
+            'Scan tool "48V System Reset"'
+        ],
+        correctIndex: 1,
+        explanation: 'Any 48V system fault diagnosis MUST start with de-energizing: remove 48V service plug, wait capacitor discharge time (5-10 min), verify <60 V DC at multiple points. 48V = shock hazard. Class 0 gloves, insulated tools required.',
+        order: 0
+    },
+    {
+        tradeSlug: 'autoservtech',
+        topicId: 'mwa-h-ev-charge-pilot-01',
+        topicLabel: 'MWA H — Diagnoses and Repairs Hybrid and Electric Vehicle (EV) Systems',
+        question: 'During AC Level 2 charging, the Control Pilot (CPLT) signal measures 6 V (State C). The EVSE is offering 32 A (50% duty cycle). The vehicle does not start charging. What is the next check?',
+        options: [
+            'OBC AC input voltage',
+            'Proximity detect (PP) circuit',
+            'EVSE ground fault',
+            'All of the above'
+        ],
+        correctIndex: 3,
+        explanation: 'State C (6 V) = vehicle ready, vent not required. No charge start: check OBC AC input (contactor closed?), PP circuit (cable rating detected?), EVSE ground fault, OBC-BMS CAN communication, and BMS charge permission (SOC, temp, cell voltage).',
+        order: 0
     }
 ];
