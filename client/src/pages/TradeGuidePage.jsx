@@ -14,7 +14,7 @@ import { paths } from '../utils/routes';
 export default function TradeGuidePage({ tradeSlug: tradeSlugProp }) {
   const { tradeSlug: paramTradeSlug, slug: paramSlug } = useParams();
   const tradeSlug = tradeSlugProp ?? paramTradeSlug ?? paramSlug;
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const guide = getGuideBySlug(tradeSlug);
 
   if (!guide) {

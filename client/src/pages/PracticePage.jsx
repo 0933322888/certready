@@ -15,7 +15,7 @@ import { usePracticeSession } from '../hooks/usePracticeSession';
 
 export default function PracticePage() {
   const { tradeSlug } = useParams();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const guide = getGuideBySlug(tradeSlug);
 
   const [phase, setPhase] = useState('idle');
