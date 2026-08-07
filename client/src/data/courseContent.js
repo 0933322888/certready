@@ -2,6 +2,7 @@ import { hairstylistCourse as courseEn } from './hairstylistCourse';
 import { hairstylistCourseFr } from './hairstylistCourse.fr';
 import hairstylistCourseRU from './hairstylistCourse.ru';
 import plumberCourseData from './plumberCourse';
+import { getQuestions as getPracticeQuestions } from '../../../server/scripts/practiceQuestions';
 import plumberCourseDataFR from './plumberCourse.fr';
 import plumberCourseDataRU from './plumberCourse.ru';
 import carpenterCourseData from './carpenterCourse';
@@ -51,7 +52,13 @@ export const COURSE_SLUGS = ['hairstylist-332a', 'plumber-306a', 'autoservtech-3
 export function getCourse(slug, lang = 'en') {
   const baseLang = (lang && String(lang).split('-')[0]) || 'en';
   const langCourses = coursesByLang[baseLang] || coursesByLang.en;
-  return langCourses[slug] || coursesByLang.en[slug] || null;
+  const course = langCourses[slug] || coursesByLang.en[slug] || null;
+
+  if (course && getPracticeQuestions) {
+    course.questions = getPracticeQuestions();
+  }
+
+  return course;
 }
 
 export const SUPPORTED_LANGUAGES = [

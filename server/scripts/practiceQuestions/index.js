@@ -15,7 +15,7 @@ import autoservtechQuestions from './autoservtech.js';
 export { TRADE_TOPICS, getTopicLabel };
 
 /** All practice questions: carpenter, then construction-electrician, then plumber, then hairstylist */
-export const QUESTIONS = [
+export const getQuestions = (i18n) => [
   ...carpenterQuestions,
   ...constructionElectricianQuestions,
   ...plumberQuestions,
