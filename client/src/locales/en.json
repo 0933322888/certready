@@ -87,7 +87,7 @@
     "freeWindowOneTime": "Claim now — free access for 5 days (purchase to keep access & unlock mock exam)",
     "checkoutFailed": "Failed to start checkout. Please try again.",
     "skilledTradesOntario": "Skilled Trades Ontario",
-    "descriptionFallback": "Pass your Skilled Trades Ontario Hairstylist (332A) certification exam with confidence. 15 chapters, 75+ practice questions, full mock exam — all based on the official STO curriculum standard.",
+    "descriptionFallback": "Pass your Skilled Trades Ontario Hairstylist (332A) certification exam with confidence. 15 chapters, 320+ practice questions, full mock exam — all based on the official STO curriculum standard.",
     "learnMoreLink": "Learn more about the {{trade}} Red Seal exam →",
     "coursePageTitle": "{{trade}} Red Seal Exam Prep — Complete Study Guide ({{code}})",
     "discountedSpotsLeft": "{{count}} discounted spots left",
@@ -338,7 +338,7 @@
   },
   "lockOverlay": {
     "title": "This chapter is part of the full course",
-    "description": "Get full access to all 15 chapters, 75+ practice questions, and the complete study guide.",
+    "description": "Get full access to all 15 chapters, 320+ practice questions, and the complete study guide.",
     "getAccess": "Get Full Access"
   },
   "home": {
@@ -383,7 +383,7 @@
     "comingSoon": "Coming Soon",
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
-      { "question": "What's included in the course?", "answer": "Each course includes comprehensive chapters covering all exam topics, 75+ practice questions with detailed explanations, a full-length mock exam, key term glossary, and 5-year access to all materials." },
+      { "question": "What's included in the course?", "answer": "Each course includes comprehensive chapters covering all exam topics, 320+ practice questions with detailed explanations, a full-length mock exam, key term glossary, and 5-year access to all materials." },
       { "question": "How long do I have access?", "answer": "You have 5 years access to the course materials. You can study at your own pace and revisit the content anytime." },
       { "question": "What if I fail the exam?", "answer": "While we can't guarantee you'll pass, our courses are designed to give you the best possible preparation. You'll have 5-year access to review the materials and retake the exam as needed." },
       { "question": "Is this official STO material?", "answer": "Our courses are based on the official Skilled Trades Ontario curriculum standards and are designed to help you prepare for the certification exam. However, we are not affiliated with STO." },

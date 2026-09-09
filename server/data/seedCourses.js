@@ -13,7 +13,7 @@ export const seedCourses = [
     isPublished: true,
     features: [
       '15 comprehensive chapters',
-      '75+ practice questions with explanations',
+      '320+ practice questions with explanations',
       'Full 50-question mock exam',
       '60+ term glossary',
       'Covers STO Levels 1 & 2 (480 hrs)',
@@ -96,7 +96,7 @@ export const seedCourses = [
     isPublished: true,
     features: [
       'Chapters covering all 5 Major Work Activities (MWA)',
-      '100+ practice questions with detailed explanations',
+      '200+ practice questions with detailed explanations',
       'Full formulas reference sheet and key terms glossary',
       'Red Seal exam strategy and MWA weighting breakdown',
       'Based on Red Seal Occupational Standard (RSOS) — Construction Electrician 2025',

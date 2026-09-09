@@ -24,7 +24,7 @@ export const hairstylistCourse = {
     examFormat: 'Multiple-choice, computer-based (Prometric Canada Testing Services)',
     features: [
         '15 comprehensive chapters covering ALL 17 official exam subjects',
-        '120+ practice questions with full explanations',
+        '320+ practice questions with full explanations',
         'Full 50-question timed mock exam (Chapter 13)',
         '70+ term glossary (Chapter 14)',
         'Exam strategy and study tips (Chapter 15)',
