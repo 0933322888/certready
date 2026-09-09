@@ -255,26 +255,61 @@ export default function MockExamPage() {
               {t('mockExam.subtitle', { tradeName: trade.name })}
             </p>
             {loadError && (
-              <Card className="mb-6 border-danger/50 bg-danger/5 p-4">
-                <p className="text-danger mb-4">{loadError}</p>
+              <Card className="mb-6 border-danger/50 bg-danger/5 p-4 sm:p-6">
+                <p className="text-danger mb-4 font-medium">{loadError}</p>
                 {courseSlug && (
-                  <div className="flex flex-col sm:flex-row gap-3 items-center">
-                    <Button
-                      onClick={handlePurchase}
-                      size="md"
-                      disabled={purchasing}
-                    >
-                      {purchasing
-                        ? t('course.processing')
-                        : user
-                          ? `${t('mockExam.unlockCta')} — ${formatPrice(displayPrice, currency)}`
-                          : t('course.signInToPurchase')}
-                    </Button>
-                    <Link to={paths.learn(courseSlug)}>
-                      <Button size="md" variant="outline">
-                        {t('mockExam.backToCourse')}
+                  <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+                      <Button
+                        onClick={handlePurchase}
+                        size="md"
+                        disabled={purchasing}
+                      >
+                        {purchasing
+                          ? t('course.processing')
+                          : user
+                            ? `${t('mockExam.unlockCta')} — ${formatPrice(displayPrice, currency)}`
+                            : t('course.signInToPurchase')}
                       </Button>
-                    </Link>
+                      <Link to={paths.learn(courseSlug)}>
+                        <Button size="md" variant="outline" className="w-full sm:w-auto">
+                          {t('mockExam.backToCourse')}
+                        </Button>
+                      </Link>
+                    </div>
+                    {user && (
+                      <div className="text-left space-y-2 max-w-md">
+                        <label htmlFor="banner-promo-code" className="block text-sm font-medium text-text-primary">
+                          {t('course.promoCodeLabel')}
+                        </label>
+                        <div className="flex gap-2">
+                          <input
+                            id="banner-promo-code"
+                            type="text"
+                            value={promoCode}
+                            onChange={(e) => handlePromoInputChange(e.target.value)}
+                            placeholder={t('course.promoCodePlaceholder')}
+                            className="flex-1 min-w-0 px-3 py-2 rounded-lg border border-border bg-surface text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent"
+                            aria-label={t('course.promoCodeLabel')}
+                          />
+                          <Button
+                            type="button"
+                            variant="outline"
+                            onClick={handleApplyPromo}
+                            disabled={applyingPromo || !promoCode.trim()}
+                          >
+                            {applyingPromo ? t('course.processing') : t('course.promoCodeApply')}
+                          </Button>
+                        </div>
+                        {appliedPromo && (
+                          <p className="text-sm text-accent-warm font-medium">
+                            {appliedPromo.amountCents === 0
+                              ? t('course.promoAppliedFree')
+                              : t('course.promoApplied')}
+                          </p>
+                        )}
+                      </div>
+                    )}
                   </div>
                 )}
               </Card>
@@ -322,7 +357,6 @@ export default function MockExamPage() {
                           {applyingPromo ? t('course.processing') : t('course.promoCodeApply')}
                         </Button>
                       </div>
-                      <p className="text-sm text-accent-warm font-medium">{t('course.promoCodeHint')}</p>
                       {appliedPromo && (
                         <p className="text-sm text-accent-warm font-medium">
                           {appliedPromo.amountCents === 0
