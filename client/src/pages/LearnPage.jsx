@@ -3,9 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { getCourse } from '../data/courseContent';
-import { getChapterById, getAllChapters } from '../data/courseHelpers';
+import { getChapterById, getAllChapters, getAdjacentChapters } from '../data/courseHelpers';
 import { useCoursePricingBySlug } from '../hooks/useCoursePricing';
-import { setLastChapter, markChapterComplete, getProgress } from '../utils/progress';
+import { setLastChapter, markChapterComplete, toggleChapterComplete, getProgress } from '../utils/progress';
 import SEO from '../components/seo/SEO';
 import { getLearnPageSEO } from '../utils/seo';
 import ChapterSidebar from '../components/course/ChapterSidebar';
@@ -32,6 +32,7 @@ export default function LearnPage() {
   const [currentChapter, setCurrentChapter] = useState(null);
   const [hasAccess, setHasAccess] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [progressVersion, setProgressVersion] = useState(0);
 
   const course = getCourse(slug, i18n.language);
 
@@ -86,7 +87,19 @@ export default function LearnPage() {
   const handleQuestionComplete = () => {
     if (currentChapter && currentChapter.practiceQuestions && course) {
       markChapterComplete(course.id, currentChapter.id);
+      setProgressVersion((v) => v + 1);
       toast.success(t('learn.progressSaved'));
+    }
+  };
+
+  const handleToggleComplete = () => {
+    if (!currentChapter || !course) return;
+    const nowCompleted = toggleChapterComplete(course.id, currentChapter.id);
+    setProgressVersion((v) => v + 1);
+    if (nowCompleted) {
+      toast.success(t('learn.chapterCompleted'));
+    } else {
+      toast(t('learn.chapterIncomplete'), { icon: 'ℹ️' });
     }
   };
 
@@ -181,6 +194,9 @@ export default function LearnPage() {
   const isChapterAccessible = currentChapter.isMockExam
     ? userHasMockExam
     : (currentChapter.isFree || hasAccess);
+  const currentProgress = getProgress(course.id);
+  const isCurrentChapterCompleted = currentProgress.completed.includes(currentChapter.id);
+  const adjacentChapters = getAdjacentChapters(currentChapter.id, course);
   const learnSeo = getLearnPageSEO(course, currentChapter);
   const purchaseLabel = unlockingMockExam
     ? `${t('mockExam.unlockCta')} — ${formatPrice(displayPrice, displayCurrency)}`
@@ -212,15 +228,46 @@ export default function LearnPage() {
         onClose={sidebarOpen}
         hasAccess={hasAccess}
         hasMockExamAccess={userHasMockExam}
+        progressVersion={progressVersion}
       />
 
       <div className="flex-1 md:ml-80 min-h-screen">
         <div className="sticky top-16 z-20 bg-surface/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 lg:px-8 py-4">
+          <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+            <div className="min-w-0">
+              <h1 className="text-lg font-display font-semibold text-text-primary truncate">
+                {course.title}
+              </h1>
+              <p className="text-sm text-text-muted truncate">{currentChapter.title}</p>
+            </div>
+            {isChapterAccessible && (
+              <Button
+                type="button"
+                variant={isCurrentChapterCompleted ? 'secondary' : 'outline'}
+                size="sm"
+                onClick={handleToggleComplete}
+                className="flex-shrink-0 flex items-center gap-1.5"
+                title={isCurrentChapterCompleted ? t('learn.completed') : t('learn.markAsComplete')}
+              >
+                {isCurrentChapterCompleted ? (
+                  <>
+                    <svg className="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{t('learn.completed')}</span>
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>{t('learn.markAsComplete')}</span>
+                  </>
+                )}
+              </Button>
+            )}
+          </div>
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-lg font-display font-semibold text-text-primary">
-              {course.title}
-            </h1>
-            <p className="text-sm text-text-muted">{currentChapter.title}</p>
             {(!hasAccess || unlockingMockExam) && (
               <div className="mt-3 pt-3 border-t border-border space-y-2">
                 <div className="flex flex-wrap items-center justify-between gap-3">
@@ -287,6 +334,13 @@ export default function LearnPage() {
                 course={course}
                 chapter={currentChapter}
                 onQuestionComplete={handleQuestionComplete}
+                isCompleted={isCurrentChapterCompleted}
+                onToggleComplete={handleToggleComplete}
+                adjacentChapters={adjacentChapters}
+                onNavigateChapter={handleChapterSelect}
+                onUnlockMockExam={handlePurchase}
+                unlockMockExamPrice={formatPrice(displayPrice, displayCurrency)}
+                unlockingMockExam={purchasing}
               />
             ) : (
               <div className="relative">
@@ -295,6 +349,10 @@ export default function LearnPage() {
                     course={course}
                     chapter={currentChapter}
                     onQuestionComplete={handleQuestionComplete}
+                    isCompleted={isCurrentChapterCompleted}
+                    onToggleComplete={handleToggleComplete}
+                    adjacentChapters={adjacentChapters}
+                    onNavigateChapter={handleChapterSelect}
                   />
                 </div>
                 <LockOverlay

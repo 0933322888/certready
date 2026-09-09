@@ -1607,7 +1607,7 @@ const plumberCourse = {
 const _parts = plumberCourse.parts;
 const _allChapters = _parts.flatMap((p) => p.chapters);
 const _totalChapters = _allChapters.length;
-const _totalQuestions = 54; // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
+const _totalQuestions = 250; // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
 
 export const plumberCourseData = {
   id: 'plumber-306a',

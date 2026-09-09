@@ -13,7 +13,7 @@ export const hvacCourse = {
   price: 4999,
   currency: 'CAD',
   totalChapters: 20,
-  totalQuestions: 134, // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
+  totalQuestions: 200, // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
   passingMark: 70,
   examFormat: 'Multiple-choice, computer-based (Prometric Canada Testing Services)',
   features: [

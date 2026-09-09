@@ -23,7 +23,18 @@ function formatInlineBold(str) {
   return parts.map((p, i) => (i % 2 === 1 ? <strong key={i}>{p}</strong> : p));
 }
 
-export default function ChapterContent({ course, chapter, onQuestionComplete }) {
+export default function ChapterContent({
+  course,
+  chapter,
+  onQuestionComplete,
+  isCompleted = false,
+  onToggleComplete = null,
+  adjacentChapters = { prev: null, next: null },
+  onNavigateChapter = null,
+  onUnlockMockExam = null,
+  unlockMockExamPrice = null,
+  unlockingMockExam = false,
+}) {
   const { t } = useTranslation();
   const { user, hasMockExamAccess, hasPurchasedBySlug } = useAuth();
   const [savedAnswers, setSavedAnswers] = useState({});
@@ -231,6 +242,18 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
                 <Link to={paths.mockExam(tradeSlug)}>
                   <Button size="lg">{t('mockExam.startExam')}</Button>
                 </Link>
+              ) : onUnlockMockExam ? (
+                <Button
+                  size="lg"
+                  onClick={onUnlockMockExam}
+                  disabled={unlockingMockExam}
+                >
+                  {unlockingMockExam
+                    ? t('course.processing')
+                    : unlockMockExamPrice
+                      ? `${t('mockExam.unlockCta')} — ${unlockMockExamPrice}`
+                      : t('mockExam.unlockCta')}
+                </Button>
               ) : (
                 <Button size="lg" disabled>
                   {t('mockExam.lockedCta')}
@@ -300,6 +323,94 @@ export default function ChapterContent({ course, chapter, onQuestionComplete }) 
           </div>
         </div>
       )}
+
+      {/* Chapter Completion & Navigation Footer */}
+      <div className="mt-12 pt-8 border-t border-border">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-surface border border-border">
+          <div className="flex items-center gap-3">
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isCompleted ? 'bg-success/20 text-success' : 'bg-surface-2 text-text-muted border border-border'}`}>
+              {isCompleted ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+              ) : (
+                <span className="text-sm font-semibold">{chapter.number}</span>
+              )}
+            </div>
+            <div>
+              <p className="font-semibold text-text-primary text-sm">
+                {isCompleted ? t('learn.completed') : `${chapter.number}. ${chapter.title}`}
+              </p>
+              <p className="text-xs text-text-muted">
+                {isCompleted ? t('learn.chapterCompleted') : t('learn.progress')}
+              </p>
+            </div>
+          </div>
+
+          {onToggleComplete && (
+            <Button
+              type="button"
+              variant={isCompleted ? 'secondary' : 'primary'}
+              size="md"
+              onClick={onToggleComplete}
+              className="w-full sm:w-auto flex items-center justify-center gap-2"
+            >
+              {isCompleted ? (
+                <>
+                  <svg className="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{t('learn.completed')}</span>
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{t('learn.markAsComplete')}</span>
+                </>
+              )}
+            </Button>
+          )}
+        </div>
+
+        {/* Previous & Next Chapter navigation buttons */}
+        {(adjacentChapters?.prev || adjacentChapters?.next) && (
+          <div className="flex items-center justify-between gap-4 mt-6">
+            {adjacentChapters.prev ? (
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => onNavigateChapter && onNavigateChapter(adjacentChapters.prev.id)}
+                className="flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                <span className="hidden sm:inline">{t('learn.previousChapter')}:</span>
+                <span className="font-normal truncate max-w-[150px]">{adjacentChapters.prev.number}. {adjacentChapters.prev.title}</span>
+              </Button>
+            ) : <div />}
+
+            {adjacentChapters.next ? (
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => onNavigateChapter && onNavigateChapter(adjacentChapters.next.id)}
+                className="flex items-center gap-2 ml-auto"
+              >
+                <span className="hidden sm:inline">{t('learn.nextChapter')}:</span>
+                <span className="font-normal truncate max-w-[150px]">{adjacentChapters.next.number}. {adjacentChapters.next.title}</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Button>
+            ) : <div />}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

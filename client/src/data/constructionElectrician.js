@@ -2381,7 +2381,7 @@ const electricianCourse = {
 const _elecParts = electricianCourse.parts;
 const _elecAllChapters = _elecParts.flatMap((p) => p.chapters);
 const _elecTotalChapters = _elecAllChapters.length;
-const _elecTotalQuestions = 69; // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
+const _elecTotalQuestions = 300; // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
 
 export const electricianCourseData = {
   id: 'construction-electrician-309a',

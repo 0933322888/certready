@@ -1154,7 +1154,6 @@ export default [
     correctIndex: 1,
     explanation: 'CSA Z7396.1 requires that medical gas piping be installed by individuals holding a valid medical gas installer certification — this is separate from and in addition to a standard plumbing licence. Medical gas systems are life-safety critical, and errors can be fatal to patients. Systems must also be tested and certified by a qualified verifier who holds a different certification before any medical gas can be admitted to the system.',
   },
-  
   {
     tradeSlug: 'plumber',
     topicId: 'A',

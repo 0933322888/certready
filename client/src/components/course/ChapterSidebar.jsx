@@ -13,6 +13,7 @@ export default function ChapterSidebar({
   onClose = null,
   hasAccess: hasAccessProp,
   hasMockExamAccess: hasMockExamAccessProp,
+  progressVersion = 0,
 }) {
   const { t } = useTranslation();
   const [expandedParts, setExpandedParts] = useState(new Set(course.parts.map(p => p.id)));
@@ -22,7 +23,7 @@ export default function ChapterSidebar({
   const progress = getProgress(course.id);
   const allChapters = getAllChapters(course);
   const completedCount = progress.completed.length;
-  const progressPercentage = (completedCount / allChapters.length) * 100;
+  const progressPercentage = allChapters.length > 0 ? (completedCount / allChapters.length) * 100 : 0;
 
   const togglePart = (partId) => {
     const newExpanded = new Set(expandedParts);

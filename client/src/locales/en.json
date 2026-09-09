@@ -254,6 +254,12 @@
     "chapterNotFound": "Chapter not found",
     "chapterRequiresAccess": "This chapter requires full course access",
     "progressSaved": "Great job! Chapter progress saved.",
+    "markAsComplete": "Mark as Complete",
+    "completed": "Completed",
+    "chapterCompleted": "Chapter marked as completed!",
+    "chapterIncomplete": "Chapter marked as incomplete",
+    "previousChapter": "Previous Chapter",
+    "nextChapter": "Next Chapter",
     "correct": "Correct",
     "incorrect": "Incorrect"
   },

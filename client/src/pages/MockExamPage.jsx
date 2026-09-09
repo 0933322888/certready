@@ -255,8 +255,28 @@ export default function MockExamPage() {
               {t('mockExam.subtitle', { tradeName: trade.name })}
             </p>
             {loadError && (
-              <Card className="mb-6 border-danger/50 bg-danger/5">
-                <p className="text-danger">{loadError}</p>
+              <Card className="mb-6 border-danger/50 bg-danger/5 p-4">
+                <p className="text-danger mb-4">{loadError}</p>
+                {courseSlug && (
+                  <div className="flex flex-col sm:flex-row gap-3 items-center">
+                    <Button
+                      onClick={handlePurchase}
+                      size="md"
+                      disabled={purchasing}
+                    >
+                      {purchasing
+                        ? t('course.processing')
+                        : user
+                          ? `${t('mockExam.unlockCta')} — ${formatPrice(displayPrice, currency)}`
+                          : t('course.signInToPurchase')}
+                    </Button>
+                    <Link to={paths.learn(courseSlug)}>
+                      <Button size="md" variant="outline">
+                        {t('mockExam.backToCourse')}
+                      </Button>
+                    </Link>
+                  </div>
+                )}
               </Card>
             )}
             <Card className="mb-6 p-6">

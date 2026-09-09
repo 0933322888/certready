@@ -1906,7 +1906,7 @@ const welderCourse = {
   const _parts = welderCourse.parts;
   const _allChapters = _parts.flatMap((p) => p.chapters);
   const _totalChapters = _allChapters.length;
-  const _totalQuestions = 0; // Questions live in the separate questions seed file
+  const _totalQuestions = 250; // Questions live in the separate questions seed file
   
   export const welderCourseData = {
     id: 'welder-456a',

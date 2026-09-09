@@ -305,6 +305,12 @@
     "chapterNotFound": "Chapitre introuvable",
     "chapterRequiresAccess": "Ce chapitre nécessite l'accès au cours complet",
     "progressSaved": "Bravo ! Progrès du chapitre enregistré.",
+    "markAsComplete": "Marquer comme terminé",
+    "completed": "Terminé",
+    "chapterCompleted": "Chapitre marqué comme terminé !",
+    "chapterIncomplete": "Chapitre marqué comme non terminé",
+    "previousChapter": "Chapitre précédent",
+    "nextChapter": "Chapitre suivant",
     "correct": "Correct",
     "incorrect": "Incorrect"
   },
