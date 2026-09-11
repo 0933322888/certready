@@ -36,9 +36,11 @@ function StarRating({ rating, max = 5 }) {
    MAIN PAGE COMPONENT
    ---------------------------------------------------------- */
 export default function TradePage({ trade }) {
-  if (!trade) return null;
   const [openMwa, setOpenMwa] = useState(null);
   const [answers, setAnswers] = useState({});
+
+  if (!trade) return null;
+
   const maxWeight = Math.max(...trade.mwas.map((m) => m.weight));
   const seo = getTradeGuidePageSEO(trade, 'en');
   const breadcrumbs = [

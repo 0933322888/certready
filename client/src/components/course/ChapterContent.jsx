@@ -168,7 +168,7 @@ export default function ChapterContent({
           </figure>
         );
 
-      case 'callout':
+      case 'callout': {
         const isWarning = content.style === 'warning';
         return (
           <div className={`rounded-xl border p-4 my-4 ${isWarning ? 'bg-amber-500/10 border-amber-500/40' : 'bg-accent/10 border-accent/30'}`}>
@@ -188,6 +188,7 @@ export default function ChapterContent({
             </div>
           </div>
         );
+      }
 
       default:
         if (content.text) {

@@ -83,5 +83,7 @@ export function saveSession(tradeSlug, questions, answers) {
 export function clearSession() {
   try {
     localStorage.removeItem(PRACTICE_SESSION_KEY);
-  } catch {}
+  } catch {
+    // ignore storage errors
+  }
 }

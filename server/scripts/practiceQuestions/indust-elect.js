@@ -564,7 +564,7 @@ export default [
     tradeSlug: 'indust-elect',
     topicId: 'mwa-b-renewables-wind',
     topicLabel: 'MWA B — Generating, Distribution & Service Systems',
-    question: 'A 3 MW wind turbine generator uses a doubly-fed induction generator (DFIG). What is the typical rotor power converter rating as a percentage of total generator rating?'
+    question: 'A 3 MW wind turbine generator uses a doubly-fed induction generator (DFIG). What is the typical rotor power converter rating as a percentage of total generator rating?',
     options: [
       '10-15%',
       '25-30%',
@@ -1007,7 +1007,7 @@ export default [
     tradeSlug: 'indust-elect',
     topicId: 'mwa-d-sync-motor-starting',
     topicLabel: 'MWA D — Rotating Equipment & Control Systems',
-    question: 'A synchronous motor fails to pull into synchronism during starting. The amortisseur winding current is normal during acceleration but drops to zero at 95% speed. What is the probable cause?'
+    question: 'A synchronous motor fails to pull into synchronism during starting. The amortisseur winding current is normal during acceleration but drops to zero at 95% speed. What is the probable cause?',
     options: [
       'Low field excitation',
       'Excessive load inertia',
@@ -1021,7 +1021,7 @@ export default [
     tradeSlug: 'indust-elect',
     topicId: 'mwa-d-generator-avr',
     topicLabel: 'MWA D — Rotating Equipment & Control Systems',
-    question: 'A synchronous generator AVR is set to 480 V. During a 50% load step increase, the voltage dips to 456 V and recovers to 478 V in 0.8 s. What is the voltage regulation?'
+    question: 'A synchronous generator AVR is set to 480 V. During a 50% load step increase, the voltage dips to 456 V and recovers to 478 V in 0.8 s. What is the voltage regulation?',
     options: [
       '0.5%',
       '1.0%',
@@ -1127,6 +1127,7 @@ export default [
     topicId: 'mwa-d-control-valve-fail-safe',
     topicLabel: 'MWA D — Rotating Equipment & Control Systems',
     question: 'A cooling water control valve on a reactor must fail OPEN on loss of instrument air to prevent overheating. What actuator action is required?'
+,
     options: [
       'Air-to-open (fail closed)',
       'Air-to-close (fail open)',
@@ -1157,6 +1158,7 @@ export default [
     topicId: 'mwa-d-motor-protection-phase-loss',
     topicLabel: 'MWA D — Rotating Equipment & Control Systems',
     question: 'A 3-phase motor loses one phase while running at full load. The bimetallic overload relay does NOT trip. What is the reason?'
+,
     options: [
       'Bimetallic relays respond only to average current',
       'Current in remaining phases decreases',
@@ -1202,6 +1204,7 @@ export default [
     topicId: 'mwa-d-welding-mfdc',
     topicLabel: 'MWA D — Rotating Equipment & Control Systems',
     question: 'An MFDC (Mid-Frequency Direct Current) resistance welder operates at 1000 Hz. What is the PRIMARY advantage over 60 Hz AC welding?'
+,
     options: [
       'Lower electrode wear',
       'Balanced 3-phase load and no inductive losses',
@@ -1480,6 +1483,7 @@ export default [
     topicId: 'mwa-f-pid-tuning',
     topicLabel: 'MWA F — Process Control Systems',
     question: 'A PID loop is oscillating with constant amplitude. The proportional gain (Kc) is 2.0. What is the MOST appropriate action?'
+,
     options: [
       'Increase Kc',
       'Decrease Kc',
@@ -1510,6 +1514,7 @@ export default [
     topicId: 'mwa-f-feedforward-control',
     topicLabel: 'MWA F — Process Control Systems',
     question: 'Feedforward control is added to a feedback loop to improve disturbance rejection. What does feedforward control require?'
+,
     options: [
       'A process model and measurable disturbance',
       'A faster secondary loop',
@@ -1555,6 +1560,7 @@ export default [
     topicId: 'mwa-f-dcs-function-block',
     topicLabel: 'MWA F — Process Control Systems',
     question: 'In a DCS, a PID function block is configured with mode = RCAS. What does this mean?'
+,
     options: [
       'Remote cascade — setpoint from supervisory computer',
       'Remote auto — setpoint from local operator',
@@ -1600,6 +1606,7 @@ export default [
     topicId: 'mwa-f-fg-detector',
     topicLabel: 'MWA F — Process Control Systems',
     question: 'An infrared (IR) open-path gas detector is installed across a 100 m span. The gas of interest is methane. What wavelength band is used?'
+,
     options: [
       '2.3 µm',
       '3.3 µm',
@@ -1630,6 +1637,7 @@ export default [
     topicId: 'mwa-f-fieldbus-ff',
     topicLabel: 'MWA F — Process Control Systems',
     question: 'On a FOUNDATION Fieldbus H1 segment, the Link Active Scheduler (LAS) fails. What happens?'
+,
     options: [
       'All communication stops',
       'A backup LAS (if configured) takes over automatically',
