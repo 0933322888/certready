@@ -8,6 +8,7 @@
     "start": "node index.js",
     "dev": "node --watch index.js",
     "lint": "eslint .",
+    "test": "vitest run",
     "seed": "node seed.js",
     "seed:course": "node scripts/upsertCourse.js",
     "seed:practice": "node scripts/seedPracticeQuestions.js",
@@ -39,6 +40,8 @@
   "devDependencies": {
     "@eslint/js": "^9.39.5",
     "eslint": "^9.39.5",
-    "globals": "^17.12.0"
+    "globals": "^17.12.0",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.0"
   }
 }

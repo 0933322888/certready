@@ -12,7 +12,10 @@
     "lint:client": "npm --prefix client run lint",
     "lint:server": "npm --prefix server run lint",
     "lint": "npm run lint:client && npm run lint:server",
-    "verify": "npm run lint && npm --prefix client run build"
+    "verify": "npm run lint && npm run test && npm --prefix client run build",
+    "test:client": "npm --prefix client run test",
+    "test:server": "npm --prefix server run test",
+    "test": "npm run test:client && npm run test:server"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
