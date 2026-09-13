@@ -148,7 +148,7 @@ export async function sendPurchaseConfirmationEmail({
   isFree = false,
 }) {
   const clientUrl = process.env.CLIENT_URL || 'https://certready.ca';
-  const courseUrl = courseSlug ? `${clientUrl}/course/${courseSlug}` : `${clientUrl}/dashboard`;
+  const courseUrl = courseSlug ? `${clientUrl}/learn/${courseSlug}` : `${clientUrl}/dashboard`;
   const formattedAmount = isFree || amount === 0
     ? 'Free'
     : `$${(amount / 100).toFixed(2)} ${currency.toUpperCase()}`;

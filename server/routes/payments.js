@@ -183,20 +183,6 @@ router.post('/create-checkout-session', protect, async (req, res) => {
         await user.save();
       }
 
-      // Send confirmation email for free promo claim (non-blocking)
-      sendPurchaseConfirmationEmail({
-        toEmail: user.email,
-        userName: user.name,
-        courseTitle: course.title,
-        courseSlug: course.slug,
-        amount: 0,
-        currency: course.currency || 'cad',
-        orderId: purchase._id,
-        isFree: true,
-      }).catch((err) => {
-        console.error('Failed to send free claim confirmation email:', err.message);
-      });
-
       const successUrl = `${process.env.CLIENT_URL}/checkout/success?session_id=${encodeURIComponent(freeSessionId)}`;
       return res.json({ sessionId: freeSessionId, url: successUrl, isFree: true, isFreeWindowActive, freeUntil });
     }
