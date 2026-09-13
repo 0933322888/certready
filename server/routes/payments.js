@@ -6,6 +6,7 @@ import Purchase from '../models/Purchase.js';
 import User from '../models/User.js';
 import { getCoursePricing } from '../utils/coursePricing.js';
 import { getValidPromo } from '../utils/promoService.js';
+import { sendPurchaseConfirmationEmail } from '../utils/sendEmail.js';
 import { userOwnsCourse, userHasMockExamAccess, userHasContentAccess } from '../utils/userPurchases.js';
 
 const router = express.Router();
@@ -182,6 +183,20 @@ router.post('/create-checkout-session', protect, async (req, res) => {
         await user.save();
       }
 
+      // Send confirmation email for free promo claim (non-blocking)
+      sendPurchaseConfirmationEmail({
+        toEmail: user.email,
+        userName: user.name,
+        courseTitle: course.title,
+        courseSlug: course.slug,
+        amount: 0,
+        currency: course.currency || 'cad',
+        orderId: purchase._id,
+        isFree: true,
+      }).catch((err) => {
+        console.error('Failed to send free claim confirmation email:', err.message);
+      });
+
       const successUrl = `${process.env.CLIENT_URL}/checkout/success?session_id=${encodeURIComponent(freeSessionId)}`;
       return res.json({ sessionId: freeSessionId, url: successUrl, isFree: true, isFreeWindowActive, freeUntil });
     }
@@ -278,18 +293,34 @@ router.post('/webhook', async (req, res) => {
 
       // Add course to user's purchases and unlock the mock exam for completed purchases.
       const user = await User.findById(purchase.user);
+      const course = await Course.findById(purchase.course);
       if (user) {
         if (!userOwnsCourse(user, purchase.course)) {
           user.purchases.push(purchase.course);
         }
 
-        const course = await Course.findById(purchase.course).select('slug');
         if (course?.slug && !user.mockExamSlugs?.includes(course.slug)) {
           user.mockExamSlugs = user.mockExamSlugs || [];
           user.mockExamSlugs.push(course.slug);
         }
 
         await user.save();
+      }
+
+      // Send purchase confirmation email (non-blocking)
+      if (user?.email && course) {
+        sendPurchaseConfirmationEmail({
+          toEmail: user.email,
+          userName: user.name,
+          courseTitle: course.title,
+          courseSlug: course.slug,
+          amount: purchase.amount,
+          currency: purchase.currency || course.currency || 'cad',
+          orderId: purchase._id,
+          isFree: purchase.amount === 0,
+        }).catch((err) => {
+          console.error('Failed to send purchase confirmation email in webhook:', err.message);
+        });
       }
 
       console.log('Purchase completed successfully:', purchase._id);

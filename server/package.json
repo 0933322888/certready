@@ -35,12 +35,14 @@
     "nodemailer": "^6.9.7",
     "openai": "^6.33.0",
     "pdf-parse": "^2.4.5",
+    "resend": "^6.28.0",
     "stripe": "^14.9.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
     "eslint": "^9.39.5",
     "globals": "^17.12.0",
+    "supertest": "^7.2.2",
     "vite": "^8.3.0",
     "vitest": "^5.0.0"
   }

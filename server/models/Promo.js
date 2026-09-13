@@ -12,7 +12,6 @@ const promoSchema = new mongoose.Schema({
   isActive: { type: Boolean, default: true },
 }, { timestamps: true });
 
-promoSchema.index({ code: 1 });
 promoSchema.index({ public: 1, isActive: 1 });
 
 export default mongoose.model('Promo', promoSchema);
