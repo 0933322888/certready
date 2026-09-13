@@ -49,8 +49,8 @@ export default function AllCoursesPage() {
                     <span className="text-2xl font-bold text-accent">
                       {formatPrice(currentPrice, currency)}
                     </span>
-                    <p className="text-sm text-accent-warm font-medium mt-1">
-                      {t('course.promoCodeHint')}
+                    <p className="text-xs text-accent-warm font-medium mt-1">
+                      Pass Reward Eligible
                     </p>
                   </div>
                 </div>

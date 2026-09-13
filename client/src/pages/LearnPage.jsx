@@ -368,7 +368,6 @@ export default function LearnPage() {
                   onApplyPromo={handleApplyPromo}
                   applyingPromo={applyingPromo}
                   appliedPromo={appliedPromo}
-                  promoHint={t('course.promoCodeHint')}
                   purchaseLabel={currentChapter.isMockExam ? t('mockExam.unlockCta') : undefined}
                 />
               </div>

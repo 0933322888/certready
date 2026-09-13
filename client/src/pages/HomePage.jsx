@@ -7,6 +7,7 @@ import FeaturesSection from '../components/home/FeaturesSection';
 import CoursePreview from '../components/home/CoursePreview';
 import Testimonials from '../components/home/Testimonials';
 import PricingSection from '../components/home/PricingSection';
+import PassRewardBanner from '../components/passReward/PassRewardBanner';
 import Card from '../components/ui/Card';
 
 const HOME_FAQ_FOR_SEO = [
@@ -59,6 +60,13 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Pass Reward Campaign Callout */}
+      <section className="py-8 bg-bg border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <PassRewardBanner />
         </div>
       </section>
 

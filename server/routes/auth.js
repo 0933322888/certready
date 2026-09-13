@@ -23,11 +23,18 @@ async function buildAuthUser(userId) {
     getAccessibleCourseSummaries(userId, user.createdAt),
     getMockExamCourseSlugs(userId),
   ]);
+  const adminEmails = (process.env.ADMIN_EMAILS || '')
+    .split(',')
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+  const isAdmin = Boolean(user.email && adminEmails.includes(user.email.toLowerCase()));
+
   return {
     id: user._id,
     _id: user._id,
     name: user.name,
     email: user.email,
+    isAdmin,
     purchases,
     mockExamSlugs,
     createdAt: user.createdAt,

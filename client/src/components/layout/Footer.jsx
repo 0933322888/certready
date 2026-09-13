@@ -88,6 +88,16 @@ export default function Footer() {
             <h3 className="font-semibold text-text-primary mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link to="/pass-reward" className="text-text-muted hover:text-accent transition-colors">
+                  CertReady Pass Reward
+                </Link>
+              </li>
+              <li>
+                <Link to="/pass-reward/terms" className="text-text-muted hover:text-accent transition-colors">
+                  Pass Reward Terms
+                </Link>
+              </li>
+              <li>
                 <Link to="/privacy" className="text-text-muted hover:text-accent transition-colors">
                   {t('footer.privacy')}
                 </Link>

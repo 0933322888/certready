@@ -240,11 +240,6 @@ export default function CoursePage() {
                 </p>
               )}
               <p className="text-text-muted">{isFreeOffer ? t('course.freeWindowOneTime') : t('course.oneTime')}</p>
-              {!isFreeOffer && (
-                <p className="text-sm mt-2 text-accent-warm font-medium">
-                  {t('course.promoCodeHint')}
-                </p>
-              )}
             </div>
 
             {!hasPurchased && user && !isFreeOffer && (

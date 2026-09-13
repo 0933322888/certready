@@ -5,6 +5,9 @@ const protect = async (req, res, next) => {
   let token;
   if (req.headers.authorization?.startsWith('Bearer ')) {
     token = req.headers.authorization.split(' ')[1];
+  } else if (req.query?.token) {
+    // Support token in query parameter for direct window/tab requests (e.g. proof preview, file downloads)
+    token = req.query.token;
   }
   if (!token) {
     return res.status(401).json({ message: 'Not authorized' });

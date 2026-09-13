@@ -10,6 +10,7 @@ import Button from '../components/ui/Button';
 import Badge from '../components/ui/Badge';
 import ProgressBar from '../components/ui/ProgressBar';
 import Spinner from '../components/ui/Spinner';
+import PassRewardDashboardSection from '../components/passReward/PassRewardDashboardSection';
 import api from '../utils/api';
 import toast from 'react-hot-toast';
 
@@ -157,6 +158,9 @@ export default function DashboardPage() {
         </h1>
         <p className="text-text-muted">{t('dashboard.continueJourney')}</p>
       </div>
+
+      {/* CertReady Pass Reward Section */}
+      <PassRewardDashboardSection />
 
       {/* Study Plan */}
       <div className="mb-12">

@@ -9,7 +9,17 @@ const purchaseSchema = new mongoose.Schema({
   currency: { type: String },
   promoCode: { type: String }, // code used at checkout, if any
   status: { type: String, enum: ['pending', 'completed', 'refunded'], default: 'pending' },
+  // CertReady Pass Reward campaign fields recorded at purchase time
+  passRewardEligible: { type: Boolean, default: false },
+  passRewardCampaignId: { type: String },
+  passRewardCampaignName: { type: String },
+  passRewardTermsVersion: { type: String },
+  passRewardPurchaseDate: { type: Date },
+  passRewardClaimDeadline: { type: Date },
   completedAt: { type: Date },
 }, { timestamps: true });
+
+purchaseSchema.index({ user: 1, passRewardEligible: 1 });
+purchaseSchema.index({ stripePaymentIntent: 1 });
 
 export default mongoose.model('Purchase', purchaseSchema);

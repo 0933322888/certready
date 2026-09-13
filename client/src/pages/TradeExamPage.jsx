@@ -18,6 +18,8 @@ import toast from 'react-hot-toast';
 import Spinner from '../components/ui/Spinner';
 import NotFoundPage from './NotFoundPage';
 import { paths } from '../utils/routes';
+import PassRewardBanner from '../components/passReward/PassRewardBanner';
+import { isCourseEligibleForPassReward } from '../config/passReward';
 
 export default function TradeExamPage() {
   const { tradeSlug } = useParams();
@@ -236,8 +238,21 @@ export default function TradeExamPage() {
                 </p>
               )}
               <p className="text-text-muted">{isFreeOffer ? t('course.freeWindowOneTime') : t('course.oneTime')}</p>
-              {!isFreeOffer && (
-                <p className="text-sm mt-2 text-accent-warm font-medium">{t('course.promoCodeHint')}</p>
+              
+              {/* Pass Reward Callout */}
+              {isCourseEligibleForPassReward(slug) && !hasPurchased && (
+                <div className="mt-4 p-3.5 rounded-xl bg-accent-warm/10 border border-accent-warm/25 text-left">
+                  <div className="flex items-center gap-1.5 mb-1">
+                    <span className="text-xs">🎉</span>
+                    <strong className="text-xs font-semibold text-accent-warm">CertReady Pass Reward</strong>
+                  </div>
+                  <p className="text-xs text-text-primary leading-snug">
+                    Pass your exam within 6 months and get your {formatPrice(4999, currency)} course fee back.
+                  </p>
+                  <Link to={paths.passReward} className="text-xs font-semibold text-accent hover:underline block mt-1">
+                    Learn eligibility & how it works →
+                  </Link>
+                </div>
               )}
             </div>
 
@@ -268,25 +283,32 @@ export default function TradeExamPage() {
               </div>
             )}
 
-            {hasPurchased ? (
+              {hasPurchased ? (
               <Link to={paths.learn(slug)} className="block">
                 <Button size="lg" className="w-full mb-4">
                   {t('home.continueLearning')} →
                 </Button>
               </Link>
             ) : user ? (
-              <Button
-                size="lg"
-                className="w-full mb-4"
-                onClick={handlePurchase}
-                disabled={purchasing}
-              >
-                {purchasing
-                  ? t('course.processing')
-                  : isFreeOffer
-                    ? t('course.claimFreeAccess')
-                    : t('course.purchase', { price: formatPrice(displayPrice, displayCurrency) })}
-              </Button>
+              <>
+                {isCourseEligibleForPassReward(slug) && !isFreeOffer && (
+                  <p className="text-xs text-text-muted mb-2 text-center">
+                    ✓ This purchase qualifies for the CertReady Pass Reward if you meet the promotion requirements.
+                  </p>
+                )}
+                <Button
+                  size="lg"
+                  className="w-full mb-4"
+                  onClick={handlePurchase}
+                  disabled={purchasing}
+                >
+                  {purchasing
+                    ? t('course.processing')
+                    : isFreeOffer
+                      ? t('course.claimFreeAccess')
+                      : t('course.purchase', { price: formatPrice(displayPrice, displayCurrency) })}
+                </Button>
+              </>
             ) : (
               <Link to={paths.login} state={{ from: paths.trade(tradeSlug) }}>
                 <Button size="lg" className="w-full mb-4">

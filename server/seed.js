@@ -12,9 +12,9 @@ const promos = [
     code: 'GET40',
     type: 'fixed_price',
     amountCents: 2999,
-    public: true,
+    public: false, // Retired from public customer-facing display
     usageCapPerCourse: 100,
-    isActive: true,
+    isActive: false, // Disabled default 40% discount for regular pricing ($49.99 CAD)
   },
   {
     code: 'SUPADMC0D3',

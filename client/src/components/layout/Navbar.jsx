@@ -45,6 +45,9 @@ export default function Navbar() {
             <Link to="/trades" className="text-white hover:text-accent transition-colors">
               {t('nav.trades')}
             </Link>
+            <Link to="/pass-reward" className="text-accent-warm hover:text-white transition-colors font-medium">
+              Pass Reward
+            </Link>
             <Link to="/practice-tests" className="text-white hover:text-accent transition-colors">
               {t('nav.practiceTests')}
             </Link>
@@ -116,6 +119,16 @@ export default function Navbar() {
                     >
                       {t('nav.dashboard')}
                     </Link>
+                    {user.isAdmin && (
+                      <Link
+                        to="/admin/claims"
+                        onClick={() => setUserMenuOpen(false)}
+                        className="block px-4 py-2 text-accent-warm hover:bg-surface-2 transition-colors font-medium flex items-center justify-between"
+                      >
+                        <span>Claims Admin</span>
+                        <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm">Admin</span>
+                      </Link>
+                    )}
                     <Link
                       to="/profile"
                       onClick={() => setUserMenuOpen(false)}

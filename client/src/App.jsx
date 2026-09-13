@@ -9,6 +9,7 @@ import PageWrapper from './components/layout/PageWrapper';
 import ScrollToTop from './components/layout/ScrollToTop';
 import Spinner from './components/ui/Spinner';
 import ProtectedRoute from './components/ui/ProtectedRoute';
+import AdminRoute from './components/ui/AdminRoute';
 import HomePage from './pages/HomePage';
 
 const RedSealExamPage = lazy(() => import('./pages/RedSealExamPage'));
@@ -42,6 +43,9 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ForgotPasswordPage = lazy(() => import('./pages/ForgotPasswordPage'));
 const ResetPasswordPage = lazy(() => import('./pages/ResetPasswordPage'));
+const PassRewardPage = lazy(() => import('./pages/PassRewardPage'));
+const PassRewardTermsPage = lazy(() => import('./pages/PassRewardTermsPage'));
+const AdminClaimsPage = lazy(() => import('./pages/AdminClaimsPage'));
 
 const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
 
@@ -90,6 +94,11 @@ export default function App() {
             <Route path="/learn/:slug" element={<LearnPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/pass-reward" element={<PassRewardPage />} />
+            <Route path="/pass-reward/terms" element={<PassRewardTermsPage />} />
+            <Route path="/admin/claims" element={
+              <AdminRoute><AdminClaimsPage /></AdminRoute>
+            } />
             <Route path="/checkout/success" element={<CheckoutSuccessPage />} />
             <Route path="/checkout/cancel" element={<CheckoutCancelPage />} />
             <Route path="/terms" element={<TermsPage />} />

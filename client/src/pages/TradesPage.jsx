@@ -5,6 +5,7 @@ import Breadcrumb from '../components/layout/Breadcrumb';
 import { getTradesPageSEO, getBreadcrumbStructuredData } from '../utils/seo';
 import { ALL_TRADES } from '../data/tradeGuideContent';
 import { paths } from '../utils/routes';
+import PassRewardBanner from '../components/passReward/PassRewardBanner';
 
 /** Sort: live guides first (alphabetically by name), then coming soon (alphabetically by name) */
 function getSortedTrades() {
@@ -40,6 +41,10 @@ export default function TradesPage() {
           <p className="mt-3 text-text-muted text-sm">
             <span className="text-accent">●</span> {t('tradesPage.liveGuidesHint')}
           </p>
+        </div>
+
+        <div className="mb-8">
+          <PassRewardBanner compact />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">

@@ -208,6 +208,47 @@ export function getTradesPageSEO() {
 }
 
 /** SEO for trade guide page (/trades/:slug-red-seal). Pass trade object from TRADE_DATA (name, overviewShort, slug, tradeCode). */
+
+/** SEO for CertReady Pass Reward campaign page (/pass-reward) */
+export function getPassRewardPageSEO() {
+  return {
+    title: 'CertReady Pass Reward | Pass Your Exam & Get Your Course Fee Back',
+    description: 'Prepare for your Canadian skilled-trades certification exam with CertReady. For a limited time, eligible students who successfully pass can receive their course fee back. Terms apply.',
+    keywords: 'CertReady Pass Reward, Red Seal exam pass reward, skilled trades exam refund, Canadian trade certification, Red Seal study bonus, trade exam prep refund',
+    canonical: '/pass-reward',
+    ogType: 'website',
+  };
+}
+
+/** SEO for CertReady Pass Reward terms page (/pass-reward/terms) */
+export function getPassRewardTermsPageSEO() {
+  return {
+    title: 'CertReady Pass Reward Terms & Conditions',
+    description: 'Official rules, eligibility requirements, verification proof criteria, and claim guidelines for the CertReady Pass Reward promotional campaign.',
+    keywords: 'CertReady Pass Reward terms, pass reward rules, exam proof requirements, claim window, refund conditions',
+    canonical: '/pass-reward/terms',
+    ogType: 'website',
+  };
+}
+
+/** Structured Data for Pass Reward Promotion */
+export function getPassRewardPromotionStructuredData() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SpecialAnnouncement',
+    name: 'CertReady Pass Reward: Pass Your Exam, Get Your Course Fee Back',
+    text: 'For a limited time, purchase an eligible CertReady trade exam prep course, prepare, pass your certification exam within 6 months, and receive a full refund of your course fee. No positive review required.',
+    url: 'https://www.certready.ca/pass-reward',
+    datePosted: '2026-01-01',
+    expires: '2026-12-31T23:59:59Z',
+    category: 'https://schema.org/EducationalOccupationalCredential',
+    publisher: {
+      '@type': 'Organization',
+      name: 'CertReady',
+      url: 'https://www.certready.ca',
+    },
+  };
+}
 export function getTradeGuidePageSEO(trade, locale = 'en') {
   if (!trade || !trade.name) return null;
   const isFrench = locale === 'fr';

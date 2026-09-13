@@ -38,9 +38,18 @@ export default function PricingSection() {
           <p className="text-sm text-text-muted mt-4">
             {t('home.lifetimeNote')}
           </p>
-          <p className="text-sm text-accent-warm font-medium mt-2">
-            {t('home.launchOfferNote')}
-          </p>
+          <div className="mt-4 p-4 rounded-xl bg-accent-warm/10 border border-accent-warm/20 inline-block text-left">
+            <p className="text-sm font-semibold text-accent-warm flex items-center gap-2">
+              <span>🎉</span>
+              <span>CertReady Pass Reward</span>
+            </p>
+            <p className="text-xs text-text-primary mt-1">
+              Pass your exam within 6 months and receive your course fee back. No review required.
+            </p>
+            <Link to="/pass-reward" className="text-xs text-accent font-semibold hover:underline block mt-1">
+              Learn how it works →
+            </Link>
+          </div>
         </Card>
       </div>
     </section>

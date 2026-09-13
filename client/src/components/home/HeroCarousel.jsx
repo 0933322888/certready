@@ -7,7 +7,7 @@ import { formatPrice } from '../../utils/formatters';
 import { CertReadyLogoFull } from '../brand/CertReadyLogo';
 import { paths } from '../../utils/routes';
 
-const AUTOPLAY_MS = 6000;
+const AUTOPLAY_MS = 9000;
 
 export default function HeroCarousel() {
   const { t } = useTranslation();
@@ -77,13 +77,13 @@ export default function HeroCarousel() {
           </div>
         </div>
 
-        {/* Slide 1: Discount */}
+        {/* Slide 1: CertReady Pass Reward */}
         <div className="min-h-screen w-1/2 flex-shrink-0 relative flex items-center justify-center">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: 'url(/hero-bg.png)' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-bg/95 via-bg/90 to-accent-warm/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-bg/95 via-bg/90 to-accent-warm/15" />
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -92,34 +92,30 @@ export default function HeroCarousel() {
           />
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
             <Badge variant="warm" className="text-sm px-4 py-1.5 mb-6">
-              {t('hero.slideDiscountBadge')}
+              Limited-Time CertReady Pass Reward
             </Badge>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-primary mb-6 leading-tight">
-              {t('hero.slideDiscountTitle')}
+              Pass Your Exam.<br />Get Your Course Fee Back.
             </h2>
-            <p className="text-lg md:text-xl text-text-primary mb-10 max-w-2xl mx-auto">
-              {t('hero.slideDiscountSubtitle')}
+            <p className="text-lg md:text-xl text-text-primary mb-8 max-w-2xl mx-auto leading-relaxed">
+              For a limited time, purchase an eligible CertReady course, prepare for your certification exam, pass it, and we&apos;ll refund your original course fee.
             </p>
-            <div className="flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-6 mb-8">
-              <span className="text-2xl text-text-primary">
-                {t('hero.slideDiscountPriceWas')}{' '}
-                <span className="line-through">{formatPrice(4999, 'CAD')}</span>
-              </span>
-              <span className="text-4xl md:text-5xl font-display font-bold text-accent-warm">
-                {t('hero.slideDiscountPriceNow')} {formatPrice(2999, 'CAD')}
-              </span>
+            <div className="inline-flex items-center gap-2 p-2.5 px-4 rounded-full bg-accent-warm/10 border border-accent-warm/20 text-accent-warm text-sm font-medium mb-8">
+              <span>🛡️</span>
+              <span>No positive review required. Your refund does not depend on what you say about CertReady.</span>
             </div>
-            <p className="text-sm text-text-primary mb-4 font-mono font-semibold text-accent-warm">
-              {t('hero.slideDiscountCode')}: GET40
-            </p>
-            <p className="text-sm text-text-muted mb-8">
-              {t('hero.slideDiscountSpots')}
-            </p>
-            <Link to="/trades">
-              <Button size="lg" className="bg-accent-warm hover:bg-accent-warm/90 text-bg font-semibold">
-                {t('hero.slideDiscountCta')}
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link to={paths.passReward}>
+                <Button size="lg" className="bg-accent-warm hover:bg-accent-warm/90 text-bg font-semibold w-full sm:w-auto">
+                  Learn How It Works →
+                </Button>
+              </Link>
+              <Link to={paths.trades}>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  Browse Eligible Courses
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

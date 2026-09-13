@@ -8,6 +8,11 @@ import { getCoursePricing } from '../utils/coursePricing.js';
 import { getValidPromo } from '../utils/promoService.js';
 import { sendPurchaseConfirmationEmail } from '../utils/sendEmail.js';
 import { userOwnsCourse, userHasMockExamAccess, userHasContentAccess } from '../utils/userPurchases.js';
+import {
+  isCourseEligibleForPassReward,
+  calculateClaimDeadline,
+  PASS_REWARD_CONFIG,
+} from '../config/passReward.js';
 
 const router = express.Router();
 
@@ -144,6 +149,13 @@ router.post('/create-checkout-session', protect, async (req, res) => {
       });
     }
 
+    // Determine Pass Reward eligibility at purchase time
+    const passRewardEligible = isCourseEligibleForPassReward(course.slug) && chargeAmountCents > 0;
+    const now = new Date();
+    const passRewardClaimDeadline = passRewardEligible
+      ? calculateClaimDeadline(now, PASS_REWARD_CONFIG.claimWindowMonths)
+      : undefined;
+
     // Free promo / free window: grant access without Stripe
     if (chargeAmountCents === 0) {
       // Upgrading mock access with a free promo — use a distinct session id (not free_window)
@@ -163,6 +175,7 @@ router.post('/create-checkout-session', protect, async (req, res) => {
             promoCode: promo?.code,
             status: 'completed',
             completedAt: new Date(),
+            passRewardEligible: false,
           });
         } catch (err) {
           // Concurrent claim: unique session id already created
@@ -213,12 +226,14 @@ router.post('/create-checkout-session', protect, async (req, res) => {
       metadata: {
         userId: req.user._id.toString(),
         courseId: course._id.toString(),
+        passRewardEligible: passRewardEligible ? 'true' : 'false',
+        passRewardCampaignId: passRewardEligible ? PASS_REWARD_CONFIG.campaignId : '',
       },
       success_url: `${process.env.CLIENT_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.CLIENT_URL}/checkout/cancel`,
     });
 
-    // Create pending Purchase record
+    // Create pending Purchase record with Pass Reward campaign snapshot
     await Purchase.create({
       user: req.user._id,
       course: course._id,
@@ -227,6 +242,12 @@ router.post('/create-checkout-session', protect, async (req, res) => {
       currency: course.currency || 'cad',
       promoCode: promo?.code,
       status: 'pending',
+      passRewardEligible,
+      passRewardCampaignId: passRewardEligible ? PASS_REWARD_CONFIG.campaignId : undefined,
+      passRewardCampaignName: passRewardEligible ? PASS_REWARD_CONFIG.campaignName : undefined,
+      passRewardTermsVersion: passRewardEligible ? PASS_REWARD_CONFIG.termsVersion : undefined,
+      passRewardPurchaseDate: passRewardEligible ? now : undefined,
+      passRewardClaimDeadline,
     });
 
     res.json({ sessionId: session.id, url: session.url });
@@ -275,6 +296,10 @@ router.post('/webhook', async (req, res) => {
       purchase.status = 'completed';
       purchase.completedAt = new Date();
       purchase.stripePaymentIntent = session.payment_intent;
+      // Ensure purchase date is set if not already set
+      if (purchase.passRewardEligible && !purchase.passRewardPurchaseDate) {
+        purchase.passRewardPurchaseDate = purchase.completedAt;
+      }
       await purchase.save();
 
       // Add course to user's purchases and unlock the mock exam for completed purchases.
@@ -304,6 +329,8 @@ router.post('/webhook', async (req, res) => {
           currency: purchase.currency || course.currency || 'cad',
           orderId: purchase._id,
           isFree: purchase.amount === 0,
+          passRewardEligible: purchase.passRewardEligible,
+          passRewardClaimDeadline: purchase.passRewardClaimDeadline,
         }).catch((err) => {
           console.error('Failed to send purchase confirmation email in webhook:', err.message);
         });
@@ -313,6 +340,21 @@ router.post('/webhook', async (req, res) => {
     } catch (error) {
       console.error('Error processing webhook:', error);
       return res.status(500).json({ message: error.message });
+    }
+  } else if (event.type === 'charge.refunded' || event.type === 'refund.created' || event.type === 'refund.updated') {
+    try {
+      const refundObj = event.data.object;
+      const paymentIntentId = refundObj.payment_intent || refundObj.id;
+      if (paymentIntentId) {
+        const purchase = await Purchase.findOne({ stripePaymentIntent: paymentIntentId });
+        if (purchase && purchase.status !== 'refunded') {
+          purchase.status = 'refunded';
+          await purchase.save();
+          console.log(`Sync'd refund status for purchase ${purchase._id}`);
+        }
+      }
+    } catch (refundSyncErr) {
+      console.error('Error handling refund webhook event:', refundSyncErr.message);
     }
   }
 

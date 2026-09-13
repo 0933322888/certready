@@ -33,7 +33,6 @@ export default function CoursePreview() {
             const tradeSlug = getGuideSlugFromCourseSlug(course.slug);
             const pricing = pricingBySlug[course.slug];
             const fullPrice = pricing?.fullPrice ?? course.price;
-            const currentPrice = pricing?.currentPrice ?? course.price;
             const currency = pricing?.currency ?? course.currency ?? 'CAD';
             return (
               <Card key={course.slug} hover className="flex flex-col">
@@ -44,8 +43,8 @@ export default function CoursePreview() {
                       <span className="text-2xl font-bold text-accent">
                         {formatPrice(fullPrice, currency)}
                       </span>
-                      <p className="text-sm text-accent-warm font-medium mt-1">
-                        {t('course.promoCodeHint')}
+                      <p className="text-xs text-accent-warm font-medium mt-1">
+                        Pass Reward Eligible
                       </p>
                     </div>
                   </div>
