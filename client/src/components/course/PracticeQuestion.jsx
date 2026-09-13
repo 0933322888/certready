@@ -25,7 +25,7 @@ export default function PracticeQuestion({
   const nextText = nextQuestionLabel ?? t('learn.nextQuestion');
   const [selectedIndex, setSelectedIndex] = useState(savedAnswer?.selectedIndex ?? null);
   const [showExplanation, setShowExplanation] = useState(savedAnswer ? true : false);
-  const [isCorrect, setIsCorrect] = useState(savedAnswer?.isCorrect ?? null);
+  const [, setIsCorrect] = useState(savedAnswer?.isCorrect ?? null);
   const questionRef = useRef(null);
 
   // Load saved answer on mount

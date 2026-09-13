@@ -157,7 +157,7 @@ export default function MockExamPage() {
       setMarkedForReview(new Set());
       setTimeRemainingSeconds(totalSeconds);
       setPhase('exam');
-    } catch (err) {
+    } catch {
       setLoadError(t('mockExam.loadError'));
       setPhase('idle');
     }
@@ -166,7 +166,32 @@ export default function MockExamPage() {
   const handleSubmitExam = useCallback(() => {
     setPhase('results');
     setShowSubmitConfirm(false);
-  }, []);
+
+    // If user is authenticated, sync all exam answers to DB in batch
+    if (user && questions.length > 0) {
+      const batchAnswers = questions
+        .map((q) => {
+          const sel = answers[q.id];
+          if (sel === undefined) return null;
+          return {
+            questionId: q.id,
+            selectedIndex: sel,
+            isCorrect: sel === q.correctIndex,
+          };
+        })
+        .filter(Boolean);
+
+      if (batchAnswers.length > 0) {
+        api.post('/answers/batch', {
+          courseId: courseSlug || tradeSlug,
+          chapterId: 'mock-exam',
+          answers: batchAnswers,
+        }).catch((err) => {
+          console.error('Failed to sync mock exam answers to server:', err);
+        });
+      }
+    }
+  }, [user, questions, answers, courseSlug, tradeSlug]);
 
   useEffect(() => {
     if (phase !== 'exam' || timeRemainingSeconds === null) return;

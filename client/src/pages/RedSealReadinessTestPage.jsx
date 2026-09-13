@@ -56,7 +56,6 @@ export default function RedSealReadinessTestPage() {
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
 
   const trade = selectedTradeSlug ? getTradeBySlug(selectedTradeSlug) : null;
-  const totalSeconds = trade ? readinessDurationSeconds(trade) : 0;
   const currentQuestion = questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
 
@@ -88,7 +87,7 @@ export default function RedSealReadinessTestPage() {
       setMarkedForReview(new Set());
       setTimeRemainingSeconds(readinessDurationSeconds(getTradeBySlug(tradeSlug)));
       setPhase('exam');
-    } catch (err) {
+    } catch {
       setLoadError(t('readinessTest.loadError'));
       setPhase('choose');
       setSelectedTradeSlug(null);

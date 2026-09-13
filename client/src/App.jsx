@@ -16,18 +16,14 @@ import HomePage from './pages/HomePage';
 const RedSealExamPage = lazy(() => import('./pages/RedSealExamPage'));
 const TradesPage = lazy(() => import('./pages/TradesPage'));
 const TradePageRoute = lazy(() => import('./components/routing/TradePageRoute'));
-const TradeExamPage = lazy(() => import('./pages/TradeExamPage'));
 const PracticeTestsListPage = lazy(() => import('./pages/PracticeTestsListPage'));
 const GuidesSlugPage = lazy(() => import('./pages/GuidesSlugPage'));
 const RedSealReadinessTestPage = lazy(() => import('./pages/RedSealReadinessTestPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
 
-const AllCoursesPage = lazy(() => import('./pages/AllCoursesPage'));
-const CoursePage = lazy(() => import('./pages/CoursePage'));
 const LearnPage = lazy(() => import('./pages/LearnPage'));
 const GuidesPage = lazy(() => import('./pages/GuidesPage'));
-const TradeGuidePage = lazy(() => import('./pages/TradeGuidePage'));
 const PracticePage = lazy(() => import('./pages/PracticePage'));
 const MockExamPage = lazy(() => import('./pages/MockExamPage'));
 const FreePracticeQuestionsLandingPage = lazy(() => import('./pages/FreePracticeQuestionsLandingPage'));
@@ -47,6 +43,7 @@ const ResetPasswordPage = lazy(() => import('./pages/ResetPasswordPage'));
 const PassRewardPage = lazy(() => import('./pages/PassRewardPage'));
 const PassRewardTermsPage = lazy(() => import('./pages/PassRewardTermsPage'));
 const AdminClaimsPage = lazy(() => import('./pages/AdminClaimsPage'));
+const AdminUsersPage = lazy(() => import('./pages/AdminUsersPage'));
 
 const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
 
@@ -100,6 +97,9 @@ export default function App() {
             <Route path="/pass-reward/terms" element={<PassRewardTermsPage />} />
             <Route path="/admin/claims" element={
               <AdminRoute><AdminClaimsPage /></AdminRoute>
+            } />
+            <Route path="/admin/users" element={
+              <AdminRoute><AdminUsersPage /></AdminRoute>
             } />
             <Route path="/checkout/success" element={<CheckoutSuccessPage />} />
             <Route path="/checkout/cancel" element={<CheckoutCancelPage />} />

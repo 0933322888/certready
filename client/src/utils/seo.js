@@ -284,7 +284,7 @@ export function getPracticeTestsListSEO() {
 }
 
 /** SEO for free practice landing pages: /electrician-red-seal-practice-questions, /plumber-red-seal-practice-questions, etc. */
-export function getFreePracticeLandingSEO({ tradeName, tradeCode, tradeSlug, landingPath, questionCount = 20 }) {
+export function getFreePracticeLandingSEO({ tradeName, tradeCode, _tradeSlug, landingPath, questionCount = 20 }) {
   return {
     title: `Free ${tradeName} Red Seal Practice Questions`,
     description: `Try ${questionCount} free ${tradeName} Red Seal exam practice questions with instant feedback and explanations. No sign-up required. Based on the official ${tradeCode} standard. Prepare for your certification exam.`,

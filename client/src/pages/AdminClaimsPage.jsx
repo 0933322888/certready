@@ -47,6 +47,7 @@ export default function AdminClaimsPage() {
 
   useEffect(() => {
     fetchClaims(statusFilter);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [statusFilter]);
 
   const handleSelectClaim = (claim) => {
@@ -116,6 +117,11 @@ export default function AdminClaimsPage() {
             </p>
           </div>
           <div className="flex items-center gap-3">
+            <Link to="/admin/users">
+              <Button variant="outline" size="sm">
+                &larr; Users Management
+              </Button>
+            </Link>
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}

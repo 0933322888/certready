@@ -22,7 +22,6 @@ export function getTopicStats(questions, answers) {
   }));
 }
 
-const DEFAULT_LIMIT = 20;
 const WEAK_THRESHOLD = 50;
 const STRONG_THRESHOLD = 70;
 

@@ -4,20 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
 import Button from '../ui/Button';
 import { CertReadyLogoCompact } from '../brand/CertReadyLogo';
-import { SUPPORTED_LANGUAGES } from '../../data/courseContent';
 
 export default function Navbar() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-  const [langMenuOpen, setLangMenuOpen] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-
-  const changeLanguage = (code) => {
-    i18n.changeLanguage(code);
-    setLangMenuOpen(false);
-  };
 
   const handleLogout = () => {
     logout();
@@ -124,14 +117,24 @@ export default function Navbar() {
                 {userMenuOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-surface border border-border rounded-xl shadow-lg py-2">
                     {user.isAdmin && (
-                      <Link
-                        to="/admin/claims"
-                        onClick={() => setUserMenuOpen(false)}
-                        className="block px-4 py-2 text-accent-warm hover:bg-surface-2 transition-colors font-medium flex items-center justify-between"
-                      >
-                        <span>Claims Admin</span>
-                        <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm">Admin</span>
-                      </Link>
+                      <>
+                        <Link
+                          to="/admin/users"
+                          onClick={() => setUserMenuOpen(false)}
+                          className="block px-4 py-2 text-accent hover:bg-surface-2 transition-colors font-medium flex items-center justify-between"
+                        >
+                          <span>Users Admin</span>
+                          <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent/20 text-accent font-semibold">Admin</span>
+                        </Link>
+                        <Link
+                          to="/admin/claims"
+                          onClick={() => setUserMenuOpen(false)}
+                          className="block px-4 py-2 text-accent-warm hover:bg-surface-2 transition-colors font-medium flex items-center justify-between"
+                        >
+                          <span>Claims Admin</span>
+                          <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm">Admin</span>
+                        </Link>
+                      </>
                     )}
                     <Link
                       to="/profile"
@@ -213,14 +216,24 @@ export default function Navbar() {
                   Pass Reward
                 </Link>
                 {user.isAdmin && (
-                  <Link
-                    to="/admin/claims"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-accent-warm hover:text-white transition-colors font-medium flex items-center justify-between"
-                  >
-                    <span>Claims Admin</span>
-                    <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm">Admin</span>
-                  </Link>
+                  <>
+                    <Link
+                      to="/admin/users"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-accent hover:text-white transition-colors font-medium flex items-center justify-between"
+                    >
+                      <span>Users Admin</span>
+                      <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent/20 text-accent font-semibold">Admin</span>
+                    </Link>
+                    <Link
+                      to="/admin/claims"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-accent-warm hover:text-white transition-colors font-medium flex items-center justify-between"
+                    >
+                      <span>Claims Admin</span>
+                      <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm font-semibold">Admin</span>
+                    </Link>
+                  </>
                 )}
                 <Link
                   to="/profile"

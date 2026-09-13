@@ -38,7 +38,7 @@ export default function ChapterContent({
   const { t } = useTranslation();
   const { user, hasMockExamAccess, hasPurchasedBySlug } = useAuth();
   const [savedAnswers, setSavedAnswers] = useState({});
-  const [loadingAnswers, setLoadingAnswers] = useState(true);
+  const [, setLoadingAnswers] = useState(true);
 
   // Load saved answers for this chapter
   useEffect(() => {
@@ -69,13 +69,13 @@ export default function ChapterContent({
         return (
           <div className="text-text-primary leading-relaxed mb-4 text-base">
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
-              p: ({node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
-              ul: ({node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
-              ol: ({node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
-              table: ({node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
-              th: ({node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
-              td: ({node, ...props}) => <td className="border px-2 py-1" {...props} />,
-              strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
+              p: ({_node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
+              ul: ({_node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
+              ol: ({_node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
+              table: ({_node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
+              th: ({_node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
+              td: ({_node, ...props}) => <td className="border px-2 py-1" {...props} />,
+              strong: ({_node, ...props}) => <strong className="font-semibold" {...props} />,
             }}>{content.text}</ReactMarkdown>
           </div>
         );
@@ -84,13 +84,13 @@ export default function ChapterContent({
         return (
           <div className="text-text-primary leading-relaxed mb-4 text-base">
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
-              p: ({node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
-              ul: ({node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
-              ol: ({node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
-              table: ({node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
-              th: ({node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
-              td: ({node, ...props}) => <td className="border px-2 py-1" {...props} />,
-              strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
+              p: ({_node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
+              ul: ({_node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
+              ol: ({_node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
+              table: ({_node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
+              th: ({_node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
+              td: ({_node, ...props}) => <td className="border px-2 py-1" {...props} />,
+              strong: ({_node, ...props}) => <strong className="font-semibold" {...props} />,
             }}>{content.text}</ReactMarkdown>
           </div>
         );

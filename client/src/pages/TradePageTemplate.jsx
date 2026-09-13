@@ -8,7 +8,6 @@ import Button from "../components/ui/Button";
 import Badge from "../components/ui/Badge";
 import { getTradeGuidePageSEO, getBreadcrumbStructuredData } from "../utils/seo";
 import { paths } from "../utils/routes";
-import { getTradeBySlug } from "../data/tradeGuideContent";
 
 /* ============================================================
    RED SEAL TRADE PAGE TEMPLATE

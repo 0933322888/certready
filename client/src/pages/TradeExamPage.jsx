@@ -34,7 +34,7 @@ export default function TradeExamPage() {
   const guide = getGuideBySlug(tradeSlug);
   const course = guide ? getCourse(guide.courseSlug, i18n.language) : null;
   const slug = course?.slug;
-  const { pricing, loading: pricingLoading } = useCoursePricingBySlug(slug);
+  const { pricing } = useCoursePricingBySlug(slug);
 
   const allChapters = course ? getAllChapters(course) : [];
   const hasPurchased = slug

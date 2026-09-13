@@ -22,7 +22,7 @@ export default function ForgotPasswordPage() {
       await api.post('/auth/forgot-password', { email: email.trim() });
       setSent(true);
       toast.success(t('auth.forgotPasswordSuccess'));
-    } catch (err) {
+    } catch {
       // Don't reveal whether email exists; show same message for success or not found
       setSent(true);
       toast.success(t('auth.forgotPasswordSuccess'));

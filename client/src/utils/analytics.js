@@ -15,7 +15,7 @@ export function trackPageView(pathname, title) {
         page_title: pageTitle,
         page_location: window.location.href,
       });
-    } catch (_err) {
+    } catch {
       // Ignore tracking errors
     }
   }
@@ -26,7 +26,7 @@ export function trackPageView(pathname, title) {
       window.plausible('pageview', {
         props: { path: pagePath },
       });
-    } catch (_err) {
+    } catch {
       // Ignore tracking errors
     }
   }
@@ -38,7 +38,7 @@ export function trackPageView(pathname, title) {
         detail: { pagePath, pageTitle, timestamp: new Date().toISOString() },
       });
       window.dispatchEvent(event);
-    } catch (_err) {
+    } catch {
       // Ignore dispatch errors
     }
   }
@@ -49,7 +49,7 @@ export function trackEvent(eventName, properties = {}) {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     try {
       window.gtag('event', eventName, properties);
-    } catch (_err) {
+    } catch {
       // Ignore tracking errors
     }
   }
@@ -58,7 +58,7 @@ export function trackEvent(eventName, properties = {}) {
   if (typeof window !== 'undefined' && typeof window.plausible === 'function') {
     try {
       window.plausible(eventName, { props: properties });
-    } catch (_err) {
+    } catch {
       // Ignore tracking errors
     }
   }
@@ -70,7 +70,7 @@ export function trackEvent(eventName, properties = {}) {
         detail: { eventName, properties, timestamp: new Date().toISOString() },
       });
       window.dispatchEvent(event);
-    } catch (_err) {
+    } catch {
       // Ignore dispatch errors
     }
   }

@@ -17,7 +17,7 @@ import toast from 'react-hot-toast';
 export default function DashboardPage() {
   const { t, i18n } = useTranslation();
   const { user, loading: authLoading } = useAuth();
-  const [dashboardData, setDashboardData] = useState(null);
+  const [, setDashboardData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [studyPlans, setStudyPlans] = useState([]);
   const [selectedPlan, setSelectedPlan] = useState(null);

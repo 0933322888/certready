@@ -12,10 +12,13 @@ import Button from '../components/ui/Button';
 import { paths } from '../utils/routes';
 import { getQuestions, loadSession, clearSession } from '../api/practiceApi';
 import { usePracticeSession } from '../hooks/usePracticeSession';
+import { useAuth } from '../context/AuthContext';
+import api from '../utils/api';
 
 export default function PracticePage() {
   const { tradeSlug } = useParams();
   const { t, i18n } = useTranslation();
+  const { user } = useAuth();
   const guide = getGuideBySlug(tradeSlug);
 
   const [phase, setPhase] = useState('idle');
@@ -66,11 +69,11 @@ export default function PracticePage() {
       clearSession();
       startSession(qs);
       setPhase('ready');
-    } catch (err) {
+    } catch {
       setLoadError(t('practicePage.loadError'));
       setPhase('idle');
     }
-  }, [tradeSlug, startSession, clearSession, t]);
+  }, [tradeSlug, startSession, t]);
 
   const handleContinue = useCallback(() => {
     if (!savedSession?.questions?.length) return;
@@ -85,6 +88,21 @@ export default function PracticePage() {
     setPhase('idle');
     setSavedSession(null);
   }, [clearSessionState]);
+
+  const handleAnswerSave = useCallback((qId, result) => {
+    setAnswer(qId, result.selectedIndex, result.isCorrect);
+    if (user && tradeSlug) {
+      api.post('/answers', {
+        courseId: tradeSlug,
+        chapterId: 'practice',
+        questionId: qId,
+        selectedIndex: result.selectedIndex,
+        isCorrect: result.isCorrect,
+      }).catch((err) => {
+        console.error('Failed to sync practice answer to server:', err);
+      });
+    }
+  }, [setAnswer, user, tradeSlug]);
 
   if (!guide) {
     return <NotFoundPage />;
@@ -212,7 +230,7 @@ export default function PracticePage() {
                     correctIndex={q.correctIndex}
                     explanation={q.explanation}
                     savedAnswer={savedAnswer}
-                    onAnswerSave={(qId, result) => setAnswer(qId, result.selectedIndex, result.isCorrect)}
+                    onAnswerSave={handleAnswerSave}
                     explanationLabel={t('learn.explanation')}
                     nextQuestionLabel={t('learn.nextQuestion')}
                   />

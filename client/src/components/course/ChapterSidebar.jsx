@@ -13,7 +13,7 @@ export default function ChapterSidebar({
   onClose = null,
   hasAccess: hasAccessProp,
   hasMockExamAccess: hasMockExamAccessProp,
-  progressVersion = 0,
+  _progressVersion = 0,
 }) {
   const { t } = useTranslation();
   const [expandedParts, setExpandedParts] = useState(new Set(course.parts.map(p => p.id)));

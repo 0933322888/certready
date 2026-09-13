@@ -25,7 +25,7 @@ export default function CoursePage() {
   const [promoCode, setPromoCode] = useState('');
   const [appliedPromo, setAppliedPromo] = useState(null);
   const [applyingPromo, setApplyingPromo] = useState(false);
-  const { pricing, loading: pricingLoading } = useCoursePricingBySlug(slug);
+  const { pricing } = useCoursePricingBySlug(slug);
 
   const course = getCourse(slug, i18n.language);
   const allChapters = course ? getAllChapters(course) : [];

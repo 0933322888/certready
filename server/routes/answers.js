@@ -11,9 +11,11 @@ router.post('/', protect, async (req, res) => {
   try {
     const { courseId, chapterId, questionId, selectedIndex, isCorrect } = req.body;
 
-    if (!courseId || !chapterId || !questionId || selectedIndex === undefined || isCorrect === undefined) {
+    if (!courseId || !questionId || selectedIndex === undefined || isCorrect === undefined) {
       return res.status(400).json({ message: 'Missing required fields' });
     }
+
+    const resolvedChapterId = chapterId || 'practice';
 
     // Upsert: update if exists, create if not
     const answer = await UserAnswer.findOneAndUpdate(
@@ -21,7 +23,7 @@ router.post('/', protect, async (req, res) => {
       {
         user: req.user._id,
         courseId,
-        chapterId,
+        chapterId: resolvedChapterId,
         questionId,
         selectedIndex,
         isCorrect,
@@ -31,6 +33,51 @@ router.post('/', protect, async (req, res) => {
     );
 
     res.json({ success: true, answer });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// @route   POST /api/answers/batch
+// @desc    Save or update multiple user answers in batch (e.g. at the end of a mock exam or practice session)
+// @access  Private
+router.post('/batch', protect, async (req, res) => {
+  try {
+    const { courseId, chapterId, answers } = req.body;
+
+    if (!courseId || !Array.isArray(answers) || answers.length === 0) {
+      return res.status(400).json({ message: 'courseId and non-empty answers array required' });
+    }
+
+    const resolvedChapterId = chapterId || 'practice';
+    const now = new Date();
+
+    const ops = answers
+      .filter((a) => a && a.questionId && a.selectedIndex !== undefined && a.isCorrect !== undefined)
+      .map((a) => ({
+        updateOne: {
+          filter: { user: req.user._id, questionId: a.questionId },
+          update: {
+            $set: {
+              user: req.user._id,
+              courseId,
+              chapterId: resolvedChapterId,
+              questionId: a.questionId,
+              selectedIndex: a.selectedIndex,
+              isCorrect: Boolean(a.isCorrect),
+              answeredAt: now,
+            },
+          },
+          upsert: true,
+        },
+      }));
+
+    if (ops.length === 0) {
+      return res.status(400).json({ message: 'No valid answers provided' });
+    }
+
+    await UserAnswer.bulkWrite(ops);
+    res.json({ success: true, count: ops.length });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

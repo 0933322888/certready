@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import Badge from '../ui/Badge';
-import Spinner from '../ui/Spinner';
 import api from '../../utils/api';
 import toast from 'react-hot-toast';
 import { paths } from '../../utils/routes';
@@ -83,7 +82,7 @@ export default function PassRewardDashboardSection() {
     try {
       const res = await api.get('/pass-reward/my-eligibility');
       setEligibilityData(res.data || []);
-    } catch (_) {
+    } catch {
       setEligibilityData([]);
     } finally {
       setLoading(false);
