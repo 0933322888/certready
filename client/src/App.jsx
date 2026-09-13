@@ -7,6 +7,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import PageWrapper from './components/layout/PageWrapper';
 import ScrollToTop from './components/layout/ScrollToTop';
+import AnalyticsTracker from './components/analytics/AnalyticsTracker';
 import Spinner from './components/ui/Spinner';
 import ProtectedRoute from './components/ui/ProtectedRoute';
 import AdminRoute from './components/ui/AdminRoute';
@@ -55,6 +56,7 @@ export default function App() {
       <AuthProvider>
         <BrowserRouter>
         <ScrollToTop />
+        <AnalyticsTracker />
         <Toaster 
           position="top-right" 
           toastOptions={{ 

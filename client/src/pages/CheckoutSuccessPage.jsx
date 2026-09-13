@@ -8,6 +8,7 @@ import Button from '../components/ui/Button';
 import Spinner from '../components/ui/Spinner';
 import api from '../utils/api';
 import toast from 'react-hot-toast';
+import { trackEvent } from '../utils/analytics';
 
 export default function CheckoutSuccessPage() {
   const { t } = useTranslation();
@@ -47,6 +48,11 @@ export default function CheckoutSuccessPage() {
           if (isMounted) {
             setPurchase(res.data.purchase);
             setLoading(false);
+            trackEvent('purchase_completed', {
+              courseSlug: res.data.purchase.course?.slug,
+              courseTitle: res.data.purchase.course?.title,
+              orderId: res.data.purchase.id,
+            });
             toast.success('Purchase confirmed! You now have full access.');
             refreshUser().catch(console.error);
           }

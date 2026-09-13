@@ -18,8 +18,8 @@ import toast from 'react-hot-toast';
 import Spinner from '../components/ui/Spinner';
 import NotFoundPage from './NotFoundPage';
 import { paths } from '../utils/routes';
-import PassRewardBanner from '../components/passReward/PassRewardBanner';
 import { isCourseEligibleForPassReward } from '../config/passReward';
+import { trackEvent } from '../utils/analytics';
 
 export default function TradeExamPage() {
   const { tradeSlug } = useParams();
@@ -87,6 +87,12 @@ export default function TradeExamPage() {
     }
     setPurchasing(true);
     try {
+      trackEvent('begin_checkout', {
+        courseSlug: slug,
+        price: displayPrice,
+        currency: displayCurrency,
+      });
+
       const res = await api.post('/payments/create-checkout-session', {
         courseSlug: slug,
         promoCode: appliedPromo?.code || undefined,
