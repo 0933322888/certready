@@ -36,33 +36,44 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-accent transition-colors">
-              {t('nav.home')}
-            </Link>
-            <Link to="/red-seal-exam" className="text-white hover:text-accent transition-colors">
-              {t('nav.redSealExam')}
-            </Link>
-            <Link to="/trades" className="text-white hover:text-accent transition-colors">
-              {t('nav.trades')}
-            </Link>
-            <Link to="/pass-reward" className="text-accent-warm hover:text-white transition-colors font-medium">
-              Pass Reward
-            </Link>
-            <Link to="/practice-tests" className="text-white hover:text-accent transition-colors">
-              {t('nav.practiceTests')}
-            </Link>
-            <Link to="/guides" className="text-white hover:text-accent transition-colors">
-              {t('nav.guides')}
-            </Link>
-            <Link to="/blog" className="text-white hover:text-accent transition-colors">
-              {t('nav.blog')}
-            </Link>
-            {user && (
+            {user ? (
               <>
-                <Link to="/dashboard" className="text-white hover:text-accent transition-colors">
+                <Link to="/dashboard" className="text-white hover:text-accent transition-colors font-medium">
                   {t('nav.dashboard')}
                 </Link>
-
+                <Link to="/trades" className="text-white hover:text-accent transition-colors">
+                  {t('nav.trades')}
+                </Link>
+                <Link to="/practice-tests" className="text-white hover:text-accent transition-colors">
+                  {t('nav.practiceTests')}
+                </Link>
+                <Link to="/pass-reward" className="text-accent-warm hover:text-white transition-colors font-medium">
+                  Pass Reward
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/" className="text-white hover:text-accent transition-colors">
+                  {t('nav.home')}
+                </Link>
+                <Link to="/red-seal-exam" className="text-white hover:text-accent transition-colors">
+                  {t('nav.redSealExam')}
+                </Link>
+                <Link to="/trades" className="text-white hover:text-accent transition-colors">
+                  {t('nav.trades')}
+                </Link>
+                <Link to="/pass-reward" className="text-accent-warm hover:text-white transition-colors font-medium">
+                  Pass Reward
+                </Link>
+                <Link to="/practice-tests" className="text-white hover:text-accent transition-colors">
+                  {t('nav.practiceTests')}
+                </Link>
+                <Link to="/guides" className="text-white hover:text-accent transition-colors">
+                  {t('nav.guides')}
+                </Link>
+                <Link to="/blog" className="text-white hover:text-accent transition-colors">
+                  {t('nav.blog')}
+                </Link>
               </>
             )}
           </div>
@@ -112,13 +123,6 @@ export default function Navbar() {
                 </button>
                 {userMenuOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-surface border border-border rounded-xl shadow-lg py-2">
-                    <Link
-                      to="/dashboard"
-                      onClick={() => setUserMenuOpen(false)}
-                      className="block px-4 py-2 text-text-primary hover:bg-surface-2 transition-colors"
-                    >
-                      {t('nav.dashboard')}
-                    </Link>
                     {user.isAdmin && (
                       <Link
                         to="/admin/claims"
@@ -178,76 +182,46 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-surface">
           <div className="px-4 py-4 space-y-3">
-            <Link
-              to="/"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-text-primary hover:text-accent transition-colors"
-            >
-              {t('nav.home')}
-            </Link>
-            <Link
-              to="/red-seal-exam"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-text-primary hover:text-accent transition-colors"
-            >
-              {t('nav.redSealExam')}
-            </Link>
-            <Link
-              to="/trades"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-text-primary hover:text-accent transition-colors"
-            >
-              {t('nav.trades')}
-            </Link>
-            <Link
-              to="/practice-tests"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-text-primary hover:text-accent transition-colors"
-            >
-              {t('nav.practiceTests')}
-            </Link>
-            <Link
-              to="/guides"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-text-primary hover:text-accent transition-colors"
-            >
-              {t('nav.guides')}
-            </Link>
-            <Link
-              to="/blog"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-text-primary hover:text-accent transition-colors"
-            >
-              {t('nav.blog')}
-            </Link>
-            <Link
-              to="/about"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block text-text-primary hover:text-accent transition-colors"
-            >
-              {t('nav.about')}
-            </Link>
-            {/* <div className="flex items-center gap-2 py-2 border-t border-border mt-2">
-              <span className="text-text-muted text-sm">{t('nav.language')}:</span>
-              {SUPPORTED_LANGUAGES.map(({ code, label }) => (
-                <button
-                  key={code}
-                  onClick={() => { changeLanguage(code); setMobileMenuOpen(false); }}
-                  className={`px-2 py-1 rounded text-sm ${i18n.language === code ? 'bg-accent text-white' : 'text-text-primary hover:bg-surface-2'}`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div> */}
             {user ? (
               <>
                 <Link
                   to="/dashboard"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-text-primary hover:text-accent transition-colors"
+                  className="block text-accent font-medium hover:text-white transition-colors"
                 >
                   {t('nav.dashboard')}
                 </Link>
+                <Link
+                  to="/trades"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-text-primary hover:text-accent transition-colors"
+                >
+                  {t('nav.trades')}
+                </Link>
+                <Link
+                  to="/practice-tests"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-text-primary hover:text-accent transition-colors"
+                >
+                  {t('nav.practiceTests')}
+                </Link>
+                <Link
+                  to="/pass-reward"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-accent-warm hover:text-white transition-colors font-medium"
+                >
+                  Pass Reward
+                </Link>
+                {user.isAdmin && (
+                  <Link
+                    to="/admin/claims"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-accent-warm hover:text-white transition-colors font-medium flex items-center justify-between"
+                  >
+                    <span>Claims Admin</span>
+                    <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm">Admin</span>
+                  </Link>
+                )}
                 <Link
                   to="/profile"
                   onClick={() => setMobileMenuOpen(false)}
@@ -257,7 +231,7 @@ export default function Navbar() {
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="block w-full text-left text-text-primary hover:text-accent transition-colors"
+                  className="block w-full text-left text-text-muted hover:text-danger transition-colors pt-2 border-t border-border"
                 >
                   {t('nav.logout')}
                 </button>
@@ -265,19 +239,70 @@ export default function Navbar() {
             ) : (
               <>
                 <Link
-                  to="/login"
+                  to="/"
                   onClick={() => setMobileMenuOpen(false)}
                   className="block text-text-primary hover:text-accent transition-colors"
                 >
-                  {t('nav.logIn')}
+                  {t('nav.home')}
                 </Link>
                 <Link
-                  to="/register"
+                  to="/red-seal-exam"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block"
+                  className="block text-text-primary hover:text-accent transition-colors"
                 >
-                  <Button className="w-full">{t('nav.getStarted')}</Button>
+                  {t('nav.redSealExam')}
                 </Link>
+                <Link
+                  to="/trades"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-text-primary hover:text-accent transition-colors"
+                >
+                  {t('nav.trades')}
+                </Link>
+                <Link
+                  to="/pass-reward"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-accent-warm hover:text-white transition-colors font-medium"
+                >
+                  Pass Reward
+                </Link>
+                <Link
+                  to="/practice-tests"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-text-primary hover:text-accent transition-colors"
+                >
+                  {t('nav.practiceTests')}
+                </Link>
+                <Link
+                  to="/guides"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-text-primary hover:text-accent transition-colors"
+                >
+                  {t('nav.guides')}
+                </Link>
+                <Link
+                  to="/blog"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-text-primary hover:text-accent transition-colors"
+                >
+                  {t('nav.blog')}
+                </Link>
+                <div className="pt-2 border-t border-border space-y-2">
+                  <Link
+                    to="/login"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-text-primary hover:text-accent transition-colors"
+                  >
+                    {t('nav.logIn')}
+                  </Link>
+                  <Link
+                    to="/register"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block"
+                  >
+                    <Button className="w-full">{t('nav.getStarted')}</Button>
+                  </Link>
+                </div>
               </>
             )}
           </div>
