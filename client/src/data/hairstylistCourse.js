@@ -19,7 +19,7 @@ export const hairstylistCourse = {
     price: 4999,
     currency: 'CAD',
     totalChapters: 15,
-    totalQuestions: 134, // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
+    totalQuestions: 328, // 328 questions in question bank (displayed as 320+)
     passingMark: 70,
     examFormat: 'Multiple-choice, computer-based (Prometric Canada Testing Services)',
     features: [

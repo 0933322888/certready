@@ -1906,7 +1906,6 @@ const welderCourse = {
   const _parts = welderCourse.parts;
   const _allChapters = _parts.flatMap((p) => p.chapters);
   const _totalChapters = _allChapters.length;
-  const _totalQuestions = 250; // Questions live in the separate questions seed file
   
   export const welderCourseData = {
     id: 'welder-456a',
@@ -1918,11 +1917,11 @@ const welderCourse = {
     price: 4999,
     currency: 'CAD',
     totalChapters: _totalChapters,
-    totalQuestions: _totalQuestions,
+    totalQuestions: 275,
     passingMark: 70,
     features: [
       '17 chapters covering all 4 Major Work Activities (MWA)',
-      `${_totalQuestions}+ practice questions with explanations`,
+      `$270+ practice questions with explanations`,
       'Red Seal–style mock exam and exam strategy',
       'Formulas reference and key terms glossary',
       'Based on Red Seal Occupational Standard (RSOS) – Welder 2023',

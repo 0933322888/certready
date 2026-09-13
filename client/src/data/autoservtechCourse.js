@@ -5,7 +5,7 @@ export const autoservtechCourse = {
     "subtitle": "Complete Study Guide — Skilled Trades Ontario Trade 310S",
     "trade": "Automotive Service Technician",
     "tradeCode": "310S",
-    "description": "Prepare for the Automotive Service Technician Red Seal exam with 38 chapters, 125 practice questions, and a full mock exam aligned to Skilled Trades Ontario Trade 310S.",
+    "description": "Prepare for the Automotive Service Technician Red Seal exam with 38 chapters, 280+ practice questions, and a full mock exam aligned to Skilled Trades Ontario Trade 310S.",
     "seoTitle": "Automotive Service Technician Red Seal Exam Prep — 310S Study Guide",
     "seoDescription": "Master the Automotive Service Technician Red Seal exam with focused study content, realistic practice questions, and a full mock exam for Trade 310S.",
     "seoKeywords": "Automotive Service Technician, 310S, 310S practice exam, Automotive Service Technician Red Seal exam, 310S exam prep, Automotive Red Seal practice test, Automotive certification Canada, Automotive Service Technician apprenticeship exam, Automotive study guide, Automotive practice questions, Automotive mock exam, Red Seal automotive exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam",
@@ -13,7 +13,7 @@ export const autoservtechCourse = {
     "price": 4999,
     "currency": "CAD",
     "totalChapters": 38,
-    "totalQuestions": 125,
+    "totalQuestions": 286,
     "passingMark": 70,
     "examFormat": "Multiple Choice (4 options)",
     "features": [

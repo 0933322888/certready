@@ -1607,7 +1607,6 @@ const plumberCourse = {
 const _parts = plumberCourse.parts;
 const _allChapters = _parts.flatMap((p) => p.chapters);
 const _totalChapters = _allChapters.length;
-const _totalQuestions = 250; // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
 
 export const plumberCourseData = {
   id: 'plumber-306a',
@@ -1619,11 +1618,11 @@ export const plumberCourseData = {
   price: 4999, // $49.99 CAD in cents
   currency: 'CAD',
   totalChapters: _totalChapters,
-  totalQuestions: _totalQuestions,
+  totalQuestions: 234,
   passingMark: 70,
   features: [
     '15 chapters covering all 7 Major Work Activities (MWA)',
-    `${_totalQuestions}+ practice questions with explanations`,
+    `230+ practice questions with explanations`,
     'Red Seal–style mock exam and exam strategy',
     'Formulas reference and key terms glossary',
     'Based on Red Seal Occupational Standard (RSOS) – Plumber 2023',

@@ -13,12 +13,12 @@ export const hvacCourse = {
   price: 4999,
   currency: 'CAD',
   totalChapters: 20,
-  totalQuestions: 200, // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
+  totalQuestions: 207, // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
   passingMark: 70,
   examFormat: 'Multiple-choice, computer-based (Prometric Canada Testing Services)',
   features: [
     '20 exam-aligned chapters covering all 6 MWAs',
-    '134 practice questions with detailed explanations',
+    '200+ practice questions with detailed explanations',
     'Full-coverage glossary for every part of the trade',
     'Mock exam with annotated answer key',
     'Exam strategy guide and timing tips',

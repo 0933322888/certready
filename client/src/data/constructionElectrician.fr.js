@@ -2386,10 +2386,7 @@ const electricianCourseFR = {
 const _elecParts = electricianCourseFR.parts;
 const _elecAllChapters = _elecParts.flatMap((p) => p.chapters);
 const _elecTotalChapters = _elecAllChapters.length;
-const _elecTotalQuestions = _elecAllChapters.reduce(
-  (sum, ch) => sum + (ch.practiceQuestions?.length || 0),
-  0
-);
+const _elecTotalQuestions = 327;
 
 export const electricianCourseDataFR = {
   id: 'construction-electrician-309a',
@@ -2405,7 +2402,7 @@ export const electricianCourseDataFR = {
   passingMark: 70,
   features: [
     `${_elecTotalChapters} chapitres couvrant les 5 activités principales (AMT)`,
-    `${_elecTotalQuestions}+ questions pratiques avec explications détaillées`,
+    '320+ questions pratiques avec explications détaillées',
     'Fiche de formules complète et glossaire des termes clés',
     'Stratégie d\'examen Sceau rouge et répartition de la pondération des AMT',
     'Basé sur la norme professionnelle nationale (RSOS) — Électricien en construction 2025',

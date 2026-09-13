@@ -2128,7 +2128,6 @@ const carpenterCourse = {
 const _parts = carpenterCourse.parts;
 const _allChapters = _parts.flatMap((p) => p.chapters);
 const _totalChapters = _allChapters.length;
-const _totalQuestions = 0; // Practice questions can be added via server/scripts/seedPracticeQuestions.js
 
 export const carpenterCourseData = {
     id: 'carpenter-403a',
@@ -2140,7 +2139,7 @@ export const carpenterCourseData = {
     price: 4999, // $49.99 CAD in cents
     currency: 'CAD',
     totalChapters: _totalChapters,
-    totalQuestions: _totalQuestions,
+    totalQuestions: 199,
     passingMark: 70,
     features: [
         `${_totalChapters} chapters covering all 7 Major Work Activities (MWA)`,

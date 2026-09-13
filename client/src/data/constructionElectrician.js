@@ -2381,7 +2381,7 @@ const electricianCourse = {
 const _elecParts = electricianCourse.parts;
 const _elecAllChapters = _elecParts.flatMap((p) => p.chapters);
 const _elecTotalChapters = _elecAllChapters.length;
-const _elecTotalQuestions = 300; // Questions moved to server/scripts/seedPracticeQuestions.js (practice API)
+const _elecTotalQuestions = 327; // 327 questions in question bank (displayed as 320+)
 
 export const electricianCourseData = {
   id: 'construction-electrician-309a',
@@ -2397,7 +2397,7 @@ export const electricianCourseData = {
   passingMark: 70,
   features: [
     `${_elecTotalChapters} chapters covering all 5 Major Work Activities (MWA)`,
-    `${_elecTotalQuestions}+ practice questions with detailed explanations`,
+    '320+ practice questions with detailed explanations',
     'Full formulas reference sheet and key terms glossary',
     'Red Seal exam strategy and MWA weighting breakdown',
     'Based on Red Seal Occupational Standard (RSOS) — Construction Electrician 2025',

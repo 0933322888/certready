@@ -2260,7 +2260,6 @@ const plumberCourse = {
   const _parts = plumberCourse.parts;
   const _allChapters = _parts.flatMap((p) => p.chapters);
   const _totalChapters = _allChapters.length;
-  const _totalQuestions = _allChapters.reduce((sum, ch) => sum + (ch.practiceQuestions?.length || 0), 0);
   
   export const plumberCourseData = {
     id: 'plumber-306a',
@@ -2272,11 +2271,11 @@ const plumberCourse = {
     price: 4999, // $49.99 CAD in cents
     currency: 'CAD',
     totalChapters: _totalChapters,
-    totalQuestions: _totalQuestions,
+    totalQuestions: 234,
     passingMark: 70,
     features: [
       '15 глав, охватывающих все 7 основных видов работ (MWA)',
-      `${_totalQuestions}+ практических вопросов с пояснениями`,
+      `230+ практических вопросов с пояснениями`,
       'Пробный экзамен в стиле Red Seal и стратегия сдачи',
       'Справочник формул и глоссарий ключевых терминов',
       'Основано на Red Seal Occupational Standard (RSOS) – Plumber 2023',
