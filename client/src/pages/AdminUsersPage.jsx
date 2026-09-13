@@ -437,7 +437,7 @@ export default function AdminUsersPage() {
                         <div className="p-4 bg-surface-2 rounded-xl border border-border">
                           <span className="text-xs text-text-muted uppercase font-medium">Account ID</span>
                           <p className="text-xs font-mono text-text-primary mt-1 select-all">
-                            {detailUser.user._id}
+                            {detailUser.user.maskedId || detailUser.user._id}
                           </p>
                         </div>
                         <div className="p-4 bg-surface-2 rounded-xl border border-border">

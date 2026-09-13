@@ -8,6 +8,7 @@ import Course from '../models/Course.js';
 import { protect, requireAdmin } from '../middleware/auth.js';
 import { isWithinFreeWindow, FREE_WINDOW_DAYS } from '../utils/coursePricing.js';
 import { isFreeWindowPurchase } from '../utils/userPurchases.js';
+import { maskEmail, maskId, maskPaymentIntent } from '../utils/maskData.js';
 
 const router = express.Router();
 
@@ -98,7 +99,7 @@ router.get('/', async (req, res) => {
       return {
         _id: u._id,
         name: u.name,
-        email: u.email,
+        email: maskEmail(u.email),
         googleId: Boolean(u.googleId),
         createdAt: u.createdAt,
         isAdmin: adminEmails.includes(u.email.toLowerCase()),
@@ -183,8 +184,8 @@ router.get('/:userId', async (req, res) => {
       amount: p.amount,
       currency: p.currency,
       status: p.status,
-      stripeSessionId: p.stripeSessionId,
-      stripePaymentIntent: p.stripePaymentIntent,
+      stripeSessionId: p.stripeSessionId ? maskPaymentIntent(p.stripeSessionId) : null,
+      stripePaymentIntent: p.stripePaymentIntent ? maskPaymentIntent(p.stripePaymentIntent) : null,
       promoCode: p.promoCode,
       passRewardEligible: p.passRewardEligible,
       passRewardClaimDeadline: p.passRewardClaimDeadline,
@@ -252,10 +253,11 @@ router.get('/:userId', async (req, res) => {
     res.json({
       user: {
         _id: user._id,
+        maskedId: maskId(user._id),
         name: user.name,
-        email: user.email,
+        email: maskEmail(user.email),
         googleId: Boolean(user.googleId),
-        stripeCustomerId: user.stripeCustomerId,
+        stripeCustomerId: user.stripeCustomerId ? maskId(user.stripeCustomerId) : null,
         createdAt: user.createdAt,
         isAdmin: adminEmails.includes(user.email.toLowerCase()),
         inFreeWindow,
