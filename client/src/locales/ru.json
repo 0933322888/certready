@@ -221,6 +221,17 @@
     "passwordsMustMatch": "Новый пароль и подтверждение должны совпадать",
     "purchaseHistory": "История покупок",
     "purchaseHistoryEmpty": "Покупок пока нет.",
+    "courseFeedback": "Отзыв о курсе",
+    "feedbackPlaceholder": "Что вы думаете об этом курсе?",
+    "submitFeedback": "Отправить отзыв",
+    "feedbackSaving": "Отправка...",
+    "feedbackSubmitted": "Отзыв отправлен на проверку администратору",
+    "feedbackSubmitFailed": "Не удалось отправить отзыв",
+    "feedbackStatus": {
+      "pending": "Ожидает одобрения",
+      "approved": "Одобрен",
+      "rejected": "Не одобрен"
+    },
     "purchasedOn": "Куплено",
     "viewCourse": "Открыть курс",
     "seoTitle": "Профиль",

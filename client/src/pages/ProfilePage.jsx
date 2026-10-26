@@ -14,6 +14,9 @@ export default function ProfilePage() {
   const { t } = useTranslation();
   const { user, loading: authLoading, dispatch } = useAuth();
   const [purchaseHistory, setPurchaseHistory] = useState([]);
+  const [courseFeedback, setCourseFeedback] = useState([]);
+  const [feedbackText, setFeedbackText] = useState({});
+  const [savingFeedbackId, setSavingFeedbackId] = useState(null);
   const [loadingHistory, setLoadingHistory] = useState(true);
   const [profileSaving, setProfileSaving] = useState(false);
   const [passwordSaving, setPasswordSaving] = useState(false);
@@ -33,12 +36,33 @@ export default function ProfilePage() {
 
   useEffect(() => {
     if (user) {
-      api.get('/users/purchase-history')
-        .then((res) => setPurchaseHistory(res.data))
-        .catch(() => setPurchaseHistory([]))
+      Promise.allSettled([api.get('/users/purchase-history'), api.get('/feedback/mine')])
+        .then(([purchasesResult, feedbackResult]) => {
+          const purchases = purchasesResult.status === 'fulfilled' ? purchasesResult.value.data : [];
+          const feedback = feedbackResult.status === 'fulfilled' ? feedbackResult.value.data : [];
+          setPurchaseHistory(purchases);
+          setCourseFeedback(feedback);
+          setFeedbackText(Object.fromEntries(feedback.map((item) => [item.purchase, item.text])));
+        })
         .finally(() => setLoadingHistory(false));
     }
   }, [user]);
+
+  const onFeedbackSubmit = async (purchaseId) => {
+    setSavingFeedbackId(purchaseId);
+    try {
+      const res = await api.post('/feedback', { purchaseId, text: feedbackText[purchaseId] || '' });
+      setCourseFeedback((current) => [
+        ...current.filter((item) => item.purchase !== purchaseId),
+        res.data,
+      ]);
+      toast.success(t('profile.feedbackSubmitted'));
+    } catch (err) {
+      toast.error(err.response?.data?.message || t('profile.feedbackSubmitFailed'));
+    } finally {
+      setSavingFeedbackId(null);
+    }
+  };
 
   const onProfileSubmit = async (data) => {
     setProfileSaving(true);
@@ -198,26 +222,60 @@ export default function ProfilePage() {
               {purchaseHistory.map((p) => (
                 <li
                   key={p._id}
-                  className="flex flex-wrap items-center justify-between gap-4 py-3 border-b border-border last:border-0"
+                  className="py-4 border-b border-border last:border-0"
                 >
-                  <div>
-                    <span className="font-medium text-text-primary">
-                      {p.course?.title ?? p.course?.slug ?? '—'}
-                    </span>
-                    {p.course?.tradeCode && (
-                      <span className="ml-2 text-sm text-text-muted">({p.course.tradeCode})</span>
+                  <div className="flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                      <span className="font-medium text-text-primary">
+                        {p.course?.title ?? p.course?.slug ?? '—'}
+                      </span>
+                      {p.course?.tradeCode && (
+                        <span className="ml-2 text-sm text-text-muted">({p.course.tradeCode})</span>
+                      )}
+                      <p className="text-sm text-text-muted mt-1">
+                        {t('profile.purchasedOn')} {formatDate(p.completedAt ?? p.createdAt)}
+                      </p>
+                    </div>
+                    {p.course?.slug && (
+                      <Link to={`/learn/${p.course.slug}`}>
+                        <Button variant="outline" size="sm">
+                          {t('profile.viewCourse')}
+                        </Button>
+                      </Link>
                     )}
-                    <p className="text-sm text-text-muted mt-1">
-                      {t('profile.purchasedOn')} {formatDate(p.completedAt ?? p.createdAt)}
-                    </p>
                   </div>
-                  {p.course?.slug && (
-                    <Link to={`/learn/${p.course.slug}`}>
-                      <Button variant="outline" size="sm">
-                        {t('profile.viewCourse')}
-                      </Button>
-                    </Link>
-                  )}
+                  <form
+                    onSubmit={(event) => {
+                      event.preventDefault();
+                      onFeedbackSubmit(p._id);
+                    }}
+                    className="mt-5 space-y-3"
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <label htmlFor={`feedback-${p._id}`} className="font-medium text-text-primary">
+                        {t('profile.courseFeedback')}
+                      </label>
+                      {courseFeedback.find((item) => item.purchase === p._id) && (
+                        <span className="text-sm text-text-muted">
+                          {t(`profile.feedbackStatus.${courseFeedback.find((item) => item.purchase === p._id).status}`)}
+                        </span>
+                      )}
+                    </div>
+                    <textarea
+                      id={`feedback-${p._id}`}
+                      value={feedbackText[p._id] || ''}
+                      onChange={(event) => setFeedbackText((current) => ({ ...current, [p._id]: event.target.value }))}
+                      minLength={10}
+                      maxLength={2000}
+                      rows={3}
+                      required
+                      placeholder={t('profile.feedbackPlaceholder')}
+                      className="w-full px-4 py-3 rounded-lg bg-surface-2 border border-border text-text-primary focus:ring-2 focus:ring-accent focus:border-transparent"
+                    />
+                    <Button type="submit" size="sm" disabled={savingFeedbackId === p._id || (feedbackText[p._id] || '').trim().length < 10}>
+                      {savingFeedbackId === p._id ? t('profile.feedbackSaving') : t('profile.submitFeedback')}
+                    </Button>
+                  </form>
                 </li>
               ))}
             </ul>

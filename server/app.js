@@ -11,6 +11,7 @@ import contactRoutes from './routes/contact.js';
 import practiceRoutes from './routes/practice.js';
 import passRewardRoutes from './routes/passReward.js';
 import adminUsersRoutes from './routes/adminUsers.js';
+import feedbackRoutes from './routes/feedback.js';
 
 export function createApp() {
   const app = express();
@@ -32,6 +33,7 @@ export function createApp() {
   app.use('/api/practice', practiceRoutes);
   app.use('/api/pass-reward', passRewardRoutes);
   app.use('/api/admin/users', adminUsersRoutes);
+  app.use('/api/feedback', feedbackRoutes);
 
   app.get('/api/health', (_, res) => res.json({ status: 'ok' }));
 

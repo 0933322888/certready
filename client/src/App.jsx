@@ -43,6 +43,7 @@ const ResetPasswordPage = lazy(() => import('./pages/ResetPasswordPage'));
 const PassRewardPage = lazy(() => import('./pages/PassRewardPage'));
 const PassRewardTermsPage = lazy(() => import('./pages/PassRewardTermsPage'));
 const AdminClaimsPage = lazy(() => import('./pages/AdminClaimsPage'));
+const AdminFeedbackPage = lazy(() => import('./pages/AdminFeedbackPage'));
 const AdminUsersPage = lazy(() => import('./pages/AdminUsersPage'));
 
 const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
@@ -97,6 +98,9 @@ export default function App() {
             <Route path="/pass-reward/terms" element={<PassRewardTermsPage />} />
             <Route path="/admin/claims" element={
               <AdminRoute><AdminClaimsPage /></AdminRoute>
+            } />
+            <Route path="/admin/feedback" element={
+              <AdminRoute><AdminFeedbackPage /></AdminRoute>
             } />
             <Route path="/admin/users" element={
               <AdminRoute><AdminUsersPage /></AdminRoute>

@@ -134,6 +134,14 @@ export default function Navbar() {
                           <span>Claims Admin</span>
                           <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm">Admin</span>
                         </Link>
+                        <Link
+                          to="/admin/feedback"
+                          onClick={() => setUserMenuOpen(false)}
+                          className="block px-4 py-2 text-accent hover:bg-surface-2 transition-colors font-medium flex items-center justify-between"
+                        >
+                          <span>Feedback Admin</span>
+                          <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent/20 text-accent font-semibold">Admin</span>
+                        </Link>
                       </>
                     )}
                     <Link
@@ -243,6 +251,14 @@ export default function Navbar() {
                     >
                       <span>Claims Admin</span>
                       <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent-warm/20 text-accent-warm font-semibold">Admin</span>
+                    </Link>
+                    <Link
+                      to="/admin/feedback"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="px-3 py-2.5 rounded-lg text-accent hover:bg-surface-2 transition-colors font-medium flex items-center justify-between min-h-[44px]"
+                    >
+                      <span>Feedback Admin</span>
+                      <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-accent/20 text-accent font-semibold">Admin</span>
                     </Link>
                   </>
                 )}

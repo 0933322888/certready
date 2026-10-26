@@ -226,6 +226,17 @@
     "passwordsMustMatch": "New password and confirmation must match",
     "purchaseHistory": "Purchase history",
     "purchaseHistoryEmpty": "No purchases yet.",
+    "courseFeedback": "Course feedback",
+    "feedbackPlaceholder": "What did you think of this course?",
+    "submitFeedback": "Submit feedback",
+    "feedbackSaving": "Submitting...",
+    "feedbackSubmitted": "Feedback submitted for admin approval",
+    "feedbackSubmitFailed": "Failed to submit feedback",
+    "feedbackStatus": {
+      "pending": "Awaiting approval",
+      "approved": "Approved",
+      "rejected": "Not approved"
+    },
     "purchasedOn": "Purchased on",
     "viewCourse": "View course",
     "seoTitle": "Profile",

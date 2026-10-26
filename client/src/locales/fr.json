@@ -278,6 +278,17 @@
     "passwordsMustMatch": "Le nouveau mot de passe et la confirmation doivent correspondre",
     "purchaseHistory": "Historique d'achats",
     "purchaseHistoryEmpty": "Aucun achat pour le moment.",
+    "courseFeedback": "Avis sur le cours",
+    "feedbackPlaceholder": "Que pensez-vous de ce cours ?",
+    "submitFeedback": "Envoyer l'avis",
+    "feedbackSaving": "Envoi...",
+    "feedbackSubmitted": "Avis envoyé pour approbation",
+    "feedbackSubmitFailed": "Échec de l'envoi de l'avis",
+    "feedbackStatus": {
+      "pending": "En attente d'approbation",
+      "approved": "Approuvé",
+      "rejected": "Non approuvé"
+    },
     "purchasedOn": "Acheté le",
     "viewCourse": "Voir le cours",
     "seoTitle": "Profil",
