@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
   try {
     const promos = await Promo.find({ isActive: true, public: true })
       .sort({ createdAt: 1 })
-      .select('code amountCents')
+      .select('code type amountCents')
       .lean();
     res.json(promos);
   } catch (error) {

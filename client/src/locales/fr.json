@@ -53,14 +53,14 @@
     "carouselPrev": "Slide précédent",
     "freeWindowBadge": "Offre nouveaux membres",
     "freeWindowSubtitle": "Le contenu du cours est gratuit pendant vos 5 premiers jours après l'inscription. Achetez pour conserver l'accès et débloquer l'examen blanc.",
-    "slideDiscountBadge": "Offre de lancement",
-    "slideDiscountTitle": "Profitez de 40 % de réduction aujourd'hui",
-    "slideDiscountSubtitle": "Utilisez le code GET40 au paiement pour payer seulement 29,99 $ par cours au lieu du prix régulier.",
+    "slideDiscountBadge": "Offre Black Friday à durée limitée",
+    "slideDiscountTitle": "50 % de réduction sur votre cours",
+    "slideDiscountSubtitle": "Pour une durée limitée, obtenez un cours à moitié prix en utilisant ce code promo au paiement.",
     "slideDiscountPriceWas": "Avant",
     "slideDiscountPriceNow": "Maintenant",
-    "slideDiscountCta": "Réserver votre place à prix réduit →",
-    "slideDiscountCode": "Code promo",
-    "slideDiscountSpots": "Utilisez ce code au paiement pour tout cours."
+    "slideDiscountCta": "Voir les cours →",
+    "slideDiscountCode": "Utilisez le code promo",
+    "slideDiscountSpots": "Utilisez le code blackfriday au paiement pour obtenir 50 % de réduction sur le prix régulier."
   },
   "home": {
     "howItWorks": "Comment ça marche",
@@ -106,12 +106,11 @@
     "faqTitle": "Questions fréquentes",
     "faqs": [
       { "question": "Qu'est-ce qui est inclus dans le cours ?", "answer": "Chaque cours comprend des chapitres complets couvrant tous les sujets de l'examen, plus de 75 questions pratiques avec des explications détaillées, un examen blanc complet, un glossaire des termes clés et un accès à vie à tout le matériel." },
-      { "question": "Comment fonctionne la Récompense Réussite CertReady ?", "answer": "Pour une durée limitée, achetez un cours CertReady admissible et réussissez votre examen Sceau rouge dans les 6 mois. Soumettez votre document de réussite et nous vous rembourserons 100 % des frais de cours sur votre mode de paiement initial, sans exiger d'avis positif." },
       { "question": "Combien de temps ai-je accès ?", "answer": "Vous avez un accès à vie au matériel du cours. Il n'y a pas de date d'expiration : vous pouvez étudier à votre rythme et revoir le contenu à tout moment." },
       { "question": "Et si je rate l'examen ?", "answer": "Nous ne pouvons pas garantir que vous réussirez, mais nos cours sont conçus pour vous donner la meilleure préparation possible. Vous aurez un accès à vie pour revoir le matériel et repasser l'examen si nécessaire." },
       { "question": "Est-ce du matériel officiel STO ?", "answer": "Nos cours sont basés sur les normes officielles du curriculum des métiers spécialisés de l'Ontario et sont conçus pour vous aider à vous préparer à l'examen de certification. Nous ne sommes toutefois pas affiliés à STO." },
       { "question": "Quels modes de paiement sont acceptés ?", "answer": "Nous acceptons toutes les cartes de crédit principales via notre processeur de paiement sécurisé Stripe. Le paiement est traité de manière sécurisée et vous recevrez un accès immédiat après l'achat." },
-      { "question": "Puis-je obtenir un remboursement ?", "answer": "En raison de la nature numérique de nos cours, les remboursements standards ne sont pas offerts. En revanche, grâce au programme Récompense Réussite, si vous réussissez votre examen sous 6 mois, vos frais de cours vous sont remboursés. De plus, vos 5 premiers jours après l'inscription sont gratuits." }
+      { "question": "Puis-je obtenir un remboursement ?", "answer": "En raison de la nature numérique de nos cours, les remboursements standards ne sont pas offerts. Vos 5 premiers jours après l'inscription sont gratuits pour explorer le cours avant l'achat." }
     ]
   },
   "stats": {
@@ -144,7 +143,7 @@
     "launchPrice": "Launch price",
     "promoCodeLabel": "Code promo",
     "promoCodePlaceholder": "Entrez le code",
-    "promoCodeHint": "Utilisez le code GET40 pour 29,99 $",
+    "promoCodeHint": "Utilisez le code BLACKFRIDAY pour obtenir 50 % de réduction sur le prix régulier.",
     "promoCodeApply": "Appliquer",
     "invalidPromoCode": "Code promo invalide",
     "promoApplied": "Code promo appliqué",

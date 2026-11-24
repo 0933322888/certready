@@ -4,6 +4,7 @@ import connectDB from './config/db.js';
 import Course from './models/Course.js';
 import Promo from './models/Promo.js';
 import { seedCourses } from './data/seedCourses.js';
+import { BLACK_FRIDAY_PROMO } from './config/blackFridayPromo.js';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ const promos = [
     usageCapPerCourse: 100,
     isActive: false, // Disabled default 40% discount for regular pricing ($49.99 CAD)
   },
+  BLACK_FRIDAY_PROMO,
   {
     code: 'SUPADMC0D3',
     type: 'free',

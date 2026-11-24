@@ -53,14 +53,14 @@
     "carouselPrev": "Previous slide",
     "freeWindowBadge": "New Member Offer",
     "freeWindowSubtitle": "Course content is free for your first 5 days after registration. Purchase to keep access and unlock the full mock exam.",
-    "slideDiscountBadge": "Limited Time Special Offer",
-    "slideDiscountTitle": "Get 40% off today",
-    "slideDiscountSubtitle": "Use code GET40 at checkout to pay just $29.99 per course instead of the regular price.",
+    "slideDiscountBadge": "Black Friday — Limited-Time Offer",
+    "slideDiscountTitle": "Get 50% off your course",
+    "slideDiscountSubtitle": "Black Friday only, get a course for half the regular price when you use this promo code at checkout.",
     "slideDiscountPriceWas": "Was",
     "slideDiscountPriceNow": "Now",
-    "slideDiscountCta": "Claim your discounted spot →",
-    "slideDiscountCode": "Promo code",
-    "slideDiscountSpots": "Use this code at checkout when you purchase any course."
+    "slideDiscountCta": "Browse Courses →",
+    "slideDiscountCode": "Use promo code",
+    "slideDiscountSpots": "Use code blackfriday at checkout for 50% off the regular price."
   },
   "stats": {
     "chapters": "Chapters",
@@ -96,7 +96,7 @@
     "launchPrice": "Launch price",
     "promoCodeLabel": "Promo code",
     "promoCodePlaceholder": "Enter code",
-    "promoCodeHint": "Use code GET40 for $29.99",
+    "promoCodeHint": "Use code BLACKFRIDAY for 50% off the regular price.",
     "promoCodeApply": "Apply",
     "invalidPromoCode": "Invalid promo code",
     "promoApplied": "Promo applied",
@@ -395,12 +395,11 @@
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
       { "question": "What's included in the course?", "answer": "Each course includes comprehensive chapters covering all exam topics, 320+ practice questions with detailed explanations, a full-length mock exam, key term glossary, and 5-year access to all materials." },
-      { "question": "How does the CertReady Pass Reward work?", "answer": "For a limited time, purchase an eligible CertReady course and pass your official Red Seal exam within 6 months. Submit your verification document and we'll refund 100% of your course fee back to your original payment method. No positive review or promotional post is required." },
       { "question": "How long do I have access?", "answer": "You have 5 years access to the course materials. You can study at your own pace and revisit the content anytime." },
       { "question": "What if I fail the exam?", "answer": "While we can't guarantee you'll pass, our courses are designed to give you the best possible preparation. You'll have 5-year access to review the materials and retake the exam as needed." },
       { "question": "Is this official STO material?", "answer": "Our courses are based on the official Skilled Trades Ontario curriculum standards and are designed to help you prepare for the certification exam. However, we are not affiliated with STO." },
       { "question": "What payment methods are accepted?", "answer": "We accept all major credit cards through our secure Stripe payment processor. Payment is processed securely and you'll receive immediate access upon purchase." },
-      { "question": "Can I get a refund?", "answer": "Due to the digital nature of our courses, standard refunds are not offered. However, with our CertReady Pass Reward program, if you pass your exam within 6 months you get your course fee refunded. Plus, your first 5 days after registration are completely free to explore the course." }
+      { "question": "Can I get a refund?", "answer": "Due to the digital nature of our courses, standard refunds are not offered. Your first 5 days after registration are completely free to explore the course before purchasing." }
     ]
   },
   "coursesPage": {

@@ -56,6 +56,7 @@ export default function ProfilePage() {
         ...current.filter((item) => item.purchase !== purchaseId),
         res.data,
       ]);
+      setFeedbackText((current) => ({ ...current, [purchaseId]: '' }));
       toast.success(t('profile.feedbackSubmitted'));
     } catch (err) {
       toast.error(err.response?.data?.message || t('profile.feedbackSubmitFailed'));

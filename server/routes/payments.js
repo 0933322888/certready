@@ -5,7 +5,7 @@ import Course from '../models/Course.js';
 import Purchase from '../models/Purchase.js';
 import User from '../models/User.js';
 import { getCoursePricing } from '../utils/coursePricing.js';
-import { getValidPromo } from '../utils/promoService.js';
+import { calculatePromoPrice, getValidPromo } from '../utils/promoService.js';
 import { sendPurchaseConfirmationEmail } from '../utils/sendEmail.js';
 import { userOwnsCourse, userHasMockExamAccess, userHasContentAccess } from '../utils/userPurchases.js';
 import {
@@ -76,12 +76,7 @@ router.post('/validate-promo', protect, async (req, res) => {
     if (!promo) {
       return res.json({ valid: false, message: message || 'Invalid promo code' });
     }
-    let amountCents = basePrice;
-    if (promo.type === 'fixed_price') {
-      amountCents = Math.min(amountCents, promo.amountCents);
-    } else if (promo.type === 'free') {
-      amountCents = 0;
-    }
+    const amountCents = calculatePromoPrice(promo, basePrice);
     const currency = (course.currency || 'CAD').toUpperCase();
     return res.json({ valid: true, amountCents, currency, isFreeWindowActive, freeUntil });
   } catch (error) {
@@ -135,11 +130,7 @@ router.post('/create-checkout-session', protect, async (req, res) => {
     }
 
     if (promo) {
-      if (promo.type === 'fixed_price') {
-        chargeAmountCents = Math.min(chargeAmountCents, promo.amountCents);
-      } else if (promo.type === 'free') {
-        chargeAmountCents = 0;
-      }
+      chargeAmountCents = calculatePromoPrice(promo, chargeAmountCents);
     }
 
     // Free-window content only + no promo: must pay to unlock mock exam

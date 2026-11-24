@@ -7,12 +7,10 @@ import FeaturesSection from '../components/home/FeaturesSection';
 import CoursePreview from '../components/home/CoursePreview';
 import Testimonials from '../components/home/Testimonials';
 import PricingSection from '../components/home/PricingSection';
-import PassRewardBanner from '../components/passReward/PassRewardBanner';
 import Card from '../components/ui/Card';
 
 const HOME_FAQ_FOR_SEO = [
   { question: 'What trades does CertReady offer exam prep for?', answer: 'CertReady currently offers courses for Hairstylist (332A) and Plumber (306A), with more trades being added. All courses are based on the official Red Seal Occupational Standard.' },
-  { question: 'How does the CertReady Pass Reward work?', answer: 'For a limited time, purchase an eligible CertReady course and pass your official Red Seal exam within 6 months. Submit your verification document and we will refund 100% of your course fee back to your original payment method. No positive review or promotional post is required.' },
   { question: 'Is this affiliated with the Red Seal Program or Skilled Trades Ontario?', answer: 'No. CertReady is an independent study resource. We are not affiliated with or endorsed by any provincial or federal trades certification authority.' },
   { question: 'How long do I have access after purchasing?', answer: 'You have 5 years access to the course materials. You can study at your own pace and revisit the content anytime.' },
   { question: 'What if I fail the exam after using CertReady?', answer: 'We believe in our content, but we cannot guarantee exam results — exam content is set by certification authorities and can change. We do not offer refunds based on exam outcomes.' },
@@ -61,13 +59,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Pass Reward Campaign Callout */}
-      <section className="py-8 bg-bg border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <PassRewardBanner />
         </div>
       </section>
 

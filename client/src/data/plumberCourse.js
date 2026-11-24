@@ -1225,7 +1225,7 @@ const plumberCourse = {
       description: 'Hydronic heating and cooling systems, and the specialized systems that expand the modern plumber\'s scope of work.',
       chapters: [
 
-        // CHAPTER 11 — Hydronic Systems (MWA F-17, F-18)
+        // CHAPTER 12 — Hydronic Systems (MWA F-17, F-18)
         {
           id: 'ch-12',
           number: 12,
@@ -1236,7 +1236,7 @@ const plumberCourse = {
           sections: [
             {
               id: 'ch12-s1',
-              title: '11.1 Hydronic System Fundamentals',
+              title: '12.1 Hydronic System Fundamentals',
               content: [
                 {
                   type: 'paragraph',

@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "test": "vitest run",
     "seed": "node seed.js",
+    "seed:promo:blackfriday": "node scripts/upsertBlackFridayPromo.js",
     "seed:course": "node scripts/upsertCourse.js",
     "seed:practice": "node scripts/seedPracticeQuestions.js",
     "seed:practice:replace": "node scripts/seedPracticeQuestionsReplace.js",

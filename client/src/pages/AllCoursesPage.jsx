@@ -49,9 +49,6 @@ export default function AllCoursesPage() {
                     <span className="text-2xl font-bold text-accent">
                       {formatPrice(currentPrice, currency)}
                     </span>
-                    <p className="text-xs text-accent-warm font-medium mt-1">
-                      Pass Reward Eligible
-                    </p>
                   </div>
                 </div>
                 <h2 className="text-2xl font-display font-bold text-text-primary mb-2">

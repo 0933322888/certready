@@ -97,11 +97,6 @@ export default function Footer() {
                   {t('footer.terms')}
                 </Link>
               </li>
-              <li>
-                <Link to="/pass-reward-terms" className="text-text-muted hover:text-accent transition-colors">
-                  Pass Reward Terms
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

@@ -40,9 +40,6 @@ export default function Navbar() {
                 <Link to="/practice-tests" className="text-white hover:text-accent transition-colors">
                   {t('nav.practiceTests')}
                 </Link>
-                <Link to="/pass-reward" className="text-accent-warm hover:text-white transition-colors font-medium">
-                  Pass Reward
-                </Link>
               </>
             ) : (
               <>
@@ -54,9 +51,6 @@ export default function Navbar() {
                 </Link>
                 <Link to="/trades" className="text-white hover:text-accent transition-colors">
                   {t('nav.trades')}
-                </Link>
-                <Link to="/pass-reward" className="text-accent-warm hover:text-white transition-colors font-medium">
-                  Pass Reward
                 </Link>
                 <Link to="/practice-tests" className="text-white hover:text-accent transition-colors">
                   {t('nav.practiceTests')}
@@ -227,13 +221,6 @@ export default function Navbar() {
                 >
                   {t('nav.practiceTests')}
                 </Link>
-                <Link
-                  to="/pass-reward"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2.5 rounded-lg text-accent-warm hover:bg-surface-2 transition-colors font-medium min-h-[44px] flex items-center"
-                >
-                  Pass Reward
-                </Link>
                 {user.isAdmin && (
                   <>
                     <Link
@@ -298,13 +285,6 @@ export default function Navbar() {
                   className="block px-3 py-2.5 rounded-lg text-text-primary hover:bg-surface-2 hover:text-accent transition-colors min-h-[44px] flex items-center"
                 >
                   {t('nav.trades')}
-                </Link>
-                <Link
-                  to="/pass-reward"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2.5 rounded-lg text-accent-warm hover:bg-surface-2 transition-colors font-medium min-h-[44px] flex items-center"
-                >
-                  Pass Reward
                 </Link>
                 <Link
                   to="/practice-tests"

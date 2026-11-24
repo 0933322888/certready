@@ -49,12 +49,26 @@ export async function getValidPromo(rawCode, courseId = null) {
   return { promo };
 }
 
+export function calculatePromoPrice(promo, currentPrice) {
+  if (promo.type === 'fixed_price') {
+    return Math.min(currentPrice, promo.amountCents);
+  }
+  if (promo.type === 'free') {
+    return 0;
+  }
+  return currentPrice;
+}
+
 /**
  * Get the first public promo for display on the site (carousel, course cards).
- * @returns {Promise<{ code: string, amountCents: number } | null>}
+ * @returns {Promise<{ code: string, type: string, amountCents: number } | null>}
  */
 export async function getPublicPromo() {
   const promo = await Promo.findOne({ public: true, isActive: true })
     .sort({ createdAt: 1 });
-  return promo ? { code: promo.code, amountCents: promo.amountCents } : null;
+  return promo ? {
+    code: promo.code,
+    type: promo.type,
+    amountCents: promo.amountCents,
+  } : null;
 }
