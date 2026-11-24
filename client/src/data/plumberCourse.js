@@ -528,6 +528,12 @@ const plumberCourse = {
                   ],
                 },
                 {
+                  type: 'image',
+                  src: '/course-images/plumber-02-45-degree-offset.png',
+                  alt: 'Centre-line diagram of a pipe offset using two 45 degree fittings',
+                  caption: 'Offset geometry: set, run and travel for equal 45 degree fittings',
+                },
+                {
                   type: 'paragraph',
                   text: 'The grade (slope) of drainage pipe is also a critical calculation. Grade is expressed as a ratio of drop or rise over the run length. For example, a 2% grade means the pipe drops 2 mm for every 100 mm of horizontal run (or 1/4 inch per foot in imperial). Adequate grade is essential for drainage systems to flow by gravity without blockages.',
                 },
@@ -867,6 +873,12 @@ const plumberCourse = {
                   text: 'The interior drainage, waste, and vent (DWV) system is the system of pipes and fittings inside a building that collects sewage and wastewater from plumbing fixtures and conveys it by gravity to the building drain and sewer. The venting system connects the drainage system to outside air to protect trap seals and allow proper air circulation.',
                 },
                 {
+                  type: 'image',
+                  src: '/course-images/plumber-01-dwv-schematic.png',
+                  alt: 'Simplified residential drainage waste and vent schematic labelled from vent terminal to building sewer',
+                  caption: 'Simplified residential DWV system overview',
+                },
+                {
                   type: 'keyTerm',
                   term: 'Trap',
                   definition: 'A fitting or device designed to hold a liquid seal that prevents the passage of sewer gas into the building, without materially affecting the flow of liquid. Every fixture must be individually trapped.',
@@ -1049,6 +1061,12 @@ const plumberCourse = {
                   definition: 'A device used to prevent backflow. Types include air gaps, vacuum breakers, double check valves, and reduced-pressure backflow preventers — selected based on the degree of hazard.',
                 },
                 {
+                  type: 'image',
+                  src: '/course-images/plumber-03-backflow-air-gap-and-RP.png',
+                  alt: 'Comparison of an air gap and a reduced-pressure backflow assembly',
+                  caption: 'Backflow protection: air gap and reduced-pressure assembly',
+                },
+                {
                   type: 'table',
                   headers: ['Device', 'Application', 'Protection Level'],
                   rows: [
@@ -1223,6 +1241,12 @@ const plumberCourse = {
                 {
                   type: 'paragraph',
                   text: 'A hydronic system uses water (or water-glycol mixtures) as the heat transfer medium to distribute heating or cooling energy throughout a building. Hydronic systems are highly efficient, quiet, and provide excellent comfort. Plumbers install, test, and service both hydronic heating and cooling systems.',
+                },
+                {
+                  type: 'image',
+                  src: '/course-images/plumber-04-hydronic-direct-vs-reverse-return.png',
+                  alt: 'Four heating units shown with direct return and reverse return piping arrangements',
+                  caption: 'Direct return versus reverse return hydronic piping',
                 },
                 {
                   type: 'keyTerm',

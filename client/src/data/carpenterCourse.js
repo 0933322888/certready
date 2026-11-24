@@ -993,6 +993,12 @@ const carpenterCourse = {
                                     ],
                                 },
                                 {
+                                    type: 'image',
+                                    src: '/course-images/carpenter-04-wall-form-section.png',
+                                    alt: 'Wall form cross-section showing plywood, studs, walers, ties, braces, footing and concrete pressure',
+                                    caption: 'Wall form cross-section: ties and walers resist concrete pressure while braces control movement',
+                                },
+                                {
                                     type: 'keyTerm',
                                     term: 'Reshoring',
                                     definition: 'The installation of new shoring below a level whose form shoring has been removed, when the concrete has not yet achieved its full design strength and construction loads (materials, equipment) are placed above. The structural engineer specifies which levels must be reshored and when reshoring can be removed.',
@@ -1250,6 +1256,12 @@ const carpenterCourse = {
                                     ],
                                 },
                                 {
+                                    type: 'image',
+                                    src: '/course-images/carpenter-03-wall-framing.png',
+                                    alt: 'Platform-framed wall elevation showing plates, studs, king and jack studs, header, sill, cripples and rough opening',
+                                    caption: 'Wall framing components around a window rough opening',
+                                },
+                                {
                                     type: 'infoBox',
                                     title: 'Wall Framing Sequence',
                                     items: [
@@ -1318,6 +1330,12 @@ const carpenterCourse = {
                                         ['Collar tie', 'A horizontal tension member connecting opposing rafters above the top plate; prevents the roof from spreading under load; typically installed on every rafter pair in the upper third of the attic'],
                                         ['Ceiling joist', 'Horizontal members spanning from wall to wall at the top plate level; tie opposing walls together to resist rafter thrust; also supports the ceiling finish below'],
                                     ],
+                                },
+                                {
+                                    type: 'image',
+                                    src: '/course-images/carpenter-01-rafter-terms.png',
+                                    alt: 'Gable roof cross-section labelling rise, run, span, overhang, ridge board, top plate and line length',
+                                    caption: 'Common rafter terminology (8:12 pitch shown)',
                                 },
                                 {
                                     type: 'table',
@@ -1480,6 +1498,12 @@ const carpenterCourse = {
                                         'This sequence applies equally to windows, exterior doors, and any wall penetration',
                                     ],
                                 },
+                                {
+                                    type: 'image',
+                                    src: '/course-images/carpenter-05-flashing-sequence.png',
+                                    alt: 'Three-panel sequence showing sill pan, jamb tape and head flashing installation',
+                                    caption: 'Window flashing sequence: sill pan first, jamb tape second, head flashing last',
+                                },
                             ],
                         },
                         {
@@ -1489,6 +1513,12 @@ const carpenterCourse = {
                                 {
                                     type: 'paragraph',
                                     text: 'Roofing is a multi-layer system where each component has a specific function and a specific installation sequence. Understanding the layers and the sequence — from the structural deck up to the ridge cap — is the core of Task E-15.',
+                                },
+                                {
+                                    type: 'image',
+                                    src: '/course-images/carpenter-06-drip-edge-eave-vs-rake.png',
+                                    alt: 'Two-panel roof edge diagram comparing eave and rake drip edge installation',
+                                    caption: 'Drip edge comparison: under the underlayment at the eave, over it at the rake',
                                 },
                                 {
                                     type: 'table',
@@ -1739,6 +1769,12 @@ const carpenterCourse = {
                                 {
                                     type: 'paragraph',
                                     text: 'Stairs are one of the most calculation-intensive tasks in finish carpentry and one of the most code-regulated elements in the building. Knowing the NBC stair geometry requirements, the calculation sequence, and the names of all components is essential — stair questions appear consistently on the Red Seal exam.',
+                                },
+                                {
+                                    type: 'image',
+                                    src: '/course-images/carpenter-02-stair-geometry.png',
+                                    alt: 'Cut stringer stair side view identifying tread, riser, nosing, stringer, rise, run and headroom',
+                                    caption: 'Stair geometry and terminology',
                                 },
                                 {
                                     type: 'table',
