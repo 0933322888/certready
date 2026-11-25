@@ -9,7 +9,7 @@ export const hvacCourse = {
   ogImage: '/course-images/og/hvac.png',
   subtitle: 'Complete Study Guide — Skilled Trades Ontario Trade 313A',
   trade: 'Refrigeration & Air Conditioning Mechanic',
-  tradeCode: '313A',
+  tradeCode: '72402 (313A)',
   price: 4999,
   currency: 'CAD',
   totalChapters: 20,

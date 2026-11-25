@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
@@ -39,6 +39,30 @@ export default function ChapterContent({
   const { user, hasMockExamAccess } = useAuth();
   const [savedAnswers, setSavedAnswers] = useState({});
   const [, setLoadingAnswers] = useState(true);
+  const [expandedImage, setExpandedImage] = useState(null);
+  const closeImageButtonRef = useRef(null);
+  const imageTriggerRef = useRef(null);
+
+  useEffect(() => {
+    if (!expandedImage) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeImageButtonRef.current?.focus();
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setExpandedImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+      imageTriggerRef.current?.focus();
+    };
+  }, [expandedImage]);
 
   // Load saved answers for this chapter
   useEffect(() => {
@@ -159,13 +183,24 @@ export default function ChapterContent({
         return (
           <figure className="my-6">
             <div className="rounded-xl border border-border bg-surface p-3 flex justify-center">
-              <img
-                src={content.src}
-                alt={content.alt}
-                className="max-w-full h-auto max-h-[min(420px,70vh)] object-contain"
-                loading="lazy"
-                decoding="async"
-              />
+              <button
+                type="button"
+                onClick={(event) => {
+                  imageTriggerRef.current = event.currentTarget;
+                  setExpandedImage(content);
+                }}
+                aria-label={content.alt || 'View larger image'}
+                aria-haspopup="dialog"
+                className="max-w-full cursor-zoom-in rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+              >
+                <img
+                  src={content.src}
+                  alt={content.alt}
+                  className="max-w-full h-auto max-h-[min(420px,70vh)] object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
             </div>
             {(content.caption || content.credit) && (
               <figcaption className="mt-2 text-sm text-text-muted text-center max-w-2xl mx-auto space-y-1">
@@ -420,6 +455,47 @@ export default function ChapterContent({
           </div>
         )}
       </div>
+
+      {expandedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-3 sm:p-8"
+          role="dialog"
+          aria-modal="true"
+          aria-label={expandedImage.alt || 'Expanded course image'}
+          onClick={() => setExpandedImage(null)}
+        >
+          <button
+            ref={closeImageButtonRef}
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation();
+              setExpandedImage(null);
+            }}
+            className="absolute right-3 top-3 z-10 flex min-h-11 min-w-11 items-center justify-center rounded-full bg-surface/90 text-text-primary hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent sm:right-6 sm:top-6"
+            aria-label={t('common.ariaLabelClose')}
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <figure
+            className="flex max-h-full max-w-full flex-col items-center gap-3"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <img
+              src={expandedImage.src}
+              alt={expandedImage.alt}
+              className="max-h-[85vh] max-w-full object-contain"
+            />
+            {(expandedImage.caption || expandedImage.credit) && (
+              <figcaption className="max-w-3xl text-center text-sm text-white">
+                {expandedImage.caption && <p>{expandedImage.caption}</p>}
+                {expandedImage.credit && <p className="mt-1 text-xs text-white/70">{expandedImage.credit}</p>}
+              </figcaption>
+            )}
+          </figure>
+        </div>
+      )}
     </div>
   );
 }

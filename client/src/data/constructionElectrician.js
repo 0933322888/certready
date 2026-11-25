@@ -2389,7 +2389,7 @@ export const electricianCourseData = {
   title: 'Construction Electrician (Red Seal 309A) Exam Prep',
   subtitle: 'Complete study guide — Red Seal Interprovincial Exam, 100 questions',
   trade: 'Construction Electrician',
-  tradeCode: '309A',
+  tradeCode: '72200 (309A)',
   price: 4999, // $49.99 CAD in cents
   currency: 'CAD',
   totalChapters: _elecTotalChapters,

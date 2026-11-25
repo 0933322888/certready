@@ -4,7 +4,7 @@ export const autoservtechCourse = {
     "title": "Automotive Service Technician Certification Exam Prep",
     "subtitle": "Complete Study Guide — Skilled Trades Ontario Trade 310S",
     "trade": "Automotive Service Technician",
-    "tradeCode": "310S",
+    "tradeCode": "72410 (310S)",
     "description": "Prepare for the Automotive Service Technician Red Seal exam with 38 chapters, 280+ practice questions, and a full mock exam aligned to Skilled Trades Ontario Trade 310S.",
     "seoTitle": "Automotive Service Technician Red Seal Exam Prep — 310S Study Guide",
     "seoDescription": "Master the Automotive Service Technician Red Seal exam with focused study content, realistic practice questions, and a full mock exam for Trade 310S.",

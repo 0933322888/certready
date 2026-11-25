@@ -9,7 +9,7 @@
 const plumberCourse = {
   meta: {
     trade: 'Plumber',
-    redSealCode: '306A',
+    redSealCode: '72300 (306A)',
     seoTitle: 'Plumber Red Seal Exam Prep — 306A Study Guide',
     seoDescription: 'Build confidence for the Plumber Red Seal exam with detailed study material, practice questions, and exam-focused preparation for Trade 306A.',
     seoKeywords: 'Plumber, 306A, 306A practice exam, Plumber Red Seal exam, 306A exam prep, Plumbing Red Seal practice test, Plumbing certification Canada, Plumber apprenticeship exam, Plumbing study guide, Plumbing practice questions, Plumber mock exam, Red Seal plumber exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam',
@@ -1638,7 +1638,7 @@ export const plumberCourseData = {
   title: 'Plumber (Red Seal 306A) Exam Prep',
   subtitle: 'Complete study guide — Red Seal Interprovincial Exam, 125 questions',
   trade: 'Plumber',
-  tradeCode: '306A',
+  tradeCode: '72300 (306A)',
   price: 4999, // $49.99 CAD in cents
   currency: 'CAD',
   totalChapters: _totalChapters,

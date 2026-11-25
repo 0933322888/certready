@@ -2171,7 +2171,7 @@ export const carpenterCourseData = {
     title: 'Carpenter (Red Seal 403A) Exam Prep',
     subtitle: 'Complete study guide — Red Seal Interprovincial Exam, 100 questions, 3 hours',
     trade: 'Carpenter',
-    tradeCode: '403A',
+    tradeCode: '72310 (403A)',
     price: 4999, // $49.99 CAD in cents
     currency: 'CAD',
     totalChapters: _totalChapters,
