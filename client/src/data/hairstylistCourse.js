@@ -43,8 +43,8 @@ export const hairstylistCourse = {
             color: '#1F4E79',
             description: 'Chapters 1–4 cover the legal, ethical, health, safety, and business frameworks every licensed hairstylist in Ontario must master.',
             chapters: [
-                 // ─── CHAPTER 0 — KEY TERMS AND GLOSSARY ───────────────────────────────────────────────────────
-                 {
+                // ─── CHAPTER 0 — KEY TERMS AND GLOSSARY ───────────────────────────────────────────────────────
+                {
                     id: 'ch-1',
                     number: 1,
                     title: 'Key Terms and Glossary',
@@ -127,7 +127,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 1 ────────────────────────────────────────────────────────
@@ -241,7 +241,7 @@ export const hairstylistCourse = {
                                 { type: 'keyTerm', term: 'GHS pictograms', definition: 'Standardized symbols on WHMIS labels that visually communicate the type of hazard — e.g., flame (flammable), skull and crossbones (toxic), exclamation mark (irritant), health hazard (carcinogen/sensitizer)' },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/ghs-pictograms-salon-sample.svg',
+                                    src: '/course-images/hairstylist/ghs-pictograms-salon-sample.png',
                                     alt: 'Four GHS pictograms in a row: flame, corrosion, exclamation mark, and skull and crossbones.',
                                     caption: 'Examples of symbols you may see on WHMIS labels and SDS summaries (flammable, corrosive, irritant/sensitizer, acute toxicity). Always read the full label and SDS for each product.',
                                     credit: 'GHS pictograms: public domain (UN GHS); Wikimedia Commons. Composite: CertReady.',
@@ -296,7 +296,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 2 ────────────────────────────────────────────────────────
@@ -365,6 +365,13 @@ export const hairstylistCourse = {
                                         '2. DISINFECTION — Middle level. Kills most pathogens (bacteria, viruses, fungi) on non-living surfaces. Does NOT kill all spores. Required for salon tools. Examples: Quats, phenolics, bleach solution.',
                                         '3. STERILIZATION — Highest level. Destroys ALL microorganisms including bacterial spores. Required for medical/surgical instruments. Achieved with autoclaves (steam under pressure). Rarely used in salons.',
                                     ]
+                                },
+                                {
+                                    type: 'image',
+                                    src: '/course-images/hairstylist/decontamination-levels.png',
+                                    alt: 'Three steps from sanitation to disinfection to sterilization, with the five-step procedure for disinfecting implements.',
+                                    caption: 'Levels of decontamination, from lowest to highest, and the disinfection procedure for implements.',
+                                    credit: 'CertReady original diagram.'
                                 },
                                 {
                                     type: 'table', headers: ['Disinfectant', 'Active Ingredient', 'Use In Salon', 'Limitations'], rows: [
@@ -486,7 +493,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 3 ────────────────────────────────────────────────────────
@@ -618,7 +625,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 4 ────────────────────────────────────────────────────────
@@ -701,7 +708,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
             ],
         },
@@ -773,7 +780,7 @@ export const hairstylistCourse = {
                                 },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/head-landmarks-schematic.svg',
+                                    src: '/course-images/hairstylist/head-landmarks-schematic.png',
                                     alt: 'Side profile of a head with labels for nape, occipital bone, parietal ridge, crown, and temporal region.',
                                     caption: 'Relate these landmarks to your sectioning and weight lines when cutting.',
                                     credit: 'CertReady schematic (not to scale).',
@@ -812,7 +819,7 @@ export const hairstylistCourse = {
                                 },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/hair-shaft-cross-section.svg',
+                                    src: '/course-images/hairstylist/hair-shaft-cross-section.png',
                                     alt: 'Schematic hair shaft showing cuticle scales, cortex, and central medulla.',
                                     caption: 'Simplified shaft structure: cuticle (outer scales), cortex (bulk of the strand), medulla (core, often reduced in fine hair).',
                                     credit: 'CertReady schematic diagram (not to scale).',
@@ -863,7 +870,7 @@ export const hairstylistCourse = {
                                 },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/hair-growth-cycle.svg',
+                                    src: '/course-images/hairstylist/hair-growth-cycle.png',
                                     alt: 'Three-step diagram: Anagen growth phase, Catagen transition, Telogen rest and shedding with typical durations and percentages.',
                                     caption: 'Most scalp hairs are in anagen at any given time; diffuse shedding often reflects a shift toward telogen (e.g., telogen effluvium).',
                                     credit: 'CertReady summary diagram.',
@@ -896,7 +903,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 6 ────────────────────────────────────────────────────────
@@ -925,7 +932,7 @@ export const hairstylistCourse = {
                                 },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/ph-scale.svg',
+                                    src: '/course-images/hairstylist/ph-scale.png',
                                     alt: 'pH scale from acidic to alkaline with example substances at different pH values.',
                                     caption: 'The pH scale: remember that healthy hair and scalp sit slightly acidic (~4.5–5.5), while many chemical services use alkaline pH to open the cuticle.',
                                     credit: 'Tristanevanslee / Wikimedia Commons (CC0).',
@@ -1038,7 +1045,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
             ],
         },
@@ -1077,7 +1084,7 @@ export const hairstylistCourse = {
                                 },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/haircut-elevation-profile.svg',
+                                    src: '/course-images/hairstylist/haircut-elevation-profile.png',
                                     alt: 'Side view of head with lines showing zero degree natural fall, forty-five degree, and ninety degree elevation from the scalp.',
                                     caption: 'Elevation is measured from how far you lift the section away from the head — it controls where weight sits in the finished cut.',
                                     credit: 'CertReady schematic (not to scale).',
@@ -1092,6 +1099,12 @@ export const hairstylistCourse = {
                                         'Back section: everything behind the ears and below the crown — can be subdivided into two halves',
                                         'Nape: the lowest section at the back of the neck — often worked first in precision cuts',
                                     ]
+                                },
+                                {
+                                    type: 'image', src: '/course-images/hairstylist/sectioning-top-view.png',
+                                    alt: 'Top view of a head divided into top, two side, back and nape sections.',
+                                    caption: 'One common sectioning pattern: top, side, back and nape sections.',
+                                    credit: 'CertReady original diagram.'
                                 },
                                 {
                                     type: 'table', headers: ['Sectioning Term', 'Definition'], rows: [
@@ -1208,7 +1221,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 8 ────────────────────────────────────────────────────────
@@ -1359,7 +1372,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
             ],
         },
@@ -1396,6 +1409,12 @@ export const hairstylistCourse = {
                                     ]
                                 },
                                 {
+                                    type: 'image', src: '/course-images/hairstylist/perm-three-steps.png',
+                                    alt: 'Four panels showing disulfide bonds intact, broken by reduction, hair wrapped on a rod, and bonds re-formed by neutralization.',
+                                    caption: 'How a perm works: reduction breaks the S-S bonds, the hair is moulded, and oxidation re-forms them.',
+                                    credit: 'CertReady original diagram (not to scale).'
+                                },
+                                {
                                     type: 'table', headers: ['Perm Type', 'pH', 'Key Reducing Agent', 'Processing', 'Characteristics'], rows: [
                                         ['Alkaline cold wave', '8.0–9.5', 'Ammonium thioglycolate (ATG)', 'At room temperature; no heat required', 'Strong, fast-acting; produces tighter, more durable curls; can be harsher on the hair; most common professional perm'],
                                         ['Acid wave (true acid)', '4.5–6.5', 'Glyceryl monothioglycolate (GMTG)', 'Requires heat (hood dryer or exothermic activation)', 'Gentler on the hair and scalp; produces softer, more natural-looking waves; slower processing; recommended for colour-treated or sensitized hair'],
@@ -1419,6 +1438,12 @@ export const hairstylistCourse = {
                                         ['Bender rod (soft rod)', 'Flexible foam-covered wire; can be bent into shapes', 'Soft, loose wave or defined spiral depending on technique', 'Long hair; body waves; creative waving patterns'],
                                         ['Pin-curl clip', 'Small clip or pin; hair is formed into a flat curl against scalp', 'Flat, smooth curl movement (less lift) — beach wave effect', 'Soft texture; gentle; vintage wave patterns'],
                                     ]
+                                },
+                                {
+                                    type: 'image', src: '/course-images/hairstylist/perm-rod-types.png',
+                                    alt: 'Five perm rod types and four rod sizes, from large to extra-small.',
+                                    caption: 'Rod shape and diameter decide the curl pattern: the smaller the rod, the tighter the curl.',
+                                    credit: 'CertReady original diagram.'
                                 },
                                 {
                                     type: 'infoBox', title: 'Rod Size and Curl Result', items: [
@@ -1486,7 +1511,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 10 ───────────────────────────────────────────────────────
@@ -1524,7 +1549,7 @@ export const hairstylistCourse = {
                             ],
                         },
                         {
-                            id: 's11-2',    
+                            id: 's11-2',
                             title: '11.2 Relaxer Application: Virgin vs. Retouch',
                             content: [
                                 {
@@ -1577,7 +1602,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 11 ───────────────────────────────────────────────────────
@@ -1619,8 +1644,14 @@ export const hairstylistCourse = {
                                     ]
                                 },
                                 {
+                                    type: 'image', src: '/course-images/hairstylist/level-system-underlying-pigment.png',
+                                    alt: 'Levels 1 to 10 with the underlying warm pigment that shows at each level when lightened.',
+                                    caption: 'Level is lightness only. The warm pigment that appears when hair is lightened is neutralized with the complementary toner.',
+                                    credit: 'CertReady original diagram. Swatches are illustrative.'
+                                },
+                                {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/rgb-color-wheel-360.svg',
+                                    src: '/course-images/hairstylist/rgb-color-wheel-360.png',
                                     alt: 'RGB colour wheel showing hues around a circle with white in the center.',
                                     caption: 'A colour wheel helps you remember complements: opposite colours neutralize each other (e.g., violet tones counteract yellow). Hair colour uses the same idea when choosing ash, gold, or copper reflects.',
                                     credit: 'Nl74 et al. / Wikimedia Commons (CC0). File:RGB color wheel 360.svg.',
@@ -1754,7 +1785,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
                 // ─── CHAPTER 12 ───────────────────────────────────────────────────────
@@ -1830,7 +1861,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
             ],
         },
@@ -1873,7 +1904,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
 
 
@@ -1991,7 +2022,7 @@ export const hairstylistCourse = {
                             ],
                         },
                     ],
-                    practiceQuestions:  [],
+                    practiceQuestions: [],
                 },
             ],
         },
@@ -2005,32 +2036,31 @@ export const hairstylistCourse = {
 /** Flatten all chapters across all parts */
 export const getAllChapters = (course = hairstylistCourse) =>
     course.parts.flatMap(p => p.chapters);
-  
-  /** Get only the free preview chapters */
-  export const getFreeChapters = (course = hairstylistCourse) =>
+
+/** Get only the free preview chapters */
+export const getFreeChapters = (course = hairstylistCourse) =>
     getAllChapters(course).filter(ch => ch.isFree);
-  
-  /** Find a chapter by its id */
-  export const getChapterById = (id, course = hairstylistCourse) =>
+
+/** Find a chapter by its id */
+export const getChapterById = (id, course = hairstylistCourse) =>
     getAllChapters(course).find(ch => ch.id === id);
-  
-  /** Find which part a chapter belongs to */
-  export const getPartForChapter = (chapterId, course = hairstylistCourse) =>
+
+/** Find which part a chapter belongs to */
+export const getPartForChapter = (chapterId, course = hairstylistCourse) =>
     course.parts.find(p => p.chapters.some(ch => ch.id === chapterId));
-  
-  /** Get the previous and next chapters (for navigation) */
-  export const getAdjacentChapters = (chapterId, course = hairstylistCourse) => {
+
+/** Get the previous and next chapters (for navigation) */
+export const getAdjacentChapters = (chapterId, course = hairstylistCourse) => {
     const all = getAllChapters(course);
     const idx = all.findIndex(ch => ch.id === chapterId);
     return {
-      prev: idx > 0 ? all[idx - 1] : null,
-      next: idx < all.length - 1 ? all[idx + 1] : null,
+        prev: idx > 0 ? all[idx - 1] : null,
+        next: idx < all.length - 1 ? all[idx + 1] : null,
     };
-  };
-  
-  /** Count total practice questions across all chapters */
-  export const getTotalQuestions = (course = hairstylistCourse) =>
+};
+
+/** Count total practice questions across all chapters */
+export const getTotalQuestions = (course = hairstylistCourse) =>
     getAllChapters(course).reduce((sum, ch) => sum + (ch.practiceQuestions?.length || 0), 0);
-  
-  export default hairstylistCourse;
-  
+
+export default hairstylistCourse;

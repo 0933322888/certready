@@ -10,10 +10,10 @@
 const carpenterCourse = {
     meta: {
         trade: 'Carpenter',
-        redSealCode: '403A',
-        seoTitle: 'Carpenter Red Seal Exam Prep — 403A Study Guide',
-        seoDescription: 'Prepare for the Carpenter Red Seal exam with focused study content, exam weighting, and practical practice resources for Trade 403A.',
-        seoKeywords: 'Carpenter, 403A, 403A practice exam, Carpenter Red Seal exam, 403A exam prep, Carpentry Red Seal practice test, Carpentry certification Canada, Carpenter apprenticeship exam, Carpentry study guide, Carpentry practice questions, Carpenter mock exam, Red Seal carpenter exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam',
+        redSealCode: '72310 (403A)',
+        seoTitle: 'Carpenter Red Seal Exam Prep — 72310 (403A) Study Guide',
+        seoDescription: 'Prepare for the Carpenter Red Seal exam with focused study content, exam weighting, and practical practice resources for Trade 72310 (403A).',
+        seoKeywords: 'Carpenter, 72310 (403A), 72310 (403A) practice exam, Carpenter Red Seal exam, 72310 (403A) exam prep, Carpentry Red Seal practice test, Carpentry certification Canada, Carpenter apprenticeship exam, Carpentry study guide, Carpentry practice questions, Carpenter mock exam, Red Seal carpenter exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam',
         ogImage: '/course-images/og/carpenter.png',
         totalExamQuestions: 100,
         apprenticeshipLevels: 4,
