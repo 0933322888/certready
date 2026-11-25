@@ -7,7 +7,7 @@ export const TRADE_DATA = {
   "construction-electrician": {
     slug: "construction-electrician",
     name: "Construction Electrician",
-    tradeCode: "309A",
+    tradeCode: "72200 (309A)",
     apprenticeshipHours: 7200,
     examQuestions: 100,
     examDuration: "3 hours",
@@ -134,7 +134,7 @@ export const TRADE_DATA = {
   plumber: {
     slug: "plumber",
     name: "Plumber",
-    tradeCode: "306A",
+    tradeCode: "72300 (306A)",
     apprenticeshipHours: 7200,
     examQuestions: 125,
     examDuration: "3 hours 45 min",
@@ -179,7 +179,7 @@ export const TRADE_DATA = {
   "automotive-service-technician": {
     slug: "automotive-service-technician",
     name: "Automotive Service Technician",
-    tradeCode: "310S",
+    tradeCode: "72410 (310S)",
     seoTitle: "Automotive Service Technician Red Seal Exam Guide — 310S Study & Practice",
     seoDescription: "Get exam-ready for the Automotive Service Technician Red Seal exam with 125 questions, detailed study guidance, and practice resources for Trade 310S.",
     seoKeywords: "Automotive Service Technician, 310S, Red Seal exam guide, study guide, practice questions, Ontario trade certification",
@@ -248,7 +248,7 @@ export const TRADE_DATA = {
   carpenter: {
     slug: "carpenter",
     name: "Carpenter",
-    tradeCode: "403A",
+    tradeCode: "72310 (403A)",
     apprenticeshipHours: 7200,
     examQuestions: 100,
     examDuration: "3 hours",
@@ -293,7 +293,7 @@ export const TRADE_DATA = {
   hairstylist: {
     slug: "hairstylist",
     name: "Hairstylist",
-    tradeCode: "332A",
+    tradeCode: "63210 (332A)",
     apprenticeshipHours: 1500,
     examQuestions: 120,
     examDuration: "3 hours",
@@ -445,7 +445,7 @@ export const TRADE_DATA = {
   "refrigeration-air-conditioning-mechanic": {
     slug: "refrigeration-air-conditioning-mechanic",
     name: "Refrigeration & Air Conditioning Mechanic",
-    tradeCode: "313A",
+    tradeCode: "72402 (313A)",
     apprenticeshipHours: 9000,
     examQuestions: 125,
     examDuration: "4 hours",
@@ -489,7 +489,7 @@ export const TRADE_DATA = {
   welder: {
     slug: "welder",
     name: "Welder",
-    tradeCode: "456A",
+    tradeCode: "72106 (456A)",
     apprenticeshipHours: 5400,
     examQuestions: 125,
     examDuration: "3 hours",

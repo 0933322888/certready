@@ -53,7 +53,6 @@ export default function TradesPage() {
               >
                 <div className="min-w-0">
                   <div className="text-sm font-medium text-text-primary truncate">{trade.name}</div>
-                  <div className="text-xs text-text-muted">{trade.code}</div>
                 </div>
                 <span className="w-2 h-2 rounded-full bg-accent shrink-0" aria-hidden />
               </Link>
@@ -65,7 +64,6 @@ export default function TradesPage() {
               >
                 <div className="min-w-0">
                   <div className="text-sm font-medium text-text-primary truncate">{trade.name}</div>
-                  <div className="text-xs text-text-muted">{trade.code}</div>
                 </div>
                 <span className="w-2 h-2 rounded-full bg-text-dim shrink-0" aria-hidden />
               </div>

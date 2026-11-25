@@ -10,7 +10,7 @@ export const hairstylistCourse = {
     title: 'Hairstylist Certification Exam Prep',
     subtitle: 'Complete Study Guide — Skilled Trades Ontario Trade 332A',
     trade: 'Hairstylist',
-    tradeCode: '332A',
+    tradeCode: '63210 (332A)',
     description: 'Prepare for the Hairstylist Red Seal exam with practical study content, detailed exam coverage, and a mock exam aligned to Skilled Trades Ontario Trade 332A.',
     seoTitle: 'Hairstylist Red Seal Exam Prep — 332A Study Guide',
     seoDescription: 'Master the Hairstylist Red Seal exam with chapter-based study material, glossary support, and a full practice exam for Trade 332A.',

@@ -10,7 +10,7 @@ import PricingSection from '../components/home/PricingSection';
 import Card from '../components/ui/Card';
 
 const HOME_FAQ_FOR_SEO = [
-  { question: 'What trades does CertReady offer exam prep for?', answer: 'CertReady currently offers courses for Hairstylist (332A) and Plumber (306A), with more trades being added. All courses are based on the official Red Seal Occupational Standard.' },
+  { question: 'What trades does CertReady offer exam prep for?', answer: 'CertReady currently offers courses for Hairstylist, Plumber, Carpenter, and other trades. More trades being added. All courses are based on the official Red Seal Occupational Standard.' },
   { question: 'Is this affiliated with the Red Seal Program or Skilled Trades Ontario?', answer: 'No. CertReady is an independent study resource. We are not affiliated with or endorsed by any provincial or federal trades certification authority.' },
   { question: 'How long do I have access after purchasing?', answer: 'You have 5 years access to the course materials. You can study at your own pace and revisit the content anytime.' },
   { question: 'What if I fail the exam after using CertReady?', answer: 'We believe in our content, but we cannot guarantee exam results — exam content is set by certification authorities and can change. We do not offer refunds based on exam outcomes.' },
