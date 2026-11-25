@@ -11,6 +11,7 @@ export function useCoursePricing() {
   const [pricingBySlug, setPricingBySlug] = useState({});
   const [loading, setLoading] = useState(true);
   const userKey = user?._id || user?.id || token || 'anon';
+  const accessKey = JSON.stringify([user?.purchases || [], user?.mockExamSlugs || []]);
 
   useEffect(() => {
     let cancelled = false;
@@ -39,7 +40,7 @@ export function useCoursePricing() {
         if (!cancelled) setLoading(false);
       });
     return () => { cancelled = true; };
-  }, [userKey]);
+  }, [userKey, accessKey]);
 
   return { pricingBySlug, loading };
 }
@@ -53,6 +54,7 @@ export function useCoursePricingBySlug(slug) {
   const [pricing, setPricing] = useState(null);
   const [loading, setLoading] = useState(!!slug);
   const userKey = user?._id || user?.id || token || 'anon';
+  const accessKey = JSON.stringify([user?.purchases || [], user?.mockExamSlugs || []]);
 
   useEffect(() => {
     if (!slug) {
@@ -82,7 +84,7 @@ export function useCoursePricingBySlug(slug) {
         if (!cancelled) setLoading(false);
       });
     return () => { cancelled = true; };
-  }, [slug, userKey]);
+  }, [slug, userKey, accessKey]);
 
   return { pricing, loading };
 }

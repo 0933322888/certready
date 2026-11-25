@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
 import { getAllChapters } from '../../data/courseHelpers';
+import { isChapterAccessible } from '../../utils/freeWindowAccess';
 import { getProgress } from '../../utils/progress';
 import Badge from '../ui/Badge';
+import Button from '../ui/Button';
 import ProgressBar from '../ui/ProgressBar';
 
 export default function ChapterSidebar({
@@ -13,13 +15,16 @@ export default function ChapterSidebar({
   onClose = null,
   hasAccess: hasAccessProp,
   hasMockExamAccess: hasMockExamAccessProp,
+  hasFreeWindowAccess = false,
   _progressVersion = 0,
+  accessPanel = null,
 }) {
   const { t } = useTranslation();
   const [expandedParts, setExpandedParts] = useState(new Set(course.parts.map(p => p.id)));
   const { hasPurchasedBySlug, hasMockExamAccess } = useAuth();
   const hasAccess = hasAccessProp ?? hasPurchasedBySlug(course.slug);
   const canAccessMockExam = hasMockExamAccessProp ?? hasMockExamAccess(course.slug);
+  const hasFullCourseAccess = canAccessMockExam;
   const progress = getProgress(course.id);
   const allChapters = getAllChapters(course);
   const completedCount = progress.completed.length;
@@ -36,10 +41,11 @@ export default function ChapterSidebar({
   };
 
   const isChapterContentUnlocked = (chapter) => {
-    if (chapter.isMockExam) {
-      return canAccessMockExam;
-    }
-    return chapter.isFree || hasAccess;
+    return isChapterAccessible(chapter, course, {
+      hasFullCourseAccess,
+      hasFreeWindowAccess,
+      hasMockExamAccess: canAccessMockExam,
+    });
   };
 
   // Mock exam can be opened (shows unlock UI) once the user has course access
@@ -47,7 +53,7 @@ export default function ChapterSidebar({
     if (chapter.isMockExam) {
       return canAccessMockExam || hasAccess;
     }
-    return chapter.isFree || hasAccess;
+    return isChapterContentUnlocked(chapter);
   };
 
   return (
@@ -92,6 +98,61 @@ export default function ChapterSidebar({
             </p>
           </div>
 
+          {accessPanel?.visible && (
+            <section className="mb-6 pb-6 border-b border-border space-y-3">
+              <div>
+                <p className="text-sm text-text-muted"> {accessPanel.title}
+                  {accessPanel.price !== null && (
+                    <span className="text-lg font-semibold text-accent mt-1"> {accessPanel.price}</span>
+                  )}
+                </p>
+              </div>
+              {accessPanel.showPromo && (
+                <div className="space-y-2">
+                  <label htmlFor="sidebar-promo-code" className="block text-sm font-medium text-text-primary">
+                    {t('course.promoCodeLabel')}
+                  </label>
+                  <input
+                    id="sidebar-promo-code"
+                    type="text"
+                    value={accessPanel.promoCode}
+                    onChange={(event) => accessPanel.onPromoCodeChange(event.target.value)}
+                    placeholder={t('course.promoCodePlaceholder')}
+                    className="w-full min-w-0 px-3 py-2 rounded-lg border border-border bg-surface text-text-primary text-sm placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent"
+                    aria-label={t('course.promoCodeLabel')}
+                  />
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                    onClick={accessPanel.onApplyPromo}
+                    disabled={accessPanel.applyingPromo || !accessPanel.promoCode.trim() || !accessPanel.user}
+                  >
+                    {accessPanel.applyingPromo ? t('course.processing') : t('course.promoCodeApply')}
+                  </Button>
+                </div>
+              )}
+              {accessPanel.unlockingMockExam && accessPanel.appliedPromo && (
+                <p className="text-sm text-accent-warm font-medium">
+                  {accessPanel.appliedPromo.amountCents === 0
+                    ? t('course.promoAppliedFree')
+                    : t('course.promoApplied')}
+                </p>
+              )}
+              <Button
+                onClick={accessPanel.onPurchase}
+                disabled={accessPanel.purchasing}
+                size="sm"
+                className="w-full"
+              >
+                {accessPanel.user
+                  ? (accessPanel.purchasing ? t('course.processing') : accessPanel.purchaseLabel)
+                  : t('course.signInToPurchase')}
+              </Button>
+            </section>
+          )}
+
           {/* Chapter List */}
           <nav>
             {course.parts.map((part) => (
@@ -102,9 +163,8 @@ export default function ChapterSidebar({
                 >
                   <span className="text-sm font-semibold text-text-primary">{part.title}</span>
                   <svg
-                    className={`w-4 h-4 text-text-muted transition-transform ${
-                      expandedParts.has(part.id) ? 'rotate-180' : ''
-                    }`}
+                    className={`w-4 h-4 text-text-muted transition-transform ${expandedParts.has(part.id) ? 'rotate-180' : ''
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -134,19 +194,18 @@ export default function ChapterSidebar({
                           className={`
                             w-full text-left px-3 py-2 rounded-lg text-sm
                             transition-all duration-200
-                            ${
-                              isActive
-                                ? 'bg-accent/20 border-l-4 border-accent text-accent font-medium'
-                                : isSelectable
+                            ${isActive
+                              ? 'bg-accent/20 border-l-4 border-accent text-accent font-medium'
+                              : isSelectable
                                 ? 'hover:bg-surface-2 text-text-muted'
                                 : 'text-text-dim cursor-not-allowed opacity-50'
                             }
                           `}
                         >
                           <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-2">
-                              <span className="text-sm">
-                                 {chapter.number}. {chapter.title}
+                            <div className="flex min-w-0 flex-1 items-center space-x-2">
+                              <span className="min-w-0 flex-1 break-words text-sm">
+                                {chapter.number}. {chapter.title}
                               </span>
                               {isCompleted && (
                                 <svg className="w-4 h-4 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,8 +213,11 @@ export default function ChapterSidebar({
                                 </svg>
                               )}
                             </div>
-                            <div className="flex items-center space-x-1">
+                            <div className="flex shrink-0 items-center space-x-1">
                               {chapter.isFree && !hasAccess && (
+                                <Badge variant="accent" className="text-xs">{t('course.freePreview')}</Badge>
+                              )}
+                              {hasFreeWindowAccess && isUnlocked && (
                                 <Badge variant="accent" className="text-xs">{t('course.freePreview')}</Badge>
                               )}
                               {chapter.isMockExam && hasAccess && !canAccessMockExam && (

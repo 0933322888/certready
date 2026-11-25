@@ -180,13 +180,6 @@ router.post('/create-checkout-session', protect, async (req, res) => {
         await user.save();
       }
 
-      // Free promo / free-window completions should also unlock the mock exam.
-      if (!user.mockExamSlugs?.includes(course.slug)) {
-        user.mockExamSlugs = user.mockExamSlugs || [];
-        user.mockExamSlugs.push(course.slug);
-        await user.save();
-      }
-
       const successUrl = `${process.env.CLIENT_URL}/checkout/success?session_id=${encodeURIComponent(freeSessionId)}`;
       return res.json({ sessionId: freeSessionId, url: successUrl, isFree: true, isFreeWindowActive, freeUntil });
     }

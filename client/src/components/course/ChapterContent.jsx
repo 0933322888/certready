@@ -36,7 +36,7 @@ export default function ChapterContent({
   unlockingMockExam = false,
 }) {
   const { t } = useTranslation();
-  const { user, hasMockExamAccess, hasPurchasedBySlug } = useAuth();
+  const { user, hasMockExamAccess } = useAuth();
   const [savedAnswers, setSavedAnswers] = useState({});
   const [, setLoadingAnswers] = useState(true);
 
@@ -72,7 +72,11 @@ export default function ChapterContent({
               p: ({_node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
               ul: ({_node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
               ol: ({_node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
-              table: ({_node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
+              table: ({_node, ...props}) => (
+                <div className="my-4 w-full overflow-x-auto">
+                  <table className="min-w-full table-auto border-collapse mb-4" {...props} />
+                </div>
+              ),
               th: ({_node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
               td: ({_node, ...props}) => <td className="border px-2 py-1" {...props} />,
               strong: ({_node, ...props}) => <strong className="font-semibold" {...props} />,
@@ -87,7 +91,11 @@ export default function ChapterContent({
               p: ({_node, ...props}) => <p className="text-text-primary leading-relaxed mb-4 text-base" {...props} />,
               ul: ({_node, ...props}) => <ul className="list-disc ml-6 space-y-2" {...props} />,
               ol: ({_node, ...props}) => <ol className="list-decimal ml-6 space-y-2" {...props} />,
-              table: ({_node, ...props}) => <table className="min-w-full table-auto border-collapse mb-4" {...props} />,
+              table: ({_node, ...props}) => (
+                <div className="my-4 w-full overflow-x-auto">
+                  <table className="min-w-full table-auto border-collapse mb-4" {...props} />
+                </div>
+              ),
               th: ({_node, ...props}) => <th className="border px-2 py-1 text-left font-semibold bg-surface" {...props} />,
               td: ({_node, ...props}) => <td className="border px-2 py-1" {...props} />,
               strong: ({_node, ...props}) => <strong className="font-semibold" {...props} />,
@@ -203,15 +211,15 @@ export default function ChapterContent({
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl min-w-0 mx-auto break-words">
       {/* Chapter Header */}
       <div className="mb-8">
         <div className="flex items-center space-x-3 mb-4">
-          <span className="text-4xl font-display font-bold text-accent">
+          <span className="text-3xl sm:text-4xl font-display font-bold text-accent">
             Chapter {chapter.number}
           </span>
         </div>
-        <h1 className="text-3xl font-display font-bold text-text-primary mb-2">
+        <h1 className="text-2xl sm:text-3xl font-display font-bold text-text-primary mb-2">
           {chapter.title}
         </h1>
         <p className="text-lg text-text-muted mb-4">{chapter.subtitle}</p>
@@ -227,7 +235,7 @@ export default function ChapterContent({
         const tradeSlug = getGuideSlugFromCourseSlug(course.id);
         const trade = getTradeBySlug(tradeSlug);
         if (!trade) return null;
-        const canStartMock = hasMockExamAccess(course.slug || course.id) || hasPurchasedBySlug(course.slug || course.id);
+        const canStartMock = hasMockExamAccess(course.slug || course.id);
         return (
           <div className="mb-8">
             <Card className="p-6 border-2 border-accent/30 bg-accent/5">
@@ -273,7 +281,7 @@ export default function ChapterContent({
         return (
           <div key={section.id || `sec-${sIdx}`} className="mb-8">
             {section.title && (
-              <h2 className="text-2xl font-display font-semibold text-text-primary mb-4">
+              <h2 className="text-xl sm:text-2xl font-display font-semibold text-text-primary mb-4">
                 {section.title}
               </h2>
             )}
@@ -348,7 +356,7 @@ export default function ChapterContent({
             </div>
           </div>
 
-          {onToggleComplete && (
+          {user && onToggleComplete && (
             <Button
               type="button"
               variant={isCompleted ? 'secondary' : 'primary'}

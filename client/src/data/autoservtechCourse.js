@@ -28,7 +28,7 @@ export const autoservtechCourse = {
         {
             "id": "part-1",
             "number": 1,
-            "title": "Performs Common Occupational Skills (MWA A)",
+            "title": "1. Performs Common Occupational Skills (MWA A)",
             "description": "Foundational knowledge every Automotive Service Technician must master: terminology, workplace safety, and tool proficiency. This MWA represents 9 questions (7% of the total exam).",
             "weight": "9 questions (7% of Total Exam)",
             "chapters": [
@@ -623,7 +623,7 @@ export const autoservtechCourse = {
         {
             "id": "part-2",
             "number": 2,
-            "title": "Diagnoses and Repairs Engine and Engine Support Systems (MWA B)",
+            "title": "2. Diagnoses and Repairs Engine and Engine Support Systems (MWA B)",
             "description": "Covers gasoline and diesel engine mechanical diagnosis/repair plus cooling, lubrication, intake, and exhaust support systems. Heavily weighted at 22 questions (17.6% of exam) — the largest single MWA. Expect procedural and critical-thinking questions on compression/leak-down analysis, timing chain/belt service, VVT/GDI/diesel high-pressure systems, and support-system failure modes.",
             "weight": "22 questions (17.6% of Total Exam)",
             "chapters": [
@@ -1327,7 +1327,7 @@ export const autoservtechCourse = {
         {
             "id": "part-3",
             "number": 3,
-            "title": "Diagnoses and Repairs Vehicle Module Communications Systems (MWA C)",
+            "title": "3. Diagnoses and Repairs Vehicle Module Communications Systems (MWA C)",
             "description": "Covers CAN/LIN/Ethernet network diagnosis, module communication faults, wiring integrity, and module programming/replacement. 12 questions (9.6% of exam). Critical for modern vehicles where 30+ modules share data — a single bus fault can set codes in multiple systems. Expect critical-thinking questions on bus topology, signal waveforms, U-codes, and J2534 pass-thru programming.",
             "weight": "12 questions (9.6% of Total Exam)",
             "chapters": [
@@ -1823,7 +1823,7 @@ export const autoservtechCourse = {
         {
             "id": "part-4",
             "number": 4,
-            "title": "Diagnoses and Repairs Driveline Systems (MWA D)",
+            "title": "4. Diagnoses and Repairs Driveline Systems (MWA D)",
             "description": "Covers clutch, manual/automatic/CVT/DCT transmissions, transfer cases, driveshafts, axles, differentials, and 4WD/AWD systems. 17 questions (13.6% of exam). Heavy on procedural diagnosis: fluid analysis, pressure tests, scan tool data interpretation, noise/vibration isolation, and repair procedures with exact torque/preload specs.",
             "weight": "17 questions (13.6% of Total Exam)",
             "chapters": [
@@ -2499,7 +2499,7 @@ export const autoservtechCourse = {
         {
             "id": "part-5",
             "number": 5,
-            "title": "Diagnoses and Repairs Electrical and Comfort Control Systems (MWA E)",
+            "title": "5. Diagnoses and Repairs Electrical and Comfort Control Systems (MWA E)",
             "description": "Covers electrical system diagnosis (battery, starting, charging, lighting, accessories), HVAC diagnosis and repair, and body electrical systems. 23 questions (18.4% of exam) — second largest MWA. Heavy on critical thinking: voltage drop, parasitic draw, CAN-related body faults, HVAC pressure/temperature analysis, and automatic climate control logic.",
             "weight": "23 questions (18.4% of Total Exam)",
             "chapters": [
@@ -3005,7 +3005,7 @@ export const autoservtechCourse = {
         {
             "id": "part-6",
             "number": 6,
-            "title": "Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings (MWA F)",
+            "title": "6. Diagnoses and Repairs Steering, Suspension, Braking, Control Systems, Tires, Hubs and Wheel Bearings (MWA F)",
             "description": "Covers steering (power, electric, 4WS), suspension (geometry, electronic, air), braking (hydraulic, ABS/ESC, regenerative, EPB), tires/TPMS, and wheel hubs/bearings. 23 questions (18.4% of exam) — tied for largest MWA. Heavy on alignment angles, ABS/ESC hydraulic/electronic diagnosis, ADAS sensor calibration, and safety-critical repair procedures.",
             "weight": "23 questions (18.4% of Total Exam)",
             "chapters": [
@@ -3696,7 +3696,7 @@ export const autoservtechCourse = {
         {
             "id": "part-7",
             "number": 7,
-            "title": "Diagnoses and Repairs Restraint Systems, Body Components, Accessories and Trim (MWA G)",
+            "title": "7. Diagnoses and Repairs Restraint Systems, Body Components, Accessories and Trim (MWA G)",
             "description": "Covers SRS (airbags, seat belts, sensors, OCS), body panels/structure, glass, accessories (power seats, mirrors, sunroof, audio), and trim. 10 questions (8% of exam). Safety-critical: SRS diagnosis requires scan tool only — never probe circuits. Body repair: corrosion protection, structural adhesive, panel alignment. Accessories: CAN/LIN communication, initialization procedures.",
             "weight": "10 questions (8% of Total Exam)",
             "chapters": [
@@ -4212,7 +4212,7 @@ export const autoservtechCourse = {
         {
             "id": "part-8",
             "number": 8,
-            "title": "Diagnoses and Repairs Hybrid and Electric Vehicle (EV) Systems (MWA H)",
+            "title": "8. Diagnoses and Repairs Hybrid and Electric Vehicle (EV) Systems (MWA H)",
             "description": "Covers HEV/EV high-voltage systems: battery packs, power electronics (inverter/converter), motor/generators, charging (AC/DC), thermal management, and safety protocols. 9 questions (7.2% of exam). Critical: HV safety (de-energize, verify, PPE), insulation resistance, scan tool data interpretation (HV battery SOC, cell balance, inverter temps), and component replacement procedures.",
             "weight": "9 questions (7.2% of Total Exam)",
             "chapters": [
@@ -4762,7 +4762,7 @@ export const autoservtechCourse = {
         {
             "id": "part-9",
             "number": 9,
-            "title": "Exam Strategy & Mock Exam",
+            "title": "9. Exam Strategy & Mock Exam",
             "description": "Final preparation: Red Seal exam structure, weighting breakdown, time management, diagnostic reasoning framework, and a full 125-question mock exam matching official distribution and question-type split.",
             "weight": "Final Preparation Part",
             "chapters": [

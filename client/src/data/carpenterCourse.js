@@ -31,7 +31,7 @@ const carpenterCourse = {
         {
             id: 'part-1',
             number: 1,
-            title: 'Foundations of the Trade',
+            title: '1. Foundations of the Trade',
             description: 'Safety, tools, work organization, and temporary access structures — the foundation every carpenter builds on before the first framing nail is driven.',
             chapters: [
 
@@ -676,7 +676,7 @@ const carpenterCourse = {
         {
             id: 'part-2',
             number: 2,
-            title: 'Planning and Layout',
+            title: '2. Planning and Layout',
             description: 'Reading construction documents, organizing site work, and performing the precise layout that every structural element depends on.',
             chapters: [
 
@@ -894,7 +894,7 @@ const carpenterCourse = {
         {
             id: 'part-3',
             number: 3,
-            title: 'Concrete Work',
+            title: '3. Concrete Work',
             description: 'Formwork is the dominant topic on the exam within MWA C — Task C-8 alone carries 12 of the 16 concrete questions. Master formwork to dominate this section.',
             chapters: [
 
@@ -1101,7 +1101,7 @@ const carpenterCourse = {
         {
             id: 'part-4',
             number: 4,
-            title: 'Framing',
+            title: '4. Framing',
             description: 'Framing is the single largest MWA on the exam at 20% — 20 questions. Floor systems, decks, walls, and roofs: every structural element carpenters build from wood and engineered lumber.',
             chapters: [
 
@@ -1446,7 +1446,7 @@ const carpenterCourse = {
         {
             id: 'part-5',
             number: 5,
-            title: 'Exterior Finishing',
+            title: '5. Exterior Finishing',
             description: 'Doors, windows, roofing, and cladding — the envelope that protects the building from weather. MWA E carries 14 questions across three tasks: E-14 (41%), E-15 (24%), and E-16 (35%).',
             chapters: [
 
@@ -1639,7 +1639,7 @@ const carpenterCourse = {
         {
             id: 'part-6',
             number: 6,
-            title: 'Interior Finishing',
+            title: '6. Interior Finishing',
             description: 'Wall and ceiling finishes, flooring, interior doors and windows, stairs and finish components — the work that defines the quality of the final product. MWA F carries 14 questions across four tasks: F-17 (17%), F-18 (17%), F-19 (31%), F-20 (35%).',
             chapters: [
 
@@ -1864,7 +1864,7 @@ const carpenterCourse = {
         {
             id: 'part-7',
             number: 7,
-            title: 'Renovations, Reference, and Exam Prep',
+            title: '7. Renovations, Reference, and Exam Prep',
             description: 'Renovation-specific skills, a complete formula and reference chapter, and a full mock exam. MWA G carries 10 questions split evenly across G-21 (48%) and G-22 (52%).',
             chapters: [
 

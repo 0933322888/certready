@@ -115,19 +115,8 @@ export function AuthProvider({ children }) {
   // Full mock exam is excluded from free-window grants, but a purchased course should also unlock it.
   const hasMockExamAccess = (courseSlug) => {
     if (!state.user || !courseSlug) return false;
-
     const slugs = state.user.mockExamSlugs;
-    const explicitAccess = Array.isArray(slugs) && slugs.includes(courseSlug);
-    const hasCoursePurchase = (state.user.purchases || []).some((purchase) => {
-      if (!purchase) return false;
-      if (typeof purchase === 'string') return purchase === courseSlug;
-
-      const purchaseSlug = purchase.slug || purchase.courseSlug || purchase.course?.slug;
-      const purchaseId = purchase._id || purchase.id || purchase.courseId || purchase.course?.id;
-      return purchaseSlug === courseSlug || purchaseId?.toString() === courseSlug?.toString();
-    });
-
-    return explicitAccess || hasCoursePurchase;
+    return Array.isArray(slugs) && slugs.includes(courseSlug);
   };
 
   return (

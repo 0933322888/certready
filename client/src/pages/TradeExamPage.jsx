@@ -24,7 +24,7 @@ export default function TradeExamPage() {
   const { tradeSlug } = useParams();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const { user, hasPurchasedBySlug, loading: authLoading, refreshUser } = useAuth();
+  const { user, hasPurchasedBySlug, hasMockExamAccess, loading: authLoading, refreshUser } = useAuth();
   const [purchasing, setPurchasing] = useState(false);
   const [promoCode, setPromoCode] = useState('');
   const [appliedPromo, setAppliedPromo] = useState(null);
@@ -39,16 +39,20 @@ export default function TradeExamPage() {
   const hasPurchased = slug
     ? (hasPurchasedBySlug(slug) || Boolean(pricing?.ownsCourse))
     : false;
+  const hasFullCourseAccess = slug ? hasMockExamAccess(slug) : false;
+  const hasFreeWindowAccess = Boolean(
+    hasPurchased && pricing?.isFreeWindowActive && !hasFullCourseAccess
+  );
 
   const currentPrice = pricing?.currentPrice ?? course?.price;
   const fullPrice = pricing?.fullPrice ?? course?.price;
   const currency = pricing?.currency ?? course?.currency ?? 'CAD';
   const isFreeOffer = Boolean(
-    appliedPromo?.amountCents === 0 || (!appliedPromo && pricing?.isFreeWindowActive)
+    appliedPromo?.amountCents === 0 || (!hasPurchased && !appliedPromo && pricing?.isFreeWindowActive)
   );
   const displayPrice = appliedPromo
     ? appliedPromo.amountCents
-    : (currentPrice ?? course?.price ?? fullPrice);
+    : (hasFreeWindowAccess ? fullPrice : (currentPrice ?? course?.price ?? fullPrice));
   const displayCurrency = appliedPromo ? appliedPromo.currency : currency;
 
   const handleApplyPromo = async () => {
@@ -237,9 +241,11 @@ export default function TradeExamPage() {
               </div>
               {(appliedPromo || pricing?.isFreeWindowActive) && (
                 <p className="text-sm text-accent-warm font-medium mb-2">
-                  {isFreeOffer
-                    ? (appliedPromo ? t('course.promoAppliedFree') : t('course.freeWindowOffer'))
-                    : t('course.promoApplied')}
+                  {hasFreeWindowAccess
+                    ? t('course.getFullCourseAccess')
+                    : isFreeOffer
+                      ? (appliedPromo ? t('course.promoAppliedFree') : t('course.freeWindowOffer'))
+                      : t('course.promoApplied')}
                 </p>
               )}
               <p className="text-text-muted">{isFreeOffer ? t('course.freeWindowOneTime') : t('course.oneTime')}</p>

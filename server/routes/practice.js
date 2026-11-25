@@ -33,7 +33,7 @@ const EXAM_QUESTIONS_BY_TRADE = {
 /**
  * GET /api/practice/:tradeSlug/questions
  * - Free users (not logged in or no course purchase): first 20 questions by order/_id (same every time).
- * - Course access including free-window: random set for practice (capped below full exam size).
+ * - Free users, including free-window access: first 20 questions by order/_id.
  * - Paid / non free-window: full random set up to 200 (mock exam).
  * Query: limit (default 20), topics (optional comma-separated topicIds to filter)
  */
@@ -69,24 +69,6 @@ router.get('/:tradeSlug/questions', optionalProtect, async (req, res) => {
       questions = await PracticeQuestion.aggregate([
         { $match: match },
         { $sample: { size: limit } },
-        {
-          $project: {
-            _id: 1,
-            tradeSlug: 1,
-            topicId: 1,
-            topicLabel: 1,
-            question: 1,
-            options: 1,
-            correctIndex: 1,
-            explanation: 1,
-          },
-        },
-      ]);
-    } else if (hasCourseAccess) {
-      const practiceLimit = Math.min(limit, 50);
-      questions = await PracticeQuestion.aggregate([
-        { $match: match },
-        { $sample: { size: practiceLimit } },
         {
           $project: {
             _id: 1,

@@ -15,8 +15,8 @@ export function isWithinFreeWindow(registeredAt) {
 
 /**
  * Get current price for a course.
- * A user gets free access for the first 5 days after registration.
- * Free-window content access expires after that unless they purchase (e.g. mock exam unlock).
+ * A user gets access to the first two course parts for the first 5 days after registration.
+ * The free-window access expires after that unless they purchase.
  * @param {Object} course - Course document (plain or mongoose doc)
  * @param {Object|null} user - User document (plain or mongoose doc)
  * @returns {Promise<{ currentPrice: number, fullPrice: number, discountedSpotsLeft: number, isFreeWindowActive: boolean, freeUntil: Date | null }>}

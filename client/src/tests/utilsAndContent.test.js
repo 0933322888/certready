@@ -2,6 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { formatPrice, formatDate } from '../utils/formatters.js';
 import { paths } from '../utils/routes.js';
 import { COURSE_SLUGS, getCourse } from '../data/courseContent.js';
+import { getAllChapters } from '../data/courseHelpers.js';
+import { FREE_WINDOW_PREVIEW_PARTS, isChapterAccessible } from '../utils/freeWindowAccess.js';
 
 describe('formatters', () => {
   it('formats cents to CAD currency string properly', () => {
@@ -35,6 +37,66 @@ describe('courseContent', () => {
       expect(course).not.toBeNull();
       expect(course.id).toBeDefined();
       expect(course.trade).toBeDefined();
+    });
+  });
+
+  describe('free-window course access', () => {
+    const course = {
+      parts: [
+        { chapters: [{ id: 'chapter-1' }, { id: 'chapter-2' }] },
+        { chapters: [{ id: 'chapter-3' }, { id: 'chapter-4' }] },
+        { chapters: [{ id: 'chapter-5', isFree: true }, { id: 'chapter-6' }] },
+        { chapters: [{ id: 'mock-exam', isMockExam: true }] },
+      ],
+    };
+
+    it('grants temporary access to all chapters in the first two parts', () => {
+      const firstFourChapters = course.parts.slice(0, 2).flatMap((part) => part.chapters);
+      const [chapter5, chapter6] = course.parts[2].chapters;
+      const [mockExam] = course.parts[3].chapters;
+      const trialAccess = { hasFreeWindowAccess: true };
+
+      expect(FREE_WINDOW_PREVIEW_PARTS).toBe(2);
+      firstFourChapters.forEach((chapter) => {
+        expect(isChapterAccessible(chapter, course, trialAccess)).toBe(true);
+      });
+      expect(isChapterAccessible(chapter5, course, trialAccess)).toBe(true);
+      expect(isChapterAccessible(chapter6, course, trialAccess)).toBe(false);
+      expect(isChapterAccessible(mockExam, course, trialAccess)).toBe(false);
+    });
+
+    it('preserves full paid access and the public free-chapter preview', () => {
+      const [chapter3] = course.parts[1].chapters;
+      const [chapter5] = course.parts[2].chapters;
+      const [mockExam] = course.parts[3].chapters;
+
+      expect(isChapterAccessible(chapter3, course, { hasFullCourseAccess: true })).toBe(true);
+      expect(isChapterAccessible(mockExam, course, {
+        hasFullCourseAccess: true,
+        hasMockExamAccess: true,
+      })).toBe(true);
+      expect(isChapterAccessible(chapter3, course)).toBe(false);
+      expect(isChapterAccessible(chapter5, course)).toBe(true);
+    });
+
+    it('grants each course first two parts during the free window', () => {
+      ['en', 'fr', 'ru'].forEach((language) => {
+        COURSE_SLUGS.forEach((slug) => {
+          const courseData = getCourse(slug, language);
+          const freePartChapterIds = new Set(
+            courseData.parts.slice(0, FREE_WINDOW_PREVIEW_PARTS)
+              .flatMap((part) => part.chapters)
+              .map((chapter) => chapter.id)
+          );
+          getAllChapters(courseData).forEach((chapter) => {
+            if (chapter.isMockExam) return;
+            const accessible = isChapterAccessible(chapter, courseData, { hasFreeWindowAccess: true });
+            expect(accessible, `${language}: ${slug}: ${chapter.id}`).toBe(
+              freePartChapterIds.has(chapter.id) || Boolean(chapter.isFree)
+            );
+          });
+        });
+      });
     });
   });
 

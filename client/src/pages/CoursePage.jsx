@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { getCourse } from '../data/courseContent';
 import { getAllChapters } from '../data/courseHelpers';
+import { isChapterAccessible } from '../utils/freeWindowAccess';
 import { getGuideSlugFromCourseSlug } from '../data/tradeGuides';
 import { useCoursePricingBySlug } from '../hooks/useCoursePricing';
 import SEO from '../components/seo/SEO';
@@ -20,7 +21,7 @@ export default function CoursePage() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const { user, hasPurchasedBySlug, loading: authLoading, refreshUser } = useAuth();
+  const { user, hasPurchasedBySlug, hasMockExamAccess, loading: authLoading, refreshUser } = useAuth();
   const [purchasing, setPurchasing] = useState(false);
   const [promoCode, setPromoCode] = useState('');
   const [appliedPromo, setAppliedPromo] = useState(null);
@@ -29,17 +30,23 @@ export default function CoursePage() {
 
   const course = getCourse(slug, i18n.language);
   const allChapters = course ? getAllChapters(course) : [];
-  const hasPurchased = hasPurchasedBySlug(slug) || Boolean(pricing?.ownsCourse);
+  const hasPurchased = pricing
+    ? Boolean(pricing.ownsCourse)
+    : hasPurchasedBySlug(slug);
+  const hasFullCourseAccess = hasMockExamAccess(slug);
+  const hasFreeWindowAccess = Boolean(
+    hasPurchased && pricing?.isFreeWindowActive && !hasFullCourseAccess
+  );
 
   const currentPrice = pricing?.currentPrice ?? course?.price;
   const fullPrice = pricing?.fullPrice ?? course?.price;
   const currency = pricing?.currency ?? course?.currency ?? 'CAD';
   const isFreeOffer = Boolean(
-    appliedPromo?.amountCents === 0 || (!appliedPromo && pricing?.isFreeWindowActive)
+    appliedPromo?.amountCents === 0 || (!hasPurchased && !appliedPromo && pricing?.isFreeWindowActive)
   );
   const displayPrice = appliedPromo
     ? appliedPromo.amountCents
-    : (currentPrice ?? course?.price ?? fullPrice);
+    : (hasFreeWindowAccess ? fullPrice : (currentPrice ?? course?.price ?? fullPrice));
   const displayCurrency = appliedPromo ? appliedPromo.currency : currency;
 
   const handleApplyPromo = async () => {
@@ -163,14 +170,22 @@ export default function CoursePage() {
               {t('course.whatsCovered')}
             </h2>
             <div className="space-y-3">
-              {allChapters.map((chapter) => (
+              {allChapters.map((chapter) => {
+                const chapterAccessible = isChapterAccessible(chapter, course, {
+                  hasFullCourseAccess,
+                  hasFreeWindowAccess,
+                  hasMockExamAccess: hasFullCourseAccess,
+                });
+                const isFreePreviewChapter = chapter.isFree
+                  || (hasFreeWindowAccess && chapterAccessible);
+                return (
                 <div
                   key={chapter.id}
                   className={`p-4 rounded-lg border ${
-                    chapter.isFree
+                    isFreePreviewChapter
                       ? 'border-accent/30 bg-accent/5'
                       : hasPurchased
-                      ? 'border-border bg-surface'
+                        ? 'border-border bg-surface'
                       : 'border-border bg-surface opacity-60'
                   }`}
                 >
@@ -187,15 +202,17 @@ export default function CoursePage() {
                       </div>
                     </div>
                     <div className="flex items-center space-x-2">
-                      {chapter.isFree && (
-                        <Badge variant="accent">{t('course.freePreview')}</Badge>
+                      {isFreePreviewChapter && (
+                        <Badge variant="accent">
+                          {chapter.isFree ? t('course.freePreview') : t('course.freeWindowPreview')}
+                        </Badge>
                       )}
-                      {!chapter.isFree && !hasPurchased && (
+                      {!chapterAccessible && (
                         <svg className="w-5 h-5 text-accent-warm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
                       )}
-                      {hasPurchased && (
+                      {hasPurchased && chapterAccessible && (
                         <Link to={`/learn/${slug}?chapter=${chapter.id}`}>
                           <Button variant="ghost" size="sm">{t('course.view')} →</Button>
                         </Link>
@@ -203,7 +220,8 @@ export default function CoursePage() {
                     </div>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </Card>
 
@@ -234,9 +252,11 @@ export default function CoursePage() {
               </div>
               {(appliedPromo || pricing?.isFreeWindowActive) && (
                 <p className="text-sm text-accent-warm font-medium mb-2">
-                  {isFreeOffer
-                    ? (appliedPromo ? t('course.promoAppliedFree') : t('course.freeWindowOffer'))
-                    : t('course.promoApplied')}
+                  {hasFreeWindowAccess
+                    ? t('course.getFullCourseAccess')
+                    : isFreeOffer
+                      ? (appliedPromo ? t('course.promoAppliedFree') : t('course.freeWindowOffer'))
+                      : t('course.promoApplied')}
                 </p>
               )}
               <p className="text-text-muted">{isFreeOffer ? t('course.freeWindowOneTime') : t('course.oneTime')}</p>

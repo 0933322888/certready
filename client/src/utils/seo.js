@@ -170,7 +170,7 @@ export function getBreadcrumbStructuredData(items) {
 export function getAllCoursesPageSEO() {
   return {
     title: 'Red Seal Exam Prep Courses — All Trades',
-    description: "Browse CertReady's Red Seal exam preparation courses for Canadian trades. Hairstylist (332A), Plumber (306A), and more. One-time purchase, 5-year access, and the first 5 days free after registration.",
+    description: "Browse CertReady's Red Seal exam preparation courses for Canadian trades. Hairstylist (332A), Plumber (306A), and more. One-time purchase, 5-year access, and the first 2 parts free for 5 days after registration.",
     keywords: 'Red Seal courses, exam prep, Canadian trades, Hairstylist, Plumber, 332A, 306A, certification, study guide',
     canonical: '/trades',
   };
