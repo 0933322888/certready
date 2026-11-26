@@ -2,15 +2,22 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
+import { SUPPORTED_LANGUAGES } from '../../data/courseContent';
 import Button from '../ui/Button';
 import { CertReadyLogoCompact } from '../brand/CertReadyLogo';
 
 export default function Navbar() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  const changeLanguage = (code) => {
+    i18n.changeLanguage(code);
+    setLangMenuOpen(false);
+  };
 
   const handleLogout = () => {
     logout();
@@ -67,7 +74,7 @@ export default function Navbar() {
 
           {/* Desktop: Language + Auth */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* <div className="relative">
+            {user && user.email === "marishka7227@gmail.com" && (<div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
                 className="flex items-center space-x-1 px-3 py-2 rounded-lg text-white hover:text-accent hover:bg-surface-2 transition-colors text-sm"
@@ -84,16 +91,15 @@ export default function Navbar() {
                     <button
                       key={code}
                       onClick={() => changeLanguage(code)}
-                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
-                        i18n.language === code ? 'text-accent font-medium' : 'text-text-primary hover:bg-surface-2'
-                      }`}
+                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${i18n.language === code ? 'text-accent font-medium' : 'text-text-primary hover:bg-surface-2'
+                        }`}
                     >
                       {label}
                     </button>
                   ))}
                 </div>
               )}
-            </div> */}
+            </div>)}
             {user ? (
               <div className="relative">
                 <button

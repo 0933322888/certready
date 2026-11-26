@@ -780,7 +780,7 @@ export const hairstylistCourse = {
                                 },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/head-landmarks-schematic.png',
+                                    src: '/course-images/hairstylist/head_landmarks-schematic.png',
                                     alt: 'Side profile of a head with labels for nape, occipital bone, parietal ridge, crown, and temporal region.',
                                     caption: 'Relate these landmarks to your sectioning and weight lines when cutting.',
                                     credit: 'CertReady schematic (not to scale).',
@@ -870,7 +870,7 @@ export const hairstylistCourse = {
                                 },
                                 {
                                     type: 'image',
-                                    src: '/course-images/hairstylist/hair-growth-cycle.png',
+                                    src: '/course-images/hairstylist/hair-growth-cycle.svg',
                                     alt: 'Three-step diagram: Anagen growth phase, Catagen transition, Telogen rest and shedding with typical durations and percentages.',
                                     caption: 'Most scalp hairs are in anagen at any given time; diffuse shedding often reflects a shift toward telogen (e.g., telogen effluvium).',
                                     credit: 'CertReady summary diagram.',
@@ -1883,7 +1883,7 @@ export const hairstylistCourse = {
                     title: 'Full Mock Exam',
                     subtitle: 'Timed 120-question practice exam (3 hours), covering all 8 Major Work Activities',
                     isFree: false,
-                    estimatedMinutes: 5,
+                    estimatedMinutes: 60,
                     isMockExam: true,
                     sections: [
                         {

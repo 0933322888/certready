@@ -1,11 +1,12 @@
-// ============================================================
-// STEP 2B — PART 1 FRAGMENT (MWA A: Hygiene, sanitation and safety)
-// Paste this object inside the `parts: [ ... ]` array of cookCourse.
-// Source: Red Seal Occupational Standard (RSOS) Cook 2020; Appendix C Glossary; exam-information page.
-// ============================================================
+
 const cookCourse = {
 
     parts: [
+        // ============================================================
+        // STEP 2B — PART 1 FRAGMENT (MWA A: Hygiene, sanitation and safety)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020; Appendix C Glossary; exam-information page.
+        // ============================================================
         {
             id: 'part-1',
             number: 1,
@@ -2546,5 +2547,1867 @@ const cookCourse = {
                 },
             ],
         },
+        // ============================================================
+        // STEP 2C — PART 4 FRAGMENT (MWA D: Stocks, broths and soups)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 3.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks D-13 and D-14.
+        // ============================================================
+        {
+            id: 'part-4',
+            number: 4,
+            title: 'Stocks, Broths and Soups (MWA D)',
+            description: 'The flavour foundation of the kitchen: stock and broth types, ingredient ratios, simmering, skimming, straining and rapid cooling, then soups from clear to cream, consommé clarification, thickening agents, finishing, garnishing and holding. MWA D carries 12 exam questions across tasks D-13 and D-14.',
+            weight: '12 questions (8.0% of Total Exam)',
 
-    ]}
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 12 — STOCKS AND BROTHS (D-13)
+                // ============================================================
+                {
+                    id: 'ch-12',
+                    number: 12,
+                    title: 'Stocks and Broths',
+                    subtitle: 'Task D-13 · Prepares stocks and broths (6 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch12-s1',
+                            title: '12.1 Types of Stocks and Broths and Selecting Ingredients (D-13.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Stocks and broths add flavour and texture to soups, sauces, braises, grains and many other dishes. Good stock starts with good ingredients, so the first step is choosing the right ones for the type of stock or broth wanted and judging their freshness and quality through sensory assessment.',
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Stock',
+                                    definition: 'A clear, thin, flavoured liquid prepared from simmering bones, vegetables and aromatics (glossary term). It is mainly a building block for sauces and soups and is usually unseasoned.',
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Broth',
+                                    definition: 'A thin, flavoured liquid prepared primarily from simmering meats; bones and vegetables may also be added (glossary term). A broth is seasoned and can be served as it is.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Type of Stock', 'Main Ingredients', 'Method', 'Typical Uses'],
+                                    rows: [
+                                        ['White stock', 'Unroasted bones (chicken, veal or beef), pale mirepoix, aromatics, cold water', 'Bones are rinsed or blanched, then simmered gently; no browning', 'Velouté sauces, cream soups, light sauces, poaching'],
+                                        ['Brown stock', 'Bones roasted until deep brown, browned mirepoix, tomato product, aromatics, cold water', 'Bones and vegetables are roasted, then the roasting pan is deglazed and everything simmered for a long time', 'Demi-glace, brown sauces, braises, French onion soup'],
+                                        ['Court-bouillon', 'Water, acid (wine, vinegar or lemon), vegetables, herbs and spices; no bones', 'Quick simmer, usually 30 to 45 minutes; strained before use', 'Poaching fish, shellfish and some vegetables'],
+                                        ['Fumet', 'Bones and trimmings of lean white fish, sweated vegetables, white wine, water', 'Short simmer (about 30 to 45 minutes); long cooking makes it bitter', 'Fish sauces, seafood soups, poaching'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Type of Broth', 'Description', 'Typical Uses'],
+                                    rows: [
+                                        ['Clear broth', 'Seasoned, clear liquid from gently simmered meat, poultry or vegetables; skimmed so it stays clear', 'Consommé base, noodle and vegetable soups, sipping broth'],
+                                        ['Bone broth', 'Bones simmered for a long time to extract collagen, minerals and flavour; often a splash of acid is added', 'Sipping broth, sauces, soup bases'],
+                                        ['Emulsified broth', 'Bones boiled vigorously so fat and collagen blend into the liquid, giving a milky, rich body', 'Ramen-style broths such as pork bone broth'],
+                                        ['Dashi', 'Japanese broth made by steeping kombu (kelp), often with katsuobushi (dried bonito flakes); kombu is removed before the water boils', 'Miso soup, noodle broths, sauces'],
+                                        ['Miso broth', 'Miso paste dissolved into dashi or stock; not boiled after the miso is added, to protect flavour and aroma', 'Miso soup, ramen, marinades'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Stock Ingredient', 'Role', 'Notes'],
+                                    rows: [
+                                        ['Bones', 'Give body (gelatin from collagen), flavour and richness', 'Veal bones give the most gelatin and a neutral flavour; chicken is mild; beef is stronger; fish bones must be lean and white'],
+                                        ['Vegetables (mirepoix)', 'Add sweetness and depth', 'Onion, carrot and celery in a 2:1:1 ratio by weight; use white mirepoix for white stock'],
+                                        ['Aromatics', 'Add fragrance and complexity', 'Sachet d’épices or bouquet garni: bay leaf, thyme, parsley stems, peppercorns, garlic'],
+                                        ['Water', 'The extraction medium', 'Always start with cold water'],
+                                        ['Proteins', 'Meat, poultry carcasses and trimmings add flavour (and clarity problems if poorly handled)', 'Use trim and carcasses; avoid fatty trim for clear stock'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Selection Factor', 'What to Consider'],
+                                    rows: [
+                                        ['Freshness', 'Bones and trim must be fresh and properly stored; off smells give off-flavours that cannot be hidden'],
+                                        ['Cost', 'Stock is a way to use bones, trim and vegetable ends; balance cost against flavour and body'],
+                                        ['Fat content', 'Fat clouds and greases stock; choose lean bones and trim fat for clear stocks'],
+                                        ['Intended application', 'Brown stock for brown sauces, white stock for light dishes, fumet for fish'],
+                                        ['Type of bone', 'Young animal bones (veal) are rich in cartilage; knuckle, neck and feet give extra gelatin'],
+                                        ['Cartilage content', 'More cartilage means more gelatin and a stock that sets when cold'],
+                                        ['Managing trim', 'Collect and store trim safely so it can be used rather than wasted'],
+                                        ['Ingredient availability', 'Seasonal vegetables and what is on hand'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify and choose ingredients according to the stock or broth wanted.',
+                                        'Identify freshness and quality indicators through sensory assessment: firm vegetables with good colour and texture, fresh-smelling bones with no slime or odour.',
+                                        'Consider dietary requirements: vegetable stocks suit vegetarian and vegan guests, but dashi made with bonito flakes is not vegetarian, miso contains soy, and stock bases can contain gluten, celery, fish, shellfish or high sodium. Halal and Kosher guests need approved bones and ingredients.',
+                                        'Convenience bases and concentrates can replace made-from-scratch stock, but they must be checked for sodium, allergens and quality.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Stock versus broth is a regular knowledge question. Stock is made mainly from bones, vegetables and aromatics and is unseasoned, so it is a building block. Broth is made primarily from meat and is seasoned, so it can be served as it is. Remember the four stocks (white, brown, court-bouillon, fumet) and the five broths (dashi, emulsified, clear, bone, miso).',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch12-s2',
+                            title: '12.2 Processing Stock and Broth Ingredients (D-13.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Preparation decides how well the stock will turn out. The cook selects the tools and equipment, calculates the quantities needed for the required yield, gathers ingredients so they are accessible in sequence, measures them and prepares them.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Stockpot', 'Tall, narrow pot that limits evaporation and keeps ingredients submerged'],
+                                        ['Spigot pot', 'Stockpot with a tap at the bottom so stock can be drained without lifting a heavy hot pot'],
+                                        ['Roasting pans', 'Roasting bones and vegetables for brown stock; deglazing'],
+                                        ['Skimmers and ladles', 'Removing foam and fat and transferring stock'],
+                                        ['Strainers (china cap, chinois)', 'Removing solids; a fine mesh gives a clearer stock'],
+                                        ['Cheesecloth', 'Lining a strainer for a very clear result; wrapping aromatics as a sachet'],
+                                        ['Butcher’s twine', 'Tying bouquet garni and securing sachets'],
+                                        ['Cutting boards and knives', 'Cutting mirepoix and trimming bones and carcasses'],
+                                        ['Scales', 'Measuring ingredients and checking yield'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Preparation Item', 'Standard Practice'],
+                                    rows: [
+                                        ['Bones', 'Cut or chop into smaller pieces to expose more surface; rinse or blanch for white stock; roast for brown stock'],
+                                        ['Mirepoix', 'Cut size matches cooking time: large pieces for long cooking, smaller pieces for short cooking; leave the onion skin on for colour in brown stock if the recipe allows'],
+                                        ['Aromatics', 'Tie in a bouquet garni with butcher’s twine or place in a sachet of cheesecloth so they can be removed easily'],
+                                        ['Tomato product', 'Added to brown stock and browned in the pan (a step called pincé) for colour and flavour'],
+                                        ['Fish bones', 'Remove gills and blood and rinse well; use only lean white fish for fumet'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Typical Starting Ratio (per 4 L of water)', 'Amount', 'Notes'],
+                                    rows: [
+                                        ['Meat or poultry bones (white or brown stock)', 'About 2 kg', 'Roughly half the weight of the water'],
+                                        ['Mirepoix (meat stocks)', 'About 500 g', 'Onion 250 g, carrot 125 g, celery 125 g'],
+                                        ['Fish bones (fumet)', 'About 2 kg', 'With about 250 g mirepoix and 250 mL white wine'],
+                                        ['Aromatics', 'Sachet or bouquet garni', 'Bay leaf, thyme, parsley stems, peppercorns, garlic'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Typical Simmering Time', 'Approximate Time'],
+                                    rows: [
+                                        ['Fish stock (fumet)', '30 to 45 minutes'],
+                                        ['Court-bouillon', '30 to 45 minutes'],
+                                        ['Chicken stock', '3 to 4 hours'],
+                                        ['Beef and veal stock', '6 to 8 hours'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Scaling a Stock Recipe', 'Calculation'],
+                                    rows: [
+                                        ['Conversion factor', 'The recipe yields 4 L and 20 L are needed: 20 ÷ 4 = 5'],
+                                        ['Bones', '2 kg × 5 = 10 kg'],
+                                        ['Mirepoix', '500 g × 5 = 2.5 kg'],
+                                        ['Water', '4 L × 5 = 20 L of cold water (the finished volume will be lower because of evaporation, so scale up a little if exact yield matters)'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Gather and measure all ingredients before starting so they are accessible in sequence.',
+                                        'Use a pot of the right size: the bones should be covered by water with some room above, not crammed or floating in a huge pot.',
+                                        'Keep trim and bones cold and covered until needed; do not leave them in the danger zone.',
+                                        'Remember that ratios are starting points: recipes vary with the type of bone, cooking time and the intensity wanted.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Cooking time and cut size go together. Long-simmered stocks use larger cuts of mirepoix so vegetables do not disintegrate and cloud the stock, while short-cooked stocks such as fumet use smaller cuts so they release flavour in the available time.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch12-s3',
+                            title: '12.3 Cooking Stocks and Broths (D-13.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Stock is made slowly and gently. The goal is to extract flavour, gelatin and colour from the ingredients while keeping the liquid clear. Most mistakes come from heat that is too high, stirring, or poor skimming.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Step', 'What to Do', 'Reason'],
+                                    rows: [
+                                        ['1. Prepare bones and vegetables', 'Rinse or blanch bones (white stock) or roast bones and vegetables until deeply browned (brown stock)', 'Blanching removes impurities; roasting builds colour and flavour'],
+                                        ['2. Deglaze', 'Add liquid (water, wine or stock) to the hot roasting pan and scrape the browned bits (fond) loose; add the liquid to the pot', 'Captures concentrated flavour'],
+                                        ['3. Start with cold water', 'Cover the bones with cold water and bring up slowly', 'Proteins and impurities coagulate gradually and rise to the surface, where they can be skimmed'],
+                                        ['4. Bring to a simmer', 'Reach a gentle simmer, with small bubbles breaking the surface lightly, according to the recipe', 'A boil churns fat and impurities into the liquid, making it cloudy and greasy'],
+                                        ['5. Skim', 'Remove foam, impurities and fat regularly with a skimmer or ladle', 'Gives a clear, clean-tasting stock'],
+                                        ['6. Add aromatics at the right time', 'Add the mirepoix and sachet or bouquet garni according to the cooking time', 'Prevents bitter, overcooked flavours and loss of aroma'],
+                                        ['7. Monitor time and temperature', 'Keep a steady, gentle simmer; check the level and top up with hot water if bones are exposed', 'Keeps extraction consistent'],
+                                        ['8. Reduce if required', 'Simmer uncovered to evaporate water and concentrate flavour', 'Makes a stronger stock or a concentrate such as glace'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Likely Cause', 'Prevention or Fix'],
+                                    rows: [
+                                        ['Cloudy stock', 'Boiling, stirring, starting with hot water, or not skimming', 'Start cold, simmer gently, skim and do not stir; strain carefully'],
+                                        ['Greasy stock', 'Fatty bones or trim, or not skimming fat', 'Use lean bones, skim often and chill to lift off the fat cap'],
+                                        ['Bitter or harsh flavour', 'Overcooked fish bones, burned bones or vegetables, or too much tomato paste', 'Respect short cooking times and avoid scorching in roasting'],
+                                        ['Weak flavour or thin body', 'Too much water, too few bones, too short a cooking time or too low a temperature', 'Check ratios, use bones with cartilage, extend cooking or reduce'],
+                                        ['Sour or off flavour', 'Poor quality or old bones, or stock held too long at warm temperatures', 'Use fresh bones and cool properly'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Do not season stock with salt unless the recipe requires it, because it will be reduced and used in other dishes, which concentrates the salt.',
+                                        'Do not cover the pot tightly: a partly open pot lets steam escape and prevents the stock from boiling over.',
+                                        'Never add fresh hot water to a cold pot, and top up with hot water only when bones are exposed.',
+                                        'Handle the pot carefully: a large stockpot full of hot liquid is a serious burn and lifting hazard. Use a spigot pot, ladle out portions, ask for help and clear the route.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Never carry a full stockpot of hot liquid through a busy kitchen. Ladle the stock into smaller containers or drain it from a spigot pot into a waiting vessel. Spilled stock is hot enough to cause serious scalds, and a fall with a heavy pot is a major injury risk.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'If a question asks why a stock is cloudy, look for boiling, stirring, hot-water start or poor skimming. If it asks why the stock has little body, look for too little bone with cartilage, too much water or too short a cooking time.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch12-s4',
+                            title: '12.4 Straining, Evaluating, Cooling and Storing Stock (D-13.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Finishing a stock is where food safety matters most. A large pot of hot stock stays in the danger zone for hours if it is not cooled correctly, and stock is a classic source of food-borne illness for this reason. The standard requires cooling by methods that meet jurisdictional regulations and manufacturer specifications.',
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Strain through a fine strainer or a cheesecloth-lined chinois to remove bones, vegetables and sediment. Do not press the solids, because pressing forces cloudy material through.',
+                                        'Remove fat by skimming while hot, or chill the stock and lift off the solid fat cap.',
+                                        'Reduce the strained stock if a concentrate is needed. A stock reduced to a thick, glossy concentrate is called a glace.',
+                                        'Evaluate quality and clarity through sensory assessment: colour appropriate to the type, a clear appearance, a clean aroma, a balanced flavour with no bitterness and a good body. A stock with enough gelatin will set to a jelly when cold.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Cooling Method', 'How It Works', 'Notes'],
+                                    rows: [
+                                        ['Ice wand (cooling paddle)', 'A frozen, food-safe paddle placed in the stock', 'Stir to circulate the stock around the wand; keep the wand clean and sanitized'],
+                                        ['Water bath (ice bath)', 'The pot or container is set in a sink of ice and cold water', 'Keep ice-water level at or above the level of the stock and stir often'],
+                                        ['Venting', 'Dividing into wide, shallow containers and leaving them uncovered or vented so heat can escape', 'Do not cover tightly until the stock is cold'],
+                                        ['Blast chiller', 'A machine that rapidly lowers the temperature with cold air', 'The fastest method for large volumes; follow the manufacturer cycle'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Two-Stage Cooling (typical guideline)', 'Target'],
+                                    rows: [
+                                        ['Stage 1', 'From 60 °C to 20 °C within 2 hours'],
+                                        ['Stage 2', 'From 20 °C to 4 °C within a further 4 hours (6 hours total)'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Divide hot stock into shallow pans no more than about 5 cm deep, or use an ice wand and ice bath, then place the stock in the refrigerator or blast chiller.',
+                                        'Monitor the temperature during cooling and record it. If the stock is not cooling fast enough, take corrective action: divide it further, add ice, move it to a blast chiller, inform the supervisor, or discard it if limits are exceeded.',
+                                        'Once cold, cover, label with the name and date, and store at 4 °C or colder, or freeze.',
+                                        'Use stored stock within the time set by company policy and regulations, and reheat it to at least 74 °C (bring it to a rolling boil if recipes call for it) before use.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Never put a large pot of hot stock directly into a walk-in refrigerator. The centre of the pot stays warm for many hours, which allows bacteria such as Clostridium perfringens and Bacillus cereus to grow, and it also warms the food around it. Divide it, cool it rapidly and record the times and temperatures.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Cooling methods named in the standard are ice wands, venting, blast chiller and water bath. If a question describes a deep pot of stock cooling slowly, the correct fix is to divide it into shallow containers, use an ice wand or ice bath, or use a blast chiller.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 13 — SOUPS (D-14)
+                // ============================================================
+                {
+                    id: 'ch-13',
+                    number: 13,
+                    title: 'Soups',
+                    subtitle: 'Task D-14 · Prepares soups (6 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch13-s1',
+                            title: '13.1 Soup Types and Selecting Ingredients (D-14.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Flavour, consistency, temperature and texture define a good soup. Soups are made from stocks, broths, vegetables, proteins, starches and dairy, and the type of soup determines the ingredients, the thickening method and the serving temperature.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Soup Type', 'Description', 'Examples', 'Serving Temperature'],
+                                    rows: [
+                                        ['Clear soups', 'A flavourful broth or stock, unthickened, with or without garnish', 'Chicken noodle, vegetable soup, beef barley, consommé', 'Hot'],
+                                        ['Consommé', 'A rich stock that has been clarified to crystal clarity', 'Beef consommé, chicken consommé', 'Hot (or served cold as a jellied consommé)'],
+                                        ['Cream soups', 'Thickened with roux, a béchamel or velouté, or starch, then finished with cream or milk', 'Cream of mushroom, cream of broccoli, cream of tomato', 'Hot'],
+                                        ['Puréed soups', 'Thickened by puréeing starchy ingredients such as potatoes, legumes or root vegetables; usually without roux', 'Split pea, carrot ginger, butternut squash', 'Hot'],
+                                        ['Specialty and international soups', 'Soups from specific cuisines, often with unique ingredients and methods', 'Minestrone, borscht, miso soup, pho, ramen, tom yum, bouillabaisse, French onion, chowder, bisque', 'Hot (most)'],
+                                        ['Cold soups', 'Served chilled; made from vegetables, fruit or dairy', 'Gazpacho, vichyssoise, chilled cucumber or fruit soups', 'Cold (4 °C or colder)'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Specialty Soup', 'Description'],
+                                    rows: [
+                                        ['Bisque', 'A smooth, rich soup traditionally made from shellfish shells and finished with cream'],
+                                        ['Chowder', 'A hearty soup, usually with potatoes, in milk or cream or a broth, with seafood or corn'],
+                                        ['Borscht', 'A beet-based soup of Eastern European origin, served hot or cold, with variations by region'],
+                                        ['Minestrone', 'An Italian vegetable soup with beans or pasta'],
+                                        ['Gazpacho', 'A cold, raw tomato and vegetable soup of Spanish origin'],
+                                        ['Vichyssoise', 'A cold, creamy potato and leek soup'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Selection Factor', 'What to Consider'],
+                                    rows: [
+                                        ['Freshness', 'Check vegetables for firmness, colour and texture; check dairy dates and smell'],
+                                        ['Cost', 'Soups are a good way to use trim and leftover ingredients safely'],
+                                        ['Fat content', 'Affects richness, mouthfeel and the need to skim'],
+                                        ['Intended application', 'Appetizer, main course, banquet, take-out or cold service'],
+                                        ['Managing trim', 'Use vegetable and protein trim safely for flavour and to reduce waste'],
+                                        ['Ingredient availability', 'Seasonal and local ingredients support quality and cost'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify and choose ingredients according to recipe specifications, and identify freshness and quality through sensory assessment.',
+                                        'Know the serving temperature of each soup type: hot soups are served hot (at 60 °C or above) and cold soups are served cold (at 4 °C or below).',
+                                        'Consider dietary requirements: cream soups contain milk, many soups contain gluten from roux or pasta, stock bases may contain allergens, and vegan guests need vegetable stock and no dairy. Always check labels on convenience bases.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Classification questions use the thickening method: clear soups and consommés are unthickened, cream soups are thickened with roux or starch and finished with cream, and puréed soups are thickened by the purée of their own starchy ingredients.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch13-s2',
+                            title: '13.2 Processing Soup Ingredients (D-14.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Soups reward mise en place. The cook selects tools and equipment, calculates quantities for the required yield, gathers ingredients so they are accessible in the order they will be used, and measures them.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Scales', 'Measuring ingredients and portions'],
+                                        ['Cutting boards and knives', 'Cutting vegetables and proteins to size'],
+                                        ['Whisks', 'Blending thickeners and cream'],
+                                        ['Food processor', 'Puréeing and chopping'],
+                                        ['Cheesecloth', 'Straining and clarifying'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Soup Yield and Portions', 'Calculation'],
+                                    rows: [
+                                        ['Total volume needed', '40 portions at 250 mL each: 40 × 0.25 = 10 L'],
+                                        ['Portions from a batch', '15 L of soup at 250 mL per portion: 15 ÷ 0.25 = 60 portions'],
+                                        ['Conversion factor', 'A recipe yields 4 L and 10 L are needed: 10 ÷ 4 = 2.5; multiply each ingredient by 2.5'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Cut vegetables to a size and shape that suits the soup: small, uniform cuts for clear soups, and rough cuts for soups that will be puréed.',
+                                        'Plan sequence: aromatics first, then ingredients that need the longest cooking, with delicate ingredients and dairy added last.',
+                                        'Allow for evaporation, thickening and the volume taken by garnishes when calculating the yield.',
+                                        'Keep potentially hazardous ingredients such as dairy, stock and proteins cold until they are used.',
+                                    ],
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch13-s3',
+                            title: '13.3 Cooking Soups, Thickening and Clarifying Consommé (D-14.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'The cook combines ingredients in sequence, controls cooking time and aromatics, clarifies consommés, incorporates thickening agents and adjusts the soup to the desired result. Tools include whisks, food processors, cheesecloth, spoons, spatulas, strainers, steam kettles and soup pots.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Stage', 'What to Do', 'Why'],
+                                    rows: [
+                                        ['Sweat aromatics', 'Cook onions, celery, garlic and other aromatics in a little fat over gentle heat without browning (unless a brown soup is wanted)', 'Builds a flavour base'],
+                                        ['Add stock or broth', 'Add hot or cold stock according to the recipe and bring to a simmer', 'Provides the liquid and body'],
+                                        ['Add ingredients by cooking time', 'Longer-cooking ingredients (root vegetables, legumes) go in first; quick-cooking ones (greens, peas, pasta) go in last', 'Prevents overcooking'],
+                                        ['Skim and monitor', 'Skim foam and fat; watch the time and the aromatics', 'Keeps the soup clean and balanced'],
+                                        ['Thicken or purée', 'Incorporate the thickening agent or blend the soup', 'Gives the desired consistency'],
+                                        ['Season and adjust', 'Season at the end and adjust characteristics', 'Reduction concentrates salt, so seasoning early risks oversalting'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Thickening Agent', 'Description', 'Notes'],
+                                    rows: [
+                                        ['Roux', 'Equal parts fat and flour by weight, cooked together; white, blond or brown depending on cooking time', 'Cook out the raw flour taste; add hot stock gradually to a cooler roux (or the reverse) to avoid lumps; browner roux thickens less'],
+                                        ['Purées', 'Starchy ingredients (potatoes, legumes, rice, vegetables) blended into the soup', 'Natural thickening; no flour needed; gluten-free if no flour is used'],
+                                        ['Modified starches', 'Commercial starches designed to hold up to heat, acid, freezing and holding', 'Used in volume production; stable and clear with no raw taste'],
+                                        ['Eggs (liaison)', 'Egg yolks, often mixed with cream, added to a soup for richness and slight thickening', 'Temper by whisking some hot soup into the liaison before adding it back; do not boil after adding or it will curdle'],
+                                    ],
+                                },
+                                {
+                                    type: 'text',
+                                    text: 'Other thickening agents, including cornstarch slurry, arrowroot, beurre manié and reduction, are covered in the chapter on thickening and binding agents in MWA E.',
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Consommé',
+                                    definition: 'A rich, strong stock or broth that has been clarified to remove all particles and fat, giving a crystal-clear liquid with an intense flavour.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Consommé Step', 'What Happens'],
+                                    rows: [
+                                        ['1. Prepare the clearmeat (raft mixture)', 'Mix lean ground meat, chopped mirepoix, egg whites and an acidic ingredient such as tomato'],
+                                        ['2. Combine with cold stock', 'Mix the clearmeat into well-skimmed, fully cold stock in a tall pot'],
+                                        ['3. Heat slowly and stir', 'Stir gently as the mixture heats so the egg whites do not stick to the bottom'],
+                                        ['4. Raft forms', 'As the proteins coagulate they rise to the surface and form a floating raft that traps impurities'],
+                                        ['5. Simmer without disturbing', 'Make a small opening in the raft and simmer very gently for about an hour; do not stir or boil'],
+                                        ['6. Strain', 'Ladle carefully through a cheesecloth-lined strainer, leaving the raft undisturbed'],
+                                        ['7. Degrease and season', 'Skim or blot off any remaining fat, then season and adjust'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Never boil a consommé after the raft forms: boiling breaks the raft and clouds the soup.',
+                                        'Never add cream or dairy to boiling soup or soup that is high in acid without care: it may curdle. Add cream at the end, off a hard boil, and heat gently.',
+                                        'Soups thicken as they cool or stand, particularly starch-thickened ones: thin with stock or water when reheating.',
+                                        'Monitor cooking time and aromatics so that herbs and spices keep their flavour and delicate ingredients do not overcook.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'When puréeing hot soup in a blender, fill it no more than half full, vent the lid and cover it with a towel, or use an immersion blender. Hot liquid expands and can blow the lid off, causing severe burns. Let the soup cool slightly before blending if you can.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Raft clarification is the classic consommé question: egg whites, ground meat and acid coagulate and trap impurities, so the soup is started cold and heated slowly, then simmered undisturbed. If a consommé is cloudy, look for boiling, stirring after the raft formed or a poorly skimmed stock.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch13-s4',
+                            title: '13.4 Finishing, Garnishing, Cooling and Holding Soups (D-14.04)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Finishing brings the soup to its final standard. The cook adjusts the characteristics, prepares the finishing ingredients, garnishes the soup and, if it is not served immediately, cools it according to jurisdictional regulations.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Soup Characteristic', 'How to Adjust'],
+                                    rows: [
+                                        ['Taste', 'Season with salt, pepper, acid (lemon or vinegar), herbs or spices; taste with a clean spoon each time'],
+                                        ['Thickness', 'Too thin: reduce, add roux, starch, purée or a liaison. Too thick: thin with hot stock, broth, water or milk'],
+                                        ['Texture', 'Purée or strain for smoothness; leave rough for rustic soups'],
+                                        ['Appearance', 'Skim fat, strain, and make sure garnish pieces are uniform and neat'],
+                                        ['Colour', 'Preserve colour by not overcooking; add fresh herbs or green vegetables late; use acid carefully'],
+                                        ['Temperature', 'Serve hot soups hot (60 °C or above) in heated bowls and cold soups well chilled (4 °C or below) in chilled bowls'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Ingredient Method', 'Example'],
+                                    rows: [
+                                        ['Blanching', 'Blanched julienne of vegetables for a clear soup garnish'],
+                                        ['Sautéing', 'Sautéed mushrooms, bacon or onions added to a soup'],
+                                        ['Roasting', 'Roasted garlic, nuts, seeds or croutons'],
+                                        ['Steaming', 'Steamed vegetables or dumplings added just before service'],
+                                        ['Boiling', 'Pasta, rice or noodles cooked separately and added at service to keep the soup clear'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Garnish', 'Used On'],
+                                    rows: [
+                                        ['Chopped fresh herbs (parsley, chives, dill)', 'Almost any soup'],
+                                        ['Croutons and crackers', 'Cream, puréed and French onion soups'],
+                                        ['Cream swirl, crème fraîche or yogurt', 'Puréed and cream soups, borscht'],
+                                        ['Julienne or brunoise of vegetables', 'Clear soups and consommés'],
+                                        ['Grated cheese', 'Minestrone, French onion, potato soups'],
+                                        ['Oil drizzle, toasted seeds or chili', 'Puréed soups and specialty soups'],
+                                    ],
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Garnish, to',
+                                    definition: 'To add a decorative yet edible item to a finished dish; also the visible, cut items in finished soups and salads (glossary term).',
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Prepare finishing ingredients separately by the method the recipe specifies, then add them at service so they keep colour, texture and the clarity of the soup.',
+                                        'Garnish soup according to recipe specifications and the desired result: neat, uniform, appropriate to the soup and edible.',
+                                        'Hold soup hot at 60 °C or above, stirring occasionally and covering to prevent a skin from forming; for cold soups, hold at 4 °C or below.',
+                                        'Cool soup that is not served immediately using the same rapid cooling methods as for stock: shallow pans, ice bath or ice wand and blast chiller. Cool from 60 °C to 20 °C in 2 hours and from 20 °C to 4 °C in a further 4 hours, then cover, label and date.',
+                                        'Reheat cooled soup to at least 74 °C quickly, using the stovetop or a steam kettle, and do not use a bain-marie or steam table to reheat.',
+                                        'Season cold soups more assertively than hot soups, because cold mutes flavour, and taste again after chilling.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Soups containing dairy, eggs, cooked rice, pasta or beans spoil quickly in the danger zone. Never leave a large pot of soup cooling on the stove overnight, and never reheat soup in a steam table. Cool it rapidly, record the times and temperatures and reheat it to 74 °C.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Soup finishing questions often ask about temperature and holding. Hot soup is held at 60 °C or above, cold soup at 4 °C or below, and any soup that must be kept is cooled rapidly through the danger zone. If the answer choices include a method that is slower or holds the soup lukewarm, it is the wrong choice.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        // ============================================================
+        // STEP 2C — PART 5 FRAGMENT (MWA E: Sauces)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 4.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks E-15 and E-16.
+        // ============================================================
+        {
+            id: 'part-5',
+            number: 5,
+            title: 'Sauces (MWA E)',
+            description: 'Thickening and binding agents, the five mother sauces and their derivatives, other sauces from salsas to caramel, butter sauces and compound butters, emulsions, tempering, reduction, finishing and holding. MWA E carries 13 exam questions across tasks E-15 (thickening and binding agents) and E-16 (sauces).',
+            weight: '13 questions (8.7% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 14 — THICKENING AND BINDING AGENTS (E-15)
+                // ============================================================
+                {
+                    id: 'ch-14',
+                    number: 14,
+                    title: 'Thickening and Binding Agents',
+                    subtitle: 'Task E-15 · Prepares thickening and binding agents (4 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 60,
+                    sections: [
+                        {
+                            id: 'ch14-s1',
+                            title: '14.1 Thickening and Binding Agents: Types and Selection (E-15.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Thickening agents give body to soups, sauces and stews. Binding agents hold ingredients together in items such as croquettes, fillings, meatloaf and forcemeats. Many ingredients do both. The cook must know which agent suits the dish, how it behaves and which dietary requirements it affects.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Agent', 'What It Is', 'Typical Uses'],
+                                    rows: [
+                                        ['Roux', 'Equal weights of fat and flour cooked together', 'Béchamel, velouté, espagnole, cream soups, gravies, stews'],
+                                        ['Starches', 'Cornstarch, arrowroot, potato starch, tapioca and modified starches, mixed into cold liquid (slurry) and stirred into a hot liquid', 'Jus lié, Asian sauces, fruit sauces, pie fillings, clear glossy sauces'],
+                                        ['Liaison', 'Egg yolks, usually mixed with cream, used to thicken and enrich', 'Finishing velouté and cream soups; allemande sauce'],
+                                        ['Beurre manié', 'Equal parts soft butter and flour kneaded into a paste', 'Last-minute adjustment of a sauce or stew'],
+                                        ['Vegetable purées', 'Cooked vegetables, legumes or starchy ingredients blended into the liquid', 'Rustic sauces, soups, coulis; gluten-free thickening'],
+                                        ['Reduction', 'Simmering a liquid so water evaporates and the liquid concentrates and thickens', 'Pan sauces, demi-glace, glace, wine and stock reductions'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Factor in Selecting', 'What to Consider'],
+                                    rows: [
+                                        ['Type of sauce or dish', 'A cream soup suits roux; a glossy Asian sauce suits cornstarch; a pan sauce suits reduction'],
+                                        ['Clarity and appearance', 'Roux gives an opaque sauce; starches such as cornstarch and arrowroot give a clear, glossy sauce'],
+                                        ['Flavour', 'Roux adds a cooked, nutty flavour, while starches are neutral; reduction concentrates flavour'],
+                                        ['Holding and storage', 'Cornstarch sauces can weep when frozen; modified starches and roux hold better'],
+                                        ['Acid content', 'Acid can weaken some thickeners; check how the agent behaves with lemon, wine or tomato'],
+                                        ['Time and skill', 'Reduction takes time; beurre manié is quick; liaison needs care'],
+                                        ['Cost and availability', 'Compare the cost per batch of the agents available'],
+                                        ['Dietary requirements', 'Gluten, dairy, egg and animal products (see below)'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dietary Requirement', 'Agents to Avoid', 'Agents That Suit'],
+                                    rows: [
+                                        ['Gluten-free (celiac disease)', 'Wheat flour roux, beurre manié, some modified starches', 'Cornstarch, arrowroot, potato starch, rice flour, vegetable purées, reduction'],
+                                        ['Dairy-free', 'Butter-based roux, beurre manié and cream liaison', 'Oil-based roux, starch slurry, vegetable purée, reduction'],
+                                        ['Egg-free', 'Liaison', 'Starch, roux, reduction'],
+                                        ['Vegan', 'Butter, cream, egg yolk, gelatin', 'Oil roux, starch slurry, vegetable and legume purées, reduction'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Determine which thickening and binding agents to make according to the recipe and the desired result.',
+                                        'Check the freshness and quality of ingredients through sensory assessment: flour and starch with no off smell, lumps or insects; butter that is fresh; eggs that are fresh, clean and properly stored; vegetables with good firmness, colour and texture.',
+                                        'Identify and choose ingredients for the agents according to recipe specifications.',
+                                        'Know the dietary requirements specific to these ingredients, especially wheat (gluten), milk and eggs, which are priority allergens.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'The standard names six agents: roux, starches, liaison, beurre manié, vegetable purées and reduction. A question about a gluten-free guest usually has an answer using cornstarch, arrowroot, a purée or reduction instead of a wheat flour roux.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch14-s2',
+                            title: '14.2 Roux (E-15.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Roux is the most important thickener in the classical kitchen. It is made by cooking equal weights of fat (usually butter, but also oil, rendered fat or clarified butter) and flour. Cooking the flour removes its raw taste and coats starch granules with fat so that they disperse without lumps.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Type of Roux', 'Cooking Time (approx.)', 'Colour and Flavour', 'Thickening Power', 'Typical Use'],
+                                    rows: [
+                                        ['White roux', '2 to 3 minutes', 'Pale, little flavour', 'Highest', 'Béchamel and cream soups'],
+                                        ['Blond roux', '5 to 6 minutes', 'Light golden, slightly nutty', 'High', 'Velouté and some cream soups'],
+                                        ['Brown roux', '10 minutes or more', 'Deep brown, strong nutty flavour', 'Lowest', 'Espagnole and brown sauces, gumbo'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sauce Consistency', 'Flour per Litre of Liquid (approx.)', 'Roux per Litre (flour + equal weight of fat)'],
+                                    rows: [
+                                        ['Thin (soups, light sauces)', 'About 40 g', 'About 80 g'],
+                                        ['Medium (most sauces)', 'About 60 g', 'About 120 g'],
+                                        ['Thick (heavy sauces, binder for croquettes)', 'About 100 g', 'About 200 g'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Use cold or cooled roux with hot liquid, or hot roux with cool liquid, whisking constantly. Adding hot liquid to hot roux can cause lumps and spattering.',
+                                        'Add liquid gradually and whisk or stir until smooth before bringing to a simmer.',
+                                        'Simmer a roux-thickened sauce gently for at least 15 to 20 minutes so the raw flour taste cooks out, stirring occasionally to prevent scorching.',
+                                        'Brown roux thickens less because browning breaks down the starch, so use more roux for the same consistency.',
+                                        'Strain the sauce through a fine strainer if lumps form.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Fix or Prevention'],
+                                    rows: [
+                                        ['Lumps', 'Hot liquid added to hot roux, or insufficient whisking', 'Use opposite temperatures, whisk constantly and strain'],
+                                        ['Raw flour taste', 'Not cooked or simmered long enough', 'Cook the roux properly and simmer the sauce'],
+                                        ['Burnt or bitter taste', 'Roux scorched', 'Stir constantly over moderate heat; start again if burned'],
+                                        ['Too thin', 'Too little roux, brown roux used for the same weight, or sauce thinned during holding', 'Add a little more roux (beurre manié) or reduce'],
+                                        ['Greasy surface', 'Too much fat, or sauce held without skimming', 'Skim fat and check the ratio'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hot roux is much hotter than boiling water and sticks to skin. Add liquid carefully, keep your face back from steam and spatter, and never carry a pot of roux and hot liquid through the kitchen.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Roux colour and thickening power are inversely related: the lighter the roux, the more thickening power it has. White roux is for béchamel, blond for velouté and brown for espagnole.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch14-s3',
+                            title: '14.3 Starches, Liaison, Beurre Manié, Purées and Reduction (E-15.02)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Starch', 'Properties', 'Cautions'],
+                                    rows: [
+                                        ['Cornstarch', 'Common, inexpensive; about twice the thickening power of flour; makes a glossy, fairly clear sauce', 'Needs to be brought to a simmer to thicken; can break down with long cooking, vigorous stirring or acid; can weep when frozen and thawed'],
+                                        ['Arrowroot', 'Very clear, neutral taste and glossy; thickens at a lower temperature', 'Do not boil for long; becomes slimy with dairy; does not reheat well'],
+                                        ['Potato starch', 'Clear and glossy; thickens at a lower temperature', 'Do not boil for long or it loses power'],
+                                        ['Tapioca', 'Gives body and a glossy finish; used in puddings and fillings', 'Can become gummy if overused'],
+                                        ['Modified starches', 'Commercial starches that stand up to heat, acid, freezing and holding', 'Used in volume production and institutional kitchens; read labels for allergens'],
+                                    ],
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Slurry',
+                                    definition: 'A mixture of starch and cold liquid (water, stock or wine) stirred until smooth, then whisked into a hot liquid. The cold liquid separates the starch granules so they do not clump when they meet the heat.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Agent', 'Method', 'Key Points'],
+                                    rows: [
+                                        ['Starch slurry', 'Mix starch with an equal or double volume of cold liquid; whisk into simmering liquid; bring back to a simmer and cook until clear', 'Add gradually until the right consistency; cook out the raw starch taste; do not boil hard'],
+                                        ['Liaison', 'Whisk egg yolks with cream; temper by whisking in a ladle or two of hot liquid, then stir the mixture back into the sauce off the heat', 'Do not let the sauce boil after the liaison is added or the yolks will curdle (scramble); heat gently to about 80 °C'],
+                                        ['Beurre manié', 'Knead equal weights of soft butter and flour into a smooth paste; whisk small pieces into a simmering sauce until dissolved', 'Simmer a few minutes to cook out the flour; best for quick corrections, not for sauces that will be held a long time'],
+                                        ['Vegetable purée', 'Simmer starchy vegetables, onions, tomatoes or legumes in the liquid, then blend or strain', 'Adds body and flavour and is naturally gluten-free; watch for fibres and skins'],
+                                        ['Reduction', 'Simmer the liquid, uncovered, until it has reached the right concentration and consistency', 'Reduces volume, so plan the starting quantity; salt becomes concentrated, so season at the end'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Tempering is the safety step that protects the liaison from curdling and keeps the sauce safe: never pour cold eggs directly into a boiling sauce. Add hot liquid to the yolks gradually first. Use fresh, properly stored eggs, and follow company policy on pasteurized eggs for sauces that are not cooked to a high temperature.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Slurry, liaison, beurre manié and roux each have a correct order of operations. Slurry: mix cold, add to hot. Liaison: temper, then add off the boil. Beurre manié: whisk in pieces at a simmer. Roux: opposite temperatures, then simmer to cook out the flour.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch14-s4',
+                            title: '14.4 Calculating Ratios and Incorporating Agents (E-15.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'The cook selects tools and equipment, calculates the ratio of thickening and binding ingredients needed for the desired result, and incorporates them according to recipe specifications. Tools include bowls, whisks, ladles, pots, strainers and blenders.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example', 'Calculation'],
+                                    rows: [
+                                        ['Roux for 5 L of medium béchamel', 'Flour: 5 L × 60 g = 300 g; butter: 300 g (equal weight); roux total = 600 g'],
+                                        ['Roux for 8 L of medium velouté', 'Flour: 8 × 60 = 480 g; fat: 480 g; roux total = 960 g'],
+                                        ['Cornstarch instead of flour', 'Cornstarch has about twice the thickening power, so the flour weight is halved: 300 g flour ÷ 2 = about 150 g cornstarch for the same 5 L'],
+                                        ['Slurry', '150 g cornstarch mixed with 300 mL cold liquid (1:2)'],
+                                        ['Reduction', 'Reducing 1 L of stock to 250 mL leaves one quarter of the volume (a 75% reduction)'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Measure by weight when possible, because flour and starch pack differently by volume.',
+                                        'Add thickeners gradually: sauces thicken further as they simmer, cool and stand, so stop slightly thinner than the target.',
+                                        'Cook starch and flour long enough to remove the raw taste, and do not overcook starches that break down.',
+                                        'Use a strainer or blender to remove lumps and bring purée thickeners to a smooth texture.',
+                                        'Store roux covered and refrigerated or frozen, labelled and dated; cool and store cooked thickened sauces according to cooling rules.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Thickening Problem', 'Likely Cause', 'Correction'],
+                                    rows: [
+                                        ['Sauce too thin', 'Not enough thickener or reduction; brown roux; starch broken down by acid or boiling', 'Reduce, or whisk in a slurry or beurre manié'],
+                                        ['Sauce too thick', 'Too much thickener, over-reduction, or the sauce thickened while standing', 'Thin with stock, milk or water and adjust seasoning'],
+                                        ['Lumpy sauce', 'Poor mixing, wrong temperature pairing', 'Strain or blend'],
+                                        ['Starchy taste', 'Under-cooked flour or starch', 'Simmer longer'],
+                                        ['Curdled liaison', 'Sauce boiled after the yolks were added, or tempering skipped', 'Strain or blend; make a new liaison if needed'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Quantity questions in this task usually give the volume of liquid and a consistency, and ask for the weight of roux or flour. Use the ratio per litre and multiply, and remember that cornstarch needs only about half the weight of flour.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 15 — MOTHER SAUCES AND DERIVATIVES (E-16.01 to E-16.03)
+                // ============================================================
+                {
+                    id: 'ch-15',
+                    number: 15,
+                    title: 'Mother Sauces and Derivatives',
+                    subtitle: 'Task E-16 · Prepares sauces: selecting, processing and cooking (6 of 9 exam questions for task E-16)',
+                    isFree: false,
+                    estimatedMinutes: 90,
+                    sections: [
+                        {
+                            id: 'ch15-s1',
+                            title: '15.1 The Five Mother Sauces (E-16.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Sauces add moisture, modify flavour and texture, can be the main element of a dish and improve its appearance. The classical system groups sauces into five mother (leading) sauces. Each mother sauce is a base from which derivative (small) sauces are made by adding ingredients.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Mother Sauce', 'Liquid', 'Thickener', 'Colour', 'Key Derivatives'],
+                                    rows: [
+                                        ['Béchamel', 'Milk', 'White roux', 'White', 'Mornay, cream sauce, soubise'],
+                                        ['Velouté', 'White stock (chicken, veal or fish)', 'Blond roux', 'Ivory', 'Supreme, allemande, normande'],
+                                        ['Espagnole', 'Brown stock (with tomato and mirepoix)', 'Brown roux', 'Dark brown', 'Demi-glace, bordelaise, chasseur, Madeira'],
+                                        ['Tomato', 'Tomatoes, with stock and aromatics', 'Reduction or purée (no roux in modern versions)', 'Red', 'Portugaise, Creole, Spanish, bolognese'],
+                                        ['Hollandaise', 'Egg yolks and clarified butter (emulsion)', 'Egg yolk emulsion', 'Pale yellow', 'Béarnaise, maltaise, mousseline'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Derivative Sauce (named in the standard)', 'Mother Sauce', 'How It Is Made'],
+                                    rows: [
+                                        ['Mornay', 'Béchamel', 'Add grated cheese (such as Gruyère and Parmesan), often with a little cream or egg yolk, off the heat'],
+                                        ['Supreme', 'Velouté', 'Chicken velouté finished with cream (and sometimes mushroom essence)'],
+                                        ['Demi-glace', 'Espagnole', 'Combine equal parts espagnole and brown stock and reduce by half, skimming and straining'],
+                                        ['Portugaise', 'Tomato', 'Tomato sauce with tomato concassé, sweated onions, garlic and herbs'],
+                                        ['Béarnaise', 'Hollandaise', 'Hollandaise made with a reduction of vinegar, wine, shallots and tarragon, finished with tarragon and chervil'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify the sauce according to the recipe specifications, and identify freshness and quality of the ingredients through sensory assessment (hydration, colour and texture).',
+                                        'Identify and choose ingredients according to the recipe, and know the ratios used, such as roux to liquid and yolks to butter.',
+                                        'Know the dietary requirements: béchamel and velouté contain milk and wheat, hollandaise contains egg and butter, espagnole contains wheat and may contain animal stock, and tomato sauce is often the easiest to make gluten-free and vegan.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Memorize the five mother sauces with their liquid and thickener: béchamel is milk and white roux, velouté is white stock and blond roux, espagnole is brown stock and brown roux, tomato is thickened by reduction, and hollandaise is an emulsion of yolks and butter. Hollandaise and tomato are the two that do not use roux.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch15-s2',
+                            title: '15.2 Béchamel and Velouté Families (E-16.01, E-16.03)',
+                            content: [
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Béchamel',
+                                    definition: 'A white sauce prepared with milk and white roux (glossary term).',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Step', 'Béchamel Method', 'Why'],
+                                    rows: [
+                                        ['1', 'Make a white roux with butter and flour, cooking 2 to 3 minutes without colour', 'Cooks out the raw flour taste while keeping the sauce white'],
+                                        ['2', 'Heat the milk (often infused with an onion piqué: an onion studded with a clove and a bay leaf)', 'Infusing adds flavour; warm milk blends smoothly'],
+                                        ['3', 'Whisk the milk into the cooled roux gradually', 'Prevents lumps'],
+                                        ['4', 'Simmer gently for 15 to 20 minutes, stirring often, and strain', 'Cooks out the flour taste and gives a smooth texture'],
+                                        ['5', 'Season with salt, white pepper and nutmeg', 'Classic seasoning, and pale pepper keeps the sauce white'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Béchamel Derivative', 'Additions', 'Uses'],
+                                    rows: [
+                                        ['Mornay', 'Grated cheese, sometimes a little cream or yolk', 'Gratins, macaroni and cheese, vegetables, croque monsieur'],
+                                        ['Cream sauce', 'Cream added to béchamel', 'Vegetables, poultry and eggs'],
+                                        ['Soubise', 'Onion purée', 'Veal, lamb, eggs'],
+                                    ],
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Velouté',
+                                    definition: 'A sauce made by thickening a white stock (chicken, veal or fish) with a blond roux. It is smooth and velvety, and the name means velvet.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Velouté Derivative', 'Base', 'Additions', 'Uses'],
+                                    rows: [
+                                        ['Supreme', 'Chicken velouté', 'Cream (and sometimes mushroom essence)', 'Poultry, vegetables, pot pies'],
+                                        ['Allemande', 'Veal or chicken velouté', 'Egg yolk and cream liaison, lemon juice', 'Poultry, vegetables, poached dishes'],
+                                        ['Normande', 'Fish velouté', 'Cream, egg yolk liaison, mushroom and fish essence', 'Fish and seafood dishes'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'The stock determines the velouté: use chicken stock for chicken velouté, veal stock for veal velouté and fumet for fish velouté.',
+                                        'Skim the surface while simmering, and strain through a fine strainer or cheesecloth for a smooth finish.',
+                                        'Cream and liaison are finishing ingredients added at the end; do not boil after adding them.',
+                                        'Cover the surface of a held sauce with a thin layer of melted butter or a sheet of plastic or parchment pressed onto it to stop a skin forming.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'If a question asks which sauce is made from white stock and blond roux, the answer is velouté. If it asks about milk and white roux, it is béchamel. The derivative tells you the base: mornay comes from béchamel, supreme from velouté.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch15-s3',
+                            title: '15.3 Espagnole, Demi-glace and Tomato Sauce (E-16.01, E-16.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Brown sauces and tomato sauces are built on browned ingredients and long, slow simmering. Deglazing, reduction and skimming are the key techniques.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sauce', 'Method', 'Key Points'],
+                                    rows: [
+                                        ['Espagnole', 'Make a brown roux; add browned mirepoix and tomato purée (browned in the pan); add brown stock and a sachet; simmer for several hours, skimming; strain', 'The long, slow simmer and skimming give a clear, glossy sauce; brown roux needs a higher ratio of roux because it thickens less'],
+                                        ['Demi-glace', 'Combine equal parts espagnole and brown stock; simmer and reduce by half; skim and strain', 'The classic example of a reduction: 2 L espagnole plus 2 L brown stock reduces by half to give about 2 L of demi-glace'],
+                                        ['Tomato sauce', 'Sweat onions and carrot, add tomato purée or crushed tomatoes, stock and a sachet; simmer, then purée or strain', 'Thickened by reduction and the purée of its own ingredients; acid from tomato needs non-reactive pots'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Derivative', 'Base', 'Additions'],
+                                    rows: [
+                                        ['Bordelaise', 'Demi-glace', 'Red wine reduction with shallots, finished with butter and sometimes bone marrow'],
+                                        ['Chasseur (hunter)', 'Demi-glace', 'Sautéed mushrooms, shallots, white wine and tomato'],
+                                        ['Madeira', 'Demi-glace', 'Madeira wine reduction'],
+                                        ['Portugaise', 'Tomato sauce', 'Tomato concassé, onions, garlic and herbs'],
+                                        ['Creole', 'Tomato sauce', 'Peppers, onions, celery, garlic and spices'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Deglaze the cooking vessel: add liquid to the hot pan after browning to dissolve the fond (browned bits) and capture the flavour.',
+                                        'Brown the tomato purée before adding liquid (pincé) to cook out acidity and deepen flavour.',
+                                        'Simmer gently and skim regularly; boiling makes brown sauces cloudy and greasy.',
+                                        'Strain through a fine chinois and finish by adjusting seasoning, consistency and gloss.',
+                                        'Modern tomato sauces are thickened by reduction and purée rather than roux, which makes them naturally gluten-free and easy to make vegan by using vegetable stock.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hot sauces are scalding and heavy, and large batches spatter when simmering. Reduce the heat, use a lid or splash guard when a sauce spits, and never taste a sauce straight from a boiling pot. Wear heat-resistant gloves and keep sleeves close.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Demi-glace is not a mother sauce: it is a derivative of espagnole made from equal parts espagnole and brown stock reduced by half. Questions often test this relationship.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch15-s4',
+                            title: '15.4 Hollandaise, Béarnaise and Emulsified Sauces (E-16.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Hollandaise is a warm emulsion of egg yolks and clarified butter seasoned with lemon juice, salt and cayenne. It relies on lecithin in the egg yolk to hold fat droplets in suspension. It is the most technical of the mother sauces, and mistakes in temperature are the main cause of failure.',
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Emulsion',
+                                    definition: 'A mixture of two liquids that do not normally combine, such as fat and water, in which one is dispersed in tiny droplets in the other. An emulsifier such as egg yolk lecithin holds the mixture together.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Step', 'Hollandaise Method', 'Why'],
+                                    rows: [
+                                        ['1', 'Clarify butter and keep it warm', 'Removes water and milk solids; warm butter blends easily'],
+                                        ['2', 'Whisk egg yolks with a little water or reduction in a stainless steel bowl over gently simmering water (a bain-marie or double boiler)', 'Gentle heat builds volume without scrambling'],
+                                        ['3', 'Whisk until the yolks are thick and ribbon-like (a sabayon) and warm', 'Creates the stable base for the emulsion'],
+                                        ['4', 'Remove from the heat and whisk in the warm butter slowly, a few drops at first', 'Adding fat too quickly breaks the emulsion'],
+                                        ['5', 'Season with lemon juice, salt and cayenne; adjust consistency with a little warm water', 'Balances richness and thins to a flowing consistency'],
+                                        ['6', 'Hold warm in a covered container', 'Prevents drying and skin formation'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Béarnaise', 'Details'],
+                                    rows: [
+                                        ['Base', 'Hollandaise method'],
+                                        ['Reduction', 'Reduce vinegar, white wine, shallots, tarragon and peppercorns; strain and use in place of the water or lemon juice'],
+                                        ['Finish', 'Chopped tarragon and chervil added at the end'],
+                                        ['Uses', 'Grilled steak, roast beef, fish'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Fix'],
+                                    rows: [
+                                        ['Sauce splits or breaks (oily surface)', 'Butter added too fast, sauce too hot or too cold', 'Whisk a spoon of warm water or lemon juice into a clean bowl, then slowly whisk in the broken sauce; or start a fresh yolk and whisk the broken sauce in gradually'],
+                                        ['Yolks scramble', 'Heat too high or bowl too hot', 'Start again; keep the bowl above the water, not touching it, and remove from heat as needed'],
+                                        ['Sauce too thick', 'Too much yolk or too much evaporation', 'Whisk in a little warm water'],
+                                        ['Sauce too thin', 'Not enough cooking of yolks, or too much water or lemon', 'Whisk in an extra warm yolk (cooked separately) or more butter slowly'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hollandaise and béarnaise are high-risk sauces: they use yolks that are only lightly heated, and they are held warm for service. Use fresh, properly stored eggs or pasteurized yolks where company policy or regulations require, make small batches, never hold them longer than the limits set by your policy and regulations, and discard what is left. Never leave them at room temperature.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Emulsion questions come down to temperature and speed. Heat that is too high scrambles the yolks, heat that is too low or butter added too fast breaks the emulsion. A broken hollandaise is rescued by whisking it slowly into a little warm water, lemon juice or a fresh yolk.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch15-s5',
+                            title: '15.5 Tools, Cooking Methods and Sauce Qualities (E-16.02, E-16.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Sauces are acidic, high in salt or rich in egg, so the wrong equipment can ruin them. The cook selects non-reactive tools and equipment suited to the ingredients, measures and prepares the ingredients, combines them in the specified sequence and adjusts temperature, qualities and thickness.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Non-reactive Equipment', 'Notes'],
+                                    rows: [
+                                        ['Stainless steel saucepans and bowls', 'Do not react with acid, egg or wine; standard choice'],
+                                        ['Double boilers', 'Gentle indirect heat for hollandaise, custards and delicate sauces'],
+                                        ['Strainers', 'Fine mesh for smooth sauces; use stainless steel'],
+                                        ['BPA-free plastic and silicone', 'Spatulas, containers and bowls for cold sauces and storage'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Reactive metals (uncoated aluminum, unlined copper and cast iron) react with acids such as tomato, wine, vinegar and lemon, giving the sauce a metallic taste and grey or dark discolouration. Egg yolks whisked in an aluminum bowl turn grey. Use stainless steel, enamelled or other non-reactive equipment.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Cooking Method', 'Description', 'Example'],
+                                    rows: [
+                                        ['Tempering', 'Gradually raising the temperature of eggs or cream by adding small amounts of hot liquid so they do not curdle', 'Liaison for allemande, pastry cream'],
+                                        ['Reduction', 'Simmering to evaporate water, concentrate flavour and thicken', 'Demi-glace, wine reduction, pan sauce'],
+                                        ['Blending', 'Combining or smoothing by whisking, blender or immersion blender', 'Tomato sauce, coulis, vinaigrette'],
+                                        ['Infusion', 'Steeping aromatics in a liquid to transfer flavour', 'Milk with onion piqué for béchamel'],
+                                        ['Coagulation', 'Proteins setting as they are heated; controlled in sauces and a cause of curdling if overdone', 'Hollandaise thickening; curdled liaison'],
+                                        ['Caramelization', 'Browning of sugars with heat to give flavour and colour', 'Caramel, browned onions, brown stock ingredients'],
+                                        ['Deglazing', 'Adding liquid to a hot pan to dissolve the fond', 'Pan sauces and gravies'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sauce Quality', 'How to Judge or Adjust'],
+                                    rows: [
+                                        ['Consistency', 'Nappé: the sauce coats the back of a spoon and a finger drawn across leaves a clean line. Adjust by reducing, thickening or thinning'],
+                                        ['Colour', 'Appropriate to the sauce; preserve by not scorching, and use non-reactive pots'],
+                                        ['Flavour', 'Taste with a clean spoon; balance salt, acid, sweetness and seasoning'],
+                                        ['Texture', 'Smooth, with no lumps or graininess; strain or blend if needed'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Combine ingredients in the specified sequence and adjust the temperature to the desired result.',
+                                        'Apply a thickening technique according to the desired result: reduction, thickening agents (roux, liaison, slurry) or emulsification.',
+                                        'Adjust sauce qualities at the end, taste again after reducing, and season carefully because reduction concentrates salt.',
+                                        'Prepare hot sauces and cold sauces according to their own procedures: hot sauces need temperature control and holding; cold sauces need to stay cold.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Nappé is the standard test for sauce consistency: the sauce clings to the back of a spoon, and a finger drawn through it leaves a clean line. If a sauce runs off the spoon it is too thin, and if it clumps it is too thick.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 16 — OTHER SAUCES, BUTTER SAUCES AND FINISHING (E-16)
+                // ============================================================
+                {
+                    id: 'ch-16',
+                    number: 16,
+                    title: 'Other Sauces, Butter Sauces, Finishing and Holding',
+                    subtitle: 'Task E-16 · Prepares sauces: other sauces, finishing and holding (3 of 9 exam questions for task E-16)',
+                    isFree: false,
+                    estimatedMinutes: 65,
+                    sections: [
+                        {
+                            id: 'ch16-s1',
+                            title: '16.1 Other Sauces (E-16.01, E-16.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Beyond the mother sauces, a cook prepares many other sauces for every cuisine and course. The standard names chutneys, salsas, pan gravies, jus lié, reductions, curries, soy-based sauces, coulis, chocolate sauces and caramel.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sauce', 'Description', 'Typical Use', 'Key Technique'],
+                                    rows: [
+                                        ['Chutney', 'Cooked fruit or vegetables with sugar, vinegar and spices; sweet, sour and spicy', 'Curries, grilled meats, cheese', 'Slow simmering until thick; the acid and sugar preserve it'],
+                                        ['Salsa', 'Chopped raw or cooked tomatoes, fruit or vegetables, chilies, onion, acid and herbs', 'Tacos, grilled fish and meat, chips', 'Uniform dice, acid and seasoning; keep cold'],
+                                        ['Pan gravy', 'Sauce made from pan drippings and flour or roux with stock', 'Roast poultry and meats', 'Deglaze the pan, make a roux from the fat, add stock and simmer'],
+                                        ['Jus lié', 'A jus (natural cooking juices or brown stock) lightly thickened with cornstarch or arrowroot', 'Roast meats, a light alternative to demi-glace', 'Slurry added to a simmering jus; skim and strain'],
+                                        ['Reduction (pan sauce)', 'Wine, stock or juice reduced, often with shallots, and finished with butter or cream', 'Sautéed steaks, chicken and fish', 'Sauté, deglaze, reduce, then finish'],
+                                        ['Curry', 'A sauce based on spices and aromatics, with onions, tomato, yogurt or coconut milk', 'Meats, vegetables and legumes', 'Toast spices, build the aromatics base, simmer'],
+                                        ['Soy-based sauces', 'Sauces built on soy sauce with sugar, ginger, garlic, mirin or other ingredients, such as teriyaki', 'Stir-fries, grilled foods and noodles', 'Balance salt, sweet and acid; thicken with a starch slurry if needed'],
+                                        ['Coulis', 'A smooth purée of fruit or vegetables, strained and sweetened or seasoned', 'Desserts, plates and terrines; roasted red pepper coulis for savoury dishes', 'Purée and strain, adjust sweetness and acid'],
+                                        ['Chocolate sauce', 'Chocolate melted with cream, milk or butter and sugar', 'Desserts and pastries', 'Melt gently; avoid overheating'],
+                                        ['Caramel', 'Sugar cooked until golden then finished with cream or butter', 'Desserts and glazes', 'Heat sugar without stirring too much; add warm cream carefully'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Check dietary requirements: soy-based sauces contain soy and wheat, curries may contain dairy, nuts or fish, chocolate and caramel contain dairy, and sauces made with wine contain alcohol.',
+                                        'Use sensory assessment of ingredients (hydration, colour and texture) when selecting fresh produce for chutneys, salsas and coulis.',
+                                        'Season to balance salt, acid, sweetness and heat, and taste at the temperature the sauce will be served.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hot sugar for caramel reaches temperatures well above boiling water and sticks to skin, causing severe burns. Use a deep pot, keep a bowl of cold water close, add cream slowly and stand back, because the mixture bubbles up violently.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Pan gravy versus jus lié: pan gravy is thickened with flour or roux made from the pan fat, while jus lié is a natural jus lightly thickened with a starch such as cornstarch or arrowroot.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch16-s2',
+                            title: '16.2 Butter Sauces, Compound Butters and Cold Sauces (E-16.01, E-16.03)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Butter Sauce', 'Description', 'Key Points'],
+                                    rows: [
+                                        ['Beurre blanc', 'A reduction of white wine, vinegar and shallots, into which cold cubed butter is whisked a few pieces at a time to make an emulsion', 'Keep over low heat; hold warm, not hot, or it breaks; strain for a smooth finish'],
+                                        ['Beurre noisette', 'Butter cooked until it turns nutty brown and smells like hazelnuts', 'Often finished with lemon juice and capers; do not burn'],
+                                        ['Beurre noir', 'Butter cooked past noisette to dark brown', 'Used with skate and other fish; finished with vinegar'],
+                                        ['Meunière', 'Beurre noisette with lemon juice and parsley', 'Served with pan-fried fish'],
+                                        ['Hollandaise', 'Emulsion of yolks and clarified butter', 'Covered in chapter 15'],
+                                    ],
+                                },
+                                {
+                                    type: 'keyTerm',
+                                    term: 'Compound butter',
+                                    definition: 'Softened butter blended with flavourings such as herbs, garlic, shallot, lemon, spices or anchovy, rolled into a log in parchment or plastic, chilled and sliced to melt over hot foods.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Compound Butter', 'Flavourings', 'Uses'],
+                                    rows: [
+                                        ['Maître d’hôtel', 'Parsley, lemon juice, salt and pepper', 'Grilled steak, fish and vegetables'],
+                                        ['Garlic and herb', 'Garlic, parsley and other herbs', 'Bread, steak and shellfish'],
+                                        ['Anchovy', 'Anchovy fillets, lemon', 'Grilled fish and meats'],
+                                        ['Chili or citrus', 'Chili, lime, orange or lemon zest', 'Seafood and vegetables'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Use compound butters fresh or freeze them, labelled and dated, and keep them refrigerated.',
+                                        'Butter sauces are emulsions held together by milk solids and are sensitive to heat: too hot and the fat separates; too cold and the butter solidifies.',
+                                        'Butter is a milk product and a priority allergen, so label any compound butter and tell guests with allergies.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Cold Sauce', 'Description', 'Notes'],
+                                    rows: [
+                                        ['Mayonnaise', 'A stable cold emulsion of egg yolk, oil and acid (vinegar or lemon)', 'Add oil slowly; use pasteurized yolks and keep at 4 °C or below because raw egg carries a food safety risk'],
+                                        ['Aioli', 'Garlic emulsion, traditionally with oil and egg yolk', 'Same cold chain and egg safety as mayonnaise'],
+                                        ['Vinaigrette', 'A temporary emulsion of oil and vinegar, usually 3 parts oil to 1 part acid', 'Shake or whisk before use; the emulsion separates when it stands'],
+                                        ['Tartar sauce, salsa verde, chimichurri', 'Mayonnaise or oil-based sauces with herbs, capers and acid', 'Keep refrigerated; label and date'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Homemade mayonnaise, aioli and similar sauces use raw egg yolks, which can carry Salmonella. Use pasteurized eggs where required by policy or regulations, keep the sauce refrigerated at 4 °C or below, and discard it according to your time limits.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Beurre blanc is a reduction finished with cold butter, so it is mounted at low heat, while hollandaise is yolks and clarified butter. Both are emulsions, and both break with the wrong temperature.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch16-s3',
+                            title: '16.3 Finishing Sauces (E-16.04)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Finishing is the last step that brings a sauce to its final standard. The cook uses finishing techniques according to the recipe, evaluates the final qualities and adjusts them to achieve the desired result.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Description', 'Effect'],
+                                    rows: [
+                                        ['Monté au beurre', 'Swirling or whisking small pieces of cold butter into a finished sauce off the heat', 'Adds gloss, richness and a smooth body'],
+                                        ['Liaison', 'Adding an egg yolk and cream mixture to enrich and lightly thicken, then warming gently without boiling', 'Adds richness and velvety texture'],
+                                        ['Garnishing', 'Adding herbs, concassé, cooked mushrooms, capers or other items', 'Adds colour, texture and flavour'],
+                                        ['Flambé', 'Adding alcohol to a hot pan and igniting it', 'Adds flavour and reduces some of the alcohol'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Final Quality', 'What to Check'],
+                                    rows: [
+                                        ['Taste', 'Balance of salt, acid and sweetness; no raw flour or burnt flavours'],
+                                        ['Appearance', 'Colour and gloss; no skin, oil slick or lumps'],
+                                        ['Flavour', 'Depth and clarity of the main flavours'],
+                                        ['Texture', 'Smooth and appropriate in consistency'],
+                                        ['Alcohol level', 'Wine, spirits and liqueurs leave alcohol behind; flambé and simmering reduce it but do not remove it completely'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Always taste and adjust just before service, because flavour changes with reduction and holding.',
+                                        'Add butter, cream and liaison last, off a boil, and keep hollandaise and butter sauces warm but not hot.',
+                                        'Tell guests when a sauce contains alcohol: some alcohol remains after flambé or simmering, which matters for guests who avoid it for health, religious or personal reasons.',
+                                        'Strain a finished sauce through a fine strainer for a smooth, polished result.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Flambé is a fire hazard. Remove the pan from the heat before adding alcohol, keep bottles away from the flame, never pour alcohol from the bottle into a hot pan, keep a lid or a fire blanket nearby, keep your face and loose sleeves away, and follow company policy, because many establishments restrict flambé to trained staff or specific areas. Never flambé under a hood with grease build-up.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Monté au beurre is added at the very end, off the heat, with cold butter, and the sauce should not be allowed to boil afterwards or the butter will separate. The four finishing techniques in the standard are monté au beurre, liaison, garnishing and flambé.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch16-s4',
+                            title: '16.4 Holding, Cooling and Storing Sauces (E-16.04)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'A sauce must keep its quality and its safety while it waits for service. The cook holds the finished sauce using techniques that preserve quality and integrity, according to jurisdictional regulations, and cools and stores any sauce that is not used.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sauce Type', 'Holding Method', 'Notes'],
+                                    rows: [
+                                        ['Roux-thickened and stock-based hot sauces', 'Bain-marie or steam table at 60 °C or above, covered, stirred occasionally', 'Cover the surface to prevent a skin; thin with stock if it thickens'],
+                                        ['Hollandaise, béarnaise and beurre blanc', 'Warm, covered holding in small quantities for a limited time within regulations', 'Overheating breaks them; they cannot be reheated normally; discard leftovers according to policy'],
+                                        ['Cold sauces and dressings', 'Refrigerate at 4 °C or below in covered, labelled containers', 'Keep emulsions such as mayonnaise cold'],
+                                        ['Sauces to be stored', 'Cool rapidly, cover, label and date', 'Refrigerate or freeze; use within the time set by policy'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Cool sauces using the same two-stage guidelines as stock: from 60 °C to 20 °C within 2 hours and from 20 °C to 4 °C within a further 4 hours, using shallow pans, ice baths, ice wands or a blast chiller.',
+                                        'Reheat stored sauces quickly to at least 74 °C, stirring, and adjust consistency and seasoning after reheating.',
+                                        'Prevent skin formation by pressing plastic wrap or parchment onto the surface or floating a thin layer of melted butter on top.',
+                                        'Label with the name, date and any allergens, and rotate with FIFO.',
+                                        'Freeze-thaw can break cornstarch-thickened and emulsified sauces; roux-thickened and modified-starch sauces hold up better.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Never hold a sauce between 4 °C and 60 °C. A large pot of sauce that cools slowly in the danger zone allows bacteria to grow, especially in dairy, egg and stock-based sauces. Cool it rapidly, reheat it to 74 °C and discard it if the time and temperature limits have been exceeded.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'For holding questions, match the method to the sauce. Hot sauces are held at 60 °C or above, cold sauces at 4 °C or below, delicate emulsions in small batches for a short time, and any sauce that cannot be held safely is discarded.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        // ============================================================
+        // STEP 2C — PART 6 FRAGMENT (MWA F: Cheese, dairy, plant-based dairy alternatives, eggs and egg products)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 5.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks F-17 and F-18.
+        // ============================================================
+        {
+            id: 'part-6',
+            number: 6,
+            title: 'Cheese, Dairy, Plant-Based Dairy Alternatives, Eggs and Egg Products (MWA F)',
+            description: 'Dairy, cheese and plant-based alternatives from classification, manufacturing and storage to melting, whipping, scalding, tempering and finishing, then eggs and egg products: composition, grades and sizes, separating, whipping, boiling, poaching, frying, scrambling, custards, omelets, soufflés, finishing and holding. MWA F carries 10 exam questions across tasks F-17 and F-18.',
+            weight: '10 questions (6.7% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 17 — CHEESE, DAIRY AND PLANT-BASED DAIRY ALTERNATIVES (F-17)
+                // ============================================================
+                {
+                    id: 'ch-17',
+                    number: 17,
+                    title: 'Cheese, Dairy and Plant-Based Dairy Alternatives',
+                    subtitle: 'Task F-17 · Uses cheese, dairy products and plant-based dairy alternative products (5 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch17-s1',
+                            title: '17.1 Dairy Products, Butters and Plant-Based Alternatives (F-17.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Dairy products appear on almost every menu, as ingredients, finishing touches and the star of dishes. A cook must know the classes of dairy, how each is made and how it behaves, how to judge freshness, how to store it safely, and which plant-based alternatives can replace it.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dairy Product', 'Description', 'Kitchen Notes'],
+                                    rows: [
+                                        ['Skim milk', 'Milk with virtually all fat removed', 'Low fat; thin; used where fat is not wanted'],
+                                        ['Whole (homogenized) milk', 'Typically 3.25% milk fat in Canada', 'General cooking, béchamel, custards'],
+                                        ['Buttermilk', 'Cultured (fermented) milk with a tangy flavour', 'Baking, marinades, dressings; the acid reacts with baking soda'],
+                                        ['Cream', 'The fat-rich portion of milk; common types are half-and-half (about 10%), table cream (about 18%) and whipping cream (about 35% milk fat)', 'Higher fat resists curdling and whips; labels show the milk fat percentage'],
+                                        ['Yogurt', 'Milk fermented with bacterial cultures', 'Sauces, marinades, dressings, baking; strain for thicker Greek-style yogurt'],
+                                        ['Cheese', 'Milk coagulated and separated into curds, then pressed, ripened or fresh', 'See classes below'],
+                                        ['Butter', 'Churned cream; in Canada at least 80% milk fat', 'Sauces, baking, sautéing; salted, unsalted or cultured'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Milk Source', 'Characteristics'],
+                                    rows: [
+                                        ['Cow', 'The most common source; mild flavour and the base of most dairy products'],
+                                        ['Goat', 'Tangy, distinct flavour; smaller fat globules; used in fresh cheeses (chèvre) and aged cheeses'],
+                                        ['Sheep', 'Rich and high in fat and solids; used in feta, Pecorino and Roquefort'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Butter or Substitute', 'Description', 'Notes'],
+                                    rows: [
+                                        ['Unsalted butter', 'Butter without added salt', 'Preferred for baking and sauces because the cook controls seasoning'],
+                                        ['Salted butter', 'Butter with added salt', 'Table butter; salt level varies by brand'],
+                                        ['Cultured butter', 'Butter made from fermented cream', 'More complex, tangy flavour'],
+                                        ['Clarified butter', 'Butter with water and milk solids removed', 'Higher smoke point; used for sautéing and hollandaise'],
+                                        ['Ghee', 'Clarified butter cooked until the milk solids brown and are strained out', 'Nutty flavour, high smoke point; nearly free of lactose'],
+                                        ['Margarine (hydrogenated and non-hydrogenated)', 'A butter substitute made from vegetable oils', 'Not butter under Canadian regulations; often dairy-free but check labels; non-hydrogenated types avoid trans fats'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Cheese Class', 'Characteristics', 'Examples'],
+                                    rows: [
+                                        ['Fresh', 'Unripened, high moisture, mild and soft', 'Cottage cheese, ricotta, cream cheese, mascarpone, fresh mozzarella, chèvre, feta'],
+                                        ['Soft-ripened', 'Bloomy or washed rind; ripens from the outside in; creamy', 'Brie, camembert'],
+                                        ['Semi-soft', 'Smooth, supple and mild to pungent', 'Havarti, Monterey Jack, fontina, low-moisture mozzarella'],
+                                        ['Semi-firm', 'Firmer texture; melts and slices well', 'Cheddar (younger), Gouda, Swiss (Emmental)'],
+                                        ['Hard', 'Aged, dry, firm and intense; grates well', 'Aged cheddar, Parmigiano-Reggiano, Pecorino, Asiago'],
+                                        ['Blue', 'Ripened with mould veins; sharp and salty', 'Roquefort, Stilton, Gorgonzola'],
+                                        ['Processed', 'Blended and melted with emulsifying salts; very smooth melting', 'Processed cheese slices, cheese spreads'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Plant-Based Alternative', 'Examples', 'Kitchen Notes'],
+                                    rows: [
+                                        ['Liquids (milk alternatives)', 'Coconut, soy, almond (also oat, rice and pea)', 'Behave differently from milk: soy and almond can curdle in hot, acidic dishes; coconut is rich; oat may contain gluten; check for added sugar'],
+                                        ['Cheeses', 'Nut-based (cashew, almond), rice-based and oil-based (coconut oil) cheeses', 'Melting, stretching and flavour differ from dairy cheese; check allergens such as tree nuts and soy'],
+                                        ['Butters and spreads', 'Plant-based butters and non-dairy margarines', 'Check the label for milk-derived ingredients'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Manufacturing Process', 'What It Does'],
+                                    rows: [
+                                        ['Pasteurization', 'Heats milk to destroy harmful bacteria; extends shelf life and makes it safe'],
+                                        ['Homogenization', 'Breaks fat globules into very small particles so the cream does not rise and separate'],
+                                        ['Fermentation', 'Cultures turn lactose into lactic acid, producing yogurt, buttermilk, sour cream and cheese'],
+                                        ['UHT (ultra-high temperature)', 'Heats milk to a very high temperature for a few seconds so it is shelf-stable until opened'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Freshness Check', 'Fresh', 'Spoiled or Not Acceptable'],
+                                    rows: [
+                                        ['Best-before date', 'Within date and stored at 4 °C or colder', 'Past date or temperature abused'],
+                                        ['Smell', 'Clean, mild or typical of the product', 'Sour, rancid or yeasty'],
+                                        ['Appearance', 'Smooth, uniform colour', 'Lumps, curdling, slime or unusual colour'],
+                                        ['Cheese ripeness', 'Soft-ripened cheese is creamy right through; firm cheeses have a clean, typical aroma', 'Chalky centre means underripe; strong ammonia smell means overripe; slimy rind or unusual mould on soft cheese'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Judge dairy freshness using the best-before date and sensory assessment; judge cheese ripeness by sensory assessment.',
+                                        'Identify milk and dairy products, butters and cheeses according to jurisdictional regulations. In Canada, standards cover items such as minimum milk fat for butter and composition limits for named cheeses, and labels show milk fat (% M.F.) and moisture (% M.C.).',
+                                        'Keep dairy at 4 °C or colder, covered and away from strong odours, because butter and milk absorb smells. Keep cheese wrapped in breathable material such as wax or parchment, and use FIFO.',
+                                        'Never return poured milk or cream to the original container.',
+                                        'Raw-milk cheeses are subject to special rules in Canada: they must be aged for a minimum period (commonly 60 days) before sale, and unpasteurized soft cheeses carry added risk for some guests.',
+                                        'Factors to consider when selecting: local availability, freshness, storage life, applications and how processed the product is. Dietary requirements to consider: milk allergy and lactose intolerance, vegan and vegetarian diets (traditional cheese uses animal rennet; microbial rennet is vegetarian), kosher and halal requirements and cultural preferences.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Milk is a priority allergen, and traces in butter, cheese, whey, casein and many sauces can trigger reactions. Never substitute plant-based items without checking the label, and clean and sanitize equipment between dairy and dairy-free preparation. Soft cheeses made from unpasteurized milk can carry Listeria, which is especially dangerous for pregnant women, older adults and people with weakened immune systems.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Homogenization stops the cream from separating, pasteurization makes milk safe, fermentation produces yogurt and cheese, and UHT makes milk shelf-stable. These four manufacturing processes are named in the standard.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch17-s2',
+                            title: '17.2 Processing Cheese, Dairy and Plant-Based Alternatives (F-17.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Dairy is delicate. Heat, acid and time can make it curdle, scorch or separate, so the cook must know how each product reacts and add it in the right sequence. Tools include cheese graters, cheese cutters and non-reactive pots and pans.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'How It Works', 'Key Points'],
+                                    rows: [
+                                        ['Whipping', 'Beating cream to trap air in a foam of fat', 'Use cream with at least about 30% fat, very cold, in a cold bowl; stop at soft or stiff peaks, because over-whipping turns cream into butter'],
+                                        ['Melting', 'Heating cheese until its fat and proteins soften', 'Use low heat, grate cheese finely and add it off the heat or at the end; high heat makes cheese stringy, greasy or rubbery'],
+                                        ['Heating', 'Warming milk and cream for sauces, soups and custards', 'Use a heavy pot and low heat, and stir to prevent scorching'],
+                                        ['Coagulating', 'Setting milk proteins with acid, rennet or heat to make curds and cheese', 'Controlled coagulation makes cheese, paneer and ricotta; uncontrolled coagulation is curdling'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dairy Technique', 'What It Is', 'Example'],
+                                    rows: [
+                                        ['Souring', 'Adding acid to milk to make a substitute for buttermilk or soured milk', 'Stir 15 mL (1 tbsp) lemon juice or vinegar into 250 mL (1 cup) milk and let it stand for 5 to 10 minutes'],
+                                        ['Tempering', 'Slowly adding hot liquid to cold dairy or eggs, or bringing cold dairy toward the temperature of a hot liquid, to prevent shock and curdling', 'Whisk hot soup into cream before returning it to the pot'],
+                                        ['Scalding', 'Heating milk to just below boiling (small bubbles forming around the edge)', 'Used in custards, breads and some sauces; do not boil'],
+                                        ['Freezing', 'Freezing dairy-based desserts', 'Ice cream and frozen yogurt; cream and soft cheeses change texture when frozen, so use them in cooked dishes afterwards'],
+                                        ['Puréeing', 'Blending dairy or cheese until smooth', 'Ricotta fillings, cheese sauces, cream soups'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Cheese Technique', 'Description', 'Typical Cheese'],
+                                    rows: [
+                                        ['Shredding', 'Cutting into strands with a grater', 'Cheddar, mozzarella'],
+                                        ['Crumbling', 'Breaking into small, irregular pieces', 'Feta, blue cheese, chèvre'],
+                                        ['Slicing', 'Cutting into slices with a wire, knife or slicer', 'Semi-firm cheeses, mozzarella'],
+                                        ['Shaving', 'Removing thin slices with a peeler or plane', 'Parmigiano-Reggiano, Pecorino'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Cooking methods for dairy and cheese: baking, melting, deep-frying, pan-frying, broiling, reducing and simmering. Keep moisture away from hot oil when deep-frying breaded cheese, and fry halloumi or paneer in a hot pan with little oil.',
+                                        'Flavour dairy products by infusion or steeping: warm milk or cream with aromatics such as vanilla, herbs, garlic or bay leaf, cover and let steep off the heat, then strain.',
+                                        'Change consistency using the method in the recipe: whip, reduce, strain (draining yogurt makes a thick labneh-style product) or purée.',
+                                        'Add dairy and cheese in the correct sequence: dairy goes in near the end of cooking, cheese is added last and off the heat, and acid is added late. High heat, acid and salt all cause curdling.',
+                                        'Stabilize dairy sauces by using a starch (roux or slurry), higher-fat cream or gentle heat.',
+                                        'Handle plant-based alternatives according to how they behave: shake cartons, choose unsweetened types for savoury dishes, expect soy and almond milk to curdle in acidic or very hot dishes, and note that chilled coconut cream can be whipped but most plant milks cannot.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention or Fix'],
+                                    rows: [
+                                        ['Curdled sauce or soup', 'Dairy boiled, added to acidic liquid, or added without tempering', 'Temper, add dairy last, use higher-fat cream or a starch stabilizer, and do not boil'],
+                                        ['Grainy or oily cheese sauce', 'Cheese added to a boiling liquid or overheated', 'Remove the pan from the heat, add finely grated cheese in small amounts, and use a roux-based sauce or processed cheese'],
+                                        ['Scorched milk', 'High heat with no stirring in a thin pot', 'Use a heavy pot, low heat and stirring; rinse the pot with cold water first'],
+                                        ['Cream will not whip', 'Fat too low, cream too warm or equipment too warm', 'Chill cream and bowl and use cream with at least 30% fat'],
+                                        ['Whipped cream turned grainy', 'Over-whipped', 'Stop at the right peak; rescue slightly over-whipped cream by folding in a little liquid cream'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example', 'Calculation'],
+                                    rows: [
+                                        ['Whipped cream volume', 'Whipped cream roughly doubles in volume, so about 2 L of whipping cream gives about 4 L of whipped cream'],
+                                        ['Buttermilk substitute', '1 L of milk needs 60 mL (4 tbsp) of lemon juice or vinegar: 4 × 250 mL cups × 15 mL = 60 mL'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hot milk boils over very quickly, and a pot of scalded milk can burn badly. Use a deep pot, stay with it and keep the handle turned in. Take care with hot cheese sauces and melted cheese, which are as hot as the oven and stick to skin.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Almost every dairy cooking problem is solved by lower heat, later addition, tempering, or a starch stabilizer. If a question asks why a sauce curdled, the answer is heat, acid or adding dairy without tempering.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch17-s3',
+                            title: '17.3 Finishing Cheese, Dairy and Plant-Based Products (F-17.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Finishing techniques turn dairy and cheese into the final dish: a bubbling, golden gratin, a caramelized brûlée or a balanced cheese plate. The tools include torches, broilers, salamanders, rasps and freezers.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Description', 'Example'],
+                                    rows: [
+                                        ['Gratin', 'Topping a dish with cheese or breadcrumbs and browning it under a broiler or salamander', 'Potato gratin, macaroni and cheese, French onion soup'],
+                                        ['Grilling', 'Browning or melting cheese under direct heat', 'Grilled cheese, halloumi, cheese toasts'],
+                                        ['Melting', 'Melting cheese over a hot dish to finish', 'Burgers, nachos, soups'],
+                                        ['Brûlé', 'Sprinkling sugar on a surface and caramelizing it with a torch or broiler', 'Crème brûlée, brûléed fruit, some cheesecakes'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Tool', 'Use'],
+                                    rows: [
+                                        ['Torch', 'Browning, caramelizing and melting surfaces'],
+                                        ['Broiler or salamander', 'Browning and melting from above'],
+                                        ['Rasp (fine grater)', 'Fine grating of hard cheese, citrus zest or spices over a dish'],
+                                        ['Freezer', 'Firming cheese or desserts for clean cuts or setting frozen dairy desserts'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Garnish or Accompaniment', 'Examples'],
+                                    rows: [
+                                        ['Fruit', 'Fresh fruit, dried fruit, fruit pastes'],
+                                        ['Nuts', 'Toasted walnuts, almonds, pecans'],
+                                        ['Herbs', 'Chives, basil, thyme'],
+                                        ['Spices', 'Black pepper, paprika, chili'],
+                                        ['Condiments', 'Honey, mustard, chutney, olives'],
+                                        ['Sauces', 'Cream or fruit sauce, reductions, coulis'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Select garnishes and accompaniments that complement the dairy or cheese: sweet with salty, crisp with creamy, acid with rich.',
+                                        'Serve cheese at the temperature that lets its flavour show, but keep it out of refrigeration only for the time allowed by policy and food safety rules.',
+                                        'On a cheese plate, arrange from mild to strong, use a separate knife for each cheese, and label each cheese and any allergens (milk, nuts, wheat in crackers).',
+                                        'Apply finishing techniques according to the recipe, and flavour dairy products and plant-based alternatives to the desired result.',
+                                        'Hold hot cheese dishes at 60 °C or above and cold dairy dishes at 4 °C or below, and keep dairy foods labelled, dated and covered.',
+                                        'Handle and store finished dairy dishes according to regulations: cool them rapidly and refrigerate, and reheat to 74 °C.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Torches are fuelled by flammable gas and the flame is hot enough to ignite clothing and nearby products. Keep the flame away from your body and containers, check for leaks, light and use the torch only in a safe area, and turn it off and set it down before moving. Never leave a lit torch or a broiler unattended.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'The four finishing techniques in the standard for cheese and dairy are gratin, grilling, melting and brûlé. If a question asks how to brown the top of a baked pasta dish, the answer is gratin under a broiler or salamander.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 18 — EGGS AND EGG-BASED DISHES (F-18)
+                // ============================================================
+                {
+                    id: 'ch-18',
+                    number: 18,
+                    title: 'Eggs and Egg-Based Dishes',
+                    subtitle: 'Task F-18 · Prepares eggs and egg-based dishes (5 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 85,
+                    sections: [
+                        {
+                            id: 'ch18-s1',
+                            title: '18.1 Selecting Eggs, Egg Products and Substitutes (F-18.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Eggs act as leavening agents and binders, and they can be served on their own or used in many dishes. Cooks need to understand eggs, egg products and egg substitutes: their composition, grades and sizes, safe handling and the best use for each type.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Part of the Egg', 'Composition and Role'],
+                                    rows: [
+                                        ['Shell', 'Porous calcium carbonate; protects the egg but allows air and bacteria to pass through if damaged or dirty'],
+                                        ['Membranes and air cell', 'Two membranes line the shell; the air cell at the broad end grows larger as the egg ages'],
+                                        ['Albumen (white)', 'About two thirds of the egg; water and protein; sets firm when heated and whips into a foam'],
+                                        ['Yolk', 'Fat, protein, vitamins and lecithin (the emulsifier used in mayonnaise and hollandaise); thickens and enriches'],
+                                        ['Chalazae', 'Twisted cords that hold the yolk in the centre; a sign of freshness, not a defect'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Egg Type', 'Characteristics', 'Uses'],
+                                    rows: [
+                                        ['Chicken', 'The standard egg used in recipes', 'All cooking and baking'],
+                                        ['Quail', 'Very small; roughly 4 to 5 equal one large chicken egg; delicate flavour', 'Garnishes, canapés, salads, pickled eggs'],
+                                        ['Duck', 'Larger than a chicken egg with a richer yolk and firmer white', 'Baking, Asian cuisine, curing'],
+                                        ['Ostrich', 'Very large; one egg is equal to about two dozen chicken eggs', 'Novelty and large-scale cooking, with careful handling'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Canadian Egg Size', 'Minimum Weight per Egg'],
+                                    rows: [
+                                        ['Peewee', 'Under 42 g'],
+                                        ['Small', '42 g'],
+                                        ['Medium', '49 g'],
+                                        ['Large (standard for recipes)', '56 g'],
+                                        ['Extra large', '63 g'],
+                                        ['Jumbo', '70 g'],
+                                    ],
+                                },
+                                {
+                                    type: 'text',
+                                    text: 'In Canada, shell eggs are graded Canada A, B or C. Canada A is the grade used in food service: the shell is clean and sound, the white is firm, the yolk is round and well centred and the air cell is small. Grade and size are set by regulation, and the carton shows both.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Egg Product', 'Description', 'Uses'],
+                                    rows: [
+                                        ['Liquid egg (whole)', 'Pasteurized, shell-free whole egg in cartons', 'Scrambled eggs, baking, batters; safe for large volume and lightly cooked uses'],
+                                        ['Egg whites', 'Separated, pasteurized whites', 'Meringues, foams, clarification of consommé'],
+                                        ['Egg yolks', 'Separated, pasteurized yolks', 'Custards, hollandaise, mayonnaise, pastry cream'],
+                                        ['Egg white powder', 'Dried egg white', 'Meringue powders, stabilizing foams'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Plant-Based Egg Substitute', 'Best For', 'Notes'],
+                                    rows: [
+                                        ['Commercial egg replacers', 'Baking and binding', 'Follow the manufacturer directions'],
+                                        ['Tofu scramble', 'Breakfast scrambles', 'Flavour and colour from seasoning and turmeric'],
+                                        ['Aquafaba (chickpea liquid)', 'Meringue-like foams and mousses', 'Whips like egg whites'],
+                                        ['Flax or chia gel, applesauce', 'Binding in baking', 'Does not leaven or whip'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Freshness Check', 'Fresh Egg', 'Old or Unacceptable'],
+                                    rows: [
+                                        ['Shell', 'Clean, intact and dry', 'Cracked, dirty or slimy; discard cracked eggs'],
+                                        ['Water test', 'Sinks and lies flat', 'Stands on end when old; floats when very old and should be discarded'],
+                                        ['Broken out', 'Thick white that stands up around a round, high yolk', 'Flat, watery white and flattened yolk'],
+                                        ['Smell', 'Neutral', 'Sulphur or sour smell; discard'],
+                                        ['Date', 'Within the best-before date and stored cold', 'Past date or temperature abused'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Judge freshness of eggs, products and substitutes using the best-before date and sensory assessment.',
+                                        'Select eggs, egg products and substitutes to suit the recipe: shell eggs for cooking to order, liquid or pasteurized products for large volumes and dishes served raw or lightly cooked (mayonnaise, Caesar dressing, mousses, tiramisu).',
+                                        'Adjust volumes for yield differences: a large egg gives about 50 g of liquid egg (about 30 g white and 20 g yolk), so a recipe that calls for 12 large eggs needs about 600 g of liquid egg (12 × 50 g).',
+                                        'Selection factors: local availability, freshness, storage life, applications, how processed the product is and production type such as free-run and cage-free.',
+                                        'Store eggs at 4 °C or colder in their cartons, away from strong odours, and use FIFO. Do not store eggs near raw meat or leave them at room temperature.',
+                                        'Dietary requirements: egg is a priority allergen, and eggs are excluded by vegan diets and some religious and cultural diets. Egg substitutes may contain soy or wheat.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Raw and lightly cooked eggs can carry Salmonella. Never use cracked or dirty eggs, wash hands and sanitize surfaces after handling shell eggs, and never pool large quantities of shell eggs for later. Use pasteurized eggs for any dish that will not be cooked thoroughly, according to company policy and regulations.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Fresh eggs sink and lie flat in water and have a thick, standing white. Old eggs stand up or float and have a thin, watery white. Quantity conversions use 50 g of liquid egg per large egg.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch18-s2',
+                            title: '18.2 Processing Eggs: Separating, Beating, Tempering and Whipping (F-18.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Processing prepares eggs for use. The cook selects tools such as non-reactive bowls, whisks, spatulas and timers, then separates, beats, tempers, combines and whips eggs to the recipe and the desired result.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Procedure', 'Method', 'Key Points'],
+                                    rows: [
+                                        ['Separating', 'Pass the yolk between the shell halves or use your clean hands, letting the white drop into a bowl', 'Cold eggs separate more cleanly; separate each egg over a small bowl before adding to the main bowl, because any yolk or fat prevents whites from whipping'],
+                                        ['Beating', 'Whisking whole eggs, whites or yolks to blend them or add air', 'Use a clean, dry, non-reactive bowl; do not overbeat when a smooth, even blend is all that is needed'],
+                                        ['Tempering', 'Slowly whisking a hot liquid into eggs to raise their temperature gradually', 'Stops the eggs from scrambling when added to hot milk, cream or sauce'],
+                                        ['Combining', 'Mixing eggs with other ingredients such as milk, cheese, sugar, vegetables, herbs, proteins, acids or fruit', 'Combine according to the recipe order, and fold gently when air needs to be kept'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Whipping Stage (Egg Whites)', 'Appearance', 'Use'],
+                                    rows: [
+                                        ['Foamy', 'Loose bubbles; liquid still flows', 'Starting point; add acid or sugar here'],
+                                        ['Soft peaks', 'Peaks curl over when the whisk is lifted; glossy', 'Gradually add sugar for meringue; fold into batters'],
+                                        ['Stiff peaks', 'Peaks stand straight up; glossy and firm', 'Meringues, soufflés, mousses'],
+                                        ['Over-whipped (dry)', 'Dull, dry, grainy and starting to separate', 'Cannot be recovered; start again'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Use a clean, grease-free bowl. Fat from yolk, oil or plastic residue prevents egg whites from foaming. Stainless steel, glass or copper bowls are best.',
+                                        'Whites whip highest at room temperature, but do not leave eggs out longer than company policy and food safety rules allow. Warming the bowl in a water bath is another way to take the chill off.',
+                                        'Add a small amount of acid (cream of tartar or lemon juice) to stabilize a foam, and add sugar gradually once soft peaks form.',
+                                        'Whole eggs and yolks whip best when slightly warmed, as in a sabayon or genoise, giving a thick ribbon stage.',
+                                        'Factors to consider when processing: freshness, storage life, applications, how processed the product is and temperature.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Egg white foam fails because of fat, not because of effort. If a question asks why whites will not whip, look for a trace of yolk, grease on the bowl or whisk, or over-whipping. Acid and sugar stabilize a foam.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch18-s3',
+                            title: '18.3 Cooking Eggs and Egg-Based Dishes (F-18.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Egg proteins set when heated: whites begin to set around 60 °C and are firm near 80 °C, while yolks thicken around 65 °C and set at about 70 °C. Too much heat or time makes eggs rubbery, watery or curdled. The standard lists these cooking methods: boiling, poaching, frying, scrambling, shirring, basting, baking, tempering and fermenting.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'How It Is Done', 'Key Points'],
+                                    rows: [
+                                        ['Boiling (in the shell)', 'Lower eggs into simmering or boiling water for a set time, then chill in ice water', 'Typical large-egg times: soft about 3 to 5 minutes, medium about 6 to 8 minutes, hard about 10 to 12 minutes; chilling stops cooking and helps peeling; a green-grey ring around the yolk comes from overcooking or slow cooling'],
+                                        ['Poaching', 'Slide a cracked egg into hot water kept just below a simmer (about 80 to 85 °C) for 3 to 4 minutes', 'Use very fresh eggs; a splash of vinegar helps the white set; remove with a perforated spoon and drain'],
+                                        ['Frying', 'Cook in a pan with butter or oil: sunny-side up, over easy, over medium or over hard', 'Use medium heat; non-stick pans work best; do not let the whites brown or turn rubbery'],
+                                        ['Scrambling', 'Stir beaten eggs in a pan over moderate heat until just set', 'Low heat and constant stirring give soft, creamy curds; remove from the heat while still slightly wet because they keep cooking; salt just before cooking'],
+                                        ['Shirring (baked eggs)', 'Bake eggs in a buttered ramekin, often with cream or other ingredients', 'Cook until the white is set and the yolk is soft'],
+                                        ['Basting', 'Spoon hot fat or steam over the top of a frying egg to set the white without turning it', 'Gives a tender, evenly cooked egg'],
+                                        ['Baking', 'Cook egg dishes in an oven', 'Quiche, frittata, baked custards and soufflés'],
+                                        ['Fermenting', 'Preserving or flavouring eggs through brining or fermentation', 'Specialty items such as pickled or cured eggs; follow tested procedures'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Egg-Based Dish', 'Description', 'Method and Key Points'],
+                                    rows: [
+                                        ['Omelet', 'Beaten eggs cooked in a pan and folded or rolled around a filling', 'Use a hot, non-stick pan with butter; stir and shake to form small curds, then fold; French omelets are pale and soft, American omelets are lightly browned'],
+                                        ['Set custard (quiche, flan)', 'Eggs and dairy baked until they set into a firm gel', 'Bake gently, often in a water bath, until just set with a slight wobble in the centre; high heat makes the custard weep and become rubbery'],
+                                        ['Stirred custard (crème anglaise, pastry cream, ice cream base)', 'Eggs and dairy cooked while stirring until thick enough to coat a spoon (nappé)', 'Cook over gentle heat to about 80 to 85 °C and do not boil; cool quickly over an ice bath'],
+                                        ['Soufflé', 'A flavoured base (such as béchamel or pastry cream) lightened with whipped egg whites and baked', 'Fold the whites in gently; bake at a moderately high temperature; do not open the oven early; serve immediately because it collapses as it cools'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Doneness', 'Description', 'Typical Dish'],
+                                    rows: [
+                                        ['Soft', 'White set, yolk runny; curds moist and soft', 'Soft-boiled, poached, sunny-side up, soft-scrambled'],
+                                        ['Medium', 'White set and yolk thickened but still creamy', 'Medium-boiled, over medium'],
+                                        ['Hard', 'White and yolk firm through', 'Hard-boiled, over hard, fully set scrambled and custards'],
+                                        ['Degree of set', 'How firm a custard, quiche or soufflé is', 'Quiche set with a slight wobble; soufflé risen and set'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention'],
+                                    rows: [
+                                        ['Rubbery or tough eggs', 'Too much heat or overcooking', 'Use moderate or low heat; remove while still slightly soft and let carryover cooking finish'],
+                                        ['Green or grey ring on hard-boiled yolks', 'Overcooking or slow cooling', 'Time carefully and chill immediately in ice water'],
+                                        ['Watery scrambled eggs or weeping custard', 'Overcooking, or too much heat; proteins squeeze out water', 'Cook gently and bake custards in a water bath'],
+                                        ['Curdled stirred custard', 'Overheated, boiled or not tempered', 'Cook slowly, stir constantly, strain if needed and cool quickly'],
+                                        ['Flat or collapsed soufflé', 'Whites under- or over-whipped, folding too rough, oven door opened too early', 'Whip to the right peak, fold gently and keep the oven closed'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Custard Quantities', 'Calculation'],
+                                    rows: [
+                                        ['Starting ratio', 'A common ratio for a set custard is 1 large egg to about 125 mL of milk or cream; adjust to the recipe'],
+                                        ['Eggs for a large batch', '4 L of custard mix at 125 mL per egg: 4 000 mL ÷ 125 = 32 eggs'],
+                                        ['Liquid egg equivalent', '32 large eggs × 50 g = 1.6 kg of liquid egg'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Select tools and equipment: pans, pots, ovens, steamers, spatulas, whisks, perforated spoons, double boilers and bain-maries.',
+                                        'Temper eggs, egg products and substitutes according to the recipe, and determine doneness through sensory assessment, the desired result and the recipe.',
+                                        'Factors to consider: freshness, storage life, applications, how processed the product is, temperature, time, acidity, batch size, and texture and consistency.',
+                                        'Cook egg dishes to a safe internal temperature (74 °C for egg dishes and leftovers) unless policy and regulations allow a lower temperature for individual servings made with fresh, properly handled eggs, and be extra careful when serving vulnerable guests.',
+                                        'Acid, sugar and dairy change how eggs set: sugar and dairy raise the setting temperature and give a tender result, while acid can make the proteins set more firmly or curdle.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Eggs that are runny or only lightly cooked carry a higher risk of Salmonella, especially for children, older adults, pregnant guests and people with weakened immune systems. Cook eggs for these guests thoroughly, use pasteurized products where required, and follow company policy and public health regulations.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Almost every egg cooking fault is too much heat. Gentle heat and removal before the dish is completely set give tender eggs, smooth custards and soft curds. Set custards bake slowly in a water bath, and stirred custards are cooked until they coat the back of a spoon.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch18-s4',
+                            title: '18.4 Finishing, Holding and Storing Egg Dishes (F-18.04)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Egg dishes lose quality quickly and are potentially hazardous. The cook assembles and finishes them, adds garnishes and handles holding and storage carefully. Tools include torches, pots, ovens, steamers, plates, hotel pans and warmers.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Step', 'Description', 'Example'],
+                                    rows: [
+                                        ['Assembly', 'Putting the dish together according to the recipe and the desired result', 'Eggs Benedict, filled omelets, quiche garnished and portioned, egg sandwiches'],
+                                        ['Torching or broiling', 'Browning or caramelizing the surface with a torch or broiler', 'Crème brûlée, gratinéed egg dishes, meringue topping'],
+                                        ['Garnishing', 'Adding colour, flavour and texture with a garnish', 'Green onions, parsley, fruit, paprika, chives'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Assemble egg dishes according to the recipe, keeping them hot and arranged neatly, and serve soufflés and omelets immediately.',
+                                        'Select garnishes for accompaniment and visual appeal that match the dish and do not introduce allergens.',
+                                        'Hold hot egg dishes at 60 °C or above in warmers or covered hotel pans, in small batches, and for no longer than recipe quality and regulations allow. Scrambled eggs held too long become watery and may develop a green tinge.',
+                                        'Cool cooked egg dishes and hard-boiled eggs rapidly, refrigerate at 4 °C or below, label and date them, and reheat to 74 °C.',
+                                        'Keep cooked and raw eggs and products separate, and clean and sanitize equipment between uses.',
+                                        'Handle and store egg dishes according to regulations and factors such as storage life, how processed the product is, batch size, temperature and holding time.',
+                                        'Dietary requirements: egg allergies, vegan and vegetarian guests, and religious and cultural restrictions. Label dishes made with egg and egg substitutes.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Egg Dish', 'Holding Guideline'],
+                                    rows: [
+                                        ['Scrambled eggs', 'Cook in small batches close to service; hold hot, covered, for a short time'],
+                                        ['Omelets, fried and poached eggs', 'Cook to order; do not hold'],
+                                        ['Quiche and baked egg dishes', 'Hold hot at 60 °C or above, or cool and refrigerate and reheat to 74 °C'],
+                                        ['Hard-boiled eggs', 'Cool rapidly, keep refrigerated in the shell or peeled in covered containers and label and date'],
+                                        ['Custards and other cold egg desserts', 'Cool quickly and hold at 4 °C or below'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Never leave egg dishes, custards, hollandaise or mayonnaise at room temperature. Egg is a high-risk food: it supports fast bacterial growth in the danger zone. Keep egg dishes either hot at 60 °C or above or cold at 4 °C or below, and discard anything held beyond limits set by company policy and regulations.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Finishing questions for egg dishes focus on timing and temperature: serve soufflés and omelets at once, hold hot egg dishes at 60 °C or above, cool hard-boiled eggs quickly, and use a torch or broiler to brown the surface of brûlée and gratinéed dishes.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+    ]
+}

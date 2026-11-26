@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 440 130" width="440" height="130" role="img" aria-labelledby="gt">
-  <title id="gt">Sample GHS hazard pictograms used on WHMIS labels</title>
-  <rect width="440" height="130" fill="#FAF7F2" rx="8"/>
-  <image xlink:href="ghs-flamme.svg" href="ghs-flamme.svg" x="12" y="18" width="88" height="88" preserveAspectRatio="xMidYMid meet"/>
-  <image xlink:href="ghs-acid.svg" href="ghs-acid.svg" x="118" y="18" width="88" height="88" preserveAspectRatio="xMidYMid meet"/>
-  <image xlink:href="ghs-exclam.svg" href="ghs-exclam.svg" x="224" y="18" width="88" height="88" preserveAspectRatio="xMidYMid meet"/>
-  <image xlink:href="ghs-skull.svg" href="ghs-skull.svg" x="330" y="18" width="88" height="88" preserveAspectRatio="xMidYMid meet"/>
-</svg>
