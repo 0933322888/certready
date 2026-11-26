@@ -69,14 +69,14 @@ export default function ChapterSidebar({
       {/* Sidebar */}
       <aside
         className={`
-          fixed md:static top-16 left-0 h-[calc(100vh-4rem)] md:h-auto
+          fixed md:static top-16 left-0 h-[calc(100dvh-4rem)] md:h-auto
           w-[85vw] max-w-xs sm:w-80 bg-surface border-r border-border z-50
-          overflow-y-auto transform transition-transform duration-300 ease-out
+          overflow-y-auto overscroll-y-contain transform transition-transform duration-300 ease-out
           ${onClose !== null ? (onClose ? 'translate-x-0' : '-translate-x-full') : 'translate-x-0'}
           md:translate-x-0
         `}
       >
-        <div className="p-4">
+        <div className="px-4 pt-4 pb-[calc(1rem+env(safe-area-inset-bottom))] md:p-4">
           <div className="flex items-center justify-between md:hidden mb-4 pb-2 border-b border-border">
             <span className="text-sm font-semibold text-text-primary">Course Navigation</span>
             <button
