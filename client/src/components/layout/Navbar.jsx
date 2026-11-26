@@ -17,6 +17,7 @@ export default function Navbar() {
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
     setLangMenuOpen(false);
+    setMobileMenuOpen(false);
   };
 
   const handleLogout = () => {
@@ -74,32 +75,37 @@ export default function Navbar() {
 
           {/* Desktop: Language + Auth */}
           <div className="hidden md:flex items-center space-x-4">
-            {user && user.email === "marishka7227@gmail.com" && (<div className="relative">
-              <button
-                onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center space-x-1 px-3 py-2 rounded-lg text-white hover:text-accent hover:bg-surface-2 transition-colors text-sm"
-                aria-label={t('common.ariaLabelSelectLanguage')}
-              >
-                <span className="uppercase font-medium">{i18n.language}</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {langMenuOpen && (
-                <div className="absolute right-0 mt-2 w-36 bg-surface border border-border rounded-xl shadow-lg py-2 z-50">
-                  {SUPPORTED_LANGUAGES.map(({ code, label }) => (
-                    <button
-                      key={code}
-                      onClick={() => changeLanguage(code)}
-                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${i18n.language === code ? 'text-accent font-medium' : 'text-text-primary hover:bg-surface-2'
+            {user?.email === 'marishka7227@gmail.com' && (
+              <div className="relative">
+                <button
+                  onClick={() => setLangMenuOpen(!langMenuOpen)}
+                  className="flex items-center space-x-1 px-3 py-2 rounded-lg text-white hover:text-accent hover:bg-surface-2 transition-colors text-sm"
+                  aria-label={t('common.ariaLabelSelectLanguage')}
+                >
+                  <span className="uppercase font-medium">{i18n.language}</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {langMenuOpen && (
+                  <div className="absolute right-0 mt-2 w-36 bg-surface border border-border rounded-xl shadow-lg py-2 z-50">
+                    {SUPPORTED_LANGUAGES.map(({ code, label }) => (
+                      <button
+                        key={code}
+                        onClick={() => changeLanguage(code)}
+                        className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
+                          i18n.language === code
+                            ? 'text-accent font-medium'
+                            : 'text-text-primary hover:bg-surface-2'
                         }`}
-                    >
-                      {label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>)}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
             {user ? (
               <div className="relative">
                 <button
@@ -227,6 +233,26 @@ export default function Navbar() {
                 >
                   {t('nav.practiceTests')}
                 </Link>
+                {user.email === 'marishka7227@gmail.com' && (
+                  <div className="border-t border-border pt-3 mt-2">
+                    <p className="px-3 pb-1 text-xs font-medium uppercase text-text-muted">
+                      {t('nav.language')}
+                    </p>
+                    {SUPPORTED_LANGUAGES.map(({ code, label }) => (
+                      <button
+                        key={code}
+                        onClick={() => changeLanguage(code)}
+                        className={`block w-full text-left px-3 py-2.5 rounded-lg transition-colors min-h-[44px] ${
+                          i18n.language === code
+                            ? 'text-accent font-medium'
+                            : 'text-text-primary hover:bg-surface-2'
+                        }`}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 {user.isAdmin && (
                   <>
                     <Link

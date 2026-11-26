@@ -4409,5 +4409,3181 @@ const cookCourse = {
                 },
             ],
         },
+        // ============================================================
+        // STEP 2C — PART 7 FRAGMENT (MWA G: Pastas, noodles, stuffed pastas and dumplings)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 6.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks G-19 and G-20.
+        // ============================================================
+        {
+            id: 'part-7',
+            number: 7,
+            title: 'Pastas, Noodles, Stuffed Pastas and Dumplings (MWA G)',
+            description: 'Dry, fresh and frozen pastas and noodles from dough types and styles to processing, hand-forming, boiling, baking, frying, reheating and finishing, then stuffed pastas and dumplings: fillings, doughs, assembly techniques, cooking methods, doneness, finishing and holding. MWA G carries 10 exam questions across tasks G-19 and G-20.',
+            weight: '10 questions (6.7% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 19 — PASTAS AND NOODLES (G-19)
+                // ============================================================
+                {
+                    id: 'ch-19',
+                    number: 19,
+                    title: 'Pastas and Noodles',
+                    subtitle: 'Task G-19 · Prepares pastas and noodles (5 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 80,
+                    sections: [
+                        {
+                            id: 'ch19-s1',
+                            title: '19.1 Selecting Pasta and Noodle Ingredients (G-19.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Pasta and noodle dishes are made in individual and large quantities, so the cook must know the types, the dough each is made from and how each behaves in cooking. Selection starts with checking quality by freshness and best-before dates, then choosing the dough type, the style and the fillings or ingredients for the dish.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dough Type', 'Main Ingredients and Characteristics', 'Typical Uses'],
+                                    rows: [
+                                        ['Wheat flour', 'Durum semolina or wheat flour and water; firm, holds its shape and cooks al dente', 'Dried pastas such as spaghetti and penne; couscous is also made from durum semolina'],
+                                        ['Egg based', 'Flour and whole eggs or yolks; rich, tender and yellow', 'Fresh pastas such as fettuccine, ravioli sheets and lasagna, and lo mein style egg noodles'],
+                                        ['Rice based', 'Rice flour and water; translucent or white, soft and gluten-free', 'Rice vermicelli, rice sticks and pad thai noodles'],
+                                        ['Corn based', 'Corn flour; gluten-free with a slightly sweet flavour and a softer texture', 'Gluten-free pasta, polenta based products'],
+                                        ['Buckwheat', 'Buckwheat flour, often blended with wheat; nutty and earthy', 'Soba noodles; many soba contain wheat, so check the label for gluten-free claims'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Style', 'Description', 'Typical Pairing or Use'],
+                                    rows: [
+                                        ['Spaghetti', 'Long, thin round strands', 'Tomato, oil and garlic, meat sauces and light sauces'],
+                                        ['Ravioli', 'Square or round filled pasta', 'Butter, sage, light tomato or cream sauces'],
+                                        ['Vermicelli', 'Very thin strands; Italian wheat vermicelli or Asian rice vermicelli', 'Soups, stir-fries and cold noodle salads'],
+                                        ['Penne', 'Short tubes cut on an angle with ridges or smooth', 'Baked dishes, chunky and cream sauces'],
+                                        ['Udon', 'Thick, chewy Japanese wheat noodles', 'Hot broth, stir-fries'],
+                                        ['Lo mein', 'Chinese egg noodles', 'Tossed with sauce, vegetables and proteins'],
+                                        ['Couscous', 'Tiny steamed granules of durum semolina', 'Side dishes, salads and stews'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Market Form', 'Characteristics', 'Notes'],
+                                    rows: [
+                                        ['Dried pasta', 'Made from semolina and water, extruded and dried; long shelf life', 'Store in a cool, dry place in sealed containers; takes longer to cook; roughly doubles in weight when cooked'],
+                                        ['Fresh pasta', 'Made from eggs and flour; soft, tender and quick to cook', 'Refrigerate and use within days, or freeze; cooks in a few minutes'],
+                                        ['Frozen pasta', 'Fresh or cooked pasta that is frozen', 'Cook from frozen without thawing in most cases; keep frozen at -18 °C or below'],
+                                        ['Fresh noodles', 'Soft and moist; refrigerated', 'Short cooking time; check best-before date'],
+                                        ['Dried noodles', 'Dehydrated; long shelf life', 'Boil or soak, depending on the type'],
+                                        ['Fried noodles', 'Pre-fried, such as instant noodles or crispy chow mein noodles', 'Rehydrate or use as a crisp garnish'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Check quality by freshness and best-before dates. Dried pasta should be hard, uniform in colour and unbroken, with no insects or musty smell. Fresh pasta should be moist and smooth, with no mould, sliminess or sour smell, and kept refrigerated.',
+                                        'Choose ingredients for fillings and dishes. Fillings include cheese, meat and vegetable, and the sauce, garnish and seasoning should suit the style.',
+                                        'Determine the dough type and style required by the dish and the guest, and weigh up availability, shelf life, cooking time, cost and quality.',
+                                        'Dietary requirements to consider: allergies (wheat, egg, soy, milk and fish in some sauces), cultural and religious restrictions, ethical choices such as vegan and vegetarian, health-related needs such as gluten-free, environmental concerns and personal preferences.',
+                                        'Wheat and egg are priority allergens, so keep gluten-free pastas in separate pots, strainers, utensils and cooking water, and label them clearly.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Match the dough to the need. Rice and corn doughs suit gluten-free requests, egg doughs give richer fresh pasta, durum wheat holds al dente best and buckwheat gives soba. Fresh pasta cooks in minutes and dried pasta takes much longer.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch19-s2',
+                            title: '19.2 Processing Pastas and Noodles (G-19.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Processing covers making, shaping, assembling and preparing pastas and noodles for cooking or storage. Select the machines and tools according to the recipe, the desired result and the manufacturer specifications.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Machine or Tool', 'Use'],
+                                    rows: [
+                                        ['Electric pasta roller', 'Rolls dough into even sheets of the desired thickness'],
+                                        ['Cutter and blades', 'Cut sheets into noodles, ribbons and squares'],
+                                        ['Ravioli press', 'Forms and cuts filled pasta in uniform shapes'],
+                                        ['Crimper', 'Seals and decorates the edges of filled pasta'],
+                                        ['Drying racks', 'Hold shaped pasta while it dries or rests'],
+                                        ['Bowls', 'Mixing doughs, fillings and sauces'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Procedure', 'Description', 'Key Points'],
+                                    rows: [
+                                        ['Cutting', 'Cutting rolled sheets into noodles or shapes', 'Dust with flour or semolina so strands do not stick together'],
+                                        ['Drying', 'Drying shaped pasta so it can be stored', 'Dry evenly on racks; poorly dried pasta spoils or cracks'],
+                                        ['Extruding', 'Forcing dough through a die to form shapes', 'The die determines the shape, such as penne and spaghetti'],
+                                        ['Blanching', 'Briefly cooking in boiling water, then cooling in ice water', 'Partially cooks pasta so it can be finished later; oil lightly to prevent sticking'],
+                                        ['Freezing', 'Freezing shaped or cooked pasta', 'Freeze in a single layer first, then bag, label and date'],
+                                        ['Assembly', 'Combining pasta with fillings, sauces and components', 'Follow the recipe; keep fillings cold and ingredients safe'],
+                                        ['Soaking', 'Rehydrating dried noodles in hot or cold water', 'Used for rice noodles and some dried Asian noodles'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Hand-Forming Technique', 'Description', 'Example'],
+                                    rows: [
+                                        ['Rolling', 'Flattening dough with a rolling pin or machine', 'Sheets for lasagna and ravioli'],
+                                        ['Folding', 'Folding dough over itself or a filling', 'Tortellini, folded dumplings'],
+                                        ['Stretching', 'Gently stretching dough to a thin sheet', 'Hand-pulled noodles'],
+                                        ['Cutting', 'Cutting rolled dough into shapes', 'Fettuccine, pappardelle, squares'],
+                                        ['Stuffing', 'Filling dough before sealing', 'Ravioli, tortelloni'],
+                                        ['Pulling', 'Pulling dough into long strands', 'Hand-pulled noodles'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Process and prepare ingredients for assembly and fillings: cheese, proteins and vegetables should be cut, cooked, cooled and seasoned as the recipe requires.',
+                                        'Rest pasta dough covered for about 30 minutes before rolling so the gluten relaxes and the dough rolls without tearing.',
+                                        'Keep dough from drying out while you work by covering it, and keep a light dusting of flour or semolina on the work surface.',
+                                        'Method to determine yield: dried pasta roughly doubles in weight when cooked, so 100 g dried pasta gives about 200 g cooked pasta. Fresh pasta gains less, so allow about 125 g cooked per 100 g.',
+                                        'Store and hold prepared pasta according to service requirements: refrigerate fresh pasta at 4 °C or below, freeze it for longer storage, and label and date every container.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Yield', 'Calculation'],
+                                    rows: [
+                                        ['Dried pasta for 40 portions', '40 portions × 100 g cooked = 4 000 g cooked pasta; 4 000 g ÷ 2 = 2 000 g (2 kg) dried pasta'],
+                                        ['Fresh pasta for 40 portions', '40 portions × 100 g cooked = 4 000 g cooked pasta; 4 000 g ÷ 1.25 = 3 200 g (3.2 kg) fresh pasta'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Pasta machines have rollers and blades that can crush or cut fingers. Keep hands clear, never feed dough by hand into moving rollers, and use lock-out procedures before cleaning or clearing a jam. Wipe up flour and spills so floors do not become slippery, and avoid creating airborne flour dust.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch19-s3',
+                            title: '19.3 Cooking Pastas and Noodles (G-19.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Most pasta is boiled, and then it may be baked or fried. The standard lists boiling, baking and frying as the cooking methods. The cook uses tools such as colanders, pots, hotel pans, frying pans, woks, pasta cooking machines, deep fryers, skimmers and tongs.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'How It Is Done', 'Key Points'],
+                                    rows: [
+                                        ['Boiling', 'Cook in a large pot of rapidly boiling, salted water, stirring at the start', 'Use about 1 L of water per 100 g of dried pasta; salt the water (about 10 g per litre); do not add oil; drain at the correct time and use or cool right away'],
+                                        ['Baking', 'Combine cooked or partly cooked pasta with sauce and cheese and bake', 'Undercook pasta slightly, because it keeps cooking in the oven; ensure enough sauce so it does not dry out; lasagna and baked ziti are examples'],
+                                        ['Frying', 'Cook pasta or noodles in oil in a pan, wok or deep fryer', 'Stir-fried noodles use cooked noodles in a hot wok; deep-fried noodles become crisp for garnishing'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Doneness Method', 'How It Works', 'Notes'],
+                                    rows: [
+                                        ['Sensory assessment', 'Bite a piece; al dente has a slight firmness at the centre with no raw, chalky core', 'The most common test; also judge appearance'],
+                                        ['Thermometer', 'Used where a food safety temperature is required, such as baked pasta dishes', 'Baked dishes containing meat, egg or dairy reach 74 °C in the centre'],
+                                        ['Time', 'Use the package or recipe time as a guide', 'Start testing a minute or two before the stated time, because water temperature, quantity and pasta thickness vary'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Product', 'Approximate Cooking Time', 'Notes'],
+                                    rows: [
+                                        ['Fresh pasta', '1 to 4 minutes', 'Cooks quickly and is ready when it floats and is tender'],
+                                        ['Dried spaghetti or penne', '8 to 12 minutes', 'Check the package; thicker shapes take longer'],
+                                        ['Rice vermicelli', 'Soak or 2 to 4 minutes', 'Follow the package; very thin'],
+                                        ['Udon (fresh or frozen)', '2 to 4 minutes', 'Reheats quickly in boiling water'],
+                                        ['Couscous', 'Steam or rehydrate in hot liquid for about 5 minutes', 'Fluff with a fork'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Use cooking temperature and time with the liquid to pasta ratio. A large volume of water keeps the temperature up and prevents pasta from sticking together.',
+                                        'Stir pasta in the first minute, when it is most likely to stick.',
+                                        'For cold dishes and pasta that will be held, cool it quickly in cold water or an ice bath, drain well and toss lightly with oil so strands do not clump.',
+                                        'For cooked pasta that will be held hot, undercook slightly and use a hot water bath to reheat. Pasta that sits in water or sauce keeps softening.',
+                                        'Determine yield by weight: cooked pasta weighs about double the dried weight.',
+                                        'Cool cooked pasta to 4 °C or below within the two-stage cooling limits, then store it covered, labelled and dated, and reheat to 74 °C when required.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention'],
+                                    rows: [
+                                        ['Sticky or clumped pasta', 'Too little water, not stirred, or left sitting after draining', 'Use a large pot, stir early, and toss with sauce or oil if holding'],
+                                        ['Mushy pasta', 'Overcooked, held too long in water or sauce', 'Cook to al dente, test early, shock cold if holding'],
+                                        ['Hard core in the centre', 'Undercooked', 'Cook longer and test by tasting'],
+                                        ['Bland pasta', 'Unsalted water', 'Salt the cooking water generously'],
+                                        ['Dry baked pasta', 'Not enough sauce or overbaked', 'Use enough sauce and cover with foil during baking'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'A pot of boiling water is heavy and scalds severely. Lower pasta in slowly so it does not splash, use a pasta basket or strain away from your body, and never carry a full pot across a busy kitchen. Cooked pasta, rice and other starches held at room temperature can grow bacteria, so cool them quickly and keep them refrigerated.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Large pot, plenty of salted boiling water, no oil in the water and a test for al dente. Pasta for baking is undercooked, and pasta for cold use is shocked in cold water.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch19-s4',
+                            title: '19.4 Finishing Pastas and Noodles (G-19.04)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Finishing joins the cooked pasta with the sauce, the seasoning and the garnish. The cook may need to reheat cooked pasta or noodles before service, choose the correct sauces, dressings or liquids and apply them to the recipe.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Reheating Method', 'How It Is Done', 'Best For'],
+                                    rows: [
+                                        ['Sautéing', 'Toss cooked pasta in a hot pan with sauce or fat', 'Pasta tossed to order, such as aglio e olio'],
+                                        ['Baking', 'Heat pasta with sauce in the oven', 'Lasagna, baked pasta dishes'],
+                                        ['Frying', 'Pan-fry or stir-fry pre-cooked noodles', 'Lo mein, chow mein, fried noodles'],
+                                        ['Steaming', 'Heat in a steamer without adding water', 'Noodles and filled pastas that must stay moist'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Liquid or Sauce', 'Examples', 'Notes'],
+                                    rows: [
+                                        ['Seasoned water', 'Salted pasta water, water with aromatics', 'Reserve a little starchy pasta water to loosen and bind a sauce'],
+                                        ['Stock', 'Chicken, vegetable or other stock', 'Used for soups and for loosening sauces'],
+                                        ['Oil', 'Olive oil, sesame oil, flavoured oils', 'Used for dressing cold noodle dishes and for simple sauces'],
+                                        ['Broth', 'Clear broth for noodle soups', 'Udon, ramen and pho style dishes'],
+                                        ['Sauces and dressings', 'Tomato, cream, meat, pesto, butter, soy-based, sesame', 'Match the sauce to the pasta shape: clinging sauces for long strands, chunky sauces for tubes and shells'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify and choose the sauce, dressing or liquid to suit the pasta or noodle and apply it and other components according to the recipe.',
+                                        'Adjust seasoning based on the recipe and sensory assessment, tasting the dish before it leaves the kitchen.',
+                                        'Garnish according to the recipe: grated cheese, fresh herbs, toasted nuts, chili, green onion or a drizzle of oil.',
+                                        'Handle, serve and store finished dishes according to regulations: serve hot dishes at 60 °C or above and cold dishes at 4 °C or below, and discard dishes held past the allowed time.',
+                                        'Dietary requirements and allergens: check the sauce and garnish for dairy, egg, nuts, soy, fish and gluten.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Reheating methods for pasta and noodles in the standard are sautéing, baking, frying and steaming, and the finishing liquids include seasoned water, stock, oil and broth. Toss pasta with the sauce in the pan, not on top of it, so the sauce coats evenly.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 20 — STUFFED PASTAS AND DUMPLINGS (G-20)
+                // ============================================================
+                {
+                    id: 'ch-20',
+                    number: 20,
+                    title: 'Stuffed Pastas and Dumplings',
+                    subtitle: 'Task G-20 · Prepares stuffed pastas and dumplings (5 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 80,
+                    sections: [
+                        {
+                            id: 'ch20-s1',
+                            title: '20.1 Selecting Stuffed Pasta and Dumpling Ingredients (G-20.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Dumplings are dough-based foods, mainly cooked with moist heat, and may be filled. Stuffed pastas have fillings such as meat, cheese, seafood or vegetables that are fully or partly encased in wheat, rice or other flour doughs. They can be baked, steamed, simmered or fried.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Stuffed Pasta', 'Description'],
+                                    rows: [
+                                        ['Cannelloni', 'Large tubes of pasta, filled and baked in sauce'],
+                                        ['Manicotti', 'Large pasta tubes, usually filled with ricotta and baked'],
+                                        ['Tortellini', 'Small ring-shaped filled pasta, folded around the finger'],
+                                        ['Ravioli', 'Square or round pockets of pasta sealed around a filling'],
+                                        ['Agnolotti', 'Small pillow shaped filled pasta from Piedmont, often with meat or cheese'],
+                                        ['Tortelloni', 'Larger version of tortellini, usually with a cheese or vegetable filling'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dumpling', 'Description', 'Cooking Method'],
+                                    rows: [
+                                        ['Wontons', 'Chinese thin wheat wrapper filled with pork, shrimp or vegetables', 'Boiled in soup, steamed or deep-fried'],
+                                        ['Pierogi', 'Eastern European dough pockets filled with potato, cheese, cabbage or meat', 'Boiled, then pan-fried or baked'],
+                                        ['Matzo balls', 'Dumplings made from matzo meal, egg and fat', 'Simmered in broth'],
+                                        ['Gyoza', 'Japanese pan-fried dumplings with a thin wrapper, filled with pork and cabbage', 'Pan-fried and steamed'],
+                                        ['Shumai', 'Open-topped steamed dumplings, usually with pork or shrimp', 'Steamed'],
+                                        ['Gnocchi', 'Soft dough dumplings made from potato, flour and egg, or from semolina or ricotta', 'Simmered in water until they float'],
+                                        ['Market forms', 'Prepared and packaged items, fresh or frozen', 'Cook according to the package or manufacturer specifications'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dough or Wrapper', 'Characteristics', 'Used For'],
+                                    rows: [
+                                        ['Wonton wrapper', 'Thin wheat and egg wrapper', 'Wontons, some stuffed items'],
+                                        ['Leavened dough', 'Dough with yeast or other leavening that rises', 'Steamed buns and baked filled breads'],
+                                        ['Flour dough', 'Basic flour and water dough', 'Gyoza, pierogi and similar dumplings'],
+                                        ['Wheat dough', 'Wheat flour dough with or without egg', 'Fresh stuffed pastas'],
+                                        ['Rice-based dough', 'Rice flour dough; translucent and chewy when cooked, gluten-free', 'Translucent dumplings and rice paper wrappers'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Check filling quality by sensory assessment and best-before dates. Fillings containing meat, seafood, eggs or dairy are potentially hazardous foods and must be kept cold.',
+                                        'Identify and choose filling ingredients to match the recipe: cheese, meat, seafood or vegetables, and seasonings.',
+                                        'Determine the dough type and shape from the recipe and the desired result. Wrapper thickness, filling moisture and cooking method must suit each other.',
+                                        'Know the terminology and applications for each type of stuffed pasta and dumpling.',
+                                        'Dietary requirements to consider: wheat, egg, milk, soy, shellfish and fish allergens, gluten-free doughs, vegetarian and vegan fillings, and religious and cultural restrictions such as pork-free fillings.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Learn the list: stuffed pastas are cannelloni, manicotti, tortellini, ravioli, agnolotti and tortelloni; dumplings include wontons, pierogi, matzo balls, gyoza, shumai and gnocchi. A question may describe a dish and ask which one it is.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch20-s2',
+                            title: '20.2 Processing Stuffed Pastas and Dumplings (G-20.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Processing means mixing the dough and filling, then shaping and assembling each item. Select tools and equipment according to the recipe and the desired result.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Bowls', 'Combining filling ingredients and mixing dough'],
+                                        ['Cutters', 'Cutting dough rounds and squares'],
+                                        ['Forms and press', 'Shaping and sealing a uniform product'],
+                                        ['Electric roller', 'Rolling dough into thin even sheets'],
+                                        ['Stand mixer', 'Mixing and kneading dough and mixing fillings'],
+                                        ['Disher scoop', 'Portioning filling evenly'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Assembly Technique', 'Description', 'Example'],
+                                    rows: [
+                                        ['Rolling', 'Rolling dough to the correct thickness', 'Ravioli sheets, wonton wrappers'],
+                                        ['Folding', 'Folding dough over filling', 'Gyoza, tortellini'],
+                                        ['Stretching', 'Gently stretching dough to cover the filling', 'Filled doughs'],
+                                        ['Stuffing', 'Placing filling into dough or a tube', 'Cannelloni, manicotti'],
+                                        ['Cutting', 'Cutting dough or sealed items into portions', 'Ravioli squares'],
+                                        ['Crimping', 'Pinching or pressing the edges to seal and decorate', 'Pierogi, gyoza'],
+                                        ['Pressing', 'Pressing edges together or using a press', 'Ravioli press, pierogi'],
+                                        ['Pinching', 'Pinching dough into pleats or closing a seam', 'Dumplings and shumai'],
+                                        ['Piping', 'Using a piping bag to fill tubes or pockets cleanly', 'Cannelloni, manicotti'],
+                                        ['Hand forming', 'Shaping by hand into balls, ovals or dumplings', 'Matzo balls, gnocchi'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Combine filling ingredients as the recipe states. Keep fillings cold, and cook and cool any cooked filling ingredients before filling the dough.',
+                                        'Fillings that are too wet make the dough soggy and burst while cooking, so drain vegetables and cool cooked fillings. Fillings that are too dry become crumbly, so use a binder such as egg, cheese or a thick sauce.',
+                                        'Seal each piece well, removing trapped air, and use water or egg wash on the edges when needed to keep the filling inside during cooking.',
+                                        'Portion the filling with a disher scoop to give even size and consistent cooking.',
+                                        'Store and hold prepared items according to the recipe and jurisdictional regulations: keep them refrigerated at 4 °C or below on a lightly floured tray in a single layer, or freeze them in a single layer first, then bag and label.',
+                                        'Jurisdictional regulations that apply: WHMIS for cleaning chemicals, HACCP for hazard control, OH&S for safe work practices and public health regulations for food safety.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention'],
+                                    rows: [
+                                        ['Items burst while cooking', 'Overfilled, poorly sealed or trapped air', 'Use less filling, press out air and seal well'],
+                                        ['Dough tears when rolled', 'Dough too dry or overworked, or too thin', 'Rest the dough and keep it covered'],
+                                        ['Items stick to each other', 'Not dusted and stacked together', 'Place in a single layer on a floured or parchment-lined tray'],
+                                        ['Soggy dough', 'Filling too wet', 'Drain and cool the filling'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Fillings made with raw meat, poultry, seafood or eggs must be kept below 4 °C and handled with separate boards and utensils. Never taste a raw filling, and wash and sanitize hands and equipment between handling raw and cooked items. Label dumplings and stuffed pastas that contain allergens such as wheat, egg, milk, soy, fish and shellfish.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Assembly techniques named in the standard are rolling, folding, stretching, stuffing, cutting, crimping, pressing, pinching, piping and hand forming. Keep fillings cold and seals tight.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch20-s3',
+                            title: '20.3 Cooking Stuffed Pastas and Dumplings (G-20.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Cooking methods depend on the item. Stuffed pastas are boiled, baked or fried. Dumplings are boiled, simmered, poached, steamed, pan-fried or deep-fried. The cook uses colanders, pots, frying pans, deep fryers, skimmers, tongs, bamboo baskets and woks.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'How It Is Done', 'Examples'],
+                                    rows: [
+                                        ['Boiling', 'Cook in a large pot of boiling, salted water', 'Ravioli, tortellini, pierogi; boil gently so they do not burst'],
+                                        ['Simmering', 'Cook in liquid just below boiling', 'Gnocchi, matzo balls in broth, some dumplings'],
+                                        ['Poaching', 'Cook gently in barely moving liquid', 'Delicate dumplings and quenelle style items'],
+                                        ['Steaming', 'Cook over steam in a bamboo basket or steamer', 'Shumai, steamed buns, wontons'],
+                                        ['Pan-frying', 'Brown in a pan with oil, then add liquid and cover to steam through', 'Gyoza, potstickers, pierogi'],
+                                        ['Deep frying', 'Fry in hot oil until golden and crisp', 'Fried wontons, some pierogi and empanada style items'],
+                                        ['Baking', 'Bake in a sauce or on a tray', 'Cannelloni, manicotti, stuffed shells'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Doneness Method', 'Signs of Doneness'],
+                                    rows: [
+                                        ['Sensory inspection', 'Boiled stuffed pasta and gnocchi float, the dough is tender and the edges are cooked; fried items are golden brown and crisp; steamed items are translucent and firm'],
+                                        ['Thermometer', 'Items with meat, poultry or seafood fillings reach a safe internal temperature (74 °C for poultry fillings and mixed fillings); check the centre of the filling'],
+                                        ['Time', 'Follow the recipe or manufacturer time, with the amount and size of the item taken into account'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Cook in a large volume of gently boiling water so items do not collide and tear, and cook in small batches so the water stays hot.',
+                                        'Use a skimmer or spider to lift items out gently. Do not pour from the pot into a colander when the dough is fragile.',
+                                        'For pan-fried dumplings, brown the base in oil, add a little water, cover immediately and steam until the water is gone and the base is crisp again.',
+                                        'Deep fry at the temperature in the recipe, commonly about 175 to 190 °C, and drain on absorbent paper. Oil that is too cool makes greasy items and oil that is too hot burns the outside before the filling is hot.',
+                                        'Cooking temperatures and times depend on the size of the item, the filling and the method. Frozen products may be cooked from frozen according to the manufacturer.',
+                                        'Store and hold cooked items according to the recipe and regulations: keep hot items at 60 °C or above, cool leftovers quickly, refrigerate at 4 °C or below and reheat to 74 °C.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Wet or frozen items lowered into hot oil can cause violent spattering and boil-overs. Pat items dry, lower them in with a skimmer away from your body, never overfill the fryer and keep water away from hot oil. Steam from baskets and woks is very hot, so lift lids away from your face.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Know which methods go with which items. Stuffed pasta is boiled, baked or fried. Dumplings use boiling, simmering, poaching, steaming, pan-frying and deep frying. Gnocchi and boiled dumplings are done when they float, and fillings with meat or seafood must reach a safe internal temperature.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch20-s4',
+                            title: '20.4 Finishing Stuffed Pastas and Dumplings (G-20.04)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Finishing prepares the cooked items for service. Items made ahead are reheated, then served with sauces, dressings, components and accompaniments that suit the recipe, seasoned and garnished.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Reheating Method', 'How It Is Done', 'Best For'],
+                                    rows: [
+                                        ['Boiling', 'Dip in boiling water briefly', 'Ravioli, tortellini'],
+                                        ['Simmering', 'Warm gently in broth or sauce', 'Matzo balls, gnocchi, dumplings in soup'],
+                                        ['Poaching', 'Warm gently in hot liquid', 'Delicate dumplings'],
+                                        ['Steaming', 'Heat in a steamer', 'Shumai, steamed dumplings and buns'],
+                                        ['Frying', 'Crisp in a pan or fryer', 'Pierogi, gyoza and wontons'],
+                                        ['Sautéing', 'Toss in a hot pan with butter, oil or sauce', 'Gnocchi, ravioli, pierogi with onions'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Item', 'Typical Sauce or Accompaniment', 'Garnish'],
+                                    rows: [
+                                        ['Ravioli and tortellini', 'Brown butter and sage, tomato, cream or broth', 'Grated hard cheese, fresh herbs'],
+                                        ['Baked stuffed pasta', 'Tomato or béchamel sauce, melted cheese', 'Parsley, basil'],
+                                        ['Gnocchi', 'Sage butter, pesto, tomato sauce', 'Parmesan, toasted nuts'],
+                                        ['Pierogi', 'Sour cream, caramelized onions, butter', 'Chives, bacon, dill'],
+                                        ['Gyoza and wontons', 'Soy and vinegar dipping sauce, chili oil, broth', 'Green onion, sesame seeds'],
+                                        ['Shumai', 'Soy sauce, chili sauce, mustard', 'Green onion'],
+                                        ['Matzo balls', 'Clear chicken broth', 'Dill, parsley'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Select sauces, dressings, components and accompaniments according to the recipe, and apply them so the dish is balanced in flavour and texture.',
+                                        'Adjust seasonings by recipe and sensory assessment before serving.',
+                                        'Garnish according to the recipe and keep the plate clean and appealing.',
+                                        'Handle, serve and store finished items according to regulations and company policy, and label allergens.',
+                                        'Know the terminology, dietary requirements and types for each item so you can answer guest questions.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Reheating methods for stuffed pastas and dumplings in the standard are boiling, simmering, poaching, steaming, frying and sautéing. Match the reheating method to how the item was cooked and the texture needed, crisp or soft.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        // ============================================================
+        // STEP 2C — PART 8 FRAGMENT (MWA H: Grains, pulses, seeds, nuts and alternative proteins)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 7.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks H-21, H-22 and H-23.
+        // ============================================================
+        {
+            id: 'part-8',
+            number: 8,
+            title: 'Grains, Pulses, Seeds, Nuts and Alternative Proteins (MWA H)',
+            description: 'Grains and pulses from selection and washing to boiling, steaming, pilaf, risotto and braising; seeds and nuts from cleaning, roasting and blanching to finishing; and alternative proteins such as tofu, tempeh, seitan and insects. MWA H carries 11 exam questions across tasks H-21, H-22 and H-23.',
+            weight: '11 questions (7.3% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 21 — GRAINS AND PULSES (H-21)
+                // ============================================================
+                {
+                    id: 'ch-21',
+                    number: 21,
+                    title: 'Grains and Pulses',
+                    subtitle: 'Task H-21 · Prepares grains and pulses (4 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 80,
+                    sections: [
+                        {
+                            id: 'ch21-s1',
+                            title: '21.1 Selecting Grains and Pulses (H-21.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Grains and pulses are staples that serve as sides, bases for main dishes and plant-based proteins. Producing quality dishes depends on knowing the varieties, how each cooks and how much to prepare. Choose the type according to the recipe and the desired result, decide the quantity from the required yield, and judge quality by sensory assessment.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Grain', 'Characteristics', 'Typical Uses'],
+                                    rows: [
+                                        ['Short-grain rice', 'Short, plump grains with high starch; cooked grains cling and turn creamy', 'Risotto (such as Arborio), sushi, rice pudding, paella'],
+                                        ['Long-grain rice', 'Slender grains lower in starch; cooks fluffy and separate', 'Pilaf, steamed rice, rice salads, side dishes'],
+                                        ['Wild rice', 'Seed of an aquatic grass, not true rice; dark, chewy and nutty; long cooking time', 'Pilaf blends, stuffings, soups, salads'],
+                                        ['Barley', 'Chewy grain; pearl barley has the bran removed and cooks faster', 'Soups, stews, pilafs and salads'],
+                                        ['Bulgur', 'Cracked wheat that is parboiled and dried; needs soaking or short cooking', 'Tabbouleh, pilaf, stuffings'],
+                                        ['Oats', 'Rolled, steel-cut or quick oats; creamy when cooked', 'Porridge, baking, crusts and binders'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Pulse', 'Characteristics', 'Typical Uses'],
+                                    rows: [
+                                        ['Lentils', 'Small, quick-cooking; red lentils break down, green and brown hold their shape', 'Dahl, soups, salads, stews'],
+                                        ['Beans', 'Kidney, black, navy, pinto, chickpeas and others; firm and need soaking and longer cooking', 'Chili, red beans and rice, salads, spreads such as hummus'],
+                                        ['Peas', 'Split peas break down when cooked; whole dried peas hold their shape', 'Split pea soup, purées, curries'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Judge quality by sensory assessment. Dry grains and pulses should be uniform in size and colour, clean and free of moisture, mould, insects, musty smell and broken or shrivelled pieces.',
+                                        'Determine quantity from the required yield. Most grains and pulses increase in volume when cooked, so work from the recipe ratio and the number of portions.',
+                                        'Choose the type by recipe and result: creamy dishes need short-grain rice, fluffy dishes need long-grain rice and chewy textures need wild rice or barley.',
+                                        'Dietary considerations: rice, quinoa, buckwheat, millet and pulses are gluten-free, while barley, bulgur and wheat are not. Oats are often contaminated with gluten unless labelled gluten-free. Pulses are plant proteins and suit vegetarian and vegan diets.',
+                                        'Store dry grains and pulses in sealed, labelled containers in a cool, dry, dark place away from pests, and use FIFO. Cooked grains and pulses are potentially hazardous and must be cooled and refrigerated quickly.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Approximate Cooking Ratio (Grain : Water)', 'Time', 'Yield Notes'],
+                                    rows: [
+                                        ['Long-grain white rice, 1 : 2', '15 to 20 minutes', 'Roughly triples in volume'],
+                                        ['Short-grain rice (steamed), 1 : 1.5', '15 to 20 minutes', 'Sticky and tender'],
+                                        ['Wild rice, 1 : 3', '45 to 60 minutes', 'Grains split open when done'],
+                                        ['Pearl barley, 1 : 3', '30 to 40 minutes', 'Roughly triples in volume'],
+                                        ['Bulgur (coarse), 1 : 2', '10 to 15 minutes', 'Fine bulgur only needs soaking'],
+                                        ['Lentils, 1 : 3', '15 to 30 minutes', 'Varies by type'],
+                                        ['Dried beans (soaked), 1 : 3', '1 to 2 hours', 'Roughly doubles after soaking and cooking'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Short-grain rice is starchy and creamy for risotto and sushi, long-grain is fluffy and separate for pilaf. Wild rice is not a true rice. Barley and bulgur contain gluten, and the standard lists grains as rice (short, long), wild rice, barley, bulgur and oats, with pulses as lentils, beans and peas.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch21-s2',
+                            title: '21.2 Processing Grains and Pulses (H-21.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Raw grains and pulses are agricultural products and may contain foreign material. Inspect them, discard anything unsafe, wash them in cold water, drain the excess and soak them as needed so they cook evenly.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Step', 'What to Do', 'Why'],
+                                    rows: [
+                                        ['Inspect', 'Spread the product on a tray and look for rocks, metal, twigs, leaves and insects', 'Removes physical contaminants that can injure guests or damage teeth'],
+                                        ['Discard', 'Throw out any product with chemical or biological contamination, mould or off-odours', 'Contaminated product cannot be made safe by cooking'],
+                                        ['Wash', 'Rinse thoroughly in cold water until the water runs clear', 'Removes dust, debris and surface starch; keeps rice grains separate'],
+                                        ['Strain', 'Drain excess water in a colander', 'Controls the cooking liquid ratio'],
+                                        ['Soak', 'Cover in cold water for the time needed by the type', 'Rehydrates dry products and evens out cooking, shortens cooking time'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Do not wash rice for risotto, because the surface starch gives the creamy texture.',
+                                        'Soak dried beans for several hours or overnight in cold water, then drain and cook in fresh water. A quick soak is to bring beans to a boil, turn off the heat and let them stand for about an hour.',
+                                        'Lentils and split peas do not need soaking, but they should be sorted and rinsed.',
+                                        'Soak wild rice, barley and whole grains where it shortens the cooking time or evens the result.',
+                                        'Discard the soaking water of dried beans and cook in fresh water, which reduces the compounds that cause gas.',
+                                        'Keep raw and cooked products separate and use clean, sanitized containers.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Raw kidney beans contain a natural toxin and must be soaked, drained and boiled vigorously for at least 10 minutes before simmering until tender. Slow cookers do not reach a high enough temperature to destroy it. Undercooked kidney beans cause severe stomach illness.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'The order is inspect, discard if contaminated, wash, strain, soak. Contaminants named in the standard are rocks, metal, twigs, leaves and insects.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch21-s3',
+                            title: '21.3 Cooking Grains and Pulses (H-21.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Cooking methods are chosen by the type of grain or pulse and the dish. The tools include colanders, steamers, pots, tongs, spatulas, Dutch ovens, woks, pressure cookers and spoons. Doneness is determined by sensory assessment, and the dish is finished according to the recipe.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'How It Works', 'Examples'],
+                                    rows: [
+                                        ['Boiling', 'Cook in a large amount of boiling water, then drain', 'Pasta style cooking for barley, wild rice and pulses'],
+                                        ['Steaming', 'Cook in measured water, covered, so the grain absorbs all the liquid', 'Steamed rice, bulgur, congee base'],
+                                        ['Baking', 'Cook in the oven with measured liquid, covered', 'Baked rice and beans, casseroles'],
+                                        ['Stir-frying', 'Cook cooked grain or soaked product in a hot wok with oil', 'Fried rice'],
+                                        ['Puffing', 'Expanding grains with heat or pressure', 'Puffed rice and popped grains used as garnishes'],
+                                        ['Pressure cooking', 'Cook in a sealed vessel under pressure for a shorter time', 'Dried beans, chickpeas, barley'],
+                                        ['Pilaf method', 'Sauté the grain in fat with aromatics, add hot liquid, cover and cook until the liquid is absorbed', 'Rice pilaf, bulgur pilaf'],
+                                        ['Risotto method', 'Sauté rice in fat, then add hot stock gradually, stirring, until creamy and tender', 'Risotto with Arborio rice'],
+                                        ['Braising', 'Cook in a covered pot with a small amount of liquid at low heat', 'Beans, lentils and grains with vegetables'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dish', 'Main Component', 'Method or Key Point'],
+                                    rows: [
+                                        ['Tabbouleh', 'Bulgur', 'Soaked, not cooked; mixed with parsley, mint, tomato, lemon and oil'],
+                                        ['Red beans and rice', 'Kidney beans and rice', 'Beans simmered until creamy with aromatics, served over rice'],
+                                        ['Pilaf', 'Rice or bulgur', 'Pilaf method, covered, fluffed with a fork'],
+                                        ['Porridge', 'Oats or other grains', 'Simmered in water or milk and stirred until creamy'],
+                                        ['Dahl', 'Lentils or split peas', 'Simmered with spices until soft, finished with a tempered spice mixture'],
+                                        ['Congee', 'Rice', 'Simmered in a large volume of liquid until it breaks down into a thick porridge'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Doneness (Sensory)', 'Grains', 'Pulses'],
+                                    rows: [
+                                        ['Texture', 'Tender with a slight bite; rice separate and fluffy for pilaf, creamy for risotto', 'Tender through the centre with no chalky core; hold their shape unless meant to break down'],
+                                        ['Appearance', 'Grains have swelled and absorbed the liquid; wild rice splits open', 'Skin is intact or just starting to split'],
+                                        ['Taste', 'No raw or starchy flavour', 'Earthy and sweet, with no raw bean taste'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Do not stir steamed rice and pilaf, because stirring releases starch and makes it gummy. Rest the covered pot off the heat for about 10 minutes, then fluff with a fork.',
+                                        'Add salt and acid at the right time: acid and salt added early can toughen pulses, so season beans once they begin to soften.',
+                                        'For risotto, add the stock hot and in small amounts, and stir until the rice is creamy and slightly firm at the centre (all onda).',
+                                        'Cool cooked grains and pulses quickly. Spread them on a shallow tray, refrigerate at 4 °C or below within the two-stage cooling limits, and reheat to 74 °C.',
+                                        'Finish according to the recipe with seasoning, herbs, fat, acid, nuts or sauces, and hold hot at 60 °C or above.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Cooked rice and other grains can carry Bacillus cereus spores that survive cooking and produce toxins when the rice sits at room temperature. Cool rice rapidly and refrigerate it, never hold it warm for long, and do not leave a pot of rice on the counter. Pressure cookers must be vented and opened carefully, because steam and hot contents can cause serious burns.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Know the method behind each dish: pilaf is sautéed then covered, risotto is stirred while hot stock is added gradually, tabbouleh uses soaked bulgur, and congee is rice simmered in extra liquid. Rice is a classic hazard for Bacillus cereus.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 22 — SEEDS AND NUTS (H-22)
+                // ============================================================
+                {
+                    id: 'ch-22',
+                    number: 22,
+                    title: 'Seeds and Nuts',
+                    subtitle: 'Task H-22 · Prepares seeds and nuts (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+                    sections: [
+                        {
+                            id: 'ch22-s1',
+                            title: '22.1 Selecting and Processing Seeds and Nuts (H-22.01 and H-22.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Seeds and nuts are served on their own or used in soups, dressings, salads, pastries and as protein alternatives. Select the type according to the recipe, determine the amount needed and judge quality by sensory assessment.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Seed', 'Characteristics', 'Typical Uses'],
+                                    rows: [
+                                        ['Pumpkin (pepitas)', 'Flat green seeds with a nutty flavour', 'Toasted garnish, salads, granola'],
+                                        ['Sunflower', 'Mild, slightly sweet seeds', 'Breads, salads, spreads'],
+                                        ['Flax', 'Small, oil-rich seeds; grind for digestibility', 'Baking, egg substitute (ground with water), cereals'],
+                                        ['Chia', 'Tiny seeds that form a gel in liquid', 'Puddings, jams, egg substitute'],
+                                        ['Quinoa', 'A seed cooked like a grain; gluten-free and high in protein; rinse to remove bitter coating', 'Salads, pilaf, side dishes'],
+                                        ['Sesame', 'Small seeds, white or black; toasted for flavour', 'Tahini, garnishes, crusts and baking'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Nut', 'Type', 'Characteristics and Uses'],
+                                    rows: [
+                                        ['Almonds', 'Tree nut', 'Mild and sweet; sliced, slivered, ground into almond flour and almond paste'],
+                                        ['Pine nuts', 'Tree nut (seed of pine cones)', 'Soft, buttery and expensive; pesto and salads; turn rancid quickly'],
+                                        ['Walnuts', 'Tree nut', 'Rich and slightly bitter; baking, salads, sauces'],
+                                        ['Peanuts', 'Groundnut (a legume)', 'Grow underground; peanut butter, sauces, stir-fries; priority allergen'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Judge quality by sensory assessment. Seeds and nuts should smell fresh and nutty, be uniform in size and colour and be free of insects, mould and shrivelled pieces. A bitter, sour or paint-like smell means they are rancid.',
+                                        'Inspect and clean: remove contaminants such as shell, twigs and insects, and discard any contaminated product.',
+                                        'Processing methods: soaking, straining, grinding, roasting, blanching, chopping and shelling.',
+                                        'Blanch nuts such as almonds by dipping them in boiling water briefly, then cooling them in cold water and slipping off the skins.',
+                                        'Soak nuts to soften them for blending into nut milks and creams, then drain and rinse.',
+                                        'Grind and chop to the size needed. Seeds and nuts release oil when ground too long, so pulse them and use a little sugar or flour to prevent paste.',
+                                        'Store in sealed containers in a cool, dry, dark place, or refrigerate or freeze for long storage, because the oils turn rancid. Label and date.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Peanuts and tree nuts are priority allergens and can cause severe, life-threatening reactions even in trace amounts. Keep nuts and nut-containing foods separate from everything else, use dedicated, cleaned and sanitized equipment, wash hands after handling them and label every dish that contains or may contain nuts or seeds such as sesame.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'The standard lists seeds as pumpkin, sunflower, flax, chia, quinoa and sesame and nuts as tree nuts (almonds, pine, walnuts) and groundnuts (peanuts). Rancid oil is the main quality fault, and processing methods include soaking, straining, grinding, roasting, blanching, chopping and shelling.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch22-s2',
+                            title: '22.2 Cooking and Finishing Seeds and Nuts (H-22.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Cooking brings out the flavour and crunch of seeds and nuts or makes them tender for use in other dishes. The tools include colanders, steamers, hotel pans, frying pans, sheet pans, pots, tongs, spatulas and pressure cookers.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'How It Is Done', 'Notes'],
+                                    rows: [
+                                        ['Roasting', 'Heat in a dry pan or in a medium oven until fragrant and lightly coloured', 'Stir often; watch carefully, because nuts and seeds burn quickly and continue to cook from residual heat'],
+                                        ['Baking', 'Toast or bake on a sheet pan in the oven, alone or in a recipe', 'Spread in a single layer for even colour'],
+                                        ['Boiling and simmering', 'Cook in water until tender', 'Used for quinoa, chestnuts and some soaked nuts'],
+                                        ['Steaming', 'Cook over steam', 'Used for tender products such as quinoa'],
+                                        ['Frying', 'Cook in oil', 'Fried nuts and seeds, crisp garnishes'],
+                                        ['Pilaf method', 'Sauté in fat, add liquid and cook covered', 'Used for quinoa and other seeds'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Method', 'Description', 'Example'],
+                                    rows: [
+                                        ['Puréeing', 'Blending to a smooth paste or butter', 'Nut butters, tahini, hummus-style spreads'],
+                                        ['Seasoning', 'Adding salt, spices, herbs or sugar', 'Spiced nuts, seasoned seeds'],
+                                        ['Curing', 'Treating with salt or brine, then drying', 'Salted and cured nuts and seeds'],
+                                        ['Candying', 'Coating with caramelized sugar', 'Candied pecans and walnuts, brittle'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Determine doneness by sensory assessment: a toasted nut smells nutty and has an even golden colour; a cooked seed is tender and the quinoa shows a white spiral tail.',
+                                        'Toast nuts at a moderate temperature (about 160 to 175 °C) and remove them from the hot pan right away so they do not over-brown.',
+                                        'Cool toasted nuts completely before storing in sealed containers, so condensation does not make them soft.',
+                                        'Finish according to the recipe and label allergens, keeping garnish and serving utensils separate for nut-free orders.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hot sugar for candying and hot oil for frying cause serious burns. Hot pans of roasting nuts are easy to forget, and scorched nuts can smoke and ignite in the oven. Use mitts, set a timer and never leave nuts roasting unattended.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Finishing methods in the standard are puréeing, seasoning, curing and candying. Roast nuts until fragrant and golden, and cool them completely before storage.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 23 — ALTERNATIVE PROTEINS (H-23)
+                // ============================================================
+                {
+                    id: 'ch-23',
+                    number: 23,
+                    title: 'Alternative Proteins',
+                    subtitle: 'Task H-23 · Prepares alternative proteins (4 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+                    sections: [
+                        {
+                            id: 'ch23-s1',
+                            title: '23.1 Selecting and Processing Alternative Proteins (H-23.01 and H-23.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Alternative proteins are served alone, as main dishes, or as the protein in soups, pastas, salads and appetizers. They include plant-based proteins and insects, and they serve vegetarian, vegan, religious, health-related and environmental needs. Choose the type according to the recipe, the desired result and the dietary requirement, and choose the amount per the recipe.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Alternative Protein', 'Description', 'Characteristics and Uses'],
+                                    rows: [
+                                        ['Tofu (soft)', 'Soybean curd with high water content', 'Delicate; soups, sauces, desserts and scrambles; do not press hard'],
+                                        ['Tofu (firm and extra firm)', 'Pressed soybean curd', 'Holds shape; stir-fries, grilling, frying, baking'],
+                                        ['Tempeh', 'Fermented whole soybeans pressed into a cake', 'Nutty, firm and chewy; steam or simmer first to reduce bitterness, then marinate and fry or grill'],
+                                        ['Bean curd', 'Coagulated soy milk, sold fresh, dried or fried', 'Used across Asian dishes; includes pressed and fried forms'],
+                                        ['Seitan (wheat gluten)', 'Concentrated wheat gluten with a meat-like texture', 'Absorbs marinades and seasonings; contains wheat and gluten, so it is unsuitable for gluten-free guests'],
+                                        ['Market forms (prepared and packaged)', 'Commercial meat substitutes, burgers, sausages and crumbles', 'Cook per the manufacturer; check allergens and ingredients'],
+                                        ['Insects', 'Edible insects such as crickets, sold dried, ground or whole', 'High in protein; used in flour, crisp snacks and savoury dishes; allergen risk for people with shellfish allergy'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Process', 'Description', 'Key Points'],
+                                    rows: [
+                                        ['Thawing', 'Defrosting frozen products', 'Thaw in the refrigerator at 4 °C or below, according to the manufacturer'],
+                                        ['Steeping', 'Soaking in hot liquid to rehydrate or soften', 'Used for dried bean curd and some dried products'],
+                                        ['Cutting', 'Cutting into cubes, slabs, strips or crumbles', 'Cut to the recipe so pieces cook evenly'],
+                                        ['Marinating', 'Soaking in a seasoned liquid', 'Adds flavour; porous items such as tofu, tempeh and seitan absorb marinades well'],
+                                        ['Breading', 'Coating in flour, egg or a substitute and crumbs', 'Used for frying and baking'],
+                                        ['Battering', 'Coating in a wet batter', 'Used for deep frying'],
+                                        ['Mixing', 'Combining ingredients, such as crumbled tofu with seasonings', 'Used for scrambles, burgers and fillings'],
+                                        ['Curdling', 'Coagulating plant milk into curds', 'The step that makes tofu from soy milk'],
+                                        ['Pressing', 'Removing water with weight', 'Gives firm tofu a denser texture that fries and browns better'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Prepare according to the manufacturer and recipe specifications.',
+                                        'Inspect freshness and quality by sensory assessment: tofu and tempeh should smell fresh and mild, with no sour smell, sliminess or mould (except the white mycelium of tempeh, which is normal) and be within the best-before date.',
+                                        'Store tofu covered in fresh water in the refrigerator and change the water daily; keep opened packages sealed, and refrigerate or freeze according to the label.',
+                                        'Flavour alternative proteins by seasoning, glazing or marinating, because most are mild on their own.',
+                                        'Dietary requirements to consider: soy allergy (tofu, tempeh, bean curd), wheat and gluten (seitan), shellfish allergy (insects) and cultural, religious and ethical preferences.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Soy and wheat are priority allergens, and insect-based products can trigger reactions in guests allergic to shellfish or dust mites. Cross-contact can happen through shared fryer oil, boards and utensils, so use dedicated equipment and label dishes clearly. Handle tofu and similar products as potentially hazardous foods and keep them at 4 °C or below.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Seitan is wheat gluten, tofu and tempeh are soy and insects may be a shellfish cross-reactivity concern. Pressing firms tofu, marinating adds flavour and the standard lists the processes: thaw, steep, cut, marinate, bread, batter, mix, curdle and press.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch23-s2',
+                            title: '23.2 Cooking and Finishing Alternative Proteins (H-23.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Alternative proteins are cooked by many methods, and doneness is determined by sensory assessment and by temperature according to jurisdictional regulations. The tools include pots, tongs, spatulas, grill pans, frying pans and woks.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Best For', 'Key Points'],
+                                    rows: [
+                                        ['Boiling', 'Tempeh pre-simmer, dried bean curd, some market forms', 'Simmer gently so delicate items do not break'],
+                                        ['Steaming', 'Tofu, tempeh, dumplings and buns', 'Gentle and keeps moisture'],
+                                        ['Grilling', 'Firm tofu, tempeh, seitan', 'Oil the grill and the item, and marinate first so it does not stick or dry out'],
+                                        ['Deep frying', 'Breaded or battered tofu, tempeh, seitan', 'Pat dry, fry at the recipe temperature and drain well'],
+                                        ['Shallow frying', 'Tofu cubes, tempeh slices, crumbles', 'Use a hot, oiled pan and do not crowd it'],
+                                        ['Roasting', 'Tofu and tempeh pieces', 'High heat gives a crisp exterior'],
+                                        ['Baking', 'Marinated tofu, seitan loaves, market forms', 'Even heat and a glaze give flavour and colour'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Determine doneness by sensory assessment: a golden crust, firm texture and heated through. Check the internal temperature according to jurisdictional regulations and the manufacturer for products that must reach a safe temperature, such as 74 °C for dishes mixed with poultry or egg and for reheated items.',
+                                        'Finish according to the specifications with sauces, glazes, garnishes and seasonings that suit the dish.',
+                                        'Hold hot items at 60 °C or above and cold at 4 °C or below, and cool and reheat leftovers safely.',
+                                        'Applicable regulations: WHMIS, HACCP, OH&S and public health regulations.',
+                                        'Keep plant-based items separate from meat on the grill, in the fryer and on boards if the guest is vegetarian or vegan, so cross-contact does not occur.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Wet tofu and marinated items spatter violently in hot oil. Pat them dry, lower them in slowly and keep water away from the fryer. Never share fryer oil or grill surfaces between plant-based dishes for vegetarian or vegan guests and meat, fish or egg dishes without telling the guest.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Cooking methods in the standard for alternative proteins are boiling, steaming, grilling, deep frying, shallow frying, roasting and baking. Doneness is judged by sensory assessment and temperature, and cross-contact is the main concern for vegetarian, vegan and allergy guests.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+
+        // ============================================================
+        // STEP 2C — PART 9 FRAGMENT (MWA I: Meats, game meats, poultry, game birds and variety meats)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 8.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks I-24, I-25 and I-26.
+        // ============================================================
+        {
+            id: 'part-9',
+            number: 9,
+            title: 'Meats, Game Meats, Poultry, Game Birds and Variety Meats (MWA I)',
+            description: 'The largest block of the exam: selecting meats and game by grade and cut, fabricating, aging, tempering, cooking by dry, moist and combination methods, resting, carving and finishing; poultry and game birds from market forms and trussing to stuffing, roasting and holding; and variety meats such as liver, kidney, sweetbreads and tripe. MWA I carries 16 exam questions across tasks I-24, I-25 and I-26.',
+            weight: '16 questions (10.7% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 24 — SELECTING MEATS AND GAME MEATS (I-24.01)
+                // ============================================================
+                {
+                    id: 'ch-24',
+                    number: 24,
+                    title: 'Selecting Meats and Game Meats',
+                    subtitle: 'Task I-24.01 · Grades, classifications, cuts, labels and freshness (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 70,
+                    sections: [
+                        {
+                            id: 'ch24-s1',
+                            title: '24.1 Meat Types, Game and Regulations',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Meat is the most costly item on many menus, and a cook who selects well wastes less, cooks better and keeps guests safe. Selection means identifying and choosing the meat according to regulations, classifications, the desired result and the recipe, reading the label or stamp and judging freshness and quality by sensory assessment.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Category', 'Examples in the Standard', 'Notes'],
+                                    rows: [
+                                        ['Meats', 'Pork, veal, beef, lamb, goat', 'Veal is young beef; lamb is young sheep; goat has lean, strongly flavoured meat'],
+                                        ['Game', 'Bison, elk, caribou, moose, deer, kangaroo, musk ox, wild boar, rabbit', 'Generally lean with a stronger flavour; needs careful cooking to avoid drying; farm-raised game is common in food service'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Regulation or Body', 'Role'],
+                                    rows: [
+                                        ['CFIA (Canadian Food Inspection Agency)', 'Sets and enforces inspection, grading, classification and branding rules for meat sold in Canada'],
+                                        ['HACCP', 'Hazard control system used to prevent, control or eliminate food safety hazards'],
+                                        ['WHMIS', 'Workplace hazardous materials information for cleaners and chemicals'],
+                                        ['OH&S', 'Occupational health and safety rules for safe work practices'],
+                                        ['Public health regulations', 'Local rules for handling, storing, cooking and serving food'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Classification', 'What It Describes'],
+                                    rows: [
+                                        ['Origin', 'Where the animal was raised and processed, such as local, domestic or imported'],
+                                        ['Size', 'Weight or size of the animal or cut, which affects yield and cooking time'],
+                                        ['Aged (dry or wet)', 'Meat that has been held under controlled conditions to improve tenderness and flavour'],
+                                        ['Grade', 'Quality rating based on factors such as marbling, maturity, colour and fat cover'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Canadian Beef Grade', 'Marbling', 'Notes'],
+                                    rows: [
+                                        ['Canada Prime', 'Slightly abundant or more', 'Highest quality; limited supply, mainly high-end restaurants'],
+                                        ['Canada AAA', 'Small', 'Common high-quality food service grade'],
+                                        ['Canada AA', 'Slight', 'Good quality'],
+                                        ['Canada A', 'Trace', 'Leaner with less marbling'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Interpret label and stamp information: look for the inspection legend, grade, packing or best-before date, weight, cut name, country of origin and handling instructions.',
+                                        'Know the dietary requirements for meat: cultural, allergies, ethical, religious (halal and kosher slaughter, pork avoidance), health-related, environmental and personal preferences.',
+                                        'Selection factors: local and seasonal availability, freshness, storage life, applications, how processed the product is and sustainability.',
+                                        'Know the hazards of raw meat: bacteria such as Salmonella, E. coli and Listeria, and parasites such as Trichinella in some game. Practise safe handling at every step.',
+                                        'Follow ordering specifications, which state the cut, grade, weight range, trim level, packaging and delivery condition.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Raw meat and meat juices carry pathogens. Store raw meat below ready-to-eat foods, in covered, labelled containers at 4 °C or below, and never let raw juices touch other foods, boards or utensils. Wild game must come from an approved, inspected source and not be hunted or butchered by the guest or an unapproved supplier.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Classifications in the standard are origin, size, aged (dry or wet) and grade. Meat inspection is mandatory, while grading is a quality rating. Marbling is the main factor in Canadian beef grades.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch24-s2',
+                            title: '24.2 Cuts, Freshness and Quality',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Meat is purchased as whole carcasses or sides, primal cuts, sub-primal cuts or pre-portioned cuts. The cut choice affects cost, labour, waste and the cooking method. Muscles that work hard (shoulder, leg, shank, chest) are tougher with more connective tissue and need moist or slow cooking. Muscles that work little (loin, rib) are tender and suit dry, fast cooking.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Cut Form', 'Description', 'Advantage'],
+                                    rows: [
+                                        ['Whole (carcass or side)', 'The entire animal or half', 'Lowest cost per kilogram but needs skilled butchery and storage space'],
+                                        ['Primal', 'A major section, such as the beef rib, loin, chuck, round, brisket or plate', 'Cut down in-house to control yield and trim'],
+                                        ['Sub-primal', 'A smaller section cut from a primal, such as a striploin or top sirloin', 'Easier to handle; less labour'],
+                                        ['Pre-portioned', 'Portion cuts such as steaks and chops ready to cook', 'Consistent size and cost with the least labour, but higher price'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Animal', 'Tender Cuts (Dry Heat)', 'Tough Cuts (Moist or Combination Heat)'],
+                                    rows: [
+                                        ['Beef', 'Rib, short loin (striploin, tenderloin), top sirloin', 'Chuck, brisket, shank, plate, round (some roast well)'],
+                                        ['Pork', 'Loin, tenderloin, rib chops', 'Shoulder (butt), picnic shoulder, hock, belly'],
+                                        ['Veal', 'Loin, rib, cutlets from the leg', 'Shoulder, shank (osso buco), breast'],
+                                        ['Lamb', 'Rack, loin, leg', 'Shoulder, shank, breast, neck'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Quality Check', 'Fresh and Acceptable', 'Unacceptable'],
+                                    rows: [
+                                        ['Colour', 'Beef bright cherry red, pork pale pink, lamb light to dark red, veal pale pink', 'Grey, green, brown or iridescent'],
+                                        ['Smell', 'Clean and mild', 'Sour, ammonia or sulphur odour'],
+                                        ['Texture', 'Firm, moist and elastic', 'Slimy, sticky or soft'],
+                                        ['Packaging', 'Cold, intact and with no leaking or bloating', 'Torn, leaking, swollen or warm'],
+                                        ['Temperature on delivery', 'Fresh at 4 °C or below; frozen at -18 °C or below and hard', 'Above 4 °C fresh or any sign of thawing and refreezing, such as ice crystals and liquid in the package'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Fat should be firm and white to cream coloured, and marbling should be evenly distributed.',
+                                        'Vacuum-packed beef can have a brief sulphur smell that disappears when opened; this is not spoilage.',
+                                        'Reject any product that is outside the temperature range at delivery, and record the rejection.',
+                                        'Dry-aged meat loses weight to evaporation and trim, so it costs more and yields less; wet-aged meat is aged in vacuum packaging and keeps its weight.',
+                                        'Plan uses for the whole cut: steaks from the tender portions, stews and ground meat from the trim, and stocks and broths from the bones.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Tough cuts come from hard-working muscles and need moist or combination cooking; tender cuts come from the loin and rib and suit dry heat. The four cut forms are whole, primal, sub-primal and pre-portioned. Fresh meat is received at 4 °C or below and frozen meat at -18 °C or below.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 25 — PROCESSING MEATS AND GAME MEATS (I-24.02)
+                // ============================================================
+                {
+                    id: 'ch-25',
+                    number: 25,
+                    title: 'Processing Meats and Game Meats',
+                    subtitle: 'Task I-24.02 · Fabrication, aging, tempering, curing and waste control (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 70,
+                    sections: [
+                        {
+                            id: 'ch25-s1',
+                            title: '25.1 Tools, Methods and Fabrication',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Processing turns delivered meat into portions ready to cook. The cook selects tools, tempers frozen product safely, fabricates the cuts, controls waste, uses the trim and keeps food safe throughout.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool', 'Use'],
+                                    rows: [
+                                        ['Band saw', 'Cuts through bone for chops, steaks and large pieces; follow lock-out procedures and wear cut-resistant gloves'],
+                                        ['Bone scraper', 'Removes bone dust and debris after sawing'],
+                                        ['Grinder', 'Grinds trim for ground meat, sausage and forcemeat'],
+                                        ['Cleaver', 'Chops through small bones and joints'],
+                                        ['Knives (boning, breaking, slicing)', 'Trimming, de-boning, portioning and carving'],
+                                        ['Cutting boards', 'Colour-coded boards separate raw meat from other foods'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Description', 'Purpose'],
+                                    rows: [
+                                        ['Cleaning and trimming', 'Removing excess fat, silverskin, gristle and bone dust', 'Better texture, appearance and even cooking'],
+                                        ['De-boning', 'Removing bones from a cut', 'Easier carving, stuffing and portioning'],
+                                        ['Larding', 'Inserting strips of fat into lean meat', 'Adds moisture and flavour to lean, dry cuts'],
+                                        ['Barding', 'Wrapping lean meat in a layer of fat', 'Protects and bastes lean meat as it roasts'],
+                                        ['Marinating', 'Soaking in a seasoned liquid with acid, oil and flavourings', 'Flavour and some surface tenderizing'],
+                                        ['Rubbing', 'Coating with dry spices and seasonings', 'Flavour and crust'],
+                                        ['Brining', 'Soaking in a salt solution', 'Retains moisture and seasons throughout'],
+                                        ['Corning', 'Curing with salt, spices and nitrite', 'Corned beef'],
+                                        ['Tying', 'Securing a roast with butcher string', 'Even shape and even cooking'],
+                                        ['Grinding', 'Mincing meat with a grinder', 'Ground meat, burgers, sausage'],
+                                        ['Curing', 'Preserving with salt, nitrite, sugar and spices', 'Bacon, ham, cured meats'],
+                                        ['Mechanical tenderizing', 'Blade or needle tenderizing, pounding or cubing', 'Breaks connective tissue in tough cuts'],
+                                        ['Smoking', 'Exposing to smoke to flavour or preserve', 'Cold smoking flavours; hot smoking cooks'],
+                                        ['Trussing', 'Tying with string to hold a shape', 'Even cooking of a whole item'],
+                                        ['Scoring', 'Cutting shallow lines into the surface', 'Helps fat render and marinades penetrate'],
+                                        ['Portioning', 'Cutting to a consistent weight', 'Consistent cost and cooking'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Processing factors: muscle structure, fat content, defrost time and wastage.',
+                                        'Minimize waste and use the trim: bones go to stocks and broths, scraps go to ground meat, and fat can be rendered.',
+                                        'Cut across the grain when slicing so the muscle fibres are short and the meat is tender.',
+                                        'Work with the colour-coded cutting boards for raw meat, keep the product cold and return unused meat to the cooler promptly.',
+                                        'Know how to work with primal, sub-primal and purchased food service cuts.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Trim Yield', 'Calculation'],
+                                    rows: [
+                                        ['Edible portion (EP) percentage', 'A 10 kg beef striploin trims to 8 kg of usable meat: 8 ÷ 10 × 100 = 80% yield'],
+                                        ['Purchase quantity needed', 'To serve 40 portions of 200 g, you need 8 kg of usable meat; at 80% yield, 8 ÷ 0.80 = 10 kg as purchased (AP)'],
+                                        ['True cost per portion', 'If the striploin costs $20 per kg, 10 kg costs $200, so 200 ÷ 40 = $5.00 per portion'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Band saws, grinders and slicers cause the most severe injuries in the kitchen. Use guards, push sticks and cut-resistant gloves, lock out the machine before cleaning, never reach into a grinder, and wear non-slip footwear because fat and blood make floors slippery. Keep knives sharp, cut away from yourself and carry them point down.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Larding puts fat into the meat, barding wraps fat around it, brining adds moisture, and curing preserves. Yield percentage is edible portion divided by as purchased weight, times 100.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch25-s2',
+                            title: '25.2 Aging, Tempering and Safe Handling',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Aging Method', 'How It Works', 'Effect'],
+                                    rows: [
+                                        ['Dry aging', 'Meat is hung or held uncovered in a cold, controlled, ventilated space for weeks', 'Natural enzymes tenderize, moisture evaporates and flavour concentrates; loses weight and needs trimming'],
+                                        ['Wet aging', 'Meat is aged in vacuum-sealed bags under refrigeration', 'Tenderizes with no moisture loss; milder flavour'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Freezing and defrosting factors: size and thickness of the cut, packaging, freezer temperature and the defrosting method. Large cuts freeze and defrost more slowly.',
+                                        'Temper (defrost) safely in the refrigerator at 4 °C or below, under cold running water (at 21 °C or below) in a leak-proof package for the time allowed, or as part of the cooking process. Never defrost on the counter.',
+                                        'Calculate defrosting time by the size of the cut: large roasts need a day or more in the refrigerator, while small steaks need a few hours. Allow about 24 hours in the refrigerator for every 2 to 2.5 kg of meat.',
+                                        'Once defrosted, cook or use the product promptly and never refreeze raw thawed meat unless it has been cooked first, according to regulations.',
+                                        'Keep fabricated product at 4 °C or below, work in small batches and return product to the cooler quickly. Do not leave it in the temperature danger zone (4 to 60 °C) for more than 2 hours in total.',
+                                        'Processing hazards include cross-contamination, temperature abuse, physical hazards such as bone fragments and cuts from knives and machines. Know the CFIA requirements that apply to cutting and processing.',
+                                        'Ground meat has a larger surface area and is mixed, so bacteria spread throughout. Grind from clean, cold meat and cook thoroughly.',
+                                        'Curing agents such as nitrite are measured accurately and used only in the amounts allowed by regulations.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Thawing at room temperature lets the outside of the meat sit in the danger zone while the centre is still frozen. Cold running water thawing must use a clean, sanitized sink with water at 21 °C or below and be limited to the allowed time. Plan ahead and move product to the refrigerator a day or more before it is needed.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Safe defrosting methods are refrigerator, cold running water and as part of cooking. Aging is dry or wet. Larger cuts take longer to defrost, and thawed raw meat should not be refrozen without cooking.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 26 — COOKING AND FINISHING MEATS AND GAME (I-24.03 and I-24.04)
+                // ============================================================
+                {
+                    id: 'ch-26',
+                    number: 26,
+                    title: 'Cooking and Finishing Meats and Game Meats',
+                    subtitle: 'Tasks I-24.03 and I-24.04 · Methods, doneness, resting, carving and accompaniments (4 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 85,
+                    sections: [
+                        {
+                            id: 'ch26-s1',
+                            title: '26.1 Cooking Methods for Meat and Game',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'The cooking method is matched to the cut. Tender cuts are cooked quickly with dry heat. Tough cuts are cooked slowly with moist heat or a combination so collagen melts into gelatin. The standard lists grilling, roasting, braising, broiling, combination methods and sous-vide.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Type of Heat', 'Best Cuts', 'Key Points'],
+                                    rows: [
+                                        ['Grilling', 'Dry, direct heat from below', 'Steaks, chops, burgers, kebabs', 'Preheat and oil the grate; turn once or twice; do not press down on meat'],
+                                        ['Broiling', 'Dry, direct heat from above', 'Steaks, chops, thin cuts', 'Distance from the element controls browning and doneness'],
+                                        ['Roasting', 'Dry, hot air in an oven', 'Whole tender roasts such as rib, loin, leg of lamb and pork loin', 'Use a rack, sear or start hot, then reduce; rest before carving'],
+                                        ['Braising', 'Moist, in a covered pot with a little liquid', 'Tough cuts such as chuck, shank, short rib and pork shoulder', 'Sear first, cover and cook slowly until fork tender'],
+                                        ['Combination', 'Dry and moist heat together, such as searing then braising or stewing', 'Stews, pot roast, short ribs', 'Browning builds flavour, then slow moist cooking tenderizes'],
+                                        ['Sous-vide', 'Moist heat in a vacuum bag in a precisely controlled water bath', 'Steaks, chops, tough cuts for long times', 'Exact temperature control; finish with a sear; follow time and temperature safety charts'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Doneness', 'Description', 'Internal Temperature (Guide)'],
+                                    rows: [
+                                        ['Rare', 'Red, very juicy centre', 'About 52 to 55 °C'],
+                                        ['Medium', 'Pink centre, juicy', 'About 63 to 66 °C'],
+                                        ['Well done', 'No pink; firm and drier', 'About 71 °C and higher'],
+                                        ['Fork tender', 'Moist-heat cuts when a fork slides in with little resistance and the meat can be pulled apart', 'Often 90 to 95 °C in the centre, when collagen has broken down'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Safe Minimum Internal Temperature (Health Canada Guide)', 'Temperature'],
+                                    rows: [
+                                        ['Beef, veal and lamb steaks, chops and roasts (whole cuts)', '63 °C (medium-rare), then rest 3 minutes'],
+                                        ['Pork chops and roasts (whole cuts)', '71 °C'],
+                                        ['Ground meat (beef, veal, pork, lamb) and mixtures', '71 °C'],
+                                        ['Wild game and all hot holding or reheating', 'Cook to the temperature required by regulations; reheat to 74 °C'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Factors to consider: cut, muscle structure and marbling, doneness, flavourings, salting and seasoning, equipment, temperature, time, yield, resting, use of excess product and cross-contamination.',
+                                        'Determine doneness by temperature readings using a clean, sanitized probe thermometer inserted into the centre of the thickest part, and by sensory assessment such as touch, colour and juices.',
+                                        'Calculate cooking time by type, size, thickness and method: thicker and denser cuts take longer, and bone-in roasts cook more slowly near the bone.',
+                                        'Season early (salt about 40 minutes ahead, or overnight for large roasts) so the salt penetrates, and pat the surface dry before searing so the meat browns instead of steaming.',
+                                        'Lean game meat such as venison, bison and rabbit dries out quickly, so cook it to a lower doneness, barding or larding where appropriate, or braise it slowly.',
+                                        'Use excess product: leftovers go to sandwiches, hashes, soups and stocks, if they were handled safely.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention'],
+                                    rows: [
+                                        ['Tough steak', 'Overcooked, wrong cut for the method, or not rested', 'Cook to the right doneness, use a tender cut and rest'],
+                                        ['Tough braise', 'Not cooked long enough or heat too high', 'Cook longer at a gentle simmer until fork tender'],
+                                        ['Grey, steamed meat', 'Pan too cold or crowded, or meat wet', 'Pat dry, preheat well and cook in batches'],
+                                        ['Dry roast', 'Overcooked, no rest, or no fat cover', 'Use a thermometer, rest, and bard or baste lean cuts'],
+                                        ['Burnt outside, raw inside', 'Heat too high for the thickness', 'Sear, then finish at a lower heat or in the oven'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Never judge safety by colour alone. Ground meat can look brown before it is safe, and meat can stay pink when safe. Use a calibrated thermometer, and never reuse a plate or tongs that held raw meat for cooked meat. Flare-ups on a grill and hot fat in a pan cause burns, so keep a clean grill, trim excess fat and never use water on a grease fire.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Tender cuts get dry heat and tough cuts get moist or combination heat. Fork tender is the doneness test for braised cuts, and ground meat is cooked to 71 °C. A thermometer reading in the thickest part is the most reliable check.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch26-s2',
+                            title: '26.2 Resting, Carving, Finishing and Serving',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Finishing starts the moment the meat leaves the heat. Resting lets the juices redistribute, carryover cooking finishes the centre and the yield is better. Carving and portioning are done to maximize yield and tenderness, and the plate is completed with accompaniments.',
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Rest cooked meat according to size, weight and internal temperature: steaks about 5 minutes, small roasts 10 to 20 minutes and large roasts 20 to 30 minutes, loosely covered.',
+                                        'Allow for carryover cooking: the internal temperature of a large roast can rise 3 to 8 °C or more after it is removed from the oven, so remove it before the target doneness.',
+                                        'Carve across the grain for tenderness, with a sharp carving knife and a stable board, and carve thinly for tougher roasts.',
+                                        'Determine portions to maximize yield and tenderness, and present each portion neatly.',
+                                        'Serving hazards: undercooked meat, cross-contamination from carving boards, and holding too long. Hold hot meat at 60 °C or above, and cool leftovers rapidly and reheat to 74 °C.',
+                                        'Handle, hold, serve and store finished product according to regulations.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Description', 'Example'],
+                                    rows: [
+                                        ['Broiling', 'Browning the top under direct heat', 'Finishing a sous-vide steak or gratinéing a topping'],
+                                        ['Crusting', 'Coating with herbs, mustard, breadcrumbs or spices and browning', 'Herb-crusted rack of lamb'],
+                                        ['Basting', 'Spooning hot fat or juices over meat while cooking', 'Butter-basted steak, roast'],
+                                        ['Glazing', 'Brushing with a sweet or reduced glaze and caramelizing', 'Glazed ham, ribs'],
+                                        ['Saucing', 'Serving with a sauce made from pan drippings or a prepared sauce', 'Pan sauce, jus, demi-glace'],
+                                        ['Seasoning', 'Final adjustment with salt, pepper or finishing salt', 'Flaky salt on a steak'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Accompaniment', 'Examples'],
+                                    rows: [
+                                        ['Sauces', 'Jus, demi-glace, peppercorn sauce, béarnaise, chimichurri'],
+                                        ['Glazes', 'Maple, honey mustard, reduced stock glaze'],
+                                        ['Condiments', 'Mustard, horseradish, mint sauce, chutney'],
+                                        ['Garnishes', 'Fresh herbs, citrus, crispy shallots'],
+                                        ['Compound butters', 'Maître d hôtel, garlic herb, blue cheese butter'],
+                                        ['Vegetables and starches', 'Roasted vegetables, potatoes, rice, polenta'],
+                                        ['Herbs', 'Rosemary, thyme, parsley'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Carving knives and hot roasts cause cuts and burns. Use a carving fork or towel to steady a hot roast, keep your free hand clear of the blade and never carve on a wet or unstable board. Leave a rested roast in the pan juices only if safe to do so, and never taste or serve juices that touched raw meat without bringing them to a boil.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Rest before you carve and carve across the grain. Finishing techniques in the standard are broiling, crusting, basting, glazing, saucing and seasoning. A compound butter is softened butter blended with herbs or flavourings.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 27 — POULTRY AND GAME BIRDS (I-25)
+                // ============================================================
+                {
+                    id: 'ch-27',
+                    number: 27,
+                    title: 'Poultry and Game Birds',
+                    subtitle: 'Task I-25 · Selecting, processing, cooking and finishing poultry and game birds (4 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 85,
+                    sections: [
+                        {
+                            id: 'ch27-s1',
+                            title: '27.1 Selecting Poultry and Game Birds (I-25.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Poultry means domesticated birds raised for meat, mainly chicken and turkey, and game birds include quail, pheasant, partridge and duck. Select birds according to regulations, age classifications, the recipe, properties and the desired result, and judge freshness and quality by label information and sensory assessment.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Bird', 'Properties', 'Typical Uses'],
+                                    rows: [
+                                        ['Chicken', 'Mild flavour; broilers and fryers are young and tender, roasters are larger, and stewing hens are older and tougher', 'Roasting, frying, grilling, braising, stocks'],
+                                        ['Turkey', 'Large; lean white breast and richer dark meat', 'Roasting, cutlets, ground turkey, deli'],
+                                        ['Quail', 'Very small, delicate and mild', 'Roasting, grilling, stuffing'],
+                                        ['Pheasant', 'Lean, with a mild gamey flavour', 'Roasting with barding, braising'],
+                                        ['Partridge', 'Small and lean with a mild game flavour', 'Roasting, braising'],
+                                        ['Duck', 'High in fat with rich, dark meat', 'Roasting, confit, breast seared and served medium-rare'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Market Form', 'Description'],
+                                    rows: [
+                                        ['Whole', 'The complete bird, sold fresh or frozen'],
+                                        ['Fresh', 'Chilled at about 0 to 4 °C, never frozen solid; shorter shelf life'],
+                                        ['Frozen', 'Frozen solid at -18 °C or below; longer shelf life'],
+                                        ['IQF (individually quick frozen)', 'Pieces frozen separately so the amount needed can be removed'],
+                                        ['Purchased food service cuts', 'Breasts, thighs, wings, drumsticks and boneless cuts, ready to use'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Properties to compare: fat content, origin, weight and cut.',
+                                        'Regulations covering poultry include inspection, grading and classification by the CFIA. Age classifications such as broiler, roaster and stewing hen tell the cook how the bird should be cooked.',
+                                        'Selection factors: availability, freshness, storage life, sustainability, free-range raising, price, size, count and protein percentage.',
+                                        'Fresh poultry has a clean smell, plump moist skin without discolouration, no slime and no off odour. Reject birds with a sour smell, grey or green skin, sticky surface or torn packaging.',
+                                        'Receive fresh poultry at 4 °C or below and frozen poultry solid at -18 °C or below.',
+                                        'Know the dietary requirements, including halal and kosher poultry and ethical preferences such as free range.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Poultry is chicken and turkey, and game birds are quail, pheasant, partridge and duck. Market forms are whole, fresh, frozen, IQF and purchased food service cuts. Young birds suit dry heat and older birds need moist cooking.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch27-s2',
+                            title: '27.2 Processing Poultry and Game Birds (I-25.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Processing poultry means preparing it for cooking while keeping it safe. Poultry is the food most associated with Salmonella and Campylobacter, so cross-contamination control matters at every step.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool', 'Use'],
+                                    rows: [
+                                        ['Boning knife', 'De-boning breasts, thighs and whole birds'],
+                                        ['Shears', 'Cutting backbones and joints, spatchcocking'],
+                                        ['Cleaver', 'Chopping through bone'],
+                                        ['Paring knife', 'Trimming and removing small parts'],
+                                        ['Grinder', 'Grinding meat for forcemeat and sausage'],
+                                        ['Mallet', 'Pounding breasts into cutlets'],
+                                        ['Cutting board', 'Colour-coded board for raw poultry'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Description', 'Purpose'],
+                                    rows: [
+                                        ['Cleaning', 'Rinsing the cavity, removing giblets and excess fat', 'Prepares the bird; do not wash poultry in a way that splashes the sink and kitchen'],
+                                        ['De-boning', 'Removing bones from a whole bird or parts', 'Faster cooking, easier stuffing and carving'],
+                                        ['Larding and barding', 'Adding fat inside or wrapping the bird', 'Moisture for lean game birds'],
+                                        ['Breading', 'Coating with flour, egg and crumbs', 'Crisp coating for frying and baking'],
+                                        ['Marinating and seasoning', 'Flavouring with liquids, rubs and salt', 'Flavour and moisture'],
+                                        ['Curing and smoking', 'Preserving or flavouring', 'Smoked duck, smoked chicken'],
+                                        ['Trussing', 'Tying a bird into a compact shape', 'Even cooking'],
+                                        ['Scoring', 'Slashing skin or flesh', 'Helps fat render, especially on duck breast'],
+                                        ['Grinding', 'Mincing meat', 'Sausage, burgers, forcemeat'],
+                                        ['Stuffing', 'Filling a bird or boneless portion', 'Flavour and presentation'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Calculate defrosting time by the size of the bird to ensure it is tempered per food safety regulations: thaw in the refrigerator at 4 °C or below (a large turkey may need several days), or under cold running water at 21 °C or below in a leak-proof package.',
+                                        'Maintain safe handling: keep poultry cold, use separate boards, utensils and sinks, wash and sanitize everything it touches and wash hands thoroughly.',
+                                        'Minimize waste and use the trim: bones and wings for stock, trim for forcemeat (farce), and fat for rendering.',
+                                        'Fabricate according to the results and recipe: break down a whole bird into breasts, thighs, drumsticks, wings and carcass, or into halves and quarters, or butterfly it.',
+                                        'Stuff portions and whole birds according to the recipe. A cold stuffing is placed loosely into a whole bird just before cooking, or the stuffing is baked separately, because stuffing inside a bird must reach 74 °C.',
+                                        'Processing factors: required portions, recipe, desired outcomes and storage requirements.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Raw poultry carries Salmonella and Campylobacter, and juices spread easily. Never rinse a bird in a way that splashes other surfaces, sanitize all boards, knives, sinks and hands immediately after handling it, and keep it away from ready-to-eat foods. Never stuff a bird in advance and keep it, because the warm stuffing is an ideal place for bacteria.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Safe handling beats everything else for poultry. Stuffing must reach 74 °C, birds are tempered in the refrigerator or under cold running water, and carcasses and trim are used for stock and forcemeat.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch27-s3',
+                            title: '27.3 Cooking Poultry and Game Birds (I-25.03)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Best For', 'Key Points'],
+                                    rows: [
+                                        ['Roasting', 'Whole birds, bone-in pieces', 'Dry the skin, season, start hot for colour, rest; use a rack so the heat circulates'],
+                                        ['Broiling', 'Split birds, boneless pieces', 'Keep a distance from the element so the surface does not burn before the inside cooks'],
+                                        ['Deep frying', 'Breaded or battered pieces, wings', 'Oil at about 165 to 175 °C; do not overcrowd; drain on a rack'],
+                                        ['Braising', 'Tougher or older birds, legs and thighs', 'Brown, add liquid and cook covered until tender'],
+                                        ['Combination', 'Pan-seared then oven-finished', 'Sear skin for colour, finish in the oven to the safe temperature'],
+                                        ['Sous-vide', 'Breasts and legs', 'Precise low temperature; sear to finish; follow time and temperature safety charts'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Poultry (Health Canada Guide)', 'Safe Internal Temperature'],
+                                    rows: [
+                                        ['Whole chicken, turkey, duck and game birds', '82 °C in the thickest part of the thigh or inner thigh'],
+                                        ['Poultry pieces (breasts, thighs, drumsticks, wings)', '74 °C'],
+                                        ['Ground poultry', '74 °C'],
+                                        ['Stuffing, whether inside the bird or cooked separately', '74 °C at the centre'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Determine doneness and tenderness by temperature readings and sensory assessment: juices run clear, the leg moves freely at the joint and the meat is tender.',
+                                        'Calculate cooking time from the size of the bird, stuffing, method and equipment so it cooks evenly. A stuffed bird takes longer than an unstuffed one.',
+                                        'Know the cooking factors: cut, muscle structure, doneness, flavouring, salting and seasoning, equipment, temperature, time, yield, resting and use of excess product.',
+                                        'White meat (breast) is lean and dries quickly, while dark meat (legs and thighs) has more connective tissue and fat, so it tolerates longer cooking and is best at a higher internal temperature.',
+                                        'Duck breast is often cooked to medium-rare, but this is only allowed where regulations and company policy permit it; follow your jurisdiction.',
+                                        'Pat the skin dry and let the bird come up in temperature slightly before roasting for crisp skin and even cooking.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Poultry that is undercooked can cause serious illness. Measure the temperature in the thickest part of the thigh without touching bone, and check stuffing at the centre. Hot oil spatters badly when a wet or frozen bird or pieces are added, so dry the product, lower it slowly and never deep fry a partly frozen whole bird.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Poultry methods in the standard are braising, deep frying, broiling, roasting, combination and sous-vide. Poultry pieces and ground poultry reach 74 °C, whole birds 82 °C and stuffing 74 °C.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch27-s4',
+                            title: '27.4 Finishing and Holding Poultry and Game Birds (I-25.04)',
+                            content: [
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Rest cooked birds according to size, weight and internal temperature to retain yield and moisture: about 10 minutes for a small bird and 20 to 30 minutes for a large turkey, loosely covered.',
+                                        'Hold cooked birds according to the factors and regulations: time, temperature, moisture retention, yield and quality. Hold hot at 60 °C or above, and do not hold longer than quality allows.',
+                                        'Apply finishing techniques: broiling, crusting, carving, basting, glazing, saucing, garnishing and presentation.',
+                                        'Determine carving and portioning by type and size, and carve and portion according to the recipe and the classification.',
+                                        'Present with accompaniments such as sauces, glazes, condiments, garnishes, compound butters, vegetables, starches and herbs.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Classification (Portion)', 'Description'],
+                                    rows: [
+                                        ['White meat', 'Breast meat; lean and mild'],
+                                        ['Dark meat', 'Legs and thighs; richer and more flavourful'],
+                                        ['Quarters', 'Breast with wing and leg with thigh, each in one piece'],
+                                        ['Halves', 'The bird split along the backbone and breastbone'],
+                                        ['Individual pieces', 'Breasts, thighs, drumsticks and wings portioned separately'],
+                                        ['Whole', 'The complete bird presented and carved at the table or in the kitchen'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Step in Carving a Roast Bird', 'Method'],
+                                    rows: [
+                                        ['1. Rest the bird', 'Let it stand covered so juices redistribute'],
+                                        ['2. Remove the legs', 'Cut through the skin between the leg and body, bend the leg back to break the joint and cut it free'],
+                                        ['3. Separate thigh and drumstick', 'Cut through the joint'],
+                                        ['4. Remove the breast', 'Cut along the breastbone and follow the rib cage to release the whole breast'],
+                                        ['5. Slice or portion', 'Slice the breast across the grain and portion the dark meat'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Cooked poultry held in the danger zone grows bacteria fast. Do not hold carved poultry at room temperature, cool leftovers rapidly in shallow containers and reheat to 74 °C. Remove stuffing from the cavity and store it separately.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Poultry portion classifications in the standard are dark, white, quarters, halves, individual pieces and whole. Hold hot at 60 °C or above, rest before carving, and separate stuffing from the bird for storage.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 28 — VARIETY MEATS (I-26)
+                // ============================================================
+                {
+                    id: 'ch-28',
+                    number: 28,
+                    title: 'Variety Meats',
+                    subtitle: 'Task I-26 · Selecting, processing, cooking and finishing variety meats (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+                    sections: [
+                        {
+                            id: 'ch28-s1',
+                            title: '28.1 Selecting and Processing Variety Meats (I-26.01 and I-26.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Variety meats, also called offal, are the edible organs and other parts of animals. They are rich in nutrients and flavour but require specific handling and preparation. They spoil faster than muscle meat and need the freshest product and strict temperature control.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Variety Meat', 'Description', 'Typical Preparations'],
+                                    rows: [
+                                        ['Sweetbreads', 'Thymus gland of young animals, usually veal; delicate and creamy', 'Soak, blanch and press, then bread and sauté or braise'],
+                                        ['Liver', 'Rich, iron-rich organ; calf and chicken livers are mildest', 'Sauté quickly, grill or make pâté; overcooking makes it dry and grainy'],
+                                        ['Heart', 'Dense, lean muscle with a strong flavour', 'Slice thinly and grill or braise slowly'],
+                                        ['Kidney', 'Strongly flavoured; veal and lamb kidneys are mildest', 'Soak to reduce the strong flavour, sauté or braise, or use in pies'],
+                                        ['Tongue', 'Tough muscle, needs long cooking', 'Simmer or braise until tender, peel and slice'],
+                                        ['Tripe', 'Lining of the stomach; tough and mild', 'Blanch and simmer for a long time, then braise, stew or fry'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Processing Method', 'Purpose'],
+                                    rows: [
+                                        ['Cleaning (removing membranes and blood vessels)', 'Removes tough, bitter or unsightly parts'],
+                                        ['Soaking', 'Draws out blood and reduces strong flavour (milk, water or acidulated water)'],
+                                        ['Blanching', 'Firms the product and loosens membranes'],
+                                        ['Pressing', 'Compresses blanched sweetbreads or tongue for even slices'],
+                                        ['Cutting, scoring and seasoning', 'Portions and flavours'],
+                                        ['Breading and marinating', 'Adds coating or flavour before cooking'],
+                                        ['Curing and smoking', 'Preserves and flavours, such as smoked or cured tongue'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify and choose variety meats according to regulations, classifications (origin, type, size and grade), the desired result and the recipe.',
+                                        'Interpret label information, and assess freshness by sensory methods: fresh variety meats have a clean, mild smell, a glossy, moist look and a firm texture. Reject slimy, sour-smelling or dull and discoloured product.',
+                                        'Selection factors: availability, fresh versus frozen, storage life, applications, how processed the product is, sustainability, tenderness and flavour.',
+                                        'Processing tools: grinders, slicers, knives, food processors, cutting boards and moulds.',
+                                        'Calculate defrosting time by size to temper according to regulations and the recipe, using the safe methods for meat.',
+                                        'Processing factors: blood content, membrane, toughness, colour and cost. Minimize waste and maintain safe handling.',
+                                        'Dietary requirements: religious restrictions, ethical preferences and allergies.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Variety meats spoil quickly and can carry high bacterial loads. Keep them at 4 °C or below, use them soon after receiving, and use separate boards and utensils. Liver and other organ meats must be thoroughly cooked, and pregnant guests are often advised to limit liver because of its very high vitamin A content.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'The variety meats named in the standard are sweetbreads, liver, heart, kidney, tongue and tripe. Cleaning means removing membranes and blood vessels, and soaking and blanching are common first steps.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch28-s2',
+                            title: '28.2 Cooking and Finishing Variety Meats (I-26.03 and I-26.04)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Best For', 'Notes'],
+                                    rows: [
+                                        ['Poaching', 'Sweetbreads, tongue', 'Gentle cooking in simmering liquid, often before further cooking'],
+                                        ['Simmering', 'Tongue, tripe, heart', 'Long, slow cooking until tender'],
+                                        ['Grilling', 'Heart slices, liver slices, kidneys', 'Quick, high heat; do not overcook'],
+                                        ['Sautéing', 'Liver, sweetbreads, kidneys', 'Hot pan, short cooking time, often with a coating of flour'],
+                                        ['Braising', 'Heart, tripe, tongue, kidneys', 'Brown and cook slowly in liquid until tender'],
+                                        ['Frying', 'Breaded sweetbreads, liver, tripe', 'Crisp and golden'],
+                                        ['Sous-vide', 'Tongue, heart, sweetbreads', 'Precise temperature for tender results'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Choose and apply a cooking method according to the recipe and results, and calculate cooking time by type, size and thickness.',
+                                        'Determine doneness using temperature readings and sensory assessment. Cook variety meats thoroughly, to a safe internal temperature of at least 71 °C, as required by regulations.',
+                                        'Factors to consider: type, aroma, cost and consumer demand.',
+                                        'Quick-cooking organs such as liver and kidney turn tough and grainy when overcooked, so cook them just through. Long-cooking organs such as tongue, heart and tripe need slow, moist heat.',
+                                        'Apply finishing techniques according to the recipe and results: slicing, presenting, saucing, glazing, searing, garnishing and seasoning.',
+                                        'Hold cooked variety meats according to factors such as time, temperature, moisture retention, yield and quality, and at 60 °C or above for hot holding.',
+                                        'Portion according to the recipe and results, and serve with sauces and garnishes that balance the rich flavours, such as acidic sauces, onions and herbs.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Undercooked organ meats can carry bacteria and parasites. Cook them through, keep raw and cooked organ meat apart and sanitize all equipment. Hot fat spatters from sautéing liver and kidneys, so pat the product dry and use a pan with enough room.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Match method to the organ: quick cooking for liver and kidney, long slow cooking for tongue, heart and tripe, and poaching then breading or searing for sweetbreads. Finishing techniques in the standard are slicing, presenting, saucing, glazing, searing, garnishing and seasoning.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        // ============================================================
+        // STEP 2C — PART 10 FRAGMENT (MWA J: Fish and seafood)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 9.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks J-27 (fin fish) and J-28 (seafood).
+        // ============================================================
+        {
+            id: 'part-10',
+            number: 10,
+            title: 'Fish and Seafood (MWA J)',
+            description: 'Fin fish and seafood from selection by freshness, origin and market form, through filleting, defrosting, shucking and shelling, to poaching, steaming, searing, frying, broiling, braising, baking and smoking, then finishing, holding and storing. MWA J carries 15 exam questions across tasks J-27 and J-28.',
+            weight: '15 questions (10.0% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 29 — SELECTING FIN FISH (J-27.01)
+                // ============================================================
+                {
+                    id: 'ch-29',
+                    number: 29,
+                    title: 'Selecting Fin Fish',
+                    subtitle: 'Task J-27.01 · Species, characteristics, market forms and freshness (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 65,
+                    sections: [
+                        {
+                            id: 'ch29-s1',
+                            title: '29.1 Fin Fish Types and Characteristics',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Fin fish vary widely: freshwater and saltwater, round and flat, oily and lean. Fish is highly perishable, so freshness and quality are central to every decision. Cooks must understand how to handle, store, prepare and cook each type so that waste is limited and the standards of the jurisdiction are met.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Characteristic', 'Description', 'Examples'],
+                                    rows: [
+                                        ['Round fish', 'Swim upright, with eyes on each side; yield two fillets', 'Salmon, cod, snapper, perch, pickerel, mahi mahi, tuna, sardines'],
+                                        ['Flat fish', 'Swim on one side with both eyes on the top; yield four fillets', 'Halibut, sole, flounder'],
+                                        ['Oily fish', 'Higher fat content spread through the flesh; richer flavour, stronger smell and shorter shelf life', 'Salmon, sardines, tuna, mackerel'],
+                                        ['Lean fish', 'Low fat; milder flavour, drier when overcooked', 'Cod, halibut, perch, pickerel, snapper'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Fin Fish', 'Origin and Type', 'Characteristics and Uses'],
+                                    rows: [
+                                        ['Perch', 'Freshwater, round, lean', 'Mild, delicate; pan-frying, baking'],
+                                        ['Pickerel (walleye)', 'Freshwater, round, lean', 'Mild, flaky; pan searing, frying, baking'],
+                                        ['Salmonids (salmon, trout, char)', 'Salt and freshwater, round, oily', 'Rich, firm to medium texture; poaching, roasting, grilling, smoking, curing'],
+                                        ['Cod', 'Saltwater, round, lean', 'Mild and flaky; baking, frying, poaching'],
+                                        ['Mahi mahi', 'Saltwater, round, lean to medium', 'Firm and meaty; grilling, searing'],
+                                        ['Halibut', 'Saltwater, flat, lean', 'Firm, white and mild; roasting, poaching, pan searing'],
+                                        ['Snapper', 'Saltwater, round, lean', 'Firm and sweet; roasting whole, pan searing'],
+                                        ['Sardines', 'Saltwater, round, oily, small', 'Strong flavour; grilling, frying, canning'],
+                                        ['Tuna', 'Saltwater, round, oily and meaty', 'Firm and dense; searing rare, grilling, raw preparations'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Origin', 'Description', 'Notes'],
+                                    rows: [
+                                        ['Wild', 'Caught in natural waters', 'Seasonal; variable fat content; sustainability depends on the fishery'],
+                                        ['Farmed', 'Raised in controlled aquaculture', 'Consistent supply, size and fat content; sustainability depends on farming practices'],
+                                        ['Freshwater', 'From lakes and rivers', 'Typically mild flavour'],
+                                        ['Saltwater', 'From oceans and seas', 'Wide range of flavours and textures'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Factors in selection: local availability, seasonal availability, freshness, storage life, applications, how processed the product is, sustainability, origin and documentation.',
+                                        'Documentation includes invoices, tags, catch or harvest information and inspection records that show where the fish came from and that it was handled safely.',
+                                        'Regulations that apply: WHMIS, HACCP, OH&S and public health regulations, along with CFIA inspection requirements for fish and seafood.',
+                                        'Dietary requirements: fish is a priority allergen, and cultural, ethical, religious, health-related, environmental and personal preferences also apply. Some guests avoid fish for mercury, sustainability or religious reasons.',
+                                        'Know the terminology of the product, the hazards of raw fish and the safe handling procedures.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Remember the groups in the standard: round, flat, oily and lean for characteristics, and wild, farmed, freshwater and saltwater for origin. Flat fish give four fillets and round fish give two. Fin fish named in the standard are perch, pickerel, salmonids, cod, mahi mahi, halibut, snapper, sardines and tuna.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch29-s2',
+                            title: '29.2 Market Forms and Judging Freshness',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Market Form', 'Description', 'Notes'],
+                                    rows: [
+                                        ['Whole', 'The complete fish, ungutted or gutted', 'Lowest cost per kilogram but more labour and waste; best for judging freshness'],
+                                        ['Fresh', 'Chilled and never frozen, packed on ice', 'Shortest shelf life; use quickly'],
+                                        ['Frozen', 'Frozen solid', 'Longer shelf life; quality depends on freezing method and handling'],
+                                        ['IQF (individually quick frozen)', 'Fillets or portions frozen separately', 'Remove only what is needed; defrost carefully'],
+                                        ['Purchased food service cuts', 'Fillets, steaks and portions ready to use', 'Consistent size and less labour; higher price'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sensory Check', 'Fresh Fish', 'Poor Quality or Spoiled'],
+                                    rows: [
+                                        ['Eyes', 'Clear, bright, full and slightly bulging', 'Cloudy, sunken or dull'],
+                                        ['Gills', 'Bright red or pink, clean and moist', 'Brown, grey, slimy or sticky'],
+                                        ['Skin and scales', 'Shiny, with scales tight and attached; slippery with clear slime', 'Dull, dry, with scales falling off or milky slime'],
+                                        ['Smell', 'Clean, mild and sea-like', 'Strong fishy, sour or ammonia odour'],
+                                        ['Flesh', 'Firm and elastic; springs back when pressed; no gaps; fillets are moist and translucent', 'Soft, leaves a dent, separates from the bone or has gaping, dry or discoloured flesh'],
+                                        ['Belly', 'Intact and firm', 'Burst or soft belly'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify fresh and previously frozen fish so that each is handled properly. Fish that was frozen and thawed should not be refrozen, because the texture and quality suffer and food safety is at risk.',
+                                        'Signs of previously frozen fish: cloudy eyes, dull flesh, a sour smell, freezer burn, ice crystals or liquid in the package.',
+                                        'Receive fresh fish at 4 °C or below, ideally packed in crushed ice at about 0 to 2 °C, and frozen fish at -18 °C or below, hard to the touch.',
+                                        'Identify cut specifications such as fillet, steak, portion size, skin-on or skin-off and bone-in or boneless, and compare them with the order.',
+                                        'Reject deliveries that are warm, smell off, are damaged or have thawed.',
+                                        'Store fish on crushed ice in a drained container in the coldest part of the cooler, below ready-to-eat foods and away from strong odours.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Some fish, especially tuna, mahi mahi, mackerel and sardines, can form histamine if they are left at warm temperatures. Histamine is not destroyed by cooking and causes scombroid poisoning with flushing, headache and rash. Keep these fish cold from the moment of receiving, and reject any with a sharp, peppery or metallic taste or odour.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Fresh fish has clear, bulging eyes, red gills, shiny tight scales, firm elastic flesh and a clean mild smell. Market forms are whole, fresh, frozen, IQF and purchased food service cuts. Store on crushed ice and never refreeze thawed fish.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 30 — PROCESSING FIN FISH (J-27.02)
+                // ============================================================
+                {
+                    id: 'ch-30',
+                    number: 30,
+                    title: 'Processing Fin Fish',
+                    subtitle: 'Task J-27.02 · Defrosting, filleting, portioning, curing and waste control (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 70,
+                    sections: [
+                        {
+                            id: 'ch30-s1',
+                            title: '30.1 Tools, Defrosting and Fabrication Methods',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Scaler', 'Removes scales from whole fish'],
+                                        ['Knives (fillet, boning, chef)', 'Filleting, portioning and trimming; keep them sharp and flexible for fillet work'],
+                                        ['Pliers and tweezers', 'Remove pin bones from fillets'],
+                                        ['Cutting boards', 'Colour-coded or dedicated boards for raw fish'],
+                                        ['Scale', 'Portion control and yield calculations'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Description'],
+                                    rows: [
+                                        ['Cleaning', 'Rinsing the fish and removing blood, slime and debris'],
+                                        ['Scaling', 'Removing scales with a scaler or the back of a knife, working from tail to head'],
+                                        ['Eviscerating and dressing', 'Removing the internal organs (gutting) and, for dressing, also the gills, fins and sometimes the head, so the fish is ready to cook'],
+                                        ['Filleting', 'Cutting the flesh away from the backbone and ribs in boneless sides'],
+                                        ['Skinning', 'Removing the skin from a fillet or whole fish'],
+                                        ['De-boning', 'Removing pin bones and other bones with pliers or tweezers'],
+                                        ['Trimming', 'Removing belly fat, bloodline, fins and ragged edges'],
+                                        ['Cutting, slicing and portioning', 'Cutting into steaks, portions, strips, cubes or thin slices to a consistent weight'],
+                                        ['Brining', 'Soaking in a salt solution to season, firm and moisten the flesh'],
+                                        ['Marinating', 'Soaking in a seasoned acidic or oil-based liquid'],
+                                        ['Curing', 'Preserving and flavouring with salt, sugar and seasonings, such as gravlax'],
+                                        ['Smoking', 'Flavouring and preserving with smoke, cold or hot'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Defrost while maintaining quality and cell structure: thaw frozen fish slowly under refrigeration at 4 °C or below, in its packaging or on a draining tray, or under cold running water at 21 °C or below if it is in a sealed package. Never thaw at room temperature or in warm water.',
+                                        'Frozen fish packed in a vacuum or reduced-oxygen package must be removed from the packaging before thawing, because anaerobic bacteria such as Clostridium botulinum can grow in the sealed package.',
+                                        'Slow thawing prevents the cells from rupturing and the flesh from becoming mushy, and reduces drip loss.',
+                                        'Round fish yield two fillets and flat fish four. Fillets are removed by cutting along the backbone and following the rib cage, and flat fish are filleted along the central spine.',
+                                        'Minimize waste and use the trim: bones, heads and frames make fish stock, and trim makes mousses, quenelles, patties and fish cakes.',
+                                        'Select seasonings and aromatics that suit the fish and recipe, such as lemon, herbs, salt, pepper and spices.',
+                                        'Handle live and raw fish with care. Keep it cold, handle it quickly, use dedicated boards and knives and sanitize all surfaces immediately.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Other Uses of Trim and Bones', 'Product'],
+                                    rows: [
+                                        ['Mousses', 'Puréed raw fish with cream and egg white, cooked gently'],
+                                        ['Quenelles', 'Shaped dumplings of fish mousse, poached'],
+                                        ['Patties', 'Ground or flaked fish formed into cakes and pan-fried or baked'],
+                                        ['Stock', 'Fish bones and trim simmered briefly (about 20 to 30 minutes) with aromatics'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Fillet Yield', 'Calculation'],
+                                    rows: [
+                                        ['Yield percentage', 'A 5 kg whole round fish gives 2 kg of fillets: 2 ÷ 5 × 100 = 40% yield'],
+                                        ['Whole fish needed', 'For 30 portions of 150 g, you need 4.5 kg of fillets; at 40% yield, 4.5 ÷ 0.40 = 11.25 kg of whole fish'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Raw fish can contain parasites such as Anisakis worms. Fish meant to be eaten raw or only lightly cured or smoked must be frozen at a temperature and for a time that kills parasites (commonly -20 °C for at least 7 days or -35 °C for at least 15 hours), according to regulations. Fillet knives are razor sharp, and wet fish and scales make boards and floors slippery, so keep the work area clean and dry and cut away from your hands.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Thaw fish slowly under refrigeration, and always remove vacuum packaging before thawing. Round fish give two fillets and flat fish four, and fish trim goes to stocks, mousses, quenelles and patties.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 31 — COOKING AND FINISHING FIN FISH (J-27.03 and J-27.04)
+                // ============================================================
+                {
+                    id: 'ch-31',
+                    number: 31,
+                    title: 'Cooking and Finishing Fin Fish',
+                    subtitle: 'Tasks J-27.03 and J-27.04 · Cooking methods, doneness, finishing, holding and storage (4 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 80,
+                    sections: [
+                        {
+                            id: 'ch31-s1',
+                            title: '31.1 Cooking Methods and Doneness',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Fish has little connective tissue, so it cooks quickly and overcooks easily. Cook time depends on the type, the thickness and the desired doneness. Tools include pans, grills, ovens, smokers, griddles and slotted spatulas.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'How It Is Done', 'Best For'],
+                                    rows: [
+                                        ['Poaching', 'Cook gently in barely simmering liquid (court bouillon, stock or milk)', 'Salmon, halibut, whole fish; keeps flesh moist and delicate'],
+                                        ['Steaming', 'Cook above simmering liquid in a covered steamer', 'Delicate fillets and whole fish; no added fat'],
+                                        ['Pan searing', 'Cook in a hot pan with a little fat to form a golden crust, often finished in the oven', 'Firm, skin-on fillets such as salmon, halibut and snapper'],
+                                        ['Deep-frying', 'Submerge in hot oil, usually breaded or battered', 'Cod, perch, pickerel; fish and chips'],
+                                        ['Smoking', 'Cook or flavour with wood smoke; cold smoking does not cook and must follow safe curing procedures', 'Salmon, trout, mackerel'],
+                                        ['Broiling', 'Cook under direct heat from above', 'Fillets and steaks; brush with oil and watch closely'],
+                                        ['Braising', 'Cook partly covered in a small amount of liquid', 'Firm fish such as halibut, in sauces and stews'],
+                                        ['Roasting', 'Cook in a hot oven, whole or in pieces', 'Whole snapper, salmon sides, fillets'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Doneness Method', 'How It Works'],
+                                    rows: [
+                                        ['Temperature reading', 'Insert a clean, sanitized probe into the thickest part; the safe internal temperature for fish is commonly 70 °C (Health Canada guidance), though some operations use lower temperatures for specific species and service styles where regulations allow'],
+                                        ['Needle test', 'Insert a thin metal needle or skewer into the thickest part, hold for a few seconds and touch it to your lip or wrist; cool means undercooked, warm means medium and hot means well done'],
+                                        ['Sensory assessment', 'Flesh turns from translucent to opaque and begins to flake easily along the muscle lines, and the juices turn from clear to milky'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Season the fish before cooking, and pat the skin and surface dry so that it sears instead of steams.',
+                                        'Determine cooking time by fish type, thickness and desired doneness. A common guide is about 10 minutes per 2.5 cm of thickness at moderate heat, measured at the thickest point.',
+                                        'Cooking factors: skin-on or skin-off, size, timing, bone-in or bone-out and texture. Skin protects the flesh and crisps in a hot pan.',
+                                        'Oily fish tolerate higher heat and grilling. Lean fish dry out easily, so use gentle methods, moist heat or added fat.',
+                                        'Carryover cooking continues after the fish leaves the heat, so remove it just before it is done.',
+                                        'Use a slotted spatula or fish spatula so that fragile fillets do not break, and do not turn the fish more than once.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention'],
+                                    rows: [
+                                        ['Dry, tough fish', 'Overcooked or heat too high', 'Use a thermometer or needle test, and remove early'],
+                                        ['Fish sticks to the pan', 'Pan not hot enough, or fish turned too early', 'Preheat the pan and oil, and let a crust form so the fish releases'],
+                                        ['Fish falls apart', 'Overcooked, fragile fish handled roughly, or poor spatula', 'Handle gently, use a wide spatula and do not overcook'],
+                                        ['Soggy fried coating', 'Oil too cool or pan crowded', 'Fry at the correct temperature and cook in small batches'],
+                                        ['White protein (albumin) oozing from salmon', 'High heat squeezing out protein', 'Cook more gently or brine briefly'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hot oil, steam and a hot broiler are the main burn hazards. Dry fish before it goes into oil and lower it in away from your body, never overfill the fryer and keep a lid or sheet pan nearby. Smoking uses open flame and smouldering wood, so work in properly ventilated areas and follow fire safety rules.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Fish cooking methods in the standard are poaching, steaming, pan searing, deep-frying, smoking, broiling, braising and roasting. Doneness is checked with temperature readings, the needle test and sensory assessment, and fish goes from translucent to opaque and flakes when done.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch31-s2',
+                            title: '31.2 Finishing, Holding and Storing Fin Fish',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Description', 'Example'],
+                                    rows: [
+                                        ['Broiling', 'Browning the surface under direct heat', 'Gratinéed fish with a topping'],
+                                        ['Crusting', 'Coating with herbs, nuts, spices or crumbs and cooking until crisp', 'Herb-crusted halibut, pecan-crusted trout'],
+                                        ['Resting', 'Letting the fish stand briefly before serving', 'Allows juices to settle and carryover cooking to finish'],
+                                        ['Glazing', 'Brushing with a glaze and caramelizing it', 'Maple-glazed salmon'],
+                                        ['Torching', 'Browning or searing the surface with a torch', 'Finishing seared tuna or salmon belly'],
+                                        ['Smoking', 'Finishing with smoke for flavour', 'Smoked trout, smoked salmon'],
+                                        ['Saucing', 'Serving with a sauce', 'Beurre blanc, lemon butter, hollandaise, salsa'],
+                                        ['Presentation', 'Arranging attractively on the plate', 'Skin side up to keep it crisp; neat portion shape'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Adjust seasoning, with acid such as lemon juice, salt and fresh herbs, and garnish according to the recipe and desired results.',
+                                        'Finishing factors: handling, skin-on or skin-off, texture, fat content and tool selection.',
+                                        'Serve hot fish as soon as possible, because it dries out and loses quality quickly.',
+                                        'Hold cooked fish at 60 °C or above for a short time only, or cool it quickly and store it covered, labelled and dated at 4 °C or below. Reheat to 74 °C.',
+                                        'Store raw fish on ice or at 0 to 4 °C, below other foods, and use it within the shelf life; cooked fish should be used within a short time (commonly 2 days).',
+                                        'Know the hazards of serving, holding and storing cooked and raw fish, the dietary requirements and the accompaniments that suit each dish: lemon, tartar sauce, herbs, vegetables and starches.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Fish is a priority allergen, and fish oil and stock can appear in sauces, Caesar dressing and Worcestershire sauce. Keep fish and fish-containing items away from other foods, use separate fryer oil and utensils, and label every dish that contains fish. Do not hold cooked fish in the danger zone, because bacteria and histamine can build up quickly.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Finishing techniques in the standard are broiling, crusting, resting, glazing, torching, smoking, saucing and presentation. Serve fish promptly, and cool and refrigerate leftovers quickly.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 32 — SELECTING AND PROCESSING SEAFOOD (J-28.01 and J-28.02)
+                // ============================================================
+                {
+                    id: 'ch-32',
+                    number: 32,
+                    title: 'Selecting and Processing Seafood',
+                    subtitle: 'Tasks J-28.01 and J-28.02 · Shellfish, bivalves, cephalopods, live seafood and shell processing (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch32-s1',
+                            title: '32.1 Seafood Types and Selection',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'In this standard, seafood means non-fin-fish items from salt and fresh water: shellfish, bivalves and cephalopods, plus items such as roe and jellyfish. Extra precautions apply to raw and cooked seafood because of its delicate nature and the related dietary requirements.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Seafood', 'Group', 'Characteristics and Uses'],
+                                    rows: [
+                                        ['Clams', 'Bivalve mollusc', 'Steamed, in chowders, pasta and sauces; must be alive when cooked'],
+                                        ['Oysters', 'Bivalve mollusc', 'Raw on the half shell, baked, grilled or fried; shucked to order'],
+                                        ['Mussels', 'Bivalve mollusc', 'Steamed in wine and aromatics; need debearding'],
+                                        ['Lobster', 'Crustacean', 'Boiled, steamed, grilled or broiled; sold live or cooked'],
+                                        ['Crayfish', 'Freshwater crustacean', 'Boiled with spices, in soups and sauces'],
+                                        ['Shrimp', 'Crustacean', 'Sautéed, grilled, fried, poached; sold by count per kilogram or pound; peeled or in shell'],
+                                        ['Squid', 'Cephalopod mollusc', 'Quick frying or grilling, or slow braising; tough if cooked in between'],
+                                        ['Octopus', 'Cephalopod mollusc', 'Tenderized by long, slow cooking, then grilled or sliced'],
+                                        ['Jellyfish', 'Cnidarian', 'Salted and dried product used in cold Asian dishes'],
+                                        ['Roe', 'Fish or shellfish eggs', 'Caviar, salmon roe, sea urchin roe; served cold as a garnish or spread'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Market Form', 'Description'],
+                                    rows: [
+                                        ['Live', 'Alive on delivery, such as lobster, crayfish, clams, mussels and oysters'],
+                                        ['Fresh', 'Chilled and never frozen'],
+                                        ['Frozen and IQF', 'Frozen solid, or individually quick frozen so that the amount needed can be removed'],
+                                        ['Peeled and de-veined', 'Shrimp with shell removed and digestive tract removed'],
+                                        ['Shucked', 'Bivalves removed from the shell, packed in their liquor'],
+                                        ['Size, shape and packaging', 'Count per weight, whole or portions, packed in sacks, boxes or vacuum packs'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Freshness Check', 'Good Quality', 'Reject'],
+                                    rows: [
+                                        ['Live bivalves', 'Closed shells, or shells that close when tapped; fresh sea smell; heavy for their size', 'Open shells that do not close, broken shells, dead or foul-smelling product'],
+                                        ['Live lobster and crayfish', 'Active and moving, with tail that curls when picked up', 'Limp, slow or dead product'],
+                                        ['Shrimp', 'Firm, translucent flesh, mild smell and tight shells', 'Soft, slimy, black spots (melanosis) or ammonia smell'],
+                                        ['Squid and octopus', 'Firm, glossy and moist, with clean smell and bright eyes', 'Slimy, dull, sour or ammonia smell'],
+                                        ['Shucked shellfish', 'Plump, with clear liquid and a mild smell', 'Cloudy or sour liquid'],
+                                        ['Temperature', 'Fresh at 4 °C or below, frozen at -18 °C or below; live shellfish held at the temperature on the tag (commonly 4 °C or below)', 'Warm or thawed product'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify fresh and frozen seafood for proper application and handling, determine freshness and quality by sensory assessment and choose by size and recipe specifications.',
+                                        'Factors in selection: local availability, seasonal availability, freshness, storage life, applications, how processed the product is, sustainability, origin and documentation.',
+                                        'Documentation includes shellstock tags, which identify where and when the shellfish was harvested. Keep tags for the period required by regulations (commonly 90 days) so that any illness can be traced.',
+                                        'Regulations include WHMIS, HACCP, OH&S and public health regulations, and shellfish must come from approved, inspected waters and suppliers.',
+                                        'Dietary requirements: shellfish (crustaceans and molluscs) are priority allergens, and some religious dietary laws forbid certain seafood. Fish and shellfish allergies are different, so know which is involved.',
+                                        'Know the regional species and the terminology, classifications and applications.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Raw oysters, clams and mussels can carry norovirus, Vibrio bacteria and toxins from algae blooms, which cooking does not always remove. Buy only from approved sources, keep shellstock tags, keep live shellfish cold, never store them in fresh water or sealed airtight and warn guests that eating raw shellfish carries a risk, especially for people with weakened immune systems.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Seafood in the standard is clams, oysters, mussels, lobster, crayfish, shrimp, squid, octopus, jellyfish and roe. Discard live bivalves that stay open when tapped, and keep shellstock tags on file.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch32-s2',
+                            title: '32.2 Processing Seafood',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Tool', 'Use'],
+                                    rows: [
+                                        ['Shucker (oyster knife)', 'Opens oysters and clams by cutting the adductor muscle'],
+                                        ['Scissors', 'Cut shrimp shells, lobster shells and trim squid'],
+                                        ['Brushes', 'Scrub shells clean'],
+                                        ['Knives', 'Cutting, trimming, portioning and splitting lobster'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Description', 'Applies To'],
+                                    rows: [
+                                        ['Sorting', 'Identifying live, unusable and damaged seafood and sorting by size and shape', 'All live and fresh shellfish'],
+                                        ['Washing and cleaning', 'Scrubbing shells, rinsing and purging grit', 'Clams, mussels, oysters'],
+                                        ['Shucking', 'Opening bivalves', 'Oysters, clams'],
+                                        ['De-bearding', 'Pulling off the fibrous threads (beard) attached to the shell', 'Mussels'],
+                                        ['Shelling and de-veining', 'Removing the shell and the dark intestinal tract along the back', 'Shrimp, crayfish'],
+                                        ['Cutting, trimming and skinning', 'Cleaning and cutting into rings, tubes or portions', 'Squid, octopus'],
+                                        ['Portioning', 'Cutting or dividing to a consistent weight', 'Lobster tails, shrimp, squid'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Defrost frozen seafood by type and size so that tempering meets regulations and recipe specifications: thaw in the refrigerator at 4 °C or below, or under cold running water for small, packaged items.',
+                                        'Separate the protein from the shell and process the shell for other uses: clean, polish and dry shells for presentation, and use shells in stocks, sauces and soups (lobster and shrimp shells give a rich flavour).',
+                                        'Select seasonings and aromatics to suit the recipe and the desired result, such as garlic, wine, herbs, lemon and spices.',
+                                        'Marinate, cure, smoke and pickle seafood according to tested procedures, since these processes can affect safety.',
+                                        'Handle live seafood carefully: keep it cool and damp, covered with a wet cloth, not in fresh water or on direct ice, and use it quickly.',
+                                        'Store raw and cooked seafood separately, raw on the lower shelves, covered and labelled, and cook or use it within the shelf life.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Shucking knives slip easily and cause deep hand injuries. Hold the shellfish in a thick cloth or cut-resistant glove, work on a stable surface and keep your free hand clear of the blade. Lobster and crab shells and claws are sharp. Wash and sanitize hands, knives and boards after handling raw shellfish.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Processing steps in the standard are sorting, washing and cleaning, shucking, shelling, de-veining, de-bearding, cutting, trimming, skinning and portioning. Shells go on to stocks, sauces, soups and presentation.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 33 — COOKING AND FINISHING SEAFOOD (J-28.03 and J-28.04)
+                // ============================================================
+                {
+                    id: 'ch-33',
+                    number: 33,
+                    title: 'Cooking and Finishing Seafood',
+                    subtitle: 'Tasks J-28.03 and J-28.04 · Cooking methods, doneness, finishing, holding and storage (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 65,
+                    sections: [
+                        {
+                            id: 'ch33-s1',
+                            title: '33.1 Cooking Seafood',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Seafood cooks quickly and becomes rubbery when overcooked. Select the cooking method by the type of seafood, the recipe and the desired result. Cooking time is calculated from the size and the method. Factors include variety, size, and whether the product is in-shell or out-of-shell.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Best For', 'Notes'],
+                                    rows: [
+                                        ['Poaching', 'Shrimp, lobster, scallop style items', 'Gentle simmer in seasoned liquid'],
+                                        ['Steaming', 'Clams, mussels, lobster, crab, shrimp', 'Cook covered until shells open; discard any that stay closed'],
+                                        ['Pan searing', 'Shrimp, scallops, squid', 'Very hot pan; short time for a golden crust and tender centre'],
+                                        ['Deep-frying', 'Calamari, shrimp, oysters', 'Batter or bread, fry briefly, drain well'],
+                                        ['Pan-frying', 'Shrimp, crayfish, oysters', 'Medium-high heat with a little fat'],
+                                        ['Broiling', 'Lobster, shrimp, oysters', 'Watch closely to avoid drying'],
+                                        ['Braising', 'Octopus, squid', 'Slow cooking until tender, in sauce or liquid'],
+                                        ['Baking', 'Stuffed shellfish, oysters, lobster tails', 'Moderate oven, covered or with a topping'],
+                                        ['Smoking', 'Mussels, oysters, shrimp', 'Cold or hot; follow safe procedures'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Doneness Sign', 'Seafood'],
+                                    rows: [
+                                        ['Opaque, firm and pink to red', 'Shrimp, lobster, crayfish; shrimp form a loose C shape when done and a tight O shape when overcooked'],
+                                        ['Shells open wide', 'Clams and mussels; discard any that do not open after cooking'],
+                                        ['Opaque white and just firm', 'Squid cooked quickly, or tender and soft if braised for a long time'],
+                                        ['Tender when pierced', 'Octopus after long, slow cooking'],
+                                        ['Temperature, needle test or sensory assessment', 'Used according to the product; seafood is commonly cooked to 70 °C internal temperature according to guidelines'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Tools and equipment: pans, pots, steamers, smokers, ovens, grills and deep fryers.',
+                                        'Squid and octopus are tender either after a very short cook (under 2 to 3 minutes) or a long, slow one; anything in between is tough and rubbery.',
+                                        'Lobster and crab may be cooked live by quickly plunging into boiling water or by another approved humane method, according to regulations and company policy.',
+                                        'Know the hazards and safe practices for cooking, and the dietary requirements.',
+                                        'Handle, hold and store cooked seafood safely: hold hot at 60 °C or above, cool quickly, refrigerate at 4 °C or below and reheat gently to 74 °C.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Do not eat or serve shellfish that fail to open when cooked, and never cook dead shellfish that were not alive when processed, because bacteria multiply very quickly after death. Steam from lobster pots and steamers causes severe burns, so lift lids away from your face. Cross-contact with shellfish can cause fatal allergic reactions, so use separate pots, fryer oil and utensils.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Seafood cooking methods in the standard are poaching, steaming, pan searing, deep-frying, pan-frying, broiling, braising, baking and smoking. Overcooking makes shrimp, scallops and lobster rubbery, and shells that do not open after steaming must be discarded.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch33-s2',
+                            title: '33.2 Finishing, Holding and Storing Seafood',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Example'],
+                                    rows: [
+                                        ['Broiling', 'Browning a topping on baked oysters or lobster'],
+                                        ['Crusting', 'Herb or breadcrumb crust on shellfish'],
+                                        ['Resting', 'Letting seared seafood stand briefly before serving'],
+                                        ['Glazing', 'Brushing shrimp or lobster with a glaze'],
+                                        ['Torching', 'Searing or browning the surface with a torch'],
+                                        ['Smoking', 'Finishing with smoke for flavour'],
+                                        ['Saucing', 'Drawn butter, cocktail sauce, white wine and garlic broth, aioli'],
+                                        ['Presentation', 'Arranging shells, claws and garnishes attractively on the plate'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Apply finishing techniques according to the recipe and desired results, adjust seasoning and garnish.',
+                                        'Typical accompaniments include lemon wedges, cocktail sauce, mignonette, drawn butter, herbs and crusty bread.',
+                                        'Serve oysters on the half shell on crushed ice, and serve cold seafood at 4 °C or below.',
+                                        'Handle, hold, serve and store finished seafood according to regulations, and keep raw and cooked seafood separate.',
+                                        'Know the hazards for serving, handling and storing seafood, and the dietary requirements: cultural, allergies, ethical, religious, health-related, environmental and preferences.',
+                                        'Label dishes that contain shellfish, fish or roe, and tell guests about cross-contact risks.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Cooked seafood held in the danger zone grows bacteria quickly, and seafood salads and cocktails made ahead must be kept at 4 °C or below. Throw away any shellfish that smells sour, ammonia-like or off. Warn guests who are allergic or immune-compromised about raw items on the menu.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Finishing techniques for seafood are the same as for fin fish: broiling, crusting, resting, glazing, torching, smoking, saucing and presentation. Serve raw shellfish on ice and keep cold seafood at 4 °C or below.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        // ============================================================
+        // STEP 2C — PART 11 FRAGMENT (MWA K: Salads and sandwiches)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 10.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks K-29, K-30 and K-31.
+        // ============================================================
+        {
+            id: 'part-11',
+            number: 11,
+            title: 'Salads and Sandwiches (MWA K)',
+            description: 'Sandwiches from selecting breads and fillings to assembly, grilling, panini and finishing; salads from selecting and processing ingredients to tossing, dressing, garnishing and holding; and condiments, preserves and dressings including vinaigrettes, emulsions, salsas, pickles, jams and canning. MWA K carries 9 exam questions across tasks K-29, K-30 and K-31.',
+            weight: '9 questions (6.0% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 34 — SANDWICHES (K-29)
+                // ============================================================
+                {
+                    id: 'ch-34',
+                    number: 34,
+                    title: 'Sandwiches',
+                    subtitle: 'Task K-29 · Prepares sandwiches (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 70,
+                    sections: [
+                        {
+                            id: 'ch34-s1',
+                            title: '34.1 Selecting Sandwich Ingredients (K-29.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Sandwiches combine a broad range of ingredients and presentations, and they appear on most menus across many cultures. Selecting well means identifying the fillings and toppings that match the recipe, choosing the bread to suit the sandwich style and checking freshness and quality by sensory assessment.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sandwich Type', 'Description', 'Typical Bread'],
+                                    rows: [
+                                        ['Hamburger', 'Cooked patty with toppings and condiments', 'Bun'],
+                                        ['Hot dog', 'Sausage served in a long bun with condiments', 'Hot dog bun'],
+                                        ['Panini', 'Pressed and grilled sandwich with fillings such as cheese, meat and vegetables', 'Ciabatta, focaccia, baguette'],
+                                        ['Shawarma', 'Sliced roasted meat with vegetables and sauce, wrapped or in a pita', 'Pita, flatbread'],
+                                        ['Wrap', 'Fillings rolled in a flat bread', 'Tortilla, flatbread'],
+                                        ['Picnic', 'Portable sandwich designed to hold up without refrigeration for a short time', 'Sturdy rolls, baguette, sliced bread'],
+                                        ['Finger sandwich', 'Small, delicate sandwich cut into fingers, triangles or rounds, often for tea or receptions', 'Thinly sliced white or brown bread, crusts removed'],
+                                        ['Pizza', 'Flat dough topped with sauce, cheese and toppings, then baked', 'Pizza dough'],
+                                        ['Deli sandwich', 'Sliced cured or cooked meats, cheese and vegetables', 'Sliced bread, rolls, baguette'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Bread', 'Characteristics', 'Best For'],
+                                    rows: [
+                                        ['Buns', 'Soft and rounded', 'Burgers, hot dogs, pulled meats'],
+                                        ['Sliced bread', 'Uniform slices, white, whole wheat, rye, sourdough', 'Deli, grilled and finger sandwiches'],
+                                        ['Baguettes', 'Crisp crust and chewy interior', 'Subs, paninis, cold cut sandwiches'],
+                                        ['Tortillas', 'Thin, flexible flatbread', 'Wraps, quesadillas'],
+                                        ['Pitas', 'Pocket or flat bread', 'Shawarma, falafel, stuffed sandwiches'],
+                                        ['Flatbread', 'Thin, unleavened or lightly leavened bread', 'Wraps, open-faced sandwiches'],
+                                        ['Alternatives (lettuce wrap)', 'Leaves used instead of bread', 'Gluten-free or low-carbohydrate requests'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Freshness and Quality Indicator', 'Good Quality', 'Poor Quality'],
+                                    rows: [
+                                        ['Hydration', 'Bread is soft or crisp as expected; vegetables are crisp and moist', 'Stale, dry bread; wilted or slimy vegetables'],
+                                        ['Colour', 'Natural, even colour', 'Mould, grey or brown spots and discolouration'],
+                                        ['Texture', 'Springy bread; firm, crisp toppings', 'Hard, crumbly or soggy product'],
+                                        ['Best before date', 'Within date and stored correctly', 'Expired or stored at the wrong temperature'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Factors in selecting ingredients: types of fillings and toppings, types of bread or alternatives, cooking method, assembly sequence and service application.',
+                                        'Choose a bread that suits the filling: a moist filling needs a sturdier bread so that it does not turn soggy, and a delicate filling suits a soft bread.',
+                                        'Dietary requirements: wheat and gluten, egg, milk, soy, sesame and nuts, plus cultural, ethical, religious, health-related, environmental and personal preferences. Offer gluten-free breads and lettuce wraps where needed.',
+                                        'Know the terminology and the characteristics of each sandwich type.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Sandwich types named in the standard are hamburgers, hot dogs, paninis, shawarma, wraps, picnic, finger, pizza and deli. Breads are buns, sliced bread, baguettes, tortillas, pitas and flatbread. Quality indicators are hydration, colour, texture and the best before date.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch34-s2',
+                            title: '34.2 Processing and Assembling Sandwiches (K-29.02 and K-29.03)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Processing Method', 'Description', 'Example'],
+                                    rows: [
+                                        ['Slicing', 'Cutting into even slices', 'Tomatoes, deli meats, cheese, onions'],
+                                        ['Mixing', 'Combining ingredients', 'Egg salad, tuna salad, chicken salad'],
+                                        ['Grating', 'Shredding with a grater', 'Cheese, carrots'],
+                                        ['Mashing', 'Crushing to a paste', 'Avocado, chickpeas, egg'],
+                                        ['Dicing', 'Cutting into small cubes', 'Onions, peppers, pickles'],
+                                        ['Pulling', 'Shredding cooked meat by hand or with forks', 'Pulled pork, pulled chicken'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Knives and slicer', 'Slicing meats, cheese, vegetables and bread'],
+                                        ['Grills, griddles and oven', 'Cooking proteins and toasting'],
+                                        ['Food processors and graters', 'Chopping, grating and blending fillings and spreads'],
+                                        ['Toasters', 'Toasting bread'],
+                                        ['Spreaders, picks and paper', 'Applying spreads, holding and wrapping sandwiches'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Hold and store ingredients according to regulations, desired results and the recipe: keep cold ingredients at 4 °C or below and hot ingredients at 60 °C or above.',
+                                        'Processing factors: volume, time, type of sandwich, and the tools and equipment available.',
+                                        'Plan the assembly steps with all ingredients prepared and within reach (mise en place) so that sandwiches are built quickly and consistently.',
+                                        'Assembly sequence: place the bread, apply a spread or condiment (a thin layer of mayonnaise or butter acts as a moisture barrier), add the filling, then toppings, and close.',
+                                        'Place wet items such as tomato and pickles in the centre or between layers of lettuce so that the bread does not become soggy.',
+                                        'Control portions with a scale or measuring scoop so that cost and quality are consistent.',
+                                        'Finishing techniques: garnishing, packaging, presentation and cutting. Cut sandwiches with a sharp knife on the diagonal or into fingers, secure with picks and wrap or package according to the service style.',
+                                        'Handle, hold and store sandwiches carefully: factors are cross-contamination, holding time and method, temperature of ingredients, presentation and portion control. Hold cold sandwiches at 4 °C or below, and discard those held beyond the time allowed.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Sandwiches contain ready-to-eat foods that are not cooked again, so cross-contamination is a major risk. Wash hands, wear gloves where required, use clean utensils and boards, and never handle money and then food. Keep egg, meat, fish and dairy fillings at 4 °C or below, and label sandwiches containing allergens such as wheat, egg, milk, soy, sesame, fish and nuts.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Processing methods in the standard are slicing, mixing, grating, mashing, dicing and pulling, and finishing techniques are garnishing, packaging, presentation and cutting. A spread acts as a moisture barrier between bread and wet fillings.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch34-s3',
+                            title: '34.3 Cooking and Finishing Cooked Sandwiches (K-29.04)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Cooked Sandwich', 'Method', 'Key Points'],
+                                    rows: [
+                                        ['Grilled sandwich', 'Griddle or pan; bread is buttered and browned on both sides', 'Moderate heat so that the cheese melts before the bread burns'],
+                                        ['Pizza', 'Baked in a hot oven', 'Do not overload the toppings; a hot oven gives a crisp base'],
+                                        ['Quesadilla', 'Tortilla filled with cheese and fillings, folded and cooked on a griddle or in a pan', 'Cook until crisp and the cheese is melted, then cut into wedges'],
+                                        ['Broiled (open-faced) sandwich', 'Cooked under a broiler', 'Watch closely to prevent burning'],
+                                        ['Panini', 'Pressed and grilled between plates or a sandwich press', 'Gives grill marks and a crisp crust'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Tools and equipment: griddle, spatula, tongs, oven and pan.',
+                                        'Cooking methods: grilling, baking, pan frying and broiling.',
+                                        'Cook proteins such as burgers, chicken and sausages to a safe internal temperature before assembly: 71 °C for ground meat and 74 °C for poultry.',
+                                        'Hold cooked sandwiches according to the recipe and regulations, hot at 60 °C or above, and serve promptly because bread turns soggy or hard.',
+                                        'Finishing techniques: garnishing, packaging, presentation, cutting and applying sauces, condiments and accompaniments such as pickles, chips or salad.',
+                                        'Jurisdictional regulations: WHMIS, HACCP, OH&S and public health regulations.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Griddles, panini presses and broilers cause burns. Use tongs and spatulas, keep your hands clear of the press, never leave a broiler unattended and watch for grease flare-ups. Melted cheese and hot fillings are very hot, so warn guests.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Cooked sandwiches in the standard are grilled, pizza, quesadilla, broiled and panini. Cooking methods are grilling, baking, pan frying and broiling, and the filling must reach a safe temperature.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 35 — SALADS (K-30)
+                // ============================================================
+                {
+                    id: 'ch-35',
+                    number: 35,
+                    title: 'Salads',
+                    subtitle: 'Task K-30 · Prepares salads (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 70,
+                    sections: [
+                        {
+                            id: 'ch35-s1',
+                            title: '35.1 Selecting Salad Ingredients (K-30.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Salads combine ingredients such as vegetables, fruit, grains, pastas, eggs, pulses, meat, fish, seafood and cheese, and may be served warm or cold. Most salads should be finished as close to serving time as possible unless they are marinated.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Salad Type', 'Examples in the Standard', 'Characteristics'],
+                                    rows: [
+                                        ['Cold salads', 'Caesar, bean, garden, coleslaw, chicken', 'Chilled, crisp and refreshing; dressed close to service or marinated'],
+                                        ['Warm salads', 'Bowls, compound, potato', 'Served warm or at room temperature; dressings are often warm; ingredients may be cooked'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Salad Type', 'Description'],
+                                    rows: [
+                                        ['Garden salad', 'Mixed greens and raw vegetables with a dressing'],
+                                        ['Caesar salad', 'Romaine lettuce with a creamy garlic, anchovy and lemon dressing, grated hard cheese and croutons'],
+                                        ['Coleslaw', 'Shredded cabbage and carrots in a creamy or vinegar-based dressing'],
+                                        ['Bean salad', 'Cooked pulses with vegetables in a vinaigrette'],
+                                        ['Chicken salad', 'Cooked chicken bound with mayonnaise or dressing and mixed with vegetables or fruit'],
+                                        ['Potato salad', 'Boiled potatoes dressed with mayonnaise or a vinaigrette, served cold or warm'],
+                                        ['Compound salad', 'Several prepared ingredients arranged or combined, each dressed separately, such as a Niçoise or Cobb'],
+                                        ['Bowl salad', 'Grains, proteins and vegetables served in a bowl'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Ingredient groups: vegetables, fruit, proteins, accompaniments, starches, grains, dressings, cheese, pulses and seeds.',
+                                        'Identify freshness and quality by sensory assessment of hydration, colour, texture and best before dates: greens should be crisp and bright without browning, slime or wilting.',
+                                        'Factors in selecting ingredients: integrity (whole, undamaged pieces), seasonality, texture, local availability, viscosity of dressings, shelf life and size.',
+                                        'Dietary requirements: nuts, seeds, dairy, egg, fish (anchovy in Caesar dressing), gluten in croutons, vegetarian and vegan requests, and cultural, ethical, religious, health-related, environmental and personal preferences.',
+                                        'Handle, hold and store ingredients properly: keep greens cold and dry, ready-to-eat items at 4 °C or below and cooked ingredients cooled quickly.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Cold salads in the standard are Caesar, bean, garden, coleslaw and chicken. Warm salads are bowls, compound and potato. Factors in ingredient selection include integrity, seasonality, texture, availability, viscosity, shelf life and size.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch35-s2',
+                            title: '35.2 Processing and Combining Salad Ingredients (K-30.02)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Description', 'Key Points'],
+                                    rows: [
+                                        ['Cleaning', 'Washing greens and produce in cold water', 'Lift greens out of the water so that grit sinks; wash thoroughly'],
+                                        ['Soaking', 'Soaking in ice water to crisp', 'Revives wilted greens such as lettuce and celery'],
+                                        ['Cooking', 'Boiling, roasting or blanching ingredients such as potatoes, beans and beets', 'Cook until tender and cool quickly in cold water or on a tray'],
+                                        ['Drying', 'Spinning or patting greens dry', 'Dry greens help dressing cling and prevent a watery salad'],
+                                        ['Cutting', 'Cutting or tearing ingredients to size', 'Tear tender lettuces, cut firm vegetables to even sizes; bite-size pieces'],
+                                        ['Straining', 'Draining cooked or canned ingredients', 'Prevents a diluted dressing'],
+                                        ['Marinating', 'Soaking ingredients in dressing or acid before service', 'Used for bean, vegetable and pasta salads, which improve with time'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Knives and cutting boards', 'Cutting and preparing ingredients'],
+                                        ['Salad spinner', 'Drying greens'],
+                                        ['Mashers', 'Mashing potatoes and pulses for salads'],
+                                        ['Pots', 'Cooking ingredients'],
+                                        ['Food processors', 'Slicing and shredding in volume'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Combine salad ingredients according to the recipe and salad type: warm or cold, composed or tossed.',
+                                        'Prepare garnishes according to the recipe, such as croutons, shaved cheese, toasted nuts and seeds, sliced fruit, herbs and crispy toppings.',
+                                        'Select dressings for the desired result: a light vinaigrette for delicate greens, a creamy dressing for sturdy greens and coleslaw, and a warm dressing for wilted salads.',
+                                        'Do not dress delicate greens until just before service, or they wilt and turn watery.',
+                                        'Maintain safe handling procedures according to regulations: wash hands, use clean boards and utensils, and keep ready-to-eat salads cold at 4 °C or below.',
+                                        'Processing factors: integrity, texture, viscosity, shelf life and size.',
+                                        'Cook and cool potatoes, pasta, grain and egg salad ingredients quickly, chill them before mixing with mayonnaise and keep them cold.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Salads are not cooked after preparation, so any contamination stays in the food. Raw produce is a common source of E. coli, Salmonella and norovirus, so wash it well and keep it away from raw meat. Potato, egg, chicken and pasta salads made with mayonnaise must be kept at 4 °C or below. Label salads that contain allergens, including nuts, seeds, egg, milk, fish and gluten.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Processing methods in the standard are cleaning, soaking, cooking, drying, cutting, straining and marinating. Dry greens, dress at the last minute and keep mayonnaise-based salads cold.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch35-s3',
+                            title: '35.3 Finishing, Holding and Storing Salads (K-30.03)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Description'],
+                                    rows: [
+                                        ['Tossing', 'Gently mixing the salad and dressing so that every piece is lightly coated'],
+                                        ['Dressing', 'Adding the dressing on top, on the side or tossed through'],
+                                        ['Packaging', 'Placing salads in containers for takeout, with dressing separate to keep the salad crisp'],
+                                        ['Garnishing', 'Adding decorative or flavourful elements'],
+                                        ['Topping', 'Adding protein, cheese, seeds or other toppings on top'],
+                                        ['Presentation', 'Arranging the salad attractively with height and colour'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Garnish or Accompaniment', 'Examples'],
+                                    rows: [
+                                        ['Grated cheese', 'Parmesan, aged cheddar, feta'],
+                                        ['Seeds', 'Sunflower, pumpkin, sesame'],
+                                        ['Nuts', 'Toasted almonds, walnuts, pecans'],
+                                        ['Croutons', 'Toasted or fried seasoned bread cubes'],
+                                        ['Fruit', 'Berries, apple, orange segments, dried fruit'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Select and use finishing tools and equipment, such as tongs, mixing bowls and plates, and chill plates and bowls for cold salads.',
+                                        'Apply the correct amount of dressing: enough to coat lightly, never to drown the salad. Season with salt and pepper and adjust by sensory assessment.',
+                                        'Finishing factors: integrity, texture, viscosity, shelf life, size, sensory assessment and seasoning.',
+                                        'Hold and store finished salads according to the recipe, the desired results and regulations: refrigerate at 4 °C or below, and keep dressed salads for the shortest time possible.',
+                                        'Warm salads are held hot at 60 °C or above, or served immediately, and not held for long.',
+                                        'Know the procedures for handling, holding and storing finished salads, and the dietary requirements.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'A salad bar or buffet leaves ready-to-eat foods in the danger zone if it is not controlled. Keep cold items at 4 °C or below on ice or in cooled wells, protect them with sneeze guards, replace rather than top up containers, label allergens and discard food held beyond limits.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Finishing techniques in the standard are tossing, dressing, packaging, garnishing, topping and presentation. Garnishes include grated cheese, seeds, nuts, croutons and fruit. Pack dressing separately for takeout.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 36 — CONDIMENTS, PRESERVES AND DRESSINGS (K-31)
+                // ============================================================
+                {
+                    id: 'ch-36',
+                    number: 36,
+                    title: 'Condiments, Preserves and Dressings',
+                    subtitle: 'Task K-31 · Prepares condiments, preserves and dressings (3 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch36-s1',
+                            title: '36.1 Types and Selection of Ingredients (K-31.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Condiments and dressings are often prepared in similar ways, but their uses differ. Dressings are associated with salads, while condiments accompany sandwiches, cheeses, charcuterie and hors d oeuvres. Preserves include pickled vegetables and preserved fruit.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Group', 'Type', 'Description and Examples'],
+                                    rows: [
+                                        ['Condiments', 'Dips', 'Thick, flavoured mixtures for dipping, such as hummus, tzatziki and guacamole'],
+                                        ['Condiments', 'Relishes', 'Chopped vegetables or fruit in a sweet and sour liquid, such as corn relish and cucumber relish'],
+                                        ['Condiments', 'Syrups', 'Sugar-based liquids, such as simple syrup, maple syrup and flavoured syrups'],
+                                        ['Condiments', 'Salsas', 'Raw or cooked mixtures of chopped vegetables or fruit with acid, such as tomato salsa and mango salsa'],
+                                        ['Preserves', 'Pickled vegetables', 'Vegetables preserved in an acidic brine'],
+                                        ['Preserves', 'Jams', 'Crushed or chopped fruit cooked with sugar until thick and spreadable'],
+                                        ['Preserves', 'Jellies', 'Fruit juice cooked with sugar and pectin until it sets into a clear gel'],
+                                        ['Dressings', 'Oil-based', 'Oil with flavourings and seasonings, with or without acid'],
+                                        ['Dressings', 'Emulsions', 'Stable mixtures of oil and a water-based liquid, such as mayonnaise and Caesar dressing'],
+                                        ['Dressings', 'Vinaigrette', 'Oil and acid, commonly in a ratio of about 3 parts oil to 1 part vinegar, with seasonings'],
+                                        ['Dressings', 'Warm dressings', 'Dressings served warm, such as a warm bacon vinaigrette'],
+                                        ['Dressings', 'Dairy-based', 'Dressings using yogurt, sour cream, buttermilk or cream, such as ranch'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify and choose ingredients according to the recipe and the desired results, and judge freshness and quality by sensory assessment: hydration, colour, texture, aroma, best before date and flavour.',
+                                        'Know the terminology, the types of condiments, preserves and dressings and their characteristics and applications.',
+                                        'Dietary requirements: egg in mayonnaise, dairy in creamy dressings, fish in Caesar dressing and Worcestershire sauce, mustard, sesame, sulphites in vinegars and dried fruit, gluten in soy sauce, plus cultural, ethical, religious, health-related, environmental and personal preferences.',
+                                        'Handle, hold and store ingredients properly, keeping perishable ingredients such as eggs and dairy at 4 °C or below.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Condiments in the standard are dips, relishes, syrups and salsas. Preserves are pickled vegetables, jams and jellies. Dressings are oil-based, emulsions, vinaigrette, warm dressings and dairy-based. Dressings go with salads, and condiments go with sandwiches, cheese, charcuterie and hors d oeuvres.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch36-s2',
+                            title: '36.2 Processing Dressings, Condiments and Preserves (K-31.02)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Technique', 'Description', 'Used For'],
+                                    rows: [
+                                        ['Chopping, dicing and cutting', 'Cutting ingredients to size', 'Relishes, salsas, pickles'],
+                                        ['Mixing and blending', 'Combining ingredients, by hand or in a blender or food processor', 'Dips, salsas, dressings'],
+                                        ['Cooking', 'Heating to blend flavours, reduce or set', 'Jams, jellies, syrups, cooked salsas'],
+                                        ['Pickling', 'Preserving in an acidic brine, with salt, vinegar or both', 'Vegetables, fruit, eggs'],
+                                        ['Fermenting', 'Using salt and bacteria to produce lactic acid', 'Sauerkraut, kimchi, fermented pickles'],
+                                        ['Smoking', 'Flavouring with smoke', 'Smoked salsas, sauces and spreads'],
+                                        ['Emulsifying', 'Forming a stable mixture of oil and water', 'Mayonnaise, aioli, creamy dressings'],
+                                        ['Whisking', 'Beating to blend or aerate', 'Vinaigrettes and emulsions'],
+                                        ['Portioning', 'Dividing into measured amounts', 'Serving and packaging'],
+                                        ['Canning', 'Sealing food in jars and heating to destroy microorganisms', 'Jams, pickles, relishes'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Type of Dressing', 'How It Is Made', 'Key Points'],
+                                    rows: [
+                                        ['Vinaigrette (temporary emulsion)', 'Whisk acid, seasonings and mustard, then slowly add oil', 'Separates on standing; whisk again before serving; mustard helps hold it together'],
+                                        ['Mayonnaise (permanent emulsion)', 'Whisk egg yolks, acid and seasonings, then add oil very slowly', 'Lecithin in egg yolk emulsifies the oil; add oil slowly; use pasteurized eggs where required; a broken emulsion can be rescued by whisking it into a fresh yolk'],
+                                        ['Aioli', 'A garlic emulsion based on olive oil, with or without egg', 'Same method as mayonnaise'],
+                                        ['Dairy-based dressing', 'Combine yogurt, sour cream, buttermilk or mayonnaise with herbs and seasonings', 'Keep refrigerated; the acid thickens the dairy'],
+                                        ['Warm dressing', 'Heat fat, aromatics and vinegar and pour over the salad', 'Wilts greens slightly; serve right away'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Preserve', 'Method', 'Key Points'],
+                                    rows: [
+                                        ['Quick pickles', 'Pour a hot or cold brine of vinegar, water, salt and sugar over vegetables and refrigerate', 'Refrigerated, short shelf life'],
+                                        ['Fermented pickles', 'Submerge vegetables in salt brine and let them ferment at room temperature', 'Keep vegetables under the brine; follow tested procedures'],
+                                        ['Jam', 'Cook fruit with sugar until it thickens and gels', 'Pectin, sugar and acid are needed for a set; the gel point is about 104 to 105 °C'],
+                                        ['Jelly', 'Cook strained fruit juice with sugar and pectin', 'Clear and firm'],
+                                        ['Canned preserves', 'Fill sterilized jars, seal and process in a boiling water bath', 'Only high-acid foods (pH below 4.6) are safe to can in a boiling water bath'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Tools and equipment: mixers, pots, food processors, blenders, stove, whisk, double-boilers, thermometers, pressure cookers and knives.',
+                                        'Apply flavouring, seasonings and thickening agents according to the recipe and desired results: acid, salt, sugar, herbs, spices, pectin, starch or reduction.',
+                                        'Processing factors: mechanical application, type of ingredients, and holding time and temperature.',
+                                        'Use safe handling procedures according to regulations, and hold and store condiments, preserves and dressings according to the recipe, desired results and regulations: refrigerated, covered, labelled and dated.',
+                                        'Package in clean, sanitized containers, and use FIFO.',
+                                        'Know the procedures for handling, holding, storing and packaging, and the dietary requirements.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Vinaigrette Quantity', 'Calculation'],
+                                    rows: [
+                                        ['Ratio of 3 : 1', 'For 2 L of vinaigrette, there are 4 parts in total; each part is 2 000 mL ÷ 4 = 500 mL'],
+                                        ['Amounts', 'Oil = 3 × 500 mL = 1 500 mL; vinegar = 1 × 500 mL = 500 mL (before adding other seasonings)'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Home-style canning and low-acid preserves can cause botulism if they are not processed correctly. Use tested recipes, measured acid and the correct heat treatment, and never taste to check. Mayonnaise and other dressings made with raw egg must be made with pasteurized eggs where required, kept at 4 °C or below and discarded when the shelf life ends. Hot sugar syrups and jam cause severe burns, so use deep pots and long-handled tools.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Processing techniques in the standard are chopping, dicing, cutting, mixing, blending, cooking, pickling, fermenting, smoking, emulsifying, whisking, portioning and canning. A vinaigrette is a temporary emulsion, mayonnaise is a permanent emulsion and egg yolk lecithin is the emulsifier. Only high-acid foods are safe for a boiling water bath.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        // ============================================================
+        // STEP 2C — PART 12 FRAGMENT (MWA L: Specialty preparations)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 11.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks L-32, L-33, L-34 and L-35.
+        // ============================================================
+        {
+            id: 'part-12',
+            number: 12,
+            title: 'Specialty Preparations (MWA L)',
+            description: 'Hors d oeuvres and finger foods from canapés to sushi, satays and dim sum; charcuterie and cured products including forcemeats, terrines, pâtés, sausages and smoked and fermented items; gels and glazes such as aspic, gelatin, agar, pectin and fluid gels; and marinades, rubs and brines. MWA L carries 8 exam questions across tasks L-32, L-33, L-34 and L-35.',
+            weight: '8 questions (5.3% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 37 — HORS D OEUVRES AND FINGER FOODS (L-32)
+                // ============================================================
+                {
+                    id: 'ch-37',
+                    number: 37,
+                    title: 'Hors d Oeuvres and Finger Foods',
+                    subtitle: 'Task L-32 · Prepares hors d oeuvres and other finger foods (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 65,
+                    sections: [
+                        {
+                            id: 'ch37-s1',
+                            title: '37.1 Selecting and Processing Ingredients (L-32.01 and L-32.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Hors d oeuvres and finger foods are savoury hot and cold bite-sized items made from meat, fish, seafood, grains, vegetables, fruit and breads. Cultural influences extend the category to items such as sushi, spring rolls, spanakopita, satays and dim sum. They must be attractive, easy to eat in one or two bites and safe to hold.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Item', 'Description', 'Notes'],
+                                    rows: [
+                                        ['Canapés', 'Small bases (bread, crackers, pastry, vegetable slices) topped with a spread and garnish', 'Hot or cold; base must stay crisp; cut and assemble close to service'],
+                                        ['Sushi', 'Seasoned rice rolled or shaped with fish, seafood, vegetables or other fillings', 'Rice is seasoned with vinegar; raw fish must be handled and frozen according to regulations'],
+                                        ['Satays', 'Skewered marinated meat, poultry or seafood, grilled', 'Usually served with a peanut or other dipping sauce; soak bamboo skewers first'],
+                                        ['Dim sum', 'Chinese bite-sized steamed, fried or baked items, such as dumplings and buns', 'Steamed in bamboo baskets or fried'],
+                                        ['Spring rolls and spanakopita', 'Filled, wrapped and baked or fried pastries', 'Seal wrappers well and keep phyllo covered'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Ingredient or Component', 'Examples'],
+                                    rows: [
+                                        ['Pastry shells', 'Vol-au-vent, tart shells'],
+                                        ['Breads and crackers', 'Toast points, baguette slices, crostini, crackers'],
+                                        ['Rice and grains', 'Sushi rice, rice paper'],
+                                        ['Edible wrapping', 'Phyllo, wonton and spring roll wrappers, rice paper, nori, lettuce leaves'],
+                                        ['Meats, vegetables, fruit and cheeses', 'Fillings and toppings'],
+                                        ['Garnish', 'Herbs, micro greens, caviar, edible flowers'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Processing Method', 'Description'],
+                                    rows: [
+                                        ['Wrapping', 'Enclosing a filling in a wrapper or edible covering'],
+                                        ['Mixing and blending', 'Combining spreads, fillings and farces'],
+                                        ['Folding', 'Gently combining mixtures or folding pastry around a filling'],
+                                        ['Cutting', 'Shaping bases and ingredients to uniform bite-sized pieces'],
+                                        ['Baking, poaching and frying', 'Cooking components such as pastry cases, fillings and proteins'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Check freshness and quality by sensory assessment: hydration, colour, texture, aroma, best before date and flavour.',
+                                        'Market forms: fresh or frozen. Prepared and packaged items such as frozen pastry cups and frozen dim sum can save time and give consistency.',
+                                        'Selection factors: seasonality, style of service, availability, price and available resources.',
+                                        'Processing factors: texture, flavour, type of service and available resources.',
+                                        'Tools and equipment: food processors, cutting boards, knives, pans, bowls and stove.',
+                                        'Store ingredients and components for future assembly according to regulations: keep fillings cold at 4 °C or below, keep bases dry and assemble as late as possible.',
+                                        'Dietary requirements: gluten in wrappers and bases, shellfish, nuts, egg and dairy; label items clearly and offer vegetarian, vegan and gluten-free options.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'The items named in the standard are canapés, sushi, satays and dim sum. Processing methods are wrapping, mixing, folding, baking, cutting, poaching, frying and blending, and selection factors are seasonality, style of service, availability, price and available resources.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch37-s2',
+                            title: '37.2 Assembling, Cooking and Finishing Finger Foods (L-32.03 to L-32.05)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Assembly Method', 'Description', 'Example'],
+                                    rows: [
+                                        ['Wrapping', 'Enclosing a filling in a wrapper', 'Spring rolls, sushi rolls with a bamboo mat'],
+                                        ['Stacking', 'Layering components', 'Layered canapés, vegetable towers'],
+                                        ['Spreading', 'Applying a spread to a base', 'Canapés, crostini'],
+                                        ['Breading', 'Coating in flour, egg and crumbs', 'Fried croquettes, breaded bites'],
+                                        ['Brushing', 'Applying egg wash, oil or glaze', 'Pastries before baking'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Assembly tools and equipment: knives, skewers, toothpicks, bamboo mats, tongs, cutting boards and portioning scoops.',
+                                        'Assembly factors: kitchen space, available resources, time management, timing and temperature. Plan production in order, prepare cold items first and cook hot items last.',
+                                        'Cooking methods for finger foods: baking, frying, broiling and steaming. Calculate cooking time by item type, size, thickness and method.',
+                                        'Determine doneness by temperature readings and sensory assessment, and check that fillings with meat, poultry, seafood or egg reach a safe temperature (74 °C for poultry fillings, 71 °C for ground meat).',
+                                        'Finish by applying seasoning, sauce, condiments and garnish. Techniques: plating, traying, garnishing, tossing, saucing and glazing.',
+                                        'Present items according to the desired results and the style of service: passed (carried on trays by staff to guests) or stationed (displayed at a table or station).',
+                                        'Hold items according to regulations, hot at 60 °C or above and cold at 4 °C or below, and replenish in small batches so that no item sits out for too long.',
+                                        'Factors in finishing: integrity (the item holds together) and temperature.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Style of Service', 'Description', 'Considerations'],
+                                    rows: [
+                                        ['Passed', 'Servers carry trays to guests', 'Items must be small, neat and eaten without a plate; provide napkins and a place to put picks'],
+                                        ['Stationed', 'Items displayed on a table or station for guests to take', 'Needs sneeze guards, temperature control, labels and regular replenishment'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Finger foods are handled many times and often held for hours at events. Use temperature controls, never hold food in the danger zone for more than 2 hours in total, label allergens and use tongs or gloves. Skewers, picks and bamboo mats can injure guests, so count and remove them. Handle sushi rice carefully, because acidified rice must be controlled to remain safe.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Styles of service are passed and stationed. Finishing techniques are plating, traying, garnishing, tossing, saucing and glazing, and assembly methods are wrapping, stacking, spreading, breading and brushing.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 38 — CHARCUTERIE AND CURED PRODUCTS (L-33)
+                // ============================================================
+                {
+                    id: 'ch-38',
+                    number: 38,
+                    title: 'Charcuterie and Cured Products',
+                    subtitle: 'Task L-33 · Prepares charcuterie and cured products (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch38-s1',
+                            title: '38.1 Charcuterie Products and Selecting Ingredients (L-33.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Charcuterie covers products made by preserving meat, fin fish and seafood through aging, drying, smoking and curing. They can be served hot or cold. Safe production depends on strict control of temperature, time, humidity and hygiene.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Product', 'Description'],
+                                    rows: [
+                                        ['Forcemeat (farce)', 'A smooth or coarse emulsified mixture of ground meat, fat and seasonings; the base for pâtés, terrines and sausages'],
+                                        ['Terrine', 'A forcemeat or layered mixture cooked in a mould (also called a terrine), served cold, usually sliced'],
+                                        ['Pâté', 'A seasoned meat mixture, baked in a mould or crust (pâté en croûte), served hot or cold'],
+                                        ['Galantine', 'A boned bird or meat stuffed with forcemeat, rolled, poached and served cold, often with aspic'],
+                                        ['Ballotine', 'A boned and stuffed leg or piece of poultry, tied and poached, braised or roasted'],
+                                        ['Sausages', 'Ground, seasoned meat stuffed into casings; fresh, smoked, cooked or dry-cured'],
+                                        ['Variety meats', 'Liver and other organs used in pâtés, mousses and sausages'],
+                                        ['Smoked and fermented meat', 'Meats preserved with smoke or by controlled fermentation, such as salami'],
+                                        ['Fin fish, seafood and poultry', 'Cured or smoked items such as gravlax, smoked salmon and smoked chicken'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify quality by sensory assessment: hydration, colour, texture and aroma. Use very fresh, cold meat and fat, because poor ingredients cannot be corrected later.',
+                                        'Selection factors: quality, storage life, cost, fat yield and meat yield. Forcemeats generally need 20 to 30% fat for moisture and texture.',
+                                        'Identify classifications and their characteristics, and know the dietary requirements: pork, alcohol in some recipes, allergens such as milk, wheat and nuts, and cultural, ethical, religious and health-related needs.',
+                                        'Handle ingredients so that the meat stays at or below 4 °C, and chill grinder parts and bowls before use.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Products named in the standard are forcemeats, terrines, pâtés, galantines and ballotines, sausages, variety meats, smoked and fermented meat, fin fish, seafood and poultry. A galantine is poached and served cold, and a ballotine is a boned, stuffed leg or portion.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch38-s2',
+                            title: '38.2 Processing, Cooking and Finishing Charcuterie (L-33.02 to L-33.04)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Meat grinder', 'Grinds meat and fat to the correct texture'],
+                                        ['Meat slicer', 'Slices cooked or cured products evenly'],
+                                        ['Cutters', 'Cut meat, fat and garnishes'],
+                                        ['Sausage press', 'Stuffs forcemeat into casings'],
+                                        ['Terrine moulds', 'Shape terrines and pâtés'],
+                                        ['Food processors', 'Emulsify forcemeats and mousses'],
+                                        ['Smokers', 'Smoke and cook or cure products'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Description'],
+                                    rows: [
+                                        ['Curing', 'Preserving with salt, sugar, spices and often nitrite; draws out moisture and slows bacterial growth'],
+                                        ['Smoking', 'Exposing to smoke; cold smoking flavours and preserves at low temperatures, hot smoking cooks the product'],
+                                        ['Drying', 'Removing moisture under controlled temperature and humidity'],
+                                        ['Chopping and grinding', 'Reducing meat and fat to particle size'],
+                                        ['Emulsifying', 'Blending ground meat, fat and liquid into a stable, smooth mixture'],
+                                        ['Marinating and soaking', 'Flavouring or rehydrating ingredients'],
+                                        ['Shaping and moulding', 'Forming terrines, pâtés and galantines'],
+                                        ['Fermenting', 'Using bacterial cultures to lower pH and develop flavour and safety in products such as salami'],
+                                        ['Stuffing', 'Filling casings or boned meats with forcemeat'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Combine ingredients, seasonings, preservatives and garnishes according to the recipe. Weigh salt and curing agents accurately.',
+                                        'Indicators to monitor in curing, smoking and fermenting: temperature, time, humidity, pH activity and dehydration. Know the temperature and environmental controls required by regulations for curing, smoking and fermenting.',
+                                        'Keep forcemeat cold while grinding and mixing so that the fat does not smear and the emulsion does not break. If the mixture warms above about 10 to 12 °C, the fat melts out and the texture becomes greasy.',
+                                        'Cooking methods: curing, poaching, baking, smoking and drying. Tools: smokers, ovens, grills, thermal circulators and refrigerators.',
+                                        'Bake terrines and pâtés in a water bath (bain-marie) at a low temperature so that they cook gently and evenly, and press them while they cool to give a dense, sliceable texture.',
+                                        'Determine doneness according to regulations, sensory assessment and indicators. Cook pork and ground meat items to 71 °C and poultry items to 74 °C, according to regulations.',
+                                        'Cool cooked products rapidly, and store them covered, labelled and dated at 4 °C or below.',
+                                        'Finishing: garnish and glaze pâtés and terrines (with aspic), fill, present, remove casings and membranes where needed, and cut and slice neatly.',
+                                        'Secondary cooking methods for select products: frying, broiling, grilling, poaching and baking, such as grilling a fresh sausage or pan-frying a slice of pâté.',
+                                        'Know the styles of service, carving and slicing procedures and the handling and storage of finished products.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention'],
+                                    rows: [
+                                        ['Greasy, broken forcemeat', 'Mixture too warm, fat smeared, overmixed', 'Keep meat, fat and equipment very cold'],
+                                        ['Dry, crumbly pâté or sausage', 'Too little fat, or overcooked', 'Use enough fat and cook to temperature, not time'],
+                                        ['Shrunken terrine with fat and juices around it', 'Cooked too hot or too fast', 'Bake in a water bath at a gentle temperature'],
+                                        ['Grey colour in cured meat', 'Not enough curing agent or oxidation', 'Measure curing agent accurately and protect from air'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Curing, smoking and fermenting meat can cause botulism, Listeria and other serious illnesses if controls fail. Use tested recipes, measure salt and curing salts (nitrite) exactly, because too much is toxic, and follow the temperature, humidity and time limits of the regulations. Keep curing salts clearly labelled and away from table salt, and never leave smokers unattended.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Indicators for curing, smoking and fermenting are temperature, time, humidity, pH activity and dehydration. Keep forcemeat cold, bake terrines in a water bath and cool them under a press. Curing methods in the standard are curing, poaching, baking, smoking and drying.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 39 — GELS, GLAZES, MARINADES, RUBS AND BRINES (L-34 and L-35)
+                // ============================================================
+                {
+                    id: 'ch-39',
+                    number: 39,
+                    title: 'Gels, Glazes, Marinades, Rubs and Brines',
+                    subtitle: 'Tasks L-34 and L-35 · Gelling agents, glazes, marinades, rubs and brines (4 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch39-s1',
+                            title: '39.1 Gels (L-34)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Gels are finished products used to complement dishes and in entrées, appetizers and desserts. They are set with animal-based gelatin or plant-based sources such as agar agar. Glazes are shiny coatings applied to foods to enhance appearance and flavour and to protect and preserve quality.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Gelling Agent', 'Source', 'Characteristics'],
+                                    rows: [
+                                        ['Gelatin (powdered and sheet)', 'Animal collagen', 'Sets when cooled, melts at body temperature, thermoreversible; gives a tender, elastic gel; not suitable for vegetarian, vegan, halal or kosher diets unless specially sourced'],
+                                        ['Agar agar', 'Seaweed', 'Plant-based; must be boiled to activate; sets at a higher temperature (about 35 to 40 °C) and firmer and more brittle than gelatin; heat stable'],
+                                        ['Pectin', 'Fruit', 'Needs sugar and acid to set; used in jams, jellies and glazes'],
+                                        ['Chia seeds', 'Plant seeds', 'Absorb liquid to form a soft gel; used in puddings and jams'],
+                                        ['Xanthan gum', 'Fermentation product', 'Thickens and stabilizes liquids, even cold; used for fluid gels and sauces'],
+                                        ['Guar gum', 'Plant seed', 'Thickener and stabilizer; works in cold liquids'],
+                                        ['Locust bean gum', 'Plant seed', 'Thickener that needs heating; often combined with other gums'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Type of Gel', 'Description', 'Examples'],
+                                    rows: [
+                                        ['Aspic', 'A savoury gel made from clarified stock', 'Coating or filling for terrines, galantines and cold platters'],
+                                        ['Gelatin gel', 'A sweet or savoury gel set with gelatin', 'Gelatin desserts, gelatin salads, panna cotta'],
+                                        ['Pectin gel', 'A gel set with fruit pectin', 'Jams, jellies, fruit glazes'],
+                                        ['Fluid gel', 'A gel that is sheared (blended) while setting to form a smooth, pourable sauce-like texture', 'Plated sauces and purées'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Selection factors: flexibility, pH, heat stability and temperature. Acidic ingredients weaken gelatin, and some fresh fruits (pineapple, kiwi, papaya, fresh figs) contain enzymes that prevent gelatin from setting unless they are cooked first.',
+                                        'Quality indicators: hydration, colour, texture, aroma and taste.',
+                                        'Tools and equipment: bain-marie, pots, whisks, knives, bowls, juicers and blenders.',
+                                        'Methods: mixing, blooming and heating. Bloom gelatin by soaking powdered gelatin in cold liquid (about 5 times its weight) or sheet gelatin in cold water until soft, then dissolve it gently in warm liquid. Do not boil gelatin, because it weakens its setting power.',
+                                        'Factors in processing: time, temperature and viscosity. Gels need enough time in the refrigerator to set fully.',
+                                        'Finishing tools: brushes, bain-marie and bowls. Methods: combining, cutting, portioning, presenting and unmoulding. To unmould, dip the mould briefly in warm water and invert onto a plate.',
+                                        'Hold and store gels covered and refrigerated at 4 °C or below, according to the recipe and regulations. Agar gels hold at room temperature better than gelatin.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Glaze Type', 'Description', 'Examples'],
+                                    rows: [
+                                        ['Sweet glaze', 'A shiny coating with sugar, such as fruit, syrup or chocolate', 'Apricot glaze on tarts, sugar glaze on pastries'],
+                                        ['Savoury glaze', 'A shiny coating from reduced stock, aspic or sauce', 'Meat glaze (glace), aspic on a terrine, glazed vegetables'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Apply glazes with a brush while the glaze is warm and fluid, in a thin, even layer, and use temperature to control viscosity and shine.',
+                                        'Keep a glaze warm in a bain-marie while working, and reheat gently if it sets.',
+                                        'Dietary requirements: gelatin is animal-derived, so offer agar or pectin for vegetarian, vegan, halal and kosher guests; check glazes for alcohol and allergens.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Gelatin comes from animals and agar agar from seaweed. Bloom gelatin in cold liquid and do not boil it. Fresh pineapple, kiwi and papaya stop gelatin from setting. Gels in the standard are aspics, gelatin, pectin and fluid gels, and glazes are sweet or savoury.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch39-s2',
+                            title: '39.2 Marinades, Rubs and Brines (L-35)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Marinades enhance flavour and tenderize, and are usually made from oils, acids and flavourings. Rubs are dry marinades made of seasonings that enhance flavour. Brines are made from liquid, flavourings and salt, and are used to cure and preserve meat, seafood and fin fish.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Type', 'Subtype', 'Description'],
+                                    rows: [
+                                        ['Marinade', 'Vinegar-based', 'Acid from vinegar with oil and flavourings; flavourful but can toughen the surface if left too long'],
+                                        ['Marinade', 'Salt-based', 'Soy sauce, fish sauce or salt for seasoning'],
+                                        ['Marinade', 'Fruit-based', 'Citrus, pineapple or other fruit juices; enzymes in some fruit tenderize quickly and can turn meat mushy'],
+                                        ['Marinade', 'Alcohol-based', 'Wine, beer or spirits for flavour'],
+                                        ['Rub', 'Dry seasoning', 'Blend of salt, herbs and spices'],
+                                        ['Rub', 'Pastes', 'Seasonings blended with oil, garlic or herbs into a paste'],
+                                        ['Rub', 'Mustard-based', 'Mustard used as a binder and flavour'],
+                                        ['Rub', 'Sugar-based', 'Sugar with spices; promotes browning and caramelization, so watch for burning'],
+                                        ['Brine', 'Salt solution', 'Salt (and often sugar) dissolved in water with flavourings'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Choose the marinade, rub or brine according to the type of protein, vegetable or fruit, the recipe and the desired results.',
+                                        'Selection factors: product availability, time, quality, function and moisture content.',
+                                        'Typical marinade ratio is about 3 parts oil to 1 part acid with seasonings and aromatics. Know the ingredients and ratios used.',
+                                        'A common brine is about 5 to 6% salt, such as 50 to 60 g of salt per litre of water, often with sugar and aromatics. Cool a hot brine fully before adding raw meat.',
+                                        'Prepare and measure ingredients according to the recipe. Use non-reactive tools and containers (stainless steel, glass or plastic), not aluminum or copper, because acids and salt react with them.',
+                                        'Processing methods: combining, heating, dissolving and cooling. Processing factors: time, quality, function, moisture content, temperature, assembly sequence, container selection and application method.',
+                                        'Marinate in the refrigerator at 4 °C or below, and keep the time within the recipe: fish and seafood for minutes to an hour, poultry for hours and tough meats longer, because acid can cook and toughen delicate foods.',
+                                        'Use safe handling procedures to avoid cross-contamination: use separate containers and utensils for raw products. Never reuse a marinade that held raw meat, poultry or fish as a sauce unless it is boiled first; reserve a portion before it contacts raw product if it will be used as a sauce.',
+                                        'Hold and store marinades, rubs and brines according to the recipe and regulations: label, date and refrigerate marinades and brines, and keep dry rubs in sealed containers in a cool, dry place.',
+                                        'Dietary requirements: soy, wheat, mustard, sesame, sulphites, alcohol, and cultural, ethical, religious, health-related, environmental and personal preferences.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Brine Quantity', 'Calculation'],
+                                    rows: [
+                                        ['Brine for 10 L at 5% salt', '5% of 10 000 g of water = 500 g of salt'],
+                                        ['Sugar at 2.5% (optional)', '2.5% of 10 000 g = 250 g of sugar'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Raw meat, poultry and fish juices in marinades and brines spread bacteria. Marinate in covered, labelled, non-reactive containers on the lower shelf of the refrigerator, wash and sanitize everything that touched the raw product and never reuse the liquid unless it has been boiled. Do not apply a sweet rub to a hot, open flame for long, because it burns and forms harmful charred compounds.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Marinades use oil, acid and flavourings. A rub is a dry marinade, and a brine is salted water used to cure and preserve. Use non-reactive containers, keep everything refrigerated and never reuse raw marinade as a sauce without boiling it.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+
     ]
 }
