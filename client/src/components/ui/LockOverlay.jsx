@@ -97,7 +97,7 @@ export default function LockOverlay({
         <Button onClick={handleClick} size="lg" disabled={purchasing} className="w-full">
           {purchasing
             ? t('course.processing')
-            : `${purchaseLabel || t('lockOverlay.getAccess')} — ${price}`}
+            : `${purchaseLabel || t('lockOverlay.getAccess')}${price ? ` — ${price}` : ''}`}
         </Button>
       </div>
     </div>

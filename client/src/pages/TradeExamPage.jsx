@@ -47,9 +47,11 @@ export default function TradeExamPage() {
   const currentPrice = pricing?.currentPrice ?? course?.price;
   const fullPrice = pricing?.fullPrice ?? course?.price;
   const currency = pricing?.currency ?? course?.currency ?? 'CAD';
-  const isFreeOffer = Boolean(
-    appliedPromo?.amountCents === 0 || (!hasPurchased && !appliedPromo && pricing?.isFreeWindowActive)
+  const isFreePromo = appliedPromo?.amountCents === 0;
+  const isFreeWindowOffer = Boolean(
+    !hasPurchased && !appliedPromo && pricing?.isFreeWindowActive
   );
+  const isFreeOffer = isFreePromo || isFreeWindowOffer;
   const displayPrice = appliedPromo
     ? appliedPromo.amountCents
     : (hasFreeWindowAccess ? fullPrice : (currentPrice ?? course?.price ?? fullPrice));
@@ -248,7 +250,13 @@ export default function TradeExamPage() {
                       : t('course.promoApplied')}
                 </p>
               )}
-              <p className="text-text-muted">{isFreeOffer ? t('course.freeWindowOneTime') : t('course.oneTime')}</p>
+              <p className="text-text-muted">
+                {isFreePromo
+                  ? t('course.freePromoOneTime')
+                  : isFreeWindowOffer
+                    ? t('course.freeWindowOneTime')
+                    : t('course.oneTime')}
+              </p>
               
             </div>
 
@@ -296,7 +304,7 @@ export default function TradeExamPage() {
                   {purchasing
                     ? t('course.processing')
                     : isFreeOffer
-                      ? t('course.claimFreeAccess')
+                      ? t(isFreePromo ? 'course.claimFreeCourse' : 'course.claimFreeAccess')
                       : t('course.purchase', { price: formatPrice(displayPrice, displayCurrency) })}
                 </Button>
               </>

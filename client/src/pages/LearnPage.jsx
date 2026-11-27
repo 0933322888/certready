@@ -113,11 +113,13 @@ export default function LearnPage() {
   const fullCurrency = pricing?.currency ?? course?.currency ?? 'CAD';
   const isFreeWindowPreview = Boolean(hasAccess && pricing?.isFreeWindowActive && !userHasMockExam);
   const unlockingMockExam = Boolean(userHasAccess && !userHasMockExam && !isFreeWindowPreview);
-  const isFreeOffer = Boolean(
-    !userHasAccess && !unlockingMockExam && (
-      appliedPromo?.amountCents === 0 || (!appliedPromo && pricing?.isFreeWindowActive)
-    )
+  const isFreePromo = Boolean(
+    !userHasAccess && !unlockingMockExam && appliedPromo?.amountCents === 0
   );
+  const isFreeWindowOffer = Boolean(
+    !userHasAccess && !unlockingMockExam && !appliedPromo && pricing?.isFreeWindowActive
+  );
+  const isFreeOffer = isFreePromo || isFreeWindowOffer;
   const mockUnlockBasePrice = pricing?.fullPrice ?? course?.price ?? fullPrice;
   const displayPrice = appliedPromo
     ? appliedPromo.amountCents
@@ -210,7 +212,7 @@ export default function LearnPage() {
   const purchaseLabel = unlockingMockExam
     ? `${t('mockExam.unlockCta')}${displayPrice === 0 ? '' : ` — ${formatPrice(displayPrice, displayCurrency)}`}`
     : isFreeOffer
-      ? t('course.claimFreeAccess')
+      ? t(isFreePromo ? 'course.claimFreeCourse' : 'course.claimFreeAccess')
       : `${t('lockOverlay.getAccess')}${displayPrice === 0 ? '' : ` — ${formatPrice(displayPrice, displayCurrency)}`}`;
 
   return (
@@ -245,9 +247,11 @@ export default function LearnPage() {
             ? t('mockExam.unlockBanner')
             : isFreeWindowPreview
               ? t('course.getFullCourseAccess')
-              : isFreeOffer
-                ? t('course.freeWindowOffer')
-                : t('lockOverlay.title'),
+              : isFreePromo
+                ? t('course.promoAppliedFree')
+                : isFreeWindowOffer
+                  ? t('course.freeWindowOffer')
+                  : t('lockOverlay.title'),
           price: displayPrice === 0 ? null : formatPrice(displayPrice, displayCurrency),
           showPromo: unlockingMockExam || !isFreeOffer,
           promoCode,

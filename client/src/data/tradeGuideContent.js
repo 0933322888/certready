@@ -635,7 +635,7 @@ export const ALL_TRADES = [
   { name: "Concrete Finisher", code: "409A", slug: "concrete-finisher", live: false },
   { name: "Construction Craft Worker", code: "300A", slug: "construction-craft-worker", live: false },
   { name: "Construction Electrician", code: "309A", slug: "construction-electrician", live: true },
-  { name: "Cook", code: "415A", slug: "cook", live: false },
+  { name: "Cook", code: "415A", slug: "cook", live: true },
   { name: "Drywall Finisher & Plasterer", code: "453A", slug: "drywall-finisher-plasterer", live: false },
   { name: "Floorcovering Installer", code: "424A", slug: "floorcovering-installer", live: false },
   { name: "Gasfitter — Class A", code: "442A", slug: "gasfitter-class-a", live: false },
