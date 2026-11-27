@@ -351,7 +351,7 @@ export default function TradePage({ trade }) {
               <ul className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-text-muted">
                 {[
                   "Chapter-by-chapter study guide",
-                  "200+ practice questions",
+                  "300+ practice questions",
                   "Full timed mock exam",
                   "Formula & glossary reference",
                   "Exam strategy guide",

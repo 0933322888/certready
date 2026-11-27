@@ -99,7 +99,7 @@
     "discountedSpotsLeftNone": "Full price",
     "saveAmount": "Save {{amount}}",
     "launchPrice": "Launch price",
-    "promoCodeLabel": "Promo code",
+    "promoCodeLabel": "Promo code (use BLACKFRIDAY for 50% off)",
     "promoCodePlaceholder": "Enter code",
     "promoCodeHint": "Use code BLACKFRIDAY for 50% off the regular price.",
     "promoCodeApply": "Apply",
