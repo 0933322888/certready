@@ -40,9 +40,15 @@ export default function CoursePreview() {
                   <div className="flex items-center justify-between mb-4">
                     <Badge variant="accent">{course.tradeCode}</Badge>
                     <div className="text-right">
-                      <span className="text-2xl font-bold text-accent">
+                      <span className="text-xl text-muted line-through mr-2">
                         {formatPrice(fullPrice, currency)}
                       </span>
+                      <span className="text-2xl font-bold text-accent">
+                       {formatPrice(2499, currency)} 
+                      </span>
+                      <div className="text-lg  text-accent">
+                        50% Black Friday OFF
+                      </div>
                     </div>
                   </div>
                   <h3 className="text-2xl font-display font-bold text-text-primary mb-2">
