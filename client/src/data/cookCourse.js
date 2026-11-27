@@ -1,6 +1,18 @@
 
 const cookCourse = {
-
+    meta: {
+        trade: 'Cook',
+        redSealCode: '63200 (415A)',
+        seoTitle: 'Cook Red Seal Exam Prep — 63200 (415A) Study Guide',
+        seoDescription: 'Prepare for the Cook Red Seal exam with focused study content, exam weighting, and practical practice resources for Trade 63200 (415A).',
+        seoKeywords: 'Cook, 63200 (415A), 63200 (415A) practice exam, Cook Red Seal exam, 63200 (415A) exam prep, Cook Red Seal practice test, Cook certification Canada, Cook apprenticeship exam, Cook study guide, Cook practice questions, Cook mock exam, Red Seal cook exam, Red Seal exam preparation, Red Seal practice exam, Red Seal practice questions, Red Seal certification, Canada trade certification, Trade exam prep, Apprenticeship exam preparation, Red Seal study guide, Red Seal mock exam, Pass your Red Seal exam',
+        ogImage: '/course-images/og/cook.png',
+        totalExamQuestions: 150,
+        apprenticeshipLevels: 3,
+        totalHours: 5400,
+        version: '2020',
+        lastUpdated: '2026',
+    },
     parts: [
         // ============================================================
         // STEP 2B — PART 1 FRAGMENT (MWA A: Hygiene, sanitation and safety)
@@ -7584,6 +7596,978 @@ const cookCourse = {
                 },
             ],
         },
+        // ============================================================
+        // STEP 2C — PART 13 FRAGMENT (MWA M: Baked goods and desserts)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 12.
+        // Source: Red Seal Occupational Standard (RSOS) Cook 2020, tasks M-36 to M-41.
+        // ============================================================
+        {
+            id: 'part-13',
+            number: 13,
+            title: 'Baked Goods and Desserts (MWA M)',
+            description: 'Dough-based and batter-based products from selecting ingredients to mixing, baking and finishing; creams, mousses, custards, frozen desserts, icings and sugar work; assembling and finishing cakes; savoury and sweet pastries and pies; and chocolate selection, tempering and finishing. MWA M carries 10 exam questions across tasks M-36 to M-41.',
+            weight: '10 questions (6.7% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 40 — DOUGH-BASED PRODUCTS (M-36)
+                // ============================================================
+                {
+                    id: 'ch-40',
+                    number: 40,
+                    title: 'Dough-Based Products',
+                    subtitle: 'Task M-36 · Prepares dough-based products (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch40-s1',
+                            title: '40.1 Selecting Ingredients and Understanding Doughs (M-36.01)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Sweet and savoury doughs make items such as pasta, breads, samosas, egg rolls, pie shells, pastries and cookies. Doughs can be shaped and moulded, and added ingredients or textures provide variety. In baking, accurate measuring by weight is the key to consistent results.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Ingredient Group', 'Examples', 'Function'],
+                                    rows: [
+                                        ['Flours', 'All-purpose, bread, pastry, whole wheat, rye, gluten-free', 'Structure: gluten from wheat flour proteins gives strength and elasticity; higher protein flour makes chewier doughs, lower protein makes tender ones'],
+                                        ['Fats', 'Butter, shortening, lard, oil, margarine', 'Tenderness, flavour, moisture and flakiness'],
+                                        ['Eggs', 'Whole eggs, yolks, whites', 'Structure, richness, colour, binding and leavening'],
+                                        ['Sweeteners', 'Sugar, honey, syrups, molasses', 'Sweetness, browning, tenderness, moisture and food for yeast'],
+                                        ['Liquids', 'Water, milk, juice', 'Hydrate flour, form gluten and create steam'],
+                                        ['Leavening agents', 'Yeast, baking powder, baking soda, steam', 'Make the product rise and lighten the texture'],
+                                        ['Dairy', 'Milk, cream, butter, yogurt', 'Flavour, tenderness and browning'],
+                                        ['Flavourings, seasonings and specialty products', 'Vanilla, spices, salt, herbs, chocolate, nuts, fruit', 'Flavour; salt also controls yeast and strengthens gluten'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dough Product', 'Type', 'Notes'],
+                                    rows: [
+                                        ['Bread dough, rolls and buns', 'Yeast-raised', 'Kneaded to develop gluten; fermented and proofed'],
+                                        ['Pizza dough', 'Yeast-raised', 'Chewy crust; rest before shaping'],
+                                        ['Pasta and noodles', 'Unleavened', 'Flour with water or egg'],
+                                        ['Pies, tarts and flans', 'Pastry (short) dough', 'Tender; fat is cut into flour; avoid overworking'],
+                                        ['Cookies', 'Sweet short dough', 'High in fat and sugar'],
+                                        ['Crackers', 'Lean, unleavened or lightly leavened', 'Rolled thin and baked crisp'],
+                                        ['Samosas and egg rolls', 'Filled and fried or baked doughs', 'Wrappers sealed and cooked until crisp'],
+                                        ['Profiteroles (choux pastry)', 'Cooked paste raised by steam', 'Cooked on the stove, then baked until puffed and dry'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify the ingredients each recipe requires, and check quality and freshness by best-before date and sensory assessment: flour should be dry, free of lumps and insects, and with a neutral smell; yeast should be active; fats should not be rancid.',
+                                        'Know the functions of each ingredient so that substitutions do not ruin the result.',
+                                        'Market forms: fresh, frozen and dry mixes; frozen dough and pre-made pastry save time.',
+                                        'Dietary requirements: gluten, egg, milk, nuts and sesame allergens, plus vegan, halal, kosher and other cultural, ethical, religious, health-related, environmental and personal preferences.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Ingredient groups in the standard are flours, fats, eggs, sweeteners, liquids, leavening agents, dairy, specialty products, flavourings and seasonings. Gluten gives structure, fat gives tenderness and yeast, baking powder, baking soda and steam give lift.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch40-s2',
+                            title: '40.2 Processing, Cooking and Finishing Doughs (M-36.02 to M-36.04)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Method', 'Description', 'Purpose'],
+                                    rows: [
+                                        ['Kneading', 'Working the dough by hand or mixer', 'Develops gluten in bread dough'],
+                                        ['Proofing', 'Letting shaped dough rise in a warm, humid place', 'Gives the final rise before baking'],
+                                        ['Resting and benching', 'Leaving dough to relax, covered, on the bench', 'Relaxes gluten for easier shaping'],
+                                        ['Rolling and shaping', 'Rolling dough flat or forming it into shapes', 'Pies, cookies, rolls'],
+                                        ['Folding', 'Folding dough over itself, as in laminated doughs', 'Builds layers for flaky pastry'],
+                                        ['Scoring', 'Slashing the surface before baking', 'Controls expansion and gives an attractive finish'],
+                                        ['Incorporating fats', 'Cutting cold fat into flour or rubbing it in', 'Flaky pie dough keeps small pieces of fat; mealy dough has fat blended finely'],
+                                        ['Portioning', 'Cutting or weighing dough pieces', 'Even size and baking'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Equipment', 'Use'],
+                                    rows: [
+                                        ['Sifters', 'Remove lumps and aerate dry ingredients'],
+                                        ['Mixers', 'Mix and knead in volume'],
+                                        ['Sheeters', 'Roll dough to an even thickness'],
+                                        ['Rolling pins', 'Roll dough by hand'],
+                                        ['Proofers', 'Provide controlled warmth and humidity for rising'],
+                                        ['Ovens, fryers, steamers and pots', 'Cooking by baking, frying, steaming or boiling'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Measure by weight, volume or size according to the recipe, and mix according to the recipe. Weighing flour is far more accurate than measuring by volume.',
+                                        'Yeast doughs need water at a temperature that activates yeast without killing it, about 35 to 40 °C for active dry yeast. Salt and yeast should not touch directly in the early mix.',
+                                        'Pastry dough should be kept cold and handled lightly, because overworking develops gluten and makes it tough. A common pie dough ratio is 3 parts flour to 2 parts fat to 1 part water by weight.',
+                                        'Cooking methods: boiling (pasta, bagels), baking, frying (samosas, doughnuts), steaming (buns, dumplings) and poaching (some dumplings).',
+                                        'Determine doneness by sensory assessment: golden brown colour, a firm structure and a hollow sound when bread is tapped on the base.',
+                                        'Finish by cooling on racks, then brushing, dipping, spraying, salting, dusting, sprinkling, glazing, garnishing or filling. Cool bread fully before slicing or packaging.',
+                                        'Package and store to maintain freshness and shelf life: wrapping, bagging, refrigerating, freezing, retail packaging, vacuum sealing or room-temperature storage.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Problem', 'Cause', 'Prevention'],
+                                    rows: [
+                                        ['Dense bread', 'Too little kneading, dead yeast or underproofing', 'Knead fully, check the yeast and allow enough proofing time'],
+                                        ['Tough pie crust', 'Overworked dough or too much water', 'Handle lightly, keep ingredients cold and add water gradually'],
+                                        ['Shrinking pastry shell', 'Dough not rested or stretched when fitted', 'Rest the dough and ease it into the pan'],
+                                        ['Soggy base', 'Wet filling or oven too cool', 'Blind bake and bake on a lower rack'],
+                                        ['Choux that collapses', 'Underbaked or opened early', 'Bake until dry and firm, and do not open the oven early'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Mixers, sheeters and dough dividers can crush and amputate fingers. Keep guards in place, lock out before cleaning and never reach into moving machinery. Hot ovens, steam and frying oil cause serious burns, so use dry oven mitts, open oven doors away from your face and keep water away from oil. Flour dust is a respiratory irritant and can be explosive at high concentration.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Processing methods in the standard are rolling, shaping, folding, scoring, resting, proofing, benching, kneading, incorporating fats and portioning. Cooking methods are boiling, baking, frying, steaming and poaching, and doneness is judged by sensory assessment.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 41 — BATTER-BASED PRODUCTS (M-37)
+                // ============================================================
+                {
+                    id: 'ch-41',
+                    number: 41,
+                    title: 'Batter-Based Products',
+                    subtitle: 'Task M-37 · Prepares batter-based products (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 60,
+                    sections: [
+                        {
+                            id: 'ch41-s1',
+                            title: '41.1 Batters, Mixing Methods and Cooking (M-37.01 to M-37.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Savoury or sweet batters are used for items such as muffins, Yorkshire pudding, tempura and cakes. Batters are pourable or spoonable mixtures with more liquid than doughs, and optional ingredients and textures add variety.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Batter Product', 'Type', 'Key Points'],
+                                    rows: [
+                                        ['Muffins', 'Quick bread batter', 'Do not overmix; mix just until the dry ingredients are moistened'],
+                                        ['Cakes', 'Creamed or foam batters', 'Accurate measuring and mixing give tenderness and volume'],
+                                        ['Popovers and Yorkshire pudding', 'Thin, egg-rich batter raised by steam', 'Very hot pan and oven; do not open the oven early'],
+                                        ['Tempura', 'Light batter for frying', 'Use cold liquid and mix lightly so that it stays crisp'],
+                                        ['Waffles and pancakes', 'Pourable batters cooked on a griddle or iron', 'Rest the batter and use a hot, lightly greased surface'],
+                                        ['Fritters', 'Batter-coated or batter-mixed items, fried', 'Fry at a steady temperature'],
+                                        ['Corn bread', 'Cornmeal batter, baked', 'Moist, crumbly texture'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Mixing Method', 'How It Works', 'Typical Product'],
+                                    rows: [
+                                        ['Creaming', 'Beat fat and sugar together until light and fluffy to trap air, then add eggs and alternate dry and liquid ingredients', 'Butter cakes, some cookies'],
+                                        ['Foaming', 'Whip eggs (with or without sugar) to a foam and fold in the dry ingredients', 'Sponge and angel food cakes'],
+                                        ['Two-stage mixing', 'Blend dry ingredients and fat first, then add liquids in stages', 'High-ratio cakes'],
+                                        ['Muffin (blending) method', 'Combine dry ingredients, combine wet ingredients, then mix the two just until moistened', 'Muffins, quick breads, pancakes'],
+                                        ['Whipping', 'Beating to incorporate air', 'Egg whites, cream'],
+                                        ['Resting', 'Letting batter stand before cooking', 'Tempura, pancake, crepe batters'],
+                                        ['Incorporating fats', 'Adding melted, creamed or oil fats', 'Cakes, muffins'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Ingredients: flours, fats, eggs, sweeteners, liquids, leavening agents, dairy, specialty products, flavourings and seasonings. Market forms: powdered, frozen and fresh.',
+                                        'Tools: spatulas, whisks, sifters, mixers, scales and bowls. Weigh ingredients accurately and bring cold ingredients such as eggs and butter to room temperature for creamed batters.',
+                                        'Baking and frying are the cooking methods, using hand tools, ovens, fryers, pans, griddles and parchment paper. Line pans with parchment and prepare them as the recipe requires.',
+                                        'Preheat the oven and do not open it early. Cakes are commonly baked at about 175 °C, but follow the recipe.',
+                                        'Determine doneness by sensory assessment: golden colour, edges pulling away from the pan, the top springing back when lightly pressed and a toothpick or tester that comes out clean.',
+                                        'Overmixing muffin and pancake batters develops gluten and makes them tough and tunnelled; undermixed creamed batters are dense.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Batter-based products in the standard are muffins, cakes, popovers, tempura, waffles, pancakes, fritters and corn bread. Methods are resting, incorporating fats, creaming, foaming, blending, whipping and two-stage mixing. Creaming traps air in fat and sugar, and muffins are mixed just until moistened.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch41-s2',
+                            title: '41.2 Finishing, Holding and Storing Batter Products (M-37.04)',
+                            content: [
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Cool products properly on racks before frosting, glazing or packaging, because warm baked goods melt icings and trap steam that makes them soggy.',
+                                        'Finishing options: frosting, glazing, garnishing, seasoning, portioning and assembling. Finishing ingredients include nuts, seeds, sweeteners, spices, glazes, sauces, syrups and fruit.',
+                                        'Hold items according to regulations: products with cream, custard or cheese fillings must be kept at 4 °C or below, and fried items are served hot.',
+                                        'Package and store by wrapping, bagging, refrigerating, freezing, retail packaging or room-temperature storage, and label allergens such as wheat, egg, milk, nuts and sesame.',
+                                        'Know the procedures for handling and storage, and the dietary requirements for batter products.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Hot fat from frying tempura and fritters causes severe burns and fires. Never fill the fryer above the fill line, dry food before frying and keep a lid or class K extinguisher nearby. Raw batter containing raw egg or flour can carry Salmonella and E. coli, so do not taste it.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 42 — CREAMS, MOUSSES, FROZEN DESSERTS, ICINGS AND SUGAR WORK (M-38)
+                // ============================================================
+                {
+                    id: 'ch-42',
+                    number: 42,
+                    title: 'Creams, Mousses, Frozen Desserts, Icings and Sugar Work',
+                    subtitle: 'Task M-38 · Custards, mousses, frozen desserts, fillings, icings, toppings and sugar works (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 75,
+                    sections: [
+                        {
+                            id: 'ch42-s1',
+                            title: '42.1 Selecting Ingredients and Processing (M-38.01 and M-38.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'These products are judged mainly on appearance and texture, so consistency and quality depend on proper technique. Ingredients include eggs, sugar, dairy, gelatin, fruits, chocolate and flavourings, in frozen, fresh and shelf-stable market forms.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Product', 'Description'],
+                                    rows: [
+                                        ['Baked custard', 'Eggs and dairy baked in a water bath until just set, such as crème caramel and crème brûlée'],
+                                        ['Stirred custard', 'Eggs and dairy cooked while stirring until thick enough to coat a spoon, such as crème anglaise and pastry cream'],
+                                        ['Parfait', 'A rich frozen dessert made with whipped cream and cooked sugar syrup and eggs'],
+                                        ['Soufflé', 'A light dessert of a flavoured base and whipped egg whites, baked until risen'],
+                                        ['Ice cream', 'A frozen, churned custard or cream base'],
+                                        ['Bavarian', 'A stirred custard set with gelatin and lightened with whipped cream'],
+                                        ['Meringue', 'Egg whites whipped with sugar; French (raw sugar beaten in), Swiss (heated over water) and Italian (hot syrup) styles'],
+                                        ['Buttercream and frostings', 'Whipped fat with sugar, sometimes with eggs, used to fill and cover cakes'],
+                                        ['Ganache', 'Chocolate and hot cream emulsified together'],
+                                        ['Coulis', 'A pourable fruit sauce, puréed and sweetened'],
+                                        ['Caramels, brittles and toffees', 'Cooked sugar products'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Sugar Stage', 'Approximate Temperature', 'Typical Use'],
+                                    rows: [
+                                        ['Thread', '110 to 112 °C', 'Syrups'],
+                                        ['Soft ball', '112 to 116 °C', 'Fudge, fondant, Italian meringue'],
+                                        ['Firm ball', '118 to 120 °C', 'Caramels'],
+                                        ['Hard ball', '121 to 130 °C', 'Nougat, marshmallow'],
+                                        ['Soft crack', '132 to 143 °C', 'Toffee, taffy'],
+                                        ['Hard crack', '149 to 154 °C', 'Brittle, lollipops, spun sugar'],
+                                        ['Caramel', '160 to 177 °C', 'Caramel sauces and coatings'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool or Material', 'Use'],
+                                    rows: [
+                                        ['Bain-marie', 'Gentle, even heat for custards and melting chocolate'],
+                                        ['Mixers', 'Whipping, creaming and emulsifying'],
+                                        ['Scoops, piping bags and moulds', 'Portioning, piping and shaping'],
+                                        ['Ice cream maker', 'Churning and freezing mixtures'],
+                                        ['Whipped cream canister', 'Aerating cream with gas'],
+                                        ['Candy thermometer', 'Measuring sugar temperatures accurately'],
+                                        ['Heat lamps and torches', 'Keeping warm, browning and caramelizing'],
+                                        ['Copper pots', 'Fast, even heating for sugar work'],
+                                        ['Parchment, acetate and wax paper', 'Lining pans and moulds, and for chocolate work'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Check quality and freshness by best-before date and sensory assessment, and choose ingredients as the recipe requires.',
+                                        'Methods: cooking or baking custards, cooling, moulding, piping, churning, freezing, tempering, folding, emulsifying and whipping.',
+                                        'Check sugar temperatures by sensory assessment (the cold water test) and thermometers. Brush down the pot sides with water to stop crystals and avoid stirring boiling sugar.',
+                                        'Prepare pans and moulds with parchment, acetate or wax paper as the recipe requires, and portion and scale the product.',
+                                        'Cool custards rapidly and cover the surface to stop a skin forming.',
+                                        'Temper eggs when adding hot liquid so that they do not scramble.',
+                                        'Churn ice cream while freezing so that ice crystals stay small and the texture is smooth.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Cooked sugar reaches temperatures far above boiling and causes deep, painful burns that stick to the skin. Use deep pots, long sleeves, dry tools and a bowl of ice water nearby, and never carry molten sugar across the kitchen. Custards, creams and mousses are made with eggs and dairy, so use pasteurized eggs for uncooked preparations, and keep them at 4 °C or below.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Soft ball is about 112 to 116 °C and hard crack about 149 to 154 °C. Baked custards go in a water bath, stirred custards are cooked until they coat a spoon, and egg-based desserts must be kept cold.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch42-s2',
+                            title: '42.2 Finishing, Packaging and Storing (M-38.03)',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Description'],
+                                    rows: [
+                                        ['Unmoulding', 'Releasing a set dessert from its mould'],
+                                        ['Tempering', 'Heating and cooling chocolate so that it sets with a shine and snap'],
+                                        ['Torching', 'Browning or caramelizing the surface'],
+                                        ['Glazing', 'Coating with a shiny layer'],
+                                        ['Spraying', 'Applying a fine coating with a sprayer or airbrush'],
+                                        ['Garnishing', 'Adding finishing touches'],
+                                        ['Pulling sugar', 'Stretching warm sugar into ribbons or shapes'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Unmould by warming the mould briefly or by running a thin knife around the edge, then inverting onto a plate.',
+                                        'Package and store desserts according to type: refrigerate custards, mousses and cream-filled items; freeze ice cream and frozen desserts at -18 °C or below; store sugar work in dry, airtight conditions, because humidity makes it sticky.',
+                                        'Keep ganache at a stable temperature and use it at the right consistency: warm and pourable for glazing, cool and whipped for filling.',
+                                        'Label and date all items and follow FIFO.',
+                                        'Know the terminology, types and characteristics, factors in selecting and processing, functions of ingredients, market forms and finishing procedures.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Finishing techniques in the standard are tempering, torching, glazing, spraying, garnishing and pulling sugar. Frozen desserts are held at -18 °C or below, and cream and custard desserts are held at 4 °C or below.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 43 — CAKES (M-39)
+                // ============================================================
+                {
+                    id: 'ch-43',
+                    number: 43,
+                    title: 'Assembling and Finishing Cakes',
+                    subtitle: 'Task M-39 · Assembles cakes (1 exam question)',
+                    isFree: false,
+                    estimatedMinutes: 40,
+                    sections: [
+                        {
+                            id: 'ch43-s1',
+                            title: '43.1 Cake Components, Assembly and Decorating (M-39.01 and M-39.02)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'This task assumes the cake, filling and icing have already been prepared and stored. Presentation and appeal are the focus: components are selected, the cake is assembled and the finishing techniques and decorations are applied.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Cake Type', 'Description'],
+                                    rows: [
+                                        ['Black Forest', 'Chocolate cake layered with cherries and whipped cream, decorated with chocolate shavings'],
+                                        ['Pound cake', 'A dense, buttery cake traditionally made with equal weights of flour, butter, sugar and eggs'],
+                                        ['Carrot cake', 'Moist spiced cake with grated carrot, often with cream cheese icing'],
+                                        ['Cheesecake', 'A cheese and egg custard filling on a crumb crust, baked or chilled'],
+                                        ['Wedding cake', 'A tiered cake that needs structural support and careful decorating'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Component', 'Examples'],
+                                    rows: [
+                                        ['Icing and fillings', 'Buttercream, cream cheese icing, fruit fillings, pastry cream'],
+                                        ['Ganache, mousse and creams', 'Chocolate ganache, chocolate mousse, whipped cream'],
+                                        ['Toppings and garnishes', 'Fruit, nuts, praline, chocolate shavings'],
+                                        ['Glazes and dessert sauces', 'Apricot glaze, fruit coulis, caramel'],
+                                        ['Meringues', 'Italian or Swiss meringue used as icing or decoration'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tool', 'Use'],
+                                    rows: [
+                                        ['Spatulas', 'Spreading filling and icing smoothly'],
+                                        ['Airbrushes', 'Applying colour as a fine mist'],
+                                        ['Piping bags and tips', 'Piping borders, rosettes and writing'],
+                                        ['Pedestals and turntables', 'Supporting and rotating the cake while decorating'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Finishing Technique', 'Decoration'],
+                                    rows: [
+                                        ['Piping', 'Piped borders, flowers and designs'],
+                                        ['Combing', 'Texturing the icing with a comb scraper'],
+                                        ['Dusting', 'Icing sugar or cocoa powder through a sieve'],
+                                        ['Sprinkling', 'Crumbs, coconut or chopped nuts on the sides or top'],
+                                        ['Writing', 'Messages in icing or chocolate'],
+                                        ['Decorations', 'Crumbs, coconut, chocolate, fruit, fondant and cookies'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Check the quality of components by sensory assessment, and make sure the cake layers are completely cool before filling or icing.',
+                                        'Level the layers, spread the filling evenly and apply a thin crumb coat before the final coat of icing so that crumbs stay out of the finish.',
+                                        'Chill the cake between steps where it helps, and use a clean, warm spatula for a smooth finish.',
+                                        'Package and store the cake: refrigerate cakes with cream, custard or cheese fillings at 4 °C or below, and keep buttercream cakes in a cool place; cover to prevent drying.',
+                                        'Know the handling and storage procedures, and label cakes with allergens such as wheat, egg, milk, nuts and soy.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Cake types in the standard are black forest, pound, carrot, cheesecake and wedding cake. Techniques are piping, combing, dusting, sprinkling and writing. Cool layers fully, crumb coat, then finish, and refrigerate cakes with perishable fillings.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 44 — SAVOURY AND SWEET PASTRIES AND PIES (M-40)
+                // ============================================================
+                {
+                    id: 'ch-44',
+                    number: 44,
+                    title: 'Savoury and Sweet Pastries and Pies',
+                    subtitle: 'Task M-40 · Prepares savoury and sweet pastries and pies (2 exam questions)',
+                    isFree: false,
+                    estimatedMinutes: 60,
+                    sections: [
+                        {
+                            id: 'ch44-s1',
+                            title: '44.1 Selecting, Assembling and Cooking Pastries and Pies (M-40.01 to M-40.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Savoury and sweet pastries and pies need attention to presentation, and fillings and garnishes should complement the product. For this task, fillings, icings, glazes and doughs are assumed to be prepared and stored.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Pastry or Pie', 'Type', 'Typical Dough and Filling'],
+                                    rows: [
+                                        ['Meat pie', 'Savoury', 'Short pastry with a cooked meat filling'],
+                                        ['Jamaican patty', 'Savoury', 'Turmeric-coloured short pastry with a spiced meat or vegetable filling'],
+                                        ['Danish', 'Sweet', 'Yeast-raised laminated dough with fruit, cream cheese or custard'],
+                                        ['Calzone', 'Savoury', 'Folded pizza dough with cheese and other fillings, baked'],
+                                        ['Empanada', 'Savoury or sweet', 'Folded dough with meat, cheese, vegetable or fruit filling, baked or fried'],
+                                        ['Samosa', 'Savoury', 'Fried or baked dough with spiced potato, vegetable or meat'],
+                                        ['Spanakopita', 'Savoury', 'Phyllo with spinach and feta'],
+                                        ['Cream puff', 'Sweet', 'Choux pastry filled with cream or custard'],
+                                        ['Cannoli', 'Sweet', 'Fried pastry tube with a sweet ricotta filling'],
+                                        ['Fruit pie and turnover', 'Sweet', 'Short pastry with a cooked or raw fruit filling'],
+                                        ['Sugar pie and custard pie', 'Sweet', 'Short pastry with a sugar-cream or egg custard filling'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Dough', 'Characteristics', 'Used For'],
+                                    rows: [
+                                        ['Short (pie) dough', 'High in fat, tender and crumbly or flaky', 'Pies, tarts, meat pies, turnovers'],
+                                        ['Sweet dough', 'Short dough with added sugar and eggs', 'Tart shells, sweet pastries'],
+                                        ['Yeast-raised dough', 'Light, risen with yeast', 'Danish, calzone'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Filling Type', 'Examples'],
+                                    rows: [
+                                        ['Protein', 'Beef, chicken, pork, lamb'],
+                                        ['Cheese', 'Feta, ricotta, cheddar'],
+                                        ['Egg', 'Quiche style and custard fillings'],
+                                        ['Vegetable', 'Spinach, potato, mixed vegetables'],
+                                        ['Fruit', 'Apple, berries, cherries'],
+                                        ['Custard', 'Pastry cream, baked egg custard'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Identify ingredients according to the recipe and check quality and freshness by sensory assessment: sweet, short and yeast-raised doughs, flavourings, seasonings, apricot glaze and marzipan.',
+                                        'Assembly tools: rolling pins, pie dockers, cutters, piping bags, bowls and pans.',
+                                        'Assembly methods: piping, filling, layering, rolling, shaping, egg washing, venting, folding and topping.',
+                                        'Vent the top crust of covered pies with slits or a hole so that steam can escape, and brush with egg wash for a shiny, golden crust.',
+                                        'Keep hot fillings from melting the pastry by cooling them before filling, and keep dough cold until it enters the oven.',
+                                        'Cooking tools: convection, conventional and combination ovens, fryers and pans. Methods: baking, frying and toasting.',
+                                        'Determine doneness by sensory assessment or internal temperature: a deep golden crust, fruit filling bubbling through the vents, and the centre of custard pies just set. Meat fillings reach 74 °C, and egg-based fillings reach 71 °C according to guidance.',
+                                        'Blind bake pie shells for fillings that do not bake long, with weights to stop the pastry from puffing.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Assembly methods in the standard are piping, filling, layering, rolling, shaping, egg washing, venting, folding and topping. Cooking methods are baking, frying and toasting, and doneness is judged by sensory assessment or internal temperature.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch44-s2',
+                            title: '44.2 Finishing, Holding and Storing Pastries and Pies (M-40.04)',
+                            content: [
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Finishing tools: spatulas, piping bags, pastry brushes, torch, warmer, hot box, display cabinet and cooler.',
+                                        'Finishing techniques include glazing, dusting with sugar, torching meringue, piping cream and garnishing, according to the recipe and desired results.',
+                                        'Hold finished product to maintain freshness and shelf life, according to the recipe and regulations: keep hot savoury items at 60 °C or above in a warmer or hot box, and keep cream, custard and meat pies that are not hot at 4 °C or below in a cooler or refrigerated display.',
+                                        'Dry pastries can be kept at room temperature in a covered display; those with fresh cream or custard cannot.',
+                                        'Know the procedures to finish, present, hold, handle and store products, and the dietary requirements.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Custard pies, cream puffs and cannoli filled with ricotta or cream, and savoury meat pies, are potentially hazardous foods. Do not leave them at room temperature, and keep them at 60 °C or above or 4 °C or below. Hot fillings and steam from vents cause burns, so use mitts and take care when cutting into a hot pie.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+
+                // ============================================================
+                // CHAPTER 45 — CHOCOLATE (M-41)
+                // ============================================================
+                {
+                    id: 'ch-45',
+                    number: 45,
+                    title: 'Chocolate',
+                    subtitle: 'Task M-41 · Prepares chocolate (1 exam question)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+                    sections: [
+                        {
+                            id: 'ch45-s1',
+                            title: '45.1 Chocolate Types, Tempering and Finishing (M-41.01 to M-41.03)',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Chocolate is a versatile but delicate component used in many styles of cooking. The focus is on chocolate-related items such as truffles, ganaches, dipping chocolate and other confections, and on careful handling and storage.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Chocolate Type', 'Characteristics'],
+                                    rows: [
+                                        ['Dark', 'Cocoa solids, cocoa butter and sugar with no milk solids; bitter to sweet depending on the percentage of cocoa'],
+                                        ['Milk', 'Contains milk solids; sweeter and creamier, with a lower cocoa content'],
+                                        ['White', 'Cocoa butter, sugar and milk solids with no cocoa solids; sweet and ivory coloured'],
+                                        ['Couverture', 'High-quality chocolate with a high cocoa butter content (commonly at least 31%), which flows well for dipping, moulding and coating, and needs tempering'],
+                                        ['Coating', 'Chocolate or compound made for dipping or coating that is easier to use'],
+                                        ['Compound', 'Made with vegetable fat instead of cocoa butter; does not need tempering but has a different flavour and melt'],
+                                        ['Ruby', 'A pink chocolate made from ruby cocoa beans, with a fruity, tangy flavour'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Ingredient', 'Function'],
+                                    rows: [
+                                        ['Cocoa butter', 'The natural fat in chocolate; gives snap, melt and shine when tempered'],
+                                        ['Cocoa powder', 'Gives a strong chocolate flavour and colour'],
+                                        ['Inclusions', 'Nuts and fruit for texture and flavour'],
+                                        ['Cream and butter', 'Used in ganache, truffles and fillings'],
+                                        ['Flavourings', 'Vanilla, liqueurs, spices and extracts'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Tempering Technique', 'How It Works'],
+                                    rows: [
+                                        ['Tabling', 'Pour two thirds of the melted chocolate onto a marble slab, work it with spatulas until it thickens, then return it to the rest'],
+                                        ['Seeding', 'Add finely chopped, tempered chocolate to melted chocolate and stir until the temperature falls to the working range'],
+                                        ['Microwaving', 'Melt in short bursts, stirring often, and add seed chocolate to cool'],
+                                        ['Tempering machine', 'Automatically heats, cools and holds chocolate at the working temperature'],
+                                        ['Holding', 'Keeping tempered chocolate at the working temperature while using it'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Chocolate (Guide Only)', 'Melt To', 'Cool To', 'Working Temperature'],
+                                    rows: [
+                                        ['Dark', '45 to 50 °C', '27 to 28 °C', '31 to 32 °C'],
+                                        ['Milk', '40 to 45 °C', '26 to 27 °C', '29 to 30 °C'],
+                                        ['White', '40 to 45 °C', '25 to 26 °C', '28 to 29 °C'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Tempering stabilizes the cocoa butter crystals so that the chocolate sets glossy, snaps cleanly and does not bloom. Poorly tempered chocolate looks dull and streaky and is soft.',
+                                        'Tools and equipment: bain-marie, thermometer, tempering machines, bowls, marble slabs, moulds and wooden spoons. Keep tools completely dry.',
+                                        'Never let water touch melting chocolate, because even a drop causes it to seize into a thick, grainy mass. Melt gently with indirect heat and do not overheat.',
+                                        'Finishing tools: transfer sheets, acetates, spatulas, cornets, knives and cutters. Finishing techniques: shaving, coating, brushing, moulding, piping and transfer sheets.',
+                                        'Ganache is made by pouring hot cream over chopped chocolate and stirring until smooth. A glaze uses about equal weights of chocolate and cream, while a firmer truffle ganache uses about 2 parts chocolate to 1 part cream.',
+                                        'Hold and store finished chocolate to maintain quality and temper: in a cool (about 15 to 18 °C), dry, dark place away from strong odours and direct light, wrapped to protect it from moisture and temperature swings.',
+                                        'Sugar bloom (grainy white surface from moisture) and fat bloom (greyish streaks from temperature changes or poor temper) are quality faults but the chocolate is still safe to eat.',
+                                        'Know the terminology, types and properties, dietary requirements (milk, nuts, soy lecithin, gluten), selection factors, ingredient characteristics and market forms.',
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Worked Example: Ganache', 'Calculation'],
+                                    rows: [
+                                        ['Truffle ganache at 2 : 1', 'For 900 g of ganache, there are 3 parts, so 900 ÷ 3 = 300 g per part: 600 g chocolate and 300 g cream'],
+                                        ['Glaze at 1 : 1', 'For 900 g of glaze: 450 g chocolate and 450 g cream'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Melted chocolate and hot cream cause burns, and steam from a bain-marie condenses into the chocolate and ruins it. Keep water out, avoid overheating and wash hands before working with chocolate. Chocolate products can contain nuts, milk, soy and gluten, so prevent cross-contact and label allergens, and do not use equipment that has touched nuts for nut-free orders.',
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Chocolate types in the standard are white, dark, milk, couverture, coating, compound and ruby. Tempering techniques are tabling, seeding, microwaving, tempering machine and holding. Couverture needs tempering, compound does not, and water makes chocolate seize.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        // ============================================================
+        // STEP 2D — PART 14 FRAGMENT (Exam Strategy and Mock Exam)
+        // Paste this object inside the `parts: [ ... ]` array of cookCourse, after Part 13.
+        // This is the FINAL part. Its single chapter is the Mock Exam chapter (isMockExam: true).
+        // Source: red-seal.ca Cook exam information page and Red Seal Exam Preparation Guide.
+        // ============================================================
+        {
+            id: 'part-14',
+            number: 14,
+            title: 'Exam Strategy and Mock Exam',
+            description: 'Everything you need on exam day: the structure of the Red Seal Cook exam, the weighting of every MWA, how to manage your time, how to approach each type of question, the calculations most often tested and a last-minute review of key numbers, followed by the full timed mock exam.',
+            weight: '150 questions (100% of Total Exam)',
+
+            chapters: [
+
+                // ============================================================
+                // CHAPTER 46 — EXAM STRATEGY AND MOCK EXAM (FINAL CHAPTER)
+                // ============================================================
+                {
+                    id: 'ch-46',
+                    number: 46,
+                    title: 'Exam Strategy and Mock Exam',
+                    subtitle: 'Exam structure, MWA weighting, time management, question approach and the full 150-question timed mock exam',
+                    isFree: false,
+                    isMockExam: true,
+                    estimatedMinutes: 30,
+                    sections: [
+                        {
+                            id: 'ch46-s1',
+                            title: '46.1 Exam Structure',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'The Red Seal Cook exam is a written, multiple-choice exam based on the Red Seal Occupational Standard (RSOS). Every question has four options (A to D) with exactly one correct answer, and every question is worth one mark. Questions are written to match the tasks and sub-tasks you have studied in this course, and the number of questions from each Major Work Activity (MWA) is fixed.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Exam Feature', 'Detail'],
+                                    rows: [
+                                        ['Number of questions', '150'],
+                                        ['Format', 'Multiple choice, four options, one correct answer'],
+                                        ['Marks per question', '1'],
+                                        ['Passing mark', '70% (105 correct answers out of 150)'],
+                                        ['Writing time', '4 hours (240 minutes), according to the Red Seal Exam Preparation Guide; confirm the time on your own exam booking'],
+                                        ['Acronyms provided with the exam', 'AP (As-Purchased), EP (Edible Portion) and PPE (Personal Protective Equipment)'],
+                                        ['Calculator', 'A calculator is provided if needed; personal electronic devices are not allowed'],
+                                        ['Scrap paper', 'Provided; use it for formulas, diagrams and rough calculations'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Question Type', 'Share of Exam', 'What It Tests', 'Example'],
+                                    rows: [
+                                        ['Knowledge and Recall', '30 to 40%', 'Facts and definitions about performing a sub-task', 'Which temperature must hot food be held at?'],
+                                        ['Procedural and Application', '55 to 65%', 'Steps, calculations and applying knowledge to a situation', 'What is the correct order for cooling a large pot of stock?'],
+                                        ['Critical Thinking', 'Less than 10%', 'Analyzing a situation, finding causes and doing multi-step calculations', 'A food item costs $1.00 and must have a 29% food cost; what is the selling price? ($1.00 ÷ 0.29 = $3.45)'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'More than half of the exam is procedural and application, so learn the why and the order of the steps, not only the facts.',
+                                        'Look back at the exam tip at the end of each chapter: they show the terms and lists that the standard names directly.',
+                                        'You need 105 correct answers to pass. You can miss up to 45 questions.',
+                                        'Bring the required identification and documents on exam day, arrive early and follow the examiner instructions.',
+                                    ],
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch46-s2',
+                            title: '46.2 MWA Weighting and Where to Study',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'The weighting table shows how many of the 150 questions come from each MWA. Percentages are calculated from the question counts. Use the table to divide your study time: the bigger the MWA, the more marks it is worth, but every MWA is tested, so do not skip any.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['MWA', 'Title', 'Questions', 'Share of Exam', 'Course Chapters'],
+                                    rows: [
+                                        ['A', 'Hygiene, sanitation and safety', '13', '8.7%', '1 to 4'],
+                                        ['B', 'Common occupational skills', '11', '7.3%', '5 to 8'],
+                                        ['C', 'Produce', '12', '8.0%', '9 to 11'],
+                                        ['D', 'Stocks, broths and soups', '12', '8.0%', '12 to 13'],
+                                        ['E', 'Sauces', '13', '8.7%', '14 to 16'],
+                                        ['F', 'Cheese, dairy, plant-based dairy alternatives, eggs and egg products', '10', '6.7%', '17 to 18'],
+                                        ['G', 'Pastas, noodles, stuffed pastas and dumplings', '10', '6.7%', '19 to 20'],
+                                        ['H', 'Grains, pulses, seeds, nuts and alternative proteins', '11', '7.3%', '21 to 23'],
+                                        ['I', 'Meats, game, poultry, game birds and variety meats', '16', '10.7%', '24 to 28'],
+                                        ['J', 'Fish and seafood', '15', '10.0%', '29 to 33'],
+                                        ['K', 'Salads and sandwiches', '9', '6.0%', '34 to 36'],
+                                        ['L', 'Specialty preparation', '8', '5.3%', '37 to 39'],
+                                        ['M', 'Sweet and savoury baked goods and desserts', '10', '6.7%', '40 to 45'],
+                                        ['', 'TOTAL', '150', '100%', '46 (this chapter)'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Priority', 'MWAs', 'Questions', 'Why'],
+                                    rows: [
+                                        ['Highest value', 'I (meats and poultry) and J (fish and seafood)', '31 together (about 21%)', 'The two largest MWAs; they also carry the biggest food safety hazards and temperature rules'],
+                                        ['High value', 'A (safety) and E (sauces)', '26 together (about 17%)', 'Food safety appears in every MWA; sauces link to stocks (MWA D) and many other dishes'],
+                                        ['Steady value', 'B, C, D, H', '46 together (about 31%)', 'Many calculation, selection and storage questions'],
+                                        ['Complete the set', 'F, G, K, L, M', '47 together (about 31%)', 'Each is small, but together they are almost a third of the exam'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Food safety runs through every MWA. The same ideas (danger zone, cross-contamination, cooling and reheating, allergens, temperature checks and FIFO) are tested in meats, fish, eggs, dairy, sauces, salads and desserts, so master MWA A first and revisit it often.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch46-s3',
+                            title: '46.3 Time Management',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'You have time to think, but not unlimited time. A simple plan keeps you calm and makes sure that every question gets an answer. The Red Seal guidance is to divide the total writing time by the number of questions to find your average time per question.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Item', 'Calculation', 'Result'],
+                                    rows: [
+                                        ['Average time per question', '240 minutes ÷ 150 questions', '1.6 minutes (about 96 seconds)'],
+                                        ['Halfway checkpoint', '75 questions should be done by 120 minutes', 'If you are behind, speed up; if ahead, use the extra time for harder questions'],
+                                        ['Passing target', '70% of 150', '105 correct answers'],
+                                        ['Review time', 'Aim to finish the first pass with 20 to 30 minutes in hand', 'Use it to go back to skipped questions and check answers'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'First pass: answer every question you can in about a minute and a half, and move on from any question that is stuck.',
+                                        'If a question is too difficult, note its number, skip it on both the booklet and the bubble sheet, and come back to it later.',
+                                        'Check your pace at the halfway point and adjust.',
+                                        'Short knowledge questions can be answered in under a minute, which gives you time for calculation and scenario questions.',
+                                        'Answer every question. There is no penalty for a wrong answer, and eliminating options improves your odds from 25% to 33% or 50%.',
+                                        'If time remains, review all of your answers and make sure that each one is marked on the correct line of the bubble sheet.',
+                                        'Unless you know that you misread the question, keep your first answer.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Check that your question number matches the bubble sheet line every so often. One slipped answer line, if it is not noticed, can shift every later answer.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch46-s4',
+                            title: '46.4 Question Approach',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Good exam technique can add several marks. Use the same routine on every question so that it becomes automatic.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Step', 'What to Do', 'Why It Helps'],
+                                    rows: [
+                                        ['1. Read the whole question', 'Read to the end before looking at the options; underline words such as NOT, ALWAYS, NEVER, FIRST, BEST and MOST LIKELY', 'One word can reverse the meaning'],
+                                        ['2. Answer before reading the options', 'Think of the answer yourself; if it is among the options, it is probably correct', 'Stops you from being led by a distractor'],
+                                        ['3. Eliminate', 'Cross out options that are clearly wrong or unsafe', 'Improves your odds on every guess'],
+                                        ['4. Check the type', 'Is it recall, procedure or critical thinking?', 'Tells you whether to recall a fact, follow the steps or calculate'],
+                                        ['5. Choose the safest, most standard answer', 'The exam rewards correct, safe, regulation-compliant practice', 'Shortcuts and unsafe practices are usually distractors'],
+                                        ['6. Mark and move on', 'Fill in the bubble completely, and note any skipped number', 'Keeps your pace'],
+                                    ],
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Break long scenario questions into smaller parts: what happened, what is the hazard, and what is the correct next step.',
+                                        'For calculation questions, estimate first, then calculate. If your answer is far from your estimate, check again.',
+                                        'Look for common patterns in the options: two options that are opposites often include the answer; an option containing words such as always or never is often wrong.',
+                                        'Where two options both look correct, choose the one that is more specific to the situation described in the question.',
+                                        'Safety questions: when the question asks what to do first, the answer is usually to make the situation safe (stop, remove the hazard, protect others) before anything else.',
+                                        'Temperature questions: match the number to the correct food and purpose, such as holding, cooking, cooling, receiving or reheating.',
+                                        'If a question mentions a guest with an allergy, the answer almost always involves preventing cross-contact and communicating accurately.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'On exam day, bring only what is allowed. Personal bags, phones and electronic devices are not permitted in the exam room, cheating leads to expulsion, and you must ask the examiner before leaving the room. Check the exam notice for the identification and documents that you must bring.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch46-s5',
+                            title: '46.5 Calculation Toolkit',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Calculation questions are usually procedural or critical thinking. Learn each formula and practise it with the calculator provided. The abbreviations AP (As-Purchased), EP (Edible Portion) and PPE are given with the exam, but you must understand what they mean.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Calculation', 'Formula', 'Worked Example'],
+                                    rows: [
+                                        ['Yield percentage', 'Yield % = EP ÷ AP × 100', '10 kg AP gives 8 kg EP: 8 ÷ 10 × 100 = 80%'],
+                                        ['Amount to purchase', 'AP = EP needed ÷ yield (as a decimal)', 'Need 8 kg EP at 80% yield: 8 ÷ 0.80 = 10 kg AP'],
+                                        ['Cost per portion', 'Total cost ÷ number of portions', '10 kg at $20 per kg is $200; 200 ÷ 40 portions = $5.00 per portion'],
+                                        ['Selling price from food cost %', 'Selling price = food cost ÷ food cost %', '$1.00 ÷ 0.29 = $3.45'],
+                                        ['Food cost percentage', 'Food cost % = food cost ÷ selling price × 100', '$3.45 selling price and $1.00 cost: 1.00 ÷ 3.45 × 100 = 29%'],
+                                        ['Recipe conversion factor', 'Factor = new yield ÷ old yield; multiply every ingredient by the factor', 'Recipe makes 20 portions, you need 50: 50 ÷ 20 = 2.5, so 400 g becomes 1 000 g'],
+                                        ['Portions from a batch', 'Total volume or weight ÷ portion size', '4 L of soup at 250 mL: 4 000 ÷ 250 = 16 portions'],
+                                        ['Percentage of a quantity', 'Quantity × percentage ÷ 100', '5% salt brine for 10 L: 10 000 g × 0.05 = 500 g salt'],
+                                        ['Ratios', 'Split the total by the sum of the parts', 'Vinaigrette 3 : 1 for 2 L: 2 000 ÷ 4 = 500 mL per part; oil 1 500 mL, vinegar 500 mL'],
+                                        ['Temperature conversion', '°F = °C × 9 ÷ 5 + 32', '74 °C × 9 ÷ 5 + 32 = 165 °F'],
+                                    ],
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Measure', 'Equivalent'],
+                                    rows: [
+                                        ['1 kg', '1 000 g; about 2.2 lb'],
+                                        ['1 lb', 'About 454 g'],
+                                        ['1 L', '1 000 mL'],
+                                        ['1 cup', '250 mL'],
+                                        ['1 tbsp', '15 mL'],
+                                        ['1 tsp', '5 mL'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Yield and cost questions are the most likely critical thinking questions in this exam. Remember that AP is what you buy, EP is what you serve, yield percentage uses EP over AP, and the amount to purchase divides by the yield.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch46-s6',
+                            title: '46.6 Last-Minute Review of Key Numbers and Ideas',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'Use this page in the final days before the exam. The numbers below are the values taught in this course; where regulations in your jurisdiction differ, follow your local public health rules and the recipe or manufacturer.',
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Topic', 'Key Point'],
+                                    rows: [
+                                        ['Danger zone', '4 °C to 60 °C; keep cold food at 4 °C or below and hot food at 60 °C or above'],
+                                        ['Safe cooking and reheating', 'Reheat to at least 74 °C; poultry pieces, ground poultry and stuffing 74 °C; ground meat and pork 71 °C'],
+                                        ['Cooling', 'Two stages: 60 °C to 20 °C within 2 hours, then 20 °C to 4 °C within a further 4 hours'],
+                                        ['Receiving', 'Fresh meat, fish and dairy at 4 °C or below; frozen food at -18 °C or below and hard'],
+                                        ['Thawing', 'Refrigerator, cold running water (21 °C or below, sealed) or as part of cooking; never on the counter'],
+                                        ['Cross-contamination', 'Separate raw and ready-to-eat foods, use colour-coded boards, wash and sanitize between tasks, and store raw food below ready-to-eat'],
+                                        ['Allergens', 'Priority allergens include milk, egg, wheat, soy, peanuts, tree nuts, sesame, fish, shellfish, mustard and sulphites; prevent cross-contact and label clearly'],
+                                        ['FIFO', 'First in, first out: rotate stock and label and date everything'],
+                                        ['Roux', 'Equal parts fat and flour by weight; white, blond and brown cooked for increasing times'],
+                                        ['Mother sauces', 'Béchamel, velouté, espagnole (brown), tomato and hollandaise, with their derivatives'],
+                                        ['Stocks', 'Start in cold water, simmer gently (never boil hard), skim and strain; cool rapidly'],
+                                        ['Eggs', 'Cook gently; keep egg dishes hot or cold, never in the danger zone; use pasteurized egg for uncooked dishes'],
+                                        ['Pasta', 'Large pot of salted boiling water, no oil; cook al dente; dried pasta roughly doubles in weight'],
+                                        ['Rice and grains', 'Cool cooked rice quickly (Bacillus cereus risk); soak and boil kidney beans thoroughly'],
+                                        ['Meat', 'Tender cuts get dry heat, tough cuts get moist or combination heat; rest before carving; carve across the grain'],
+                                        ['Fish and seafood', 'Keep very cold; fresh fish has clear eyes, red gills and a clean smell; discard live bivalves that stay open and shells that do not open after cooking'],
+                                        ['Salads and dressings', 'Dry greens, dress at the last minute; keep mayonnaise-based salads at 4 °C or below; vinaigrette about 3 : 1 oil to acid'],
+                                        ['Charcuterie and curing', 'Keep forcemeat cold; measure curing salt accurately; control temperature, time, humidity and pH'],
+                                        ['Chocolate', 'Temper to set with shine and snap; keep water away from melted chocolate'],
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'warning',
+                                    text: 'Before the exam, confirm the current rules for your province or territory with your apprenticeship authority or public health office. This course follows the Red Seal Occupational Standard and general industry practice, and some numbers (for example holding times and curing controls) can differ by jurisdiction.',
+                                },
+                            ],
+                        },
+                        {
+                            id: 'ch46-s7',
+                            title: '46.7 Take the Full Mock Exam',
+                            content: [
+                                {
+                                    type: 'text',
+                                    text: 'The mock exam is a timed practice exam built to match the real one: 150 multiple-choice questions with four options each, drawn from all 13 MWAs in proportion to the weighting table, and with the same mix of knowledge and recall, procedural and application, and critical thinking questions. Take it when you have finished studying the chapters.',
+                                },
+                                {
+                                    type: 'list',
+                                    items: [
+                                        'Set aside 4 uninterrupted hours (240 minutes) and sit at a table with only a pencil, scrap paper and a calculator.',
+                                        'Work through the exam using the routine from section 46.4 and the pacing plan from section 46.3.',
+                                        'Do not look at the course while you work. Mark skipped questions and return to them at the end.',
+                                        'When you finish, review every wrong answer and read the explanation. Find the MWA and chapter that the question belongs to, and study that chapter again.',
+                                        'A score of 70% or more (105 of 150) matches the passing mark. If you score below that, study your weakest MWAs first and retake the exam after a few days.',
+                                        'Keep a short list of the topics you missed, and review it the day before your real exam.',
+                                    ],
+                                },
+                                {
+                                    type: 'callout',
+                                    style: 'exam-tip',
+                                    text: 'Treat the mock exam like the real exam: timed, quiet and with no help. A realistic practice run shows you where your marks are being lost and trains your pacing, and that is worth more than reading the material again.',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
 
     ]
 }
+
+const _parts = cookCourse.parts;
+const _allChapters = _parts.flatMap((p) => p.chapters);
+const _totalChapters = _allChapters.length;
+
+export const cookCourseData = {
+    id: 'cook-415a',
+    slug: 'cook-415a',
+    title: 'Cook (Red Seal 63200/415A) Exam Prep',
+    subtitle: 'Complete study guide — Red Seal Interprovincial Exam, 150 questions, 4 hours',
+    trade: 'Cook',
+    tradeCode: '63200 (415A)',
+    price: 4999, // $49.99 CAD in cents
+    currency: 'CAD',
+    totalChapters: _totalChapters,
+    totalQuestions: 150,
+    passingMark: 70,
+    features: [
+        `${_totalChapters} chapters covering all 13 Major Work Activities (MWA)`,
+        '150-question timed Red Seal mock exam and exam strategy',
+        'Key terms glossary and trade acronyms (exam reference)',
+        'Based on Red Seal Occupational Standard (RSOS) – Cook 2020',
+        '5-year access — study at your own pace',
+    ],
+    parts: _parts,
+};
+
+export default cookCourseData

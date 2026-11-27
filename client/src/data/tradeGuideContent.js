@@ -237,7 +237,8 @@ export const TRADE_DATA = {
       { icon: "🔧", tip: "Start with diagnostics", body: "Good diagnostic strategy reduces wasted time. Learn how to isolate faults quickly using symptoms, test data, and service information." },
       { icon: "⚡", tip: "Know electrical fundamentals", body: "Battery, charging, and starting systems appear constantly. Practice voltage, resistance, and current checks with wiring diagrams." },
       { icon: "❄️", tip: "Understand HVAC basics", body: "Refrigerant handling, airflow, and system controls are important for both comfort and safety questions." },
-      { icon: "📋", tip: "Practice full exam pacing", body: "Run at least one 125-question mock exam. Time management is critical on the Automotive Service Technician exam.",
+      {
+        icon: "📋", tip: "Practice full exam pacing", body: "Run at least one 125-question mock exam. Time management is critical on the Automotive Service Technician exam.",
       },
     ],
     courseSlug: "autoservtech-310s",
@@ -527,6 +528,57 @@ export const TRADE_DATA = {
     courseSlug: "welder-456a",
     courseUrl: "/trades/welder",
     practiceUrl: "/practice-tests/welder",
+  },
+  cook: {
+    slug: "cook",
+    name: "Cook",
+    tradeCode: "63200 (415A)",
+    apprenticeshipHours: 5400,
+    examQuestions: 150,
+    examDuration: "4 hours",
+    passingScore: 70,
+    overviewShort:
+      "Prepare, cook, and present soups, sauces, meats, fish, vegetables, baked goods, and more safely and consistently in commercial kitchens across Canada.",
+    overview:
+      "The Cook Red Seal exam certifies your ability to work safely and efficiently across a professional kitchen. It covers hygiene, sanitation and food safety, ordering and storage, recipes and costing, and the preparation of produce, stocks and soups, sauces, dairy and eggs, pastas, grains and alternative proteins, meats and poultry, fish and seafood, salads and sandwiches, specialty items, and baked goods. Earning a Red Seal supports interprovincial mobility and demonstrates national-level trade competency.",
+    mwas: [
+      { id: "A", title: "Performs Hygiene, Sanitation and Safety Functions", weight: 8.7, items: ["Maintains personal hygiene and workplace safety", "Cleans and sanitizes tools, equipment and work areas", "Applies food safety procedures and temperature control", "Prevents cross-contamination and cross-contact"] },
+      { id: "B", title: "Performs Common Occupational Skills", weight: 7.3, items: ["Organizes work and manages information", "Orders, receives, stores and inventories products", "Uses recipes, portions and costs dishes", "Accommodates dietary requirements and mentors others"] },
+      { id: "C", title: "Prepares Produce", weight: 8, items: ["Selects and prepares herbs and spices", "Selects, cuts and cooks vegetables", "Selects, prepares and cooks fruit", "Stores produce and controls quality"] },
+      { id: "D", title: "Prepares Stocks, Broths and Soups", weight: 8, items: ["Prepares stocks and broths", "Prepares clear and thickened soups", "Cools, stores and reheats safely", "Adjusts seasoning, consistency and presentation"] },
+      { id: "E", title: "Prepares Sauces", weight: 8.7, items: ["Prepares thickening and binding agents", "Prepares mother sauces and derivatives", "Prepares butter sauces, emulsions and pan sauces", "Finishes, holds and serves sauces safely"] },
+      { id: "F", title: "Prepares Cheese, Dairy, Plant-Based Dairy Alternatives, Eggs and Egg Products", weight: 6.7, items: ["Selects and handles cheese and dairy", "Uses plant-based dairy alternatives", "Cooks eggs and egg-based dishes", "Stores and handles dairy and eggs safely"] },
+      { id: "G", title: "Prepares Pastas, Noodles, Stuffed Pastas and Dumplings", weight: 6.7, items: ["Prepares and cooks pasta and noodles", "Prepares dough, fillings and stuffed pastas", "Prepares and cooks dumplings", "Holds, finishes and serves pasta dishes"] },
+      { id: "H", title: "Prepares Grains, Pulses, Seeds, Nuts and Alternative Proteins", weight: 7.3, items: ["Selects and cooks grains and pulses", "Prepares seeds and nuts", "Prepares alternative proteins", "Manages allergens and cross-contact"] },
+      { id: "I", title: "Prepares Meats, Game Meats, Poultry, Game Birds and Variety Meats", weight: 10.7, items: ["Selects meats and game meats", "Processes and portions meats and poultry", "Cooks and finishes meats, poultry and game", "Prepares variety meats"] },
+      { id: "J", title: "Prepares Fish and Seafood", weight: 10, items: ["Selects fin fish and seafood", "Processes fin fish and shellfish", "Cooks and finishes fin fish", "Cooks and finishes seafood"] },
+      { id: "K", title: "Prepares Salads and Sandwiches", weight: 6, items: ["Prepares hot and cold sandwiches", "Prepares salads", "Prepares dressings and condiments", "Prepares preserves and pickled products"] },
+      { id: "L", title: "Prepares Specialty Items", weight: 5.3, items: ["Prepares hors d oeuvres and finger foods", "Prepares charcuterie and cured products", "Prepares gels and glazes", "Prepares marinades, rubs and brines"] },
+      { id: "M", title: "Prepares Sweet and Savoury Baked Goods and Desserts", weight: 6.7, items: ["Prepares dough-based and batter-based products", "Prepares creams, mousses, frozen desserts and icings", "Assembles and finishes cakes and pastries", "Works with chocolate and sugar"] },
+    ],
+    difficultyRating: 3,
+    difficultyNote:
+      "The Cook exam is wide rather than deep. Thirteen Major Work Activities cover nearly every station in a kitchen, and most questions ask you to apply a procedure, temperature or calculation to a realistic scenario. Meats and poultry (MWA I) and fish and seafood (MWA J) carry the most questions, and food safety principles appear in almost every section.",
+    challengePoints: [
+      { icon: "📚", heading: "Thirteen MWAs to cover", body: "No single section is above 11% of the exam, so gaps in any area cost marks. Steady coverage matters more than deep focus on one topic." },
+      { icon: "🌡️", heading: "Temperatures and times", body: "Danger zone limits, cooking and holding temperatures, and cooling times appear across every MWA, not only in hygiene." },
+      { icon: "🧮", heading: "Costing and yield calculations", body: "Yield percentage, edible portion cost, recipe conversion, food cost percentage and portioning are tested as short calculation questions." },
+      { icon: "⏱️", heading: "150 questions in 4 hours", body: "About 96 seconds per question means pacing matters, especially on calculation and scenario questions." },
+    ],
+    sampleQuestions: [
+      { question: "Which MWA carries the most questions on the Cook Red Seal exam?", options: ["MWA E — Sauces", "MWA I — Meats, Game Meats, Poultry, Game Birds and Variety Meats", "MWA J — Fish and Seafood", "MWA B — Common Occupational Skills"], correct: 1, explanation: "MWA I has 16 of the 150 questions, which is about 10.7% of the exam. MWA J follows with 15 questions.", mwa: "I" },
+      { question: "Which temperature range is known as the danger zone, where bacteria grow most quickly in potentially hazardous food?", options: ["0 °C to 40 °C", "4 °C to 60 °C", "10 °C to 74 °C", "-18 °C to 4 °C"], correct: 1, explanation: "The danger zone is 4 °C to 60 °C. Cold food is kept at 4 °C or below and hot food at 60 °C or above.", mwa: "A" },
+      { question: "A 10 kg case of an item costs $80 and has an 80% yield. What is the cost per kilogram of edible portion?", options: ["$8.00", "$10.00", "$6.40", "$12.50"], correct: 1, explanation: "The edible portion is 10 × 0.80 = 8 kg, so the cost is $80 ÷ 8 kg = $10.00 per kg. $8.00 ignores the trim loss.", mwa: "B" },
+    ],
+    studyTips: [
+      { icon: "🌡️", tip: "Memorize the key temperatures", body: "Danger zone, cooling stages, reheating, hot holding and safe cooking temperatures for meat, poultry, fish and eggs should be automatic." },
+      { icon: "🧮", tip: "Drill yield and costing math", body: "Practise yield percentage, edible portion cost, recipe conversion and selling price from food cost percentage until you can do them quickly." },
+      { icon: "🥩", tip: "Give extra time to MWA I and J", body: "Meats, poultry, fish and seafood together make up about 21% of the exam." },
+      { icon: "⏲️", tip: "Run full timed sets", body: "Train for 150 questions in a single sitting to build pace and focus endurance." },
+    ],
+    courseSlug: "cook-415a",
+    courseUrl: "/trades/cook",
+    practiceUrl: "/practice-tests/cook",
   },
 };
 

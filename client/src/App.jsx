@@ -81,9 +81,7 @@ export default function App() {
             <Route path="/practice-tests" element={<PracticeTestsListPage />} />
             <Route path="/practice-tests/:tradeSlug/mock-exam" element={<MockExamPage />} />
             <Route path="/practice-tests/:tradeSlug" element={<PracticePage />} />
-            <Route path="/electrician-red-seal-practice-questions" element={<FreePracticeQuestionsLandingPage />} />
-            <Route path="/plumber-red-seal-practice-questions" element={<FreePracticeQuestionsLandingPage />} />
-            <Route path="/hairstylist-red-seal-practice-questions" element={<FreePracticeQuestionsLandingPage />} />
+            <Route path="/:tradeKey-red-seal-practice-questions" element={<FreePracticeQuestionsLandingPage />} />
             <Route path="/guides" element={<GuidesPage />} />
             <Route path="/guides/:slug" element={<GuidesSlugPage />} />
             <Route path="/blog" element={<BlogPage />} />

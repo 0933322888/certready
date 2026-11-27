@@ -309,6 +309,53 @@ export const tradeGuides = [
       'Run timed practice to build pace for 125 questions',
     ],
   },
+  {
+    slug: 'cook',
+    courseSlug: 'cook-415a',
+    tradeName: 'Cook',
+    tradeCode: '415A',
+    examQuestions: 150,
+    passMark: 70,
+    apprenticeshipHours: 5400,
+    apprenticeshipLevels: 3,
+    examWeighting: [
+      { area: 'Hygiene, Sanitation and Safety (MWA A)', percent: 9 },
+      { area: 'Common Occupational Skills (MWA B)', percent: 7 },
+      { area: 'Produce (MWA C)', percent: 8 },
+      { area: 'Stocks, Broths and Soups (MWA D)', percent: 8 },
+      { area: 'Sauces (MWA E)', percent: 9 },
+      { area: 'Cheese, Dairy, Plant-Based Dairy Alternatives, Eggs and Egg Products (MWA F)', percent: 7 },
+      { area: 'Pastas, Noodles, Stuffed Pastas and Dumplings (MWA G)', percent: 7 },
+      { area: 'Grains, Pulses, Seeds, Nuts and Alternative Proteins (MWA H)', percent: 7 },
+      { area: 'Meats, Game, Poultry, Game Birds and Variety Meats (MWA I)', percent: 11 },
+      { area: 'Fish and Seafood (MWA J)', percent: 10 },
+      { area: 'Salads and Sandwiches (MWA K)', percent: 6 },
+      { area: 'Specialty Preparation (MWA L)', percent: 5 },
+      { area: 'Sweet and Savoury Baked Goods and Desserts (MWA M)', percent: 7 },
+    ],
+    faqs: [
+      {
+        question: 'How many questions are on the Red Seal Cook exam?',
+        answer: 'The Red Seal Cook interprovincial exam contains 150 multiple-choice questions. A minimum score of 70% is required to pass.',
+      },
+
+      {
+        question: 'How long is the Cook apprenticeship?',
+        answer: 'The Cook apprenticeship typically includes 5,400 total hours of combined on-the-job and in-school training across 3 levels.',
+      },
+      {
+        question: 'Do I need to memorize formulas for the Cook exam?',
+        answer: 'Yes. Focus on food cost calculations, recipe scaling, measurement conversions, cooking ratios, and portion calculations. Practise applying these formulas to real kitchen scenarios.',
+      },
+    ],
+    topStudyTips: [
+      'Master food safety, sanitation, and temperature control procedures',
+      'Practise cooking methods, ingredient preparation, and proper equipment use',
+      'Focus extra study time on meats, fish, seafood, and sauces',
+      'Run timed practice to build pace for 150 questions',
+      'Review incorrect answers to strengthen knowledge and improve problem-solving skills',
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug) {

@@ -11,18 +11,20 @@ import hairstylistQuestions from './hairstylist.js';
 import hvacQuestions from './hvac.js';
 import welderQuestions from './welder.js';
 import autoservtechQuestions from './autoservtech.js';
+import cookQuestions from './cook.js';
 
 export { TRADE_TOPICS, getTopicLabel };
 
 /** All practice questions: carpenter, then construction-electrician, then plumber, then hairstylist */
-export const getQuestions = (i18n) => [
+export const getQuestions = () => [
   ...carpenterQuestions,
   ...constructionElectricianQuestions,
   ...plumberQuestions,
   ...hairstylistQuestions,
   ...hvacQuestions,
   ...welderQuestions,
-  ...autoservtechQuestions
+  ...autoservtechQuestions,
+  ...cookQuestions
 ];
 
 export const QUESTIONS = getQuestions();

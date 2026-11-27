@@ -41,11 +41,17 @@ export const STUDY_PLAN_PHASES = {
     { title: 'Practice exams and review', key: 'practice-exams' },
   ],
   'autoservtech': [
-  { title: 'Safety and fundamentals', key: 'safety-fundamentals' },
-  { title: 'Vehicle systems and diagnostics', key: 'systems-diagnostics' },
-  { title: 'Powertrain, brakes, and HVAC', key: 'powertrain-brakes-hvac' },
-  { title: 'Practice exams and review', key: 'practice-exams' },
-],
+    { title: 'Safety and fundamentals', key: 'safety-fundamentals' },
+    { title: 'Vehicle systems and diagnostics', key: 'systems-diagnostics' },
+    { title: 'Powertrain, brakes, and HVAC', key: 'powertrain-brakes-hvac' },
+    { title: 'Practice exams and review', key: 'practice-exams' },
+  ],
+  'cook-415a': [
+    { title: 'Safety, sanitation, and fundamentals', key: 'safety-fundamentals' },
+    { title: 'Core skills and ingredient preparation', key: 'core-skills' },
+    { title: 'Menu planning and food service', key: 'menu-planning' },
+    { title: 'Practice exams and review', key: 'practice-exams' },
+  ],
 };
 
 /** Fallback when a published course has no trade-specific phases yet */

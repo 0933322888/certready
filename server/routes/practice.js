@@ -16,6 +16,7 @@ const TRADE_SLUG_TO_COURSE_SLUG = {
   hvac: 'refrigeration-air-conditioning-mechanic-313a',
   'refrigeration-air-conditioning-mechanic': 'refrigeration-air-conditioning-mechanic-313a',
   autoservtech: 'autoservtech-310s',
+  cook: 'cook-415a',
 };
 
 /** Full mock exam question count per trade (for readiness 20% calculation) */
@@ -28,6 +29,7 @@ const EXAM_QUESTIONS_BY_TRADE = {
   hvac: 125,
   'refrigeration-air-conditioning-mechanic': 125,
   autoservtech: 125,
+  cook: 150,
 };
 
 /**

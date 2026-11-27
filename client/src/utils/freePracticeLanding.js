@@ -3,10 +3,14 @@
  * Example: /electrician-red-seal-practice-questions → tradeSlug construction-electrician
  */
 export const FREE_PRACTICE_LANDING_TRADES = {
+  autoservtech: 'autoservtech',
   carpenter: 'carpenter',
+  cook: 'cook',
   electrician: 'construction-electrician',
-  plumber: 'plumber',
   hairstylist: 'hairstylist',
+  plumber: 'plumber',
+  'refrigeration-air-conditioning-mechanic': 'refrigeration-air-conditioning-mechanic',
+  welder: 'welder',
 };
 
 export function getTradeSlugFromLandingKey(tradeKey) {

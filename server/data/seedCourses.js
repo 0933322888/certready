@@ -147,4 +147,25 @@ export const seedCourses = [
       '5-year access — study at your own pace',
     ],
   },
+  {
+    slug: 'cook-415a',
+    title: 'Cook (Red Seal 415A) Exam Prep',
+    subtitle: 'Complete study guide — Red Seal Interprovincial Exam, 150 questions',
+    description: 'Prepare for the Red Seal Cook (415A) interprovincial exam. 15 chapters covering all 5 Major Work Activities, formulas reference, key terms glossary, and exam strategy.',
+    trade: 'Cook',
+    tradeCode: '415A',
+    price: 4999,
+    currency: 'cad',
+    totalChapters: 15,
+    totalQuestions: 150,
+    isPublished: true,
+    features: [
+      '15 chapters covering all 5 Major Work Activities (MWA)',
+      '300 practice questions with detailed explanations',
+      'Red Seal-style mock exam and exam strategy',
+      'Formulas reference and key terms glossary',
+      'Based on Red Seal Occupational Standard (RSOS) – Cook 2020',
+      '5-year access — study at your own pace',
+    ],
+  }
 ];
