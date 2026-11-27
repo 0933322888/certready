@@ -27,7 +27,7 @@ export default function Hero() {
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-4 sm:mb-6 leading-tight">
           {t('hero.title')} <span className="text-accent block sm:inline mt-1 sm:mt-2">— {t('hero.titleHighlight')}</span>
         </h1>
-        <p className="text-base sm:text-xl md:text-2xl text-text-primary mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-xl md:text-2xl text-text-primary mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed underline-offset-4 decoration-accent/50 decoration-2">
           {t('hero.subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full max-w-sm sm:max-w-none mx-auto">
