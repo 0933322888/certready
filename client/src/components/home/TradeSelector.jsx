@@ -9,12 +9,12 @@ import { trackEvent } from '../../utils/analytics';
  * stay in sync with the rest of the site.
  */
 const TRADES = [
-  { slug: 'hairstylist', code: '332A', icon: '✂️' },
-  { slug: 'carpenter', code: '403A', icon: '🔨' },
-  { slug: 'construction-electrician', code: '309A', icon: '⚡' },
-  { slug: 'plumber', code: '306A', icon: '🔧' },
-  { slug: 'refrigeration-air-conditioning-mechanic', code: '313A', icon: '❄️' },
-  { slug: 'welder', code: '456A', icon: '🔥' },
+  { slug: 'hairstylist', code: '332A' },
+  { slug: 'carpenter', code: '403A' },
+  { slug: 'construction-electrician', code: '309A' },
+  { slug: 'plumber', code: '306A' },
+  { slug: 'refrigeration-air-conditioning-mechanic', code: '313A' },
+  { slug: 'welder', code: '456A' },
 ];
 
 export default function TradeSelector() {
@@ -32,7 +32,7 @@ export default function TradeSelector() {
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {TRADES.map((trade) => (
             <li key={trade.slug}>
               <Link
@@ -42,17 +42,25 @@ export default function TradeSelector() {
                   trade_code: trade.code,
                   cta_location: 'homepage_trade_selector',
                 })}
-                className="group flex items-center gap-3 sm:gap-4 h-full p-4 sm:p-5 rounded-xl border border-border bg-surface hover:border-accent hover:bg-accent/5 focus-visible:border-accent transition-colors"
+                className="group flex h-full items-center justify-between gap-4 rounded-xl border border-border bg-surface p-5 sm:p-6 hover:border-accent hover:bg-accent/5 focus-visible:border-accent transition-colors"
               >
-                <span className="text-2xl sm:text-3xl shrink-0" aria-hidden="true">{trade.icon}</span>
                 <span className="min-w-0">
-                  <span className="block text-sm sm:text-base font-semibold text-text-primary group-hover:text-accent transition-colors">
+                  <span className="block text-base sm:text-lg font-semibold text-text-primary group-hover:text-accent transition-colors">
                     {t(`home.tradeSelector.trades.${trade.slug}.name`)}
                   </span>
-                  <span className="block text-xs sm:text-sm text-text-muted">
+                  <span className="mt-1 inline-block rounded-md bg-surface-2 px-2 py-0.5 text-xs font-medium text-accent group-hover:bg-accent/10 group-hover:text-accent transition-colors">
                     {t('home.tradeSelector.codeLabel', { code: trade.code })}
                   </span>
                 </span>
+                <svg
+                  className="h-5 w-5 shrink-0 text-text-dim group-hover:text-accent transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </li>
           ))}

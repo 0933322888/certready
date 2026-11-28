@@ -56,6 +56,19 @@ describe('TradeSelector', () => {
     );
   });
 
+  it('renders each card with the trade name and code badge, without icons', () => {
+    const { container } = renderWithProviders(<TradeSelector />);
+    const cards = Array.from(container.querySelectorAll('#trades li a'));
+
+    expect(cards).toHaveLength(6);
+    cards.forEach((card) => {
+      expect(card).toHaveTextContent(/Red Seal \d{3}[A-Z]/);
+      expect(card.querySelector('svg')).toBeInTheDocument();
+    });
+    // No emoji/icon glyphs should remain in the card text
+    expect(container.querySelector('#trades').textContent).not.toMatch(/[\p{Extended_Pictographic}]/u);
+  });
+
   it('emits trade_selected once with the trade name and code', () => {
     const listener = vi.fn();
     window.addEventListener('certready:analytics', listener);
