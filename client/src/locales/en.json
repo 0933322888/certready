@@ -48,19 +48,7 @@
     "browseCourses": "Browse Courses",
     "startPracticeQuestions": "Start Practice Questions",
     "takeReadinessTest": "Take Readiness Test",
-    "previewFree": "Preview Free Chapter",
-    "carouselNext": "Next slide",
-    "carouselPrev": "Previous slide",
-    "freeWindowBadge": "New Member Offer",
-    "freeWindowSubtitle": "Explore the first 2 parts of any course free for 5 days after registration. Purchase for full course access and the mock exam.",
-    "slideDiscountBadge": "Black Friday — Limited-Time Offer",
-    "slideDiscountTitle": "Get 50% off your course",
-    "slideDiscountSubtitle": "Black Friday offer starts now, get a course for half the regular price when you use this promo code at checkout.",
-    "slideDiscountPriceWas": "Was",
-    "slideDiscountPriceNow": "Now",
-    "slideDiscountCta": "Browse Courses →",
-    "slideDiscountCode": "Use promo code",
-    "slideDiscountSpots": "Use code blackfriday at checkout for 50% off the regular price."
+    "previewFree": "Preview Free Chapter"
   },
   "stats": {
     "chapters": "Chapters",
@@ -358,6 +346,92 @@
     "getAccess": "Get Full Access"
   },
   "home": {
+      "hero": {
+        "eyebrow": "Red Seal Exam Preparation",
+        "title": "Prepare with confidence. Practise with purpose.",
+        "subtitle": "Trade-specific practice questions and study resources to help you prepare for your Red Seal certification exam.",
+        "primaryCta": "Find Your Trade",
+        "secondaryCta": "Explore Practice Tests"
+      },
+      "promo": {
+        "title": "Save 50% on your exam preparation",
+        "subtitle": "Get access to trade-specific practice tests and prepare at your own pace.",
+        "codeLabel": "Use code",
+        "cta": "Explore Courses"
+      },
+      "tradeSelector": {
+        "title": "Find Your Trade",
+        "subtitle": "Choose your trade to see practice tests and study resources built for your Red Seal exam.",
+        "codeLabel": "Red Seal {{code}}",
+        "allPracticeTests": "View all practice tests",
+        "trades": {
+          "hairstylist": { "name": "Hairstylist" },
+          "carpenter": { "name": "Carpenter" },
+          "construction-electrician": { "name": "Construction Electrician" },
+          "plumber": { "name": "Plumber" },
+          "refrigeration-air-conditioning-mechanic": { "name": "Refrigeration & Air Conditioning Mechanic" },
+          "welder": { "name": "Welder" }
+        }
+      },
+      "howItWorksTitle": "How CertReady Works",
+      "howSteps": {
+        "study": {
+          "title": "Study",
+          "desc": "Review trade-specific learning resources and important exam topics."
+        },
+        "practise": {
+          "title": "Practise",
+          "desc": "Answer exam-style questions and test your knowledge."
+        },
+        "improve": {
+          "title": "Improve",
+          "desc": "Review explanations, identify knowledge gaps, and focus your preparation."
+        }
+      },
+      "sampleQuestion": {
+        "title": "Try a Sample Question",
+        "subtitle": "See how CertReady practice questions work — select an answer to reveal the explanation.",
+        "label": "CertReady practice question — {{trade}} ({{code}})",
+        "explanationLabel": "Explanation",
+        "disclaimer": "This is a CertReady practice question, not an official Red Seal examination question.",
+        "cta": "Start Practising — Carpenter 403A",
+        "allTrades": "Browse all trades"
+      },
+      "trust": {
+        "title": "Why Choose CertReady",
+        "subtitle": "Practical preparation resources built around how the Red Seal exams are structured.",
+        "points": {
+          "tradeSpecific": {
+            "title": "Trade-specific preparation",
+            "desc": "Content organised around your trade's exam topics and weighting."
+          },
+          "explanations": {
+            "title": "Questions with explanations",
+            "desc": "Every practice question includes an explanation so you learn from each answer."
+          },
+          "selfPaced": {
+            "title": "Self-paced learning",
+            "desc": "Study at your own pace with access to your course materials."
+          },
+          "resources": {
+            "title": "Study resources",
+            "desc": "Chapters, glossaries, and mock exams alongside practice questions."
+          }
+        },
+        "disclaimer": "CertReady is an independent exam-preparation resource. We are not an official Red Seal examination provider or certifying authority, and we are not affiliated with or endorsed by the Canadian Council of Directors of Apprenticeship or any provincial trades authority.",
+        "links": {
+          "about": "About CertReady",
+          "contact": "Contact",
+          "terms": "Terms of Service",
+          "privacy": "Privacy Policy"
+        }
+      },
+      "finalCta": {
+        "title": "Ready to start preparing?",
+        "subtitle": "Find your trade and begin practising today.",
+        "primaryCta": "Find Your Trade",
+        "secondaryCta": "Start Practising"
+      },
     "howItWorks": "How It Works",
     "step1Title": "Browse Courses",
     "step1Desc": "Explore available exam prep courses for your trade",
@@ -486,25 +560,7 @@
     "finishSession": "Finish session",
     "tryAgain": "Try another set",
     "backToPracticeTests": "Back to Practice Tests",
-    "faqHeading": "Frequently Asked Questions",
-    "plumber": {
-      "overviewHeading": "What to Expect on the Plumber Red Seal Exam",
-      "overviewBody": "The Red Seal Plumber (306A) exam is a multiple-choice examination based on the trade's National Occupational Analysis. It tests the theory, code knowledge, and trade math behind safe, code-compliant plumbing work — from drainage and venting to water distribution and hydronic systems. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.",
-      "topicsHeading": "Topics Covered in Our Plumber Practice Questions",
-      "topicsIntro": "Our practice questions mirror the Red Seal weighting for Plumbers, so you spend your study time where it matters most:",
-      "prepareHeading": "How to Prepare for the Plumber Certification Exam",
-      "prepareBody": "Start with the official Red Seal Occupational Standard for Plumbers, review the code references used in your province, and work through calculation questions by hand. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady Plumber course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.",
-      "courseLink": "Explore the full Plumber course →"
-    },
-    "welder": {
-      "overviewHeading": "What to Expect on the Welder Red Seal Exam",
-      "overviewBody": "The Red Seal Welder (456A) exam is a multiple-choice examination based on the trade's National Occupational Analysis. It covers the theory behind fabricating, thermal cutting and gouging, and welding activities — including WPS interpretation, weld symbols, process selection, and heat-input calculations. Practising exam-style questions helps you build the pace and recall the exam demands.",
-      "topicsHeading": "Topics Covered in Our Welding Practice Questions",
-      "topicsIntro": "Our practice questions follow the Red Seal weighting for Welders, with the heaviest emphasis on fabricating and welding activities:",
-      "prepareHeading": "How to Prepare for the Welder Certification Exam",
-      "prepareBody": "Review the official Red Seal Occupational Standard for Welders, refresh your welding processes, parameters, and weld symbols, and drill the fabrication and heat-input math. Then use exam-style practice questions to identify weak areas and build speed. The full CertReady Welder course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.",
-      "courseLink": "Explore the full Welder course →"
-    }
+    "faqHeading": "Frequently Asked Questions"
   },
   "freePracticeLanding": {
     "breadcrumb": "Free {{tradeName}} Practice Questions",

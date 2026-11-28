@@ -127,46 +127,9 @@ export default function PracticePage() {
     { name: t('practicePage.freePracticeQuestions'), url: paths.practiceTest(guide.slug) },
   ];
 
-  const isPlumberOrWelder = tradeSlug === 'plumber' || tradeSlug === 'welder';
-  const tradeFaqs = isPlumberOrWelder
-    ? (tradeSlug === 'plumber'
-      ? [
-        {
-          question: 'What topics are covered on the Plumber Red Seal exam?',
-          answer: 'The Plumber Red Seal exam covers common occupational skills, tube and pipe, drainage, waste and vent (DWV) systems, water service and distribution, fixtures and appliances, low-pressure steam and hydronic systems, and specialized systems. DWV systems carry the highest weighting.',
-        },
-        {
-          question: 'How should I prepare for the Plumber certification exam?',
-          answer: 'Review the official Red Seal Occupational Standard for Plumbers, study the plumbing code references used in your province, practise trade calculations by hand, and test yourself with exam-style practice questions to find and close knowledge gaps.',
-        },
-        {
-          question: 'Are practice questions useful for Red Seal exam preparation?',
-          answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
-        },
-        {
-          question: 'Can I use practice tests to identify knowledge gaps?',
-          answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
-        },
-      ]
-      : [
-        {
-          question: 'What topics are covered on the Welder Red Seal exam?',
-          answer: 'The Welder Red Seal exam covers common occupational skills, fabricating activities, thermal cutting and gouging, and welding activities. Fabricating activities carry the highest weighting, followed by welding activities.',
-        },
-        {
-          question: 'What welding processes should I review?',
-          answer: 'Review the common welding processes in the trade, including shielded metal arc welding (SMAW), gas metal arc welding (GMAW), flux-cored arc welding (FCAW), and gas tungsten arc welding (GTAW), along with their parameters, polarity, and typical applications.',
-        },
-        {
-          question: 'How should I prepare for the Welder certification exam?',
-          answer: 'Study the official Red Seal Occupational Standard for Welders, refresh your welding processes, parameters, and weld symbols, drill fabrication and heat-input calculations, and use exam-style practice questions to build speed and target weak areas.',
-        },
-        {
-          question: 'Are practice questions useful for Red Seal exam preparation?',
-          answer: 'Yes. Exam-style questions build familiarity with question wording, improve recall under time pressure, and reveal which areas — such as fabrication math or WPS interpretation — need more study.',
-        },
-      ])
-    : [];
+  const practiceContent = guide.practiceContent;
+  const hasPracticeContent = Boolean(practiceContent);
+  const tradeFaqs = hasPracticeContent ? (guide.practiceFaqs || []) : [];
 
   return (
     <>
@@ -212,23 +175,23 @@ export default function PracticePage() {
               </div>
             </Card>
 
-            {isPlumberOrWelder && (
+            {hasPracticeContent && (
               <>
                 <section className="mb-10" aria-labelledby="practice-overview-heading">
                   <h2 id="practice-overview-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
-                    {t(`practicePage.${tradeSlug}.overviewHeading`)}
+                    {practiceContent.overviewHeading}
                   </h2>
                   <p className="text-text-muted leading-relaxed">
-                    {t(`practicePage.${tradeSlug}.overviewBody`)}
+                    {practiceContent.overviewBody}
                   </p>
                 </section>
 
                 <section className="mb-10" aria-labelledby="practice-topics-heading">
                   <h2 id="practice-topics-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
-                    {t(`practicePage.${tradeSlug}.topicsHeading`)}
+                    {practiceContent.topicsHeading}
                   </h2>
                   <p className="text-text-muted leading-relaxed mb-4">
-                    {t(`practicePage.${tradeSlug}.topicsIntro`)}
+                    {practiceContent.topicsIntro}
                   </p>
                   <div className="space-y-2">
                     {guide.examWeighting.map((row, i) => (
@@ -248,16 +211,16 @@ export default function PracticePage() {
 
                 <section className="mb-10" aria-labelledby="practice-prepare-heading">
                   <h2 id="practice-prepare-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
-                    {t(`practicePage.${tradeSlug}.prepareHeading`)}
+                    {practiceContent.prepareHeading}
                   </h2>
                   <p className="text-text-muted leading-relaxed">
-                    {t(`practicePage.${tradeSlug}.prepareBody`)}
+                    {practiceContent.prepareBody}
                   </p>
                   <Link
                     to={paths.trade(guide.slug)}
                     className="inline-flex items-center font-semibold text-accent hover:text-accent/80 mt-4"
                   >
-                    {t(`practicePage.${tradeSlug}.courseLink`)}
+                    {practiceContent.courseLink}
                   </Link>
                 </section>
 

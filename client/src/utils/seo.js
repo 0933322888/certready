@@ -42,9 +42,9 @@ export function getLearnPageSEO(course, currentChapter) {
 
 export function getHomePageSEO() {
   return {
-    title: 'Red Seal Exam Prep for Canadian Trades — Study Guides & Practice Questions',
-    description: 'CertReady offers comprehensive Red Seal exam preparation courses for Canadian trades certification candidates. Practice questions, study guides, mock exams. Pass first try.',
-    keywords: 'Red Seal, Canadian trades, exam prep, certification, practice questions, study guide, mock exam, CertReady, Sceau rouge',
+    title: 'Red Seal Exam Practice Tests & Preparation',
+    description: 'Prepare for your Red Seal exam with trade-specific practice tests, study resources, and explanations. Find your trade and start practising with CertReady.',
+    keywords: 'Red Seal exam preparation, Red Seal practice tests, trade-specific practice questions, Canadian trades, certification, study guide, mock exam, CertReady, Sceau rouge',
     canonical: '/',
   };
 }

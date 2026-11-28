@@ -46,6 +46,33 @@ export const tradeGuides = [
       'Know every WHMIS hazard class and which salon products fall into each',
       'Practice all formulation calculations — mixing ratios appear in multiple questions',
     ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Hairstylist Red Seal Exam',
+      overviewBody: 'The Red Seal Hairstylist (332A) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It tests the theory behind hair and scalp care, cutting, styling, chemical texture services, and colour — not just hands-on salon work. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.',
+      topicsHeading: 'Topics Covered in Our Hairstylist Practice Questions',
+      topicsIntro: 'Our practice questions mirror the Red Seal weighting for Hairstylists, so you spend your study time where it matters most:',
+      prepareHeading: 'How to Prepare for the Hairstylist Certification Exam',
+      prepareBody: 'Start with the official Red Seal Occupational Standard for Hairstylists, review the chemistry behind chemical texture services and colour, and practise formulation and mixing-ratio calculations. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady Hairstylist course adds chapter-by-chapter study material, 320+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Hairstylist course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Hairstylist Red Seal exam?',
+        answer: 'The Hairstylist Red Seal exam covers workplace practices, hair and scalp, haircutting, hair styling, chemical texture services, and hair colouring and lightening. Chemical texture services and colour together carry the highest weighting.',
+      },
+      {
+        question: 'How should I prepare for the Hairstylist certification exam?',
+        answer: 'Review the official Red Seal Occupational Standard for Hairstylists, study the chemistry behind chemical texture services and colour, practise formulation and mixing-ratio calculations, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+      },
+      {
+        question: 'Can I use practice tests to identify knowledge gaps?',
+        answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+      },
+    ],
   },
   {
     slug: 'plumber',
@@ -89,6 +116,33 @@ export const tradeGuides = [
       'Understand cross connection control thoroughly — it appears in both water and fixture sections',
       'Practice metric/imperial conversions using the official formula sheet',
       'Know all pipe joining methods and which materials they apply to',
+    ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Plumber Red Seal Exam',
+      overviewBody: 'The Red Seal Plumber (306A) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It tests the theory, code knowledge, and trade math behind safe, code-compliant plumbing work — from drainage and venting to water distribution and hydronic systems. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.',
+      topicsHeading: 'Topics Covered in Our Plumber Practice Questions',
+      topicsIntro: 'Our practice questions mirror the Red Seal weighting for Plumbers, so you spend your study time where it matters most:',
+      prepareHeading: 'How to Prepare for the Plumber Certification Exam',
+      prepareBody: 'Start with the official Red Seal Occupational Standard for Plumbers, review the code references used in your province, and work through calculation questions by hand. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady Plumber course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Plumber course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Plumber Red Seal exam?',
+        answer: 'The Plumber Red Seal exam covers common occupational skills, tube and pipe, drainage, waste and vent (DWV) systems, water service and distribution, fixtures and appliances, low-pressure steam and hydronic systems, and specialized systems. DWV systems carry the highest weighting.',
+      },
+      {
+        question: 'How should I prepare for the Plumber certification exam?',
+        answer: 'Review the official Red Seal Occupational Standard for Plumbers, study the plumbing code references used in your province, practise trade calculations by hand, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+      },
+      {
+        question: 'Can I use practice tests to identify knowledge gaps?',
+        answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+      },
     ],
   },
   {
@@ -138,6 +192,33 @@ export const tradeGuides = [
       'Understand HVAC service, refrigerant handling, and air distribution system principles',
       'Drill time management with full-length 125-question practice tests',
     ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Automotive Service Technician Red Seal Exam',
+      overviewBody: 'The Red Seal Automotive Service Technician (310S) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It tests the theory behind engine systems, vehicle electrical, brakes and suspension, HVAC, and fault diagnosis. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.',
+      topicsHeading: 'Topics Covered in Our Automotive Service Technician Practice Questions',
+      topicsIntro: 'Our practice questions mirror the Red Seal weighting for Automotive Service Technicians, so you spend your study time where it matters most:',
+      prepareHeading: 'How to Prepare for the Automotive Service Technician Certification Exam',
+      prepareBody: 'Start with the official Red Seal Occupational Standard for Automotive Service Technicians, review diagnostics and electrical theory, and practise fault-finding by symptom. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Automotive Service Technician course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Automotive Service Technician Red Seal exam?',
+        answer: 'The Automotive Service Technician Red Seal exam covers common occupational skills, engine systems, vehicle electrical systems, brakes and suspension, heating, ventilation and air conditioning, diagnosis and repair, and service practices. Engine systems and diagnosis and repair carry the highest weighting.',
+      },
+      {
+        question: 'How should I prepare for the Automotive Service Technician certification exam?',
+        answer: 'Review the official Red Seal Occupational Standard for Automotive Service Technicians, study diagnostics and electrical theory, practise fault-finding by symptom, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+      },
+      {
+        question: 'Can I use practice tests to identify knowledge gaps?',
+        answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+      },
+    ],
   },
   {
     slug: 'carpenter',
@@ -182,6 +263,33 @@ export const tradeGuides = [
       'Know safety hierarchy, PPE, LOTO, and PAT (powder-actuated tool) certification requirements',
       'Memorize key terms from the RSOS glossary — they appear in scenario-based questions',
     ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Carpenter Red Seal Exam',
+      overviewBody: 'The Red Seal Carpenter (403A) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It tests the theory behind layout, concrete work, framing, and interior and exterior finishing, along with trade math. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.',
+      topicsHeading: 'Topics Covered in Our Carpenter Practice Questions',
+      topicsIntro: 'Our practice questions mirror the Red Seal weighting for Carpenters, so you spend your study time where it matters most:',
+      prepareHeading: 'How to Prepare for the Carpenter Certification Exam',
+      prepareBody: 'Start with the official Red Seal Occupational Standard for Carpenters, review the RSOS glossary and trade acronyms, and practise layout and rafter/stair calculations by hand. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady Carpenter course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Carpenter course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Carpenter Red Seal exam?',
+        answer: 'The Carpenter Red Seal exam covers common occupational skills, planning and layout, concrete work, framing, exterior finishing, interior finishing, and renovations. Framing (MWA D) carries the highest weighting, followed by concrete work.',
+      },
+      {
+        question: 'How should I prepare for the Carpenter certification exam?',
+        answer: 'Review the official Red Seal Occupational Standard for Carpenters, study the RSOS glossary and trade acronyms, practise layout and rafter/stair calculations, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+      },
+      {
+        question: 'Can I use practice tests to identify knowledge gaps?',
+        answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+      },
+    ],
   },
   {
     slug: 'construction-electrician',
@@ -223,6 +331,33 @@ export const tradeGuides = [
       'Memorize key CEC formulas and application (voltage drop, conduit fill, etc.)',
       'Understand commissioning and testing procedures for various systems',
       'Practice fault diagnosis scenarios across all system types',
+    ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Construction Electrician Red Seal Exam',
+      overviewBody: 'The Red Seal Construction Electrician (309A) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It tests the theory behind installation, maintenance and commissioning, and fault diagnosis, with the Canadian Electrical Code as a key reference. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.',
+      topicsHeading: 'Topics Covered in Our Construction Electrician Practice Questions',
+      topicsIntro: 'Our practice questions mirror the Red Seal weighting for Construction Electricians, so you spend your study time where it matters most:',
+      prepareHeading: 'How to Prepare for the Construction Electrician Certification Exam',
+      prepareBody: 'Start with the official Red Seal Occupational Standard for Construction Electricians, review the Canadian Electrical Code sections you will be tested on, and practise voltage-drop and conduit-fill calculations. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady Construction Electrician course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Construction Electrician course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Construction Electrician Red Seal exam?',
+        answer: 'The Construction Electrician Red Seal exam covers common occupational skills, installation, maintenance and commissioning, fault diagnosis and repair, and other related tasks. Maintenance and commissioning (MWA C) carries the highest weighting, followed by installation.',
+      },
+      {
+        question: 'How should I prepare for the Construction Electrician certification exam?',
+        answer: 'Review the official Red Seal Occupational Standard for Construction Electricians, study the Canadian Electrical Code sections you will be tested on, practise voltage-drop and conduit-fill calculations, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+      },
+      {
+        question: 'Can I use practice tests to identify knowledge gaps?',
+        answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+      },
     ],
   },
   {
@@ -267,6 +402,33 @@ export const tradeGuides = [
       'Practice superheat, subcooling, and compression ratio calculations',
       'Understand VFD safety: capacitor discharge times and verification before servicing',
     ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Refrigeration & Air Conditioning Mechanic Red Seal Exam',
+      overviewBody: 'The Red Seal Refrigeration & Air Conditioning Mechanic (313A) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It tests the theory behind installation, commissioning, and maintenance and service, including the pressure-enthalpy diagram and refrigerant handling. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.',
+      topicsHeading: 'Topics Covered in Our Refrigeration & Air Conditioning Practice Questions',
+      topicsIntro: 'Our practice questions mirror the Red Seal weighting for Refrigeration & Air Conditioning Mechanics, so you spend your study time where it matters most:',
+      prepareHeading: 'How to Prepare for the Refrigeration & Air Conditioning Certification Exam',
+      prepareBody: 'Start with the official Red Seal Occupational Standard for Refrigeration & Air Conditioning Mechanics, review CSA B52 and refrigerant regulations, and practise superheat, subcooling, and compression-ratio calculations. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Refrigeration & Air Conditioning course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Refrigeration & Air Conditioning Red Seal exam?',
+        answer: 'The Refrigeration & Air Conditioning Mechanic Red Seal exam covers common occupational skills, routine trade activities, installation planning and execution, commissioning, and maintenance and service. Maintenance and service (MWA F) carries the highest weighting, followed by installation.',
+      },
+      {
+        question: 'How should I prepare for the Refrigeration & Air Conditioning certification exam?',
+        answer: 'Review the official Red Seal Occupational Standard for Refrigeration & Air Conditioning Mechanics, study CSA B52 and refrigerant regulations, practise superheat, subcooling, and compression-ratio calculations, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+      },
+      {
+        question: 'Can I use practice tests to identify knowledge gaps?',
+        answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+      },
+    ],
   },
   {
     slug: 'welder',
@@ -307,6 +469,33 @@ export const tradeGuides = [
       'Drill process selection, polarity, and parameter ranges',
       'Review cutting, gouging, and rigging safety scenarios',
       'Run timed practice to build pace for 125 questions',
+    ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Welder Red Seal Exam',
+      overviewBody: 'The Red Seal Welder (456A) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It covers the theory behind fabricating, thermal cutting and gouging, and welding activities — including WPS interpretation, weld symbols, process selection, and heat-input calculations. Practising exam-style questions helps you build the pace and recall the exam demands.',
+      topicsHeading: 'Topics Covered in Our Welding Practice Questions',
+      topicsIntro: 'Our practice questions follow the Red Seal weighting for Welders, with the heaviest emphasis on fabricating and welding activities:',
+      prepareHeading: 'How to Prepare for the Welder Certification Exam',
+      prepareBody: 'Review the official Red Seal Occupational Standard for Welders, refresh your welding processes, parameters, and weld symbols, and drill the fabrication and heat-input math. Then use exam-style practice questions to identify weak areas and build speed. The full CertReady Welder course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Welder course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Welder Red Seal exam?',
+        answer: 'The Welder Red Seal exam covers common occupational skills, fabricating activities, thermal cutting and gouging, and welding activities. Fabricating activities carry the highest weighting, followed by welding activities.',
+      },
+      {
+        question: 'What welding processes should I review?',
+        answer: 'Review the common welding processes in the trade, including shielded metal arc welding (SMAW), gas metal arc welding (GMAW), flux-cored arc welding (FCAW), and gas tungsten arc welding (GTAW), along with their parameters, polarity, and typical applications.',
+      },
+      {
+        question: 'How should I prepare for the Welder certification exam?',
+        answer: 'Study the official Red Seal Occupational Standard for Welders, refresh your welding processes, parameters, and weld symbols, drill fabrication and heat-input calculations, and use exam-style practice questions to build speed and target weak areas.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Exam-style questions build familiarity with question wording, improve recall under time pressure, and reveal which areas — such as fabrication math or WPS interpretation — need more study.',
+      },
     ],
   },
   {
@@ -354,6 +543,33 @@ export const tradeGuides = [
       'Focus extra study time on meats, fish, seafood, and sauces',
       'Run timed practice to build pace for 150 questions',
       'Review incorrect answers to strengthen knowledge and improve problem-solving skills',
+    ],
+    practiceContent: {
+      overviewHeading: 'What to Expect on the Cook Red Seal Exam',
+      overviewBody: 'The Red Seal Cook (415A) exam is a multiple-choice examination based on the trade\'s National Occupational Analysis. It tests the theory behind food safety, preparation, stocks and sauces, and a wide range of dishes and baked goods, along with food-cost math. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.',
+      topicsHeading: 'Topics Covered in Our Cook Practice Questions',
+      topicsIntro: 'Our practice questions mirror the Red Seal weighting for Cooks, so you spend your study time where it matters most:',
+      prepareHeading: 'How to Prepare for the Cook Certification Exam',
+      prepareBody: 'Start with the official Red Seal Occupational Standard for Cooks, review food-safety and temperature-control procedures, and practise food-cost and recipe-scaling calculations. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady Cook course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.',
+      courseLink: 'Explore the full Cook course →',
+    },
+    practiceFaqs: [
+      {
+        question: 'What topics are covered on the Cook Red Seal exam?',
+        answer: 'The Cook Red Seal exam covers hygiene, sanitation and safety, common occupational skills, produce, stocks and soups, sauces, dairy and eggs, pastas, grains and alternative proteins, meats and poultry, fish and seafood, salads and sandwiches, specialty preparation, and baked goods and desserts. Meats and poultry and fish and seafood carry the highest weighting.',
+      },
+      {
+        question: 'How should I prepare for the Cook certification exam?',
+        answer: 'Review the official Red Seal Occupational Standard for Cooks, study food-safety and temperature-control procedures, practise food-cost and recipe-scaling calculations, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+      },
+      {
+        question: 'Are practice questions useful for Red Seal exam preparation?',
+        answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+      },
+      {
+        question: 'Can I use practice tests to identify knowledge gaps?',
+        answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+      },
     ],
   },
 ];

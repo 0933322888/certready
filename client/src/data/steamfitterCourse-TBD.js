@@ -2587,6 +2587,1113 @@ export const steamfitterCourse = {
                     ]
                 }
             ]
+        },
+        {
+            id: 'part-5',
+            number: 5,
+            title: 'Heating, Cooling and Process Piping Systems (MWA E)',
+            description: 'Installing, testing, maintaining, troubleshooting and repairing hydronic, process, water and waste treatment, hydraulic, HVACR, fuel, medical gas, compressed air and fire protection piping systems.',
+            weight: '27 questions (20.8% of Total Exam)',
+
+            chapters: [
+                // ============================================================
+                // CHAPTER 20 — HYDRONIC SYSTEMS (E-13)
+                // ============================================================
+                {
+                    id: 'ch-20',
+                    number: 20,
+                    title: 'Hydronic Heating and Cooling Systems',
+                    subtitle: 'Equipment, piping configurations, testing and service of hot water and chilled water systems (E-13)',
+                    isFree: false,
+                    estimatedMinutes: 60,
+
+                    sections: [
+                        {
+                            id: 'ch20-s1',
+                            title: 'What a Hydronic System Is',
+                            content: [
+                                { type: 'text', text: 'A hydronic system moves water, or a water and glycol mix, to carry heat from a source to where it is needed, or to carry heat away. Task E-13 covers comfort heating and cooling, process heating and cooling, high and low temperature hot water, chilled water cooling and cooling towers. Most of the other Major Work Activity E tasks (process, hydraulic, HVACR, fuel, compressed air) follow the same four-step pattern: install the equipment, install the piping, test, then maintain, troubleshoot and repair. Learn that pattern once and it carries through the whole MWA.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Equipment', 'Role in a hydronic system'],
+                                    rows: [
+                                        ['Boiler', 'Heats the water'],
+                                        ['Chiller or cooling tower', 'Removes heat from the water'],
+                                        ['Circulating pump', 'Moves the water around the loop'],
+                                        ['Heat exchanger', 'Transfers heat between two fluids without mixing them'],
+                                        ['Expansion tank', 'Absorbs the volume change of the water as it heats and cools'],
+                                        ['Air separator and air vents', 'Remove trapped air that blocks circulation'],
+                                        ['Chemical feeder', 'Adds inhibitors, glycol or treatment chemicals'],
+                                        ['Isolation and balancing valves', 'Allow service and set the flow in each circuit'],
+                                        ['Terminal units', 'Radiators, convectors, pipe coils, unit heaters, radiant panels and coils that deliver or collect the heat']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'Heat sources in the standard are oil, gas, wood, steam, geothermal and solar. Cooling sources are ground source, cooling towers, chillers, refrigeration and heat exchangers. The heat transfer principles are radiation, conduction and convection.' }
+                            ]
+                        },
+                        {
+                            id: 'ch20-s2',
+                            title: 'Installing Hydronic Equipment',
+                            content: [
+                                { type: 'text', text: 'The equipment steps are the same as for steam: select and size the equipment from the application, drawings, specifications and regulations, using load and demand calculations, measurements and manufacturer documents. Find the high and low points, set the location, choose tools, install supports and fasteners, select a manual or mechanical installation method, install the equipment and its controls, and complete the documentation.' },
+                                { type: 'text', text: 'The heat carried by water can be found from flow and temperature difference. The trade formula is BTU per hour = 500 × GPM × temperature difference in degrees F. The 500 comes from 8.33 lb per gallon × 60 minutes × 1 BTU per lb per degree F, and the exam provides the 8.33 lb per gallon constant.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Worked example: a chilled water loop moves 120 GPM with a 10 degree F temperature difference. Load = 500 × 120 × 10 = 600 000 BTU per hour. Divide by 12 000 BTU per ton and the load is 50 tons.' },
+                                {
+                                    type: 'list', items: [
+                                        'Pumps are installed with isolation valves, a strainer or suction diffuser and flexible connectors where vibration must be controlled.',
+                                        'The expansion tank is connected on the suction side of the pump near the point of no pressure change, so the pump does not pull air into the system.',
+                                        'Air is removed at high points with vents and at an air separator in the main.',
+                                        'Equipment is placed on housekeeping or isolator pads and anchored to the manufacturer instructions.'
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: 'ch20-s3',
+                            title: 'Hydronic Piping Configurations',
+                            content: [
+                                { type: 'text', text: 'Piping for hydronic systems may be carbon steel, copper, plastic, stainless steel, HDPE or PEX, joined by flanging, grooving, threading, welding, soldering, brazing or mechanical joints. The standard lists the piping configurations you must know.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Configuration', 'How it works', 'Note'],
+                                    rows: [
+                                        ['One pipe', 'A single loop; each terminal unit takes some water from the main and returns it to the same main', 'Simple and cheap; later units get cooler water'],
+                                        ['Two pipe', 'Separate supply and return mains', 'Direct return: shortest return path; reverse return: first supply is last return, so flows balance naturally'],
+                                        ['Three pipe', 'Hot supply, cold supply and a common return', 'Mixing in the common return wastes energy; rare today'],
+                                        ['Four pipe', 'Hot supply and return plus chilled supply and return', 'Heating or cooling is available at any time in any zone'],
+                                        ['Primary and secondary', 'A primary loop with the boiler or chiller, and secondary loops with their own pumps connected through closely spaced tees', 'Pumps do not interfere with each other; each zone has independent flow']
+                                    ]
+                                },
+                                { type: 'text', text: 'Piping components include valves, fittings, flexible connectors and hoses, and strainers. Consider insulation, the type of supports, shoes and sleeves, and the expansion and contraction of the pipe. Protect piping from mechanical damage, seismic activity and the environment, and watch for conflicts such as overhead doors, forklifts, machinery and structural members.' },
+                                { type: 'callout', style: 'warning', text: 'Joining copper directly to steel in a water system can cause electrolysis (galvanic corrosion), and water at heating temperature can scald. Use dielectric fittings and keep personnel protected from hot piping.' },
+                                { type: 'callout', style: 'exam-tip', text: 'In a reverse return system, the first unit supplied is the last unit returned, so each circuit has about the same pipe length and the system self-balances. Direct return systems need balancing valves.' }
+                            ]
+                        },
+                        {
+                            id: 'ch20-s4',
+                            title: 'Testing, Maintenance and Troubleshooting',
+                            content: [
+                                { type: 'text', text: 'Hydronic systems are tested hydrostatically with water or a water and glycol mix, or pneumatically with compressed air or inert gas. The test sequence is the same as in the steam chapter: visual pre-check and punch list, choose the test and parameters, assemble test equipment, lock out and tag out, install isolation, confirm zero energy, test, document, remove the medium, reinstate. Test equipment includes calibrated gauges, a hand or centrifugal pump, testing trees and headers, and relief devices. Remember that elevation adds 0.433 psi per foot of head and trapped air must be vented.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Gurgling, no flow in a high zone', 'Trapped air', 'Vent at high points, check the air separator, purge'],
+                                        ['Pump runs but the zone is cold', 'Air lock, closed valve, plugged strainer, failed check valve', 'Verify valves, clean the strainer, vent air'],
+                                        ['Relief valve discharges repeatedly', 'Waterlogged or undersized expansion tank, overpressure from make-up valve', 'Check the expansion tank charge and system fill pressure'],
+                                        ['Frequent make-up water', 'Leak, failed pump seal, failed relief valve', 'Locate and repair the leak'],
+                                        ['Corrosion and sludge', 'Poor water treatment, oxygen in the system', 'Test the medium with a test kit and treat with chemicals'],
+                                        ['Uneven heating between zones', 'Unbalanced circuits, wrong return piping', 'Balance with balancing valves']
+                                    ]
+                                },
+                                { type: 'text', text: 'Maintenance includes adding chemicals and additives, lubricating, checking fluids, cleaning components, inspecting for wear and replacing worn parts. After a repair, reinstate by filling, pressurizing, bleeding air and contaminants and checking for leaks, then perform a medium quality test with a test kit. Documentation covers lock-out and tag-out, the maintenance log and quality control reports.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Air is the most common hydronic problem. If the question describes noise, no flow or a cold zone in a water system, trapped air is usually the first answer to consider.' }
+                            ]
+                        },
+                        {
+                            id: 'ch20-s5',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Hydronic systems carry heat with water or a water and glycol mix.',
+                                        'BTU/h = 500 × GPM × temperature difference; 12 000 BTU/h = 1 ton.',
+                                        'Know one pipe, two pipe (direct and reverse return), three pipe, four pipe and primary and secondary piping.',
+                                        'Place the expansion tank on the pump suction side; vent air at high points.',
+                                        'Test with water or water and glycol; add 0.433 psi per foot of elevation.',
+                                        'Reinstatement includes bleeding air and testing the medium quality.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 21 — PROCESS PIPING (E-14)
+                // ============================================================
+                {
+                    id: 'ch-21',
+                    number: 21,
+                    title: 'Process Piping Systems',
+                    subtitle: 'Equipment, pipe materials, testing and maintenance for industrial process piping (E-14)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+
+                    sections: [
+                        {
+                            id: 'ch21-s1',
+                            title: 'Process Piping Equipment',
+                            content: [
+                                { type: 'text', text: 'Process piping carries the fluids used in manufacturing and processing: gas and oil refining, pulp production, mining, food processing, chemical production, shipbuilding, sawmills, manufacturing and solar. The fluids can be corrosive, flammable, hot or under high pressure, so materials, joining and testing are controlled by the specification and by codes such as ASME B31.3 where they apply.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Equipment', 'Purpose'],
+                                    rows: [
+                                        ['Circulating and transfer pumps', 'Move process fluid through the piping or between tanks'],
+                                        ['Tanks and holding tanks', 'Store or hold the process fluid'],
+                                        ['Pressure vessels', 'Contain fluid under pressure; registered and inspected under code'],
+                                        ['Heat exchangers: plate, shell and tube', 'Transfer heat between process fluids'],
+                                        ['Relief valves', 'Protect equipment and piping from overpressure'],
+                                        ['Isolation valves for equipment', 'Allow equipment to be removed or serviced'],
+                                        ['Strainers and filters', 'Protect pumps and equipment from debris'],
+                                        ['Isolators', 'Reduce vibration transmitted from rotating equipment']
+                                    ]
+                                },
+                                { type: 'text', text: 'Supports include brackets, stands, hangers, plates, housekeeping and isolator pads, concrete embeds, seismic restraints, anchors and guides. Fasteners are anchors, inserts, beam clamps, nuts, bolts, screws and epoxy.' },
+                                { type: 'callout', style: 'exam-tip', text: 'A plate heat exchanger packs thin plates between gaskets and has a large surface area in a small space; a shell and tube exchanger passes one fluid through tubes inside a shell holding the other fluid. Know which is which.' }
+                            ]
+                        },
+                        {
+                            id: 'ch21-s2',
+                            title: 'Process Piping Installation',
+                            content: [
+                                { type: 'text', text: 'Process pipe may be carbon steel, alloy steel, copper, stainless steel, HDPE or specialty materials. Joining methods are flanging, bonding, grooving, threading, welding, soldering, brazing, mechanical joints and fusion. The piping is routed from the isometric and P&ID drawings, and the route is changed only to avoid obstructions, with the change recorded.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Consideration', 'What to check'],
+                                    rows: [
+                                        ['Material compatibility', 'Pipe, gaskets and valve trim must resist the process fluid'],
+                                        ['Joining', 'Weld procedure, flange facing and gasket type, fusion parameters for plastics'],
+                                        ['Expansion', 'Loops, joints and swing joints sized to the temperature range'],
+                                        ['Supports and restraints', 'Rollers, hangers, clamps, brackets, stands, anchors and guides'],
+                                        ['Grade or pitch', 'Drain lines and lines that must drain by gravity'],
+                                        ['Dissimilar metals', 'Isolate to prevent electrolysis'],
+                                        ['Cleanliness', 'Clean and prepare fittings and joints before assembly']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Never assume the contents of a process line. Confirm the fluid from the P&ID and line list, and treat unknown fluid as hazardous. Know the safety data sheet requirements before opening any line.' }
+                            ]
+                        },
+                        {
+                            id: 'ch21-s3',
+                            title: 'Testing and Maintaining Process Piping',
+                            content: [
+                                { type: 'text', text: 'Process piping is tested hydrostatically, pneumatically or by vacuum, using water, a water and glycol mix, air or inert gas. Vessels, pumps, relief valves and instruments that cannot take the test pressure are isolated with blinds, spades, plugs and caps or temporary spool pieces.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Test', 'Typical use', 'Safety note'],
+                                    rows: [
+                                        ['Hydrostatic', 'Most process piping; commonly 1.5 times design pressure under ASME B31.3', 'Vent air and check support for the weight of the water'],
+                                        ['Pneumatic', 'Lines that cannot be wetted; commonly 1.1 times design pressure', 'Stores large energy; use only when allowed and increase pressure in steps'],
+                                        ['Vacuum', 'Checks tightness of lines used under vacuum', 'Make sure the pipe and supports can take external pressure']
+                                    ]
+                                },
+                                { type: 'text', text: 'Maintenance and repair follow the standard sequence: consult the owner or operator, troubleshoot by inspection and testing, lock out and tag out, isolate and confirm zero energy, repair, reinstate, test the system medium with a kit, treat the medium with chemicals where needed and document. Maintenance covers pumps, tanks, pressure vessels, heat exchangers, isolators, valves, strainers and filters.' },
+                                { type: 'callout', style: 'exam-tip', text: 'The 1.5 and 1.1 test factors are common code values, not exam constants. If a calculation is asked, the factor will be given in the question.' },
+                                { type: 'callout', style: 'warning', text: 'A pneumatic test releases stored energy if something fails. Keep personnel clear, use a regulator and relief device on the test setup, and never exceed the test pressure.' }
+                            ]
+                        },
+                        {
+                            id: 'ch21-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Process piping carries industrial fluids and is governed by the specification and code.',
+                                        'Equipment includes pumps, tanks, pressure vessels, plate and shell and tube exchangers, relief valves, strainers and filters.',
+                                        'Confirm the fluid from the P&ID before opening a line.',
+                                        'Hydrostatic tests are preferred; pneumatic tests need extra safeguards.',
+                                        'Isolate equipment that cannot take the test pressure.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 22 — INDUSTRIAL WATER AND WASTE TREATMENT (E-15)
+                // ============================================================
+                {
+                    id: 'ch-22',
+                    number: 22,
+                    title: 'Industrial Water and Waste Treatment Systems',
+                    subtitle: 'Softeners, clarifiers, aeration, gravity and pressure piping and confined space hazards (E-15)',
+                    isFree: false,
+                    estimatedMinutes: 45,
+
+                    sections: [
+                        {
+                            id: 'ch22-s1',
+                            title: 'Equipment and Systems',
+                            content: [
+                                { type: 'text', text: 'Industrial water and waste treatment systems clean and condition water for use or for discharge. The standard names water softeners, settling tanks, clarifiers, chemical injection and aeration as system types.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Equipment or system', 'Purpose'],
+                                    rows: [
+                                        ['Water softener', 'Removes hardness minerals that cause scale'],
+                                        ['Settling tank', 'Lets solids settle out by gravity'],
+                                        ['Clarifier', 'Removes suspended solids from water, with scrapers or skimmers for sludge and floating material'],
+                                        ['Chemical injection', 'Adds treatment chemicals in controlled amounts'],
+                                        ['Aeration', 'Adds air to water to support biological treatment or remove gases'],
+                                        ['Filters and strainers', 'Remove particles from the flow'],
+                                        ['Separators and skimmers', 'Remove oil and floating material'],
+                                        ['Pumps, tanks and valves', 'Move, store and control the fluid']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'Do not mix up the roles: a softener removes hardness, a clarifier or settling tank removes solids, and aeration adds air. Questions often describe the purpose and ask for the equipment.' }
+                            ]
+                        },
+                        {
+                            id: 'ch22-s2',
+                            title: 'Piping, Grade and Testing',
+                            content: [
+                                { type: 'text', text: 'Piping may be carbon steel, copper, plastic, stainless steel, fibreglass, cast iron, ductile iron, concrete pressure pipe, regular concrete pipe, dual containment pipe or HDPE. Systems are gravity or pressurized. Gravity lines must be installed with the correct grade, and pressurized lines are tested like other piping.' },
+                                { type: 'text', text: 'Grade is the slope of a gravity line. Drop = run × grade. As an example, 80 ft of pipe at a grade of 1/8 in. per foot drops 80 × 1/8 = 10 in. Check grade with a laser, a level or a line and grade board, and avoid low spots that hold solids.' },
+                                { type: 'text', text: 'Tests listed in the standard are hydrostatic, pneumatic and aeration, using water, a water and glycol mix, compressed air or inert gas. Maintenance includes adding chemicals, lubricating, cleaning, inspecting for wear and replacing worn components, plus testing the quality of the system medium with a kit and treating it with chemicals according to the manufacturer and regulations.' },
+                                { type: 'callout', style: 'warning', text: 'Tanks, clarifiers and manholes are confined spaces and may contain toxic gas such as hydrogen sulphide, low oxygen or engulfment hazards. Follow the confined space entry procedure: test the atmosphere, ventilate, use a standby person and a rescue plan. Chemical injection areas need correct PPE and eyewash stations.' }
+                            ]
+                        },
+                        {
+                            id: 'ch22-s3',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Know the purpose of softeners, settling tanks, clarifiers, chemical injection and aeration.',
+                                        'Gravity piping needs correct grade; drop = run × grade.',
+                                        'Tests are hydrostatic, pneumatic and aeration.',
+                                        'Tanks and manholes are confined spaces; follow entry procedures.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 23 — HYDRAULIC SYSTEMS (E-16)
+                // ============================================================
+                {
+                    id: 'ch-23',
+                    number: 23,
+                    title: 'Hydraulic Systems',
+                    subtitle: 'Components, tube and hose installation, service testing, flushing and troubleshooting (E-16)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+
+                    sections: [
+                        {
+                            id: 'ch23-s1',
+                            title: 'How Hydraulic Systems Work',
+                            content: [
+                                { type: 'text', text: 'Hydraulic systems use an incompressible fluid under pressure to transmit force and motion, for example to operate lifting devices, motors and valves. Pressure applied to a confined fluid acts equally in all directions. Force equals pressure times area.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Worked example: a cylinder has a piston area of 3.14 in. squared (2 in. diameter) and the system pressure is 1 500 psi. Force = 1 500 × 3.14 = 4 710 lb. The same pressure on a piston of twice the area gives twice the force.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Component', 'Function'],
+                                    rows: [
+                                        ['Reservoir tank', 'Stores fluid, lets air and contaminants separate, helps cool the fluid'],
+                                        ['Pump', 'Moves the fluid and creates flow'],
+                                        ['Motor', 'Drives the pump'],
+                                        ['Valves', 'Control pressure, direction and flow'],
+                                        ['Cylinders, pistons and actuators', 'Convert fluid pressure into linear or rotary work'],
+                                        ['Accumulator', 'Stores pressurized fluid and absorbs shocks'],
+                                        ['Fluid cooler and heater', 'Hold the fluid at a suitable temperature'],
+                                        ['Strainers and filters', 'Remove contaminants']
+                                    ]
+                                },
+                                { type: 'text', text: 'Hydraulic systems can be open loop (fluid returns to a reservoir at atmospheric pressure) or closed loop (fluid circulates between the pump and the actuator). Pressure-controlling devices such as relief valves protect the system.' },
+                                { type: 'callout', style: 'warning', text: 'Hydraulic fluid under pressure can inject through the skin from a pinhole leak and cause severe injury. Never use a hand to find a leak. Use cardboard or a similar object, and relieve pressure and lock out before servicing. Accumulators hold stored energy even when the pump is off, so bleed them down.' }
+                            ]
+                        },
+                        {
+                            id: 'ch23-s2',
+                            title: 'Installing Hydraulic Piping and Hoses',
+                            content: [
+                                { type: 'text', text: 'Hydraulic lines use carbon steel or stainless steel tube and tubing, and hydraulic hose. Components include valves, fittings, flexible connectors and hoses, and strainers. Joining uses flanging, threading, welding, brazing and mechanical joints. Tubing and pipe must be clean inside, because contaminants wear pumps and valves.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Installation point', 'Practice'],
+                                    rows: [
+                                        ['Cleanliness', 'Clean and prepare fittings and joints; cap open ends; protect from dirt'],
+                                        ['Bending', 'Bend tube to the correct radius without kinking or flattening'],
+                                        ['Supports and restraints', 'Clamps and brackets at regular spacing to stop vibration and whip'],
+                                        ['Hose', 'Do not twist, kink or bend tighter than the minimum bend radius; allow for length change under pressure; keep away from heat and abrasion'],
+                                        ['Expansion', 'Allow for movement with loops or flexible hose'],
+                                        ['Air', 'Route to avoid trapped air and provide bleed points'],
+                                        ['Protection', 'Guard from mechanical damage, seismic activity and the environment']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'A twisted hose weakens quickly under pressure. If a question shows a hose assembly failing early, check for twisting, bending below the minimum radius and rubbing or heat damage.' }
+                            ]
+                        },
+                        {
+                            id: 'ch23-s3',
+                            title: 'Testing, Flushing and Troubleshooting',
+                            content: [
+                                { type: 'text', text: 'The standard lists a service test and a pneumatic test for hydraulic systems, with hydraulic fluid, compressed air or inert gas as the test medium. Before testing, install isolation components such as blinds, spades, plugs and caps, protect sensitive components, confirm zero energy and use calibrated gauges, regulators and relief devices on the test setup. After repair, reinstate by filling, pressurizing, bleeding air and contaminants, checking for leaks, performing particle tests and removing locks and tags.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Noisy, spongy or jerky operation', 'Air in the fluid, low reservoir level, cavitating pump', 'Check the level and suction line, bleed air'],
+                                        ['Overheating fluid', 'Relief valve open too long, low fluid, plugged cooler, internal leakage', 'Check the relief setting, cooler and fluid level'],
+                                        ['Slow actuator', 'Worn pump, internal leakage, clogged filter, low pressure setting', 'Check filter, pump output and relief setting'],
+                                        ['External leaks', 'Damaged seals, loose fittings, worn hose', 'Isolate, relieve pressure and replace the part'],
+                                        ['Contaminated fluid', 'Failed filter, dirty installation, water ingress', 'Replace the filter, sample the fluid and check the particle count'],
+                                        ['Excess vibration', 'Loose clamps, worn pump, pressure pulsation', 'Check supports and clamps; consider an accumulator']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'Particle tests check the cleanliness of the hydraulic fluid after repair or flushing. Clean fluid matters more in hydraulics than in most piping systems because valve clearances are very small.' }
+                            ]
+                        },
+                        {
+                            id: 'ch23-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Force = pressure × area; fluid transmits pressure equally in all directions.',
+                                        'Know reservoir, pump, valves, actuators, accumulators, coolers and filters.',
+                                        'Never check a hydraulic leak with a bare hand; injection injuries are serious.',
+                                        'Avoid twisting hose or bending it below the minimum radius.',
+                                        'Tests are service and pneumatic; check particle cleanliness after repairs.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 24 — HVACR (E-17)
+                // ============================================================
+                {
+                    id: 'ch-24',
+                    number: 24,
+                    title: 'HVACR Systems',
+                    subtitle: 'Chilled water, industrial cooling, refrigerant piping, evacuation and leak testing (E-17)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+
+                    sections: [
+                        {
+                            id: 'ch24-s1',
+                            title: 'HVACR Equipment and the Refrigeration Cycle',
+                            content: [
+                                { type: 'text', text: 'HVACR systems cover heating, ventilation, air conditioning and refrigeration. The standard names two system types: chilled water and industrial cooling. In compression refrigeration a refrigerant is compressed to a hot high-pressure gas, condensed to a liquid in the condenser, expanded through a metering device and evaporated in the evaporator, where it absorbs heat.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Equipment', 'Function'],
+                                    rows: [
+                                        ['Compressor', 'Raises refrigerant pressure and moves it through the cycle'],
+                                        ['Condenser', 'Rejects heat and turns vapour into liquid'],
+                                        ['Evaporator', 'Absorbs heat as refrigerant boils'],
+                                        ['Chiller', 'Package that cools water for chilled water systems'],
+                                        ['Heat pump', 'Moves heat in either direction with a reversing valve'],
+                                        ['Cooling tower and fin fan', 'Reject heat to the air'],
+                                        ['Liquid receiver', 'Stores liquid refrigerant'],
+                                        ['Accumulator', 'Prevents liquid refrigerant reaching the compressor'],
+                                        ['Humidifier', 'Adds moisture to air']
+                                    ]
+                                },
+                                { type: 'text', text: 'Cooling load is measured in tons, where 1 ton = 12 000 BTU per hour. A 50 ton chiller removes 50 × 12 000 = 600 000 BTU per hour.' },
+                                { type: 'callout', style: 'warning', text: 'Refrigerants such as CFCs and HCFCs damage the ozone layer, and all refrigerants displace oxygen in enclosed spaces. Recover refrigerant with approved equipment and do not vent it. Work only in ventilated areas and use leak detection where large charges exist.' }
+                            ]
+                        },
+                        {
+                            id: 'ch24-s2',
+                            title: 'Refrigerant Piping',
+                            content: [
+                                { type: 'text', text: 'Refrigerant piping is usually copper tube made for refrigeration service, though the standard also lists carbon steel, alloys, tubing, plastic tubing and fibreglass for other parts of the system. Lines are joined by brazing, flanging, threading, welding, grooving and mechanical joints. The standard names the configurations liquid line, gas line, supply and return.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Line', 'Carries', 'Installation point'],
+                                    rows: [
+                                        ['Liquid line', 'Liquid refrigerant from condenser or receiver to the metering device', 'Keep short enough to avoid pressure loss that causes flashing; insulate if it passes through hot areas'],
+                                        ['Suction (gas) line', 'Low pressure vapour from evaporator to compressor', 'Pitch toward the compressor so oil returns; trap risers where required to lift oil'],
+                                        ['Discharge (hot gas) line', 'Hot vapour from compressor to condenser', 'Pitch away from the compressor and prevent liquid draining back into it'],
+                                        ['Chilled water supply and return', 'Cold water between chiller and coils', 'Insulate with a vapour barrier to stop condensation']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Flow dry nitrogen through copper tube while brazing to prevent oxide scale that would plug the system. Use a regulator on the nitrogen cylinder and never use oxygen or compressed air with refrigerant systems because oil and oxygen can react violently.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Oil moves around the system with the refrigerant. Pitch and risers in suction and discharge lines are arranged so the oil keeps returning to the compressor.' }
+                            ]
+                        },
+                        {
+                            id: 'ch24-s3',
+                            title: 'Testing, Evacuation and Maintenance',
+                            content: [
+                                { type: 'text', text: 'The standard lists hydrostatic, pneumatic and vacuum tests for HVACR systems. For refrigerant circuits the usual sequence is a pressure test with dry nitrogen to check for leaks, followed by evacuation with a vacuum pump to remove air and moisture, then a standing vacuum test to prove the system holds. Chilled water circuits are tested like hydronic systems. The test media listed are water, a water and glycol mix, compressed air, glycol and inert gases.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Step', 'Purpose'],
+                                    rows: [
+                                        ['Nitrogen pressure test', 'Finds leaks at joints before refrigerant is added'],
+                                        ['Evacuation with a vacuum pump', 'Removes air, non-condensables and moisture'],
+                                        ['Standing vacuum test', 'Confirms the system holds a vacuum with no leak or boiling moisture'],
+                                        ['Charging', 'Adds the specified refrigerant to the system'],
+                                        ['Medium quality test', 'Tests water treatment in chilled water and tower circuits']
+                                    ]
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Poor cooling, high head pressure', 'Dirty condenser, non-condensables, fan or tower problem', 'Clean the condenser, check airflow and tower water'],
+                                        ['Frosted suction line, low suction pressure', 'Low charge, restriction, low airflow', 'Check for leaks and restrictions'],
+                                        ['Oil on joints', 'Refrigerant leak', 'Leak-test, repair and re-evacuate'],
+                                        ['Cooling tower scale or slime', 'Poor water treatment', 'Test the water and treat with chemicals'],
+                                        ['Compressor vibration', 'Loose mounts, failed isolators, liquid slugging', 'Check supports, isolators and superheat']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'Cooling towers need regular water treatment to control scale, corrosion and Legionella growth, and system medium testing with a test kit is part of E-17.04.' }
+                            ]
+                        },
+                        {
+                            id: 'ch24-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'The refrigeration cycle is compress, condense, expand, evaporate.',
+                                        '1 ton = 12 000 BTU per hour.',
+                                        'Suction lines pitch toward the compressor; discharge lines pitch away from it.',
+                                        'Braze with dry nitrogen flowing; never use oxygen or compressed air on refrigerant circuits.',
+                                        'Pressure test with nitrogen, evacuate, hold a standing vacuum, then charge.',
+                                        'Recover refrigerant; never vent it.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 25 — FUEL SYSTEMS (E-18)
+                // ============================================================
+                {
+                    id: 'ch-25',
+                    number: 25,
+                    title: 'Fuel Systems',
+                    subtitle: 'Natural gas, propane, oil and other fuel piping, purging, leak testing and gas safety (E-18)',
+                    isFree: false,
+                    estimatedMinutes: 55,
+
+                    sections: [
+                        {
+                            id: 'ch25-s1',
+                            title: 'Fuel Types and Equipment',
+                            content: [
+                                { type: 'text', text: 'Fuel systems deliver fuel to boilers, furnaces, engines, burners and process equipment. The standard lists natural gas, propane, diesel, fuel oil, black liquor, hydrocarbon derivatives, biofuels, bunker C (grade 4 oil or heavier), light oils, recovered biogases (sewer and landfill) and hydrogen. Applications are residential heating, ICI heating and process.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Equipment', 'Purpose'],
+                                    rows: [
+                                        ['Pumps and blowers', 'Move liquid fuel or gas'],
+                                        ['Tanks, including rail and marine tanks', 'Store fuel'],
+                                        ['Heat exchangers and heat transfer equipment', 'Heat heavy oils so they can flow'],
+                                        ['Vacuum breakers', 'Prevent vacuum conditions in tanks and lines'],
+                                        ['Water separation equipment', 'Remove water from fuel'],
+                                        ['Flare stacks', 'Burn off waste or excess gas safely'],
+                                        ['Flashback arrestors', 'Stop a flame travelling back through a gas line'],
+                                        ['Scrubbers', 'Remove contaminants from gas'],
+                                        ['Vaporizers', 'Turn liquid fuel such as propane into gas'],
+                                        ['Expansion joints and valves', 'Allow movement and control flow']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Fuel systems are a fire and explosion hazard. Eliminate ignition sources, keep fuel away from heat, ensure bonding and grounding where static can build up, and use gas detection meters before and during work.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Natural gas is lighter than air and rises. Propane is heavier than air and collects in low spots, pits and basements. Hydrogen is very light and leaks through very small openings.' }
+                            ]
+                        },
+                        {
+                            id: 'ch25-s2',
+                            title: 'Fuel Piping Installation',
+                            content: [
+                                { type: 'text', text: 'Fuel piping may be carbon steel, copper, HDPE, stainless steel, protective-coated pipe, tube, tubing, venting and exhaust piping and fibreglass. Joining methods are flanging, bonding, grooving, threading, welding, soldering, brazing, mechanical joints and fusion. Selection and installation are governed by the fuel gas codes, such as CSA B149.1 for natural gas and propane, and the authority having jurisdiction.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Point', 'Practice'],
+                                    rows: [
+                                        ['Material', 'Use only materials approved for the fuel and pressure; protective coatings for buried steel'],
+                                        ['Joints', 'Use thread sealant approved for fuel; welded and fused joints preferred for higher pressures'],
+                                        ['Grade or pitch', 'Slope lines toward drip legs or drains where liquids can collect'],
+                                        ['Supports', 'Rollers, hangers, clamps, brackets, stands, anchors and guides'],
+                                        ['Valves', 'Shut-off valves at equipment, and where required at building entry'],
+                                        ['Venting and exhaust', 'Use approved materials and slope for condensate drainage'],
+                                        ['Dissimilar metals', 'Isolate to prevent electrolysis, especially at buried transitions']
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: 'ch25-s3',
+                            title: 'Testing, Purging and Maintenance',
+                            content: [
+                                { type: 'text', text: 'Tests listed for fuel systems are hydrostatic, pneumatic and vacuum, plus non-destructive examination (NDE) of welds. Test media are water, a water and glycol mix, air, inert gases and the fuels themselves. Testing equipment includes blind flanges, calibrated pressure gauges, test pumps, isolation valves, recorders, testing trees and headers, regulators, compressors, relief devices and gas detection meters.' },
+                                {
+                                    type: 'list', items: [
+                                        'Isolate the section under test with blinds, spades, plugs and caps or temporary spool pieces.',
+                                        'Use air or inert gas for gas line pressure tests; never use oxygen.',
+                                        'Check joints with an approved leak detection solution or a gas detector, and do not use an open flame.',
+                                        'Purge new gas piping of air with an inert gas or by an approved procedure before introducing fuel, and purge fuel out before opening a line.',
+                                        'Release purged gas to a safe outdoor location away from ignition sources.',
+                                        'Document the test results for sign-off before the system is put in service.'
+                                    ]
+                                },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Gas smell at a joint', 'Loose or damaged fitting, failed sealant', 'Isolate and ventilate; repair and re-test'],
+                                        ['Low fuel pressure at the burner', 'Plugged filter or strainer, undersized pipe, regulator fault', 'Check strainers, regulator and pipe sizing'],
+                                        ['Water in fuel oil', 'Condensation in the tank, failed water separator', 'Drain the tank and service the separator'],
+                                        ['Heavy oil will not flow', 'Heating system failure or low temperature', 'Check heat tracing or heat exchanger'],
+                                        ['Corrosion on buried pipe', 'Damaged coating, dissimilar metal contact', 'Inspect coating and isolation']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Never test a gas line with a flame. If a gas leak is suspected, leave the area, remove ignition sources, ventilate and shut off the supply from a safe location. Allow only qualified personnel to repair and re-commission the line.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Maintenance of fuel systems also includes checking fluids, cleaning filters and strainers, chemical treatment of the fuel where required, and testing the quality of the fuel medium with a test kit.' }
+                            ]
+                        },
+                        {
+                            id: 'ch25-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Know the fuels in the standard and the equipment such as flare stacks, flashback arrestors, scrubbers and vaporizers.',
+                                        'Natural gas rises; propane sinks; hydrogen leaks through small openings.',
+                                        'Tests are hydrostatic, pneumatic, vacuum and NDE.',
+                                        'Never use oxygen or open flame for testing; purge before opening or filling.',
+                                        'Use gas detection and eliminate ignition sources.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 26 — COMPRESSED AIR AND PNEUMATIC SYSTEMS (E-20)
+                // ============================================================
+                {
+                    id: 'ch-26',
+                    number: 26,
+                    title: 'Compressed Air and Pneumatic Systems',
+                    subtitle: 'Compressors, dryers, receivers, air piping, moisture control and pneumatic safety (E-20)',
+                    isFree: false,
+                    estimatedMinutes: 45,
+
+                    sections: [
+                        {
+                            id: 'ch26-s1',
+                            title: 'Compressed Air Equipment',
+                            content: [
+                                { type: 'text', text: 'Compressed air systems supply instrument, utility and process air, and compressed gases, in industrial, commercial and institutional settings. A compressor raises air pressure, a receiver stores it, and treatment equipment removes moisture, oil and particles before the air reaches tools and controls.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Equipment', 'Function'],
+                                    rows: [
+                                        ['Compressor (piston, screw, rotary, axial, reciprocating, vane)', 'Raises the pressure of the air'],
+                                        ['Aftercooler and heat transfer equipment', 'Cool the hot compressed air so water vapour condenses'],
+                                        ['Receiver tank', 'Stores air, smooths pressure and lets moisture settle; needs a relief valve and a drain'],
+                                        ['Dryer', 'Removes moisture from the air'],
+                                        ['Separator and liquid drainer', 'Remove liquid water and oil'],
+                                        ['Filter', 'Removes particles and oil'],
+                                        ['Regulator', 'Lowers and holds the pressure at the point of use'],
+                                        ['Lubricator', 'Adds a small amount of oil mist for pneumatic tools'],
+                                        ['Cylinders and tanks', 'Store or use compressed gas']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'Compressed air carries water. Cooling the air condenses that water, so dryers, separators and drains are essential, and piping is arranged to drain moisture away from the points of use.' }
+                            ]
+                        },
+                        {
+                            id: 'ch26-s2',
+                            title: 'Piping, Testing and Service',
+                            content: [
+                                { type: 'text', text: 'Compressed air piping may be carbon steel, copper, galvanized pipe, stainless steel, tube, tubing or an approved plastic. Plastic that is not rated for compressed air must never be used, because it can shatter and spray fragments if it fails. Joining methods and supports follow the same rules as other piping.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Point', 'Practice'],
+                                    rows: [
+                                        ['Pitch', 'Slope mains slightly toward drain legs at the ends and low points'],
+                                        ['Branch connections', 'Take branches off the top of the main so water does not run into them'],
+                                        ['Drain legs', 'Install drains at low points and ahead of risers'],
+                                        ['Sizing', 'Size pipe to limit pressure drop between the compressor and the farthest use'],
+                                        ['Flexible hoses', 'Restrain with whip checks or restraints where required'],
+                                        ['Expansion and air', 'Allow for movement and provide for draining rather than trapping air']
+                                    ]
+                                },
+                                { type: 'text', text: 'The standard lists hydrostatic and pneumatic tests with water, air or inert gas. A hydrostatic test is safer because water stores little energy. A pneumatic test stores a great deal of energy, so apply pressure in steps, keep personnel clear, use a regulator and relief device and never exceed the test pressure. Typical practice is to test pneumatically at about 1.1 times the design pressure, but use the value in the specification.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Water at points of use', 'Failed dryer or drain, branches taken from the bottom of the main', 'Check dryer, drains and branch connections'],
+                                        ['Pressure drop at end of line', 'Leaks, undersized pipe, plugged filter', 'Leak-test, check filters and pipe size'],
+                                        ['Compressor short cycles', 'Receiver too small, leaks, control fault', 'Check receiver size, leaks and controls'],
+                                        ['Overheating compressor', 'Blocked cooler, low oil, high ambient temperature', 'Check oil, cooling and ventilation']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Compressed air can inject into the skin and blow debris into eyes. Never point an air hose at a person or use compressed air to clean clothing. Depressurize and lock out before opening any air line, receiver or compressor.' }
+                            ]
+                        },
+                        {
+                            id: 'ch26-s3',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Compressors, receivers, dryers, filters, regulators and lubricators each have a distinct job.',
+                                        'Branches come off the top of the main; drain legs go at low points.',
+                                        'Only approved plastic may be used for compressed air.',
+                                        'Pneumatic tests store energy; hydrostatic tests are safer.',
+                                        'Lock out and depressurize before service.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 27 — MEDICAL GAS SYSTEMS (E-19)
+                // ============================================================
+                {
+                    id: 'ch-27',
+                    number: 27,
+                    title: 'Medical Gas Systems',
+                    subtitle: 'Gases, outlets, medical gas piping, brazing, purging and verification testing (E-19)',
+                    isFree: false,
+                    estimatedMinutes: 45,
+
+                    sections: [
+                        {
+                            id: 'ch27-s1',
+                            title: 'Systems and Equipment',
+                            content: [
+                                { type: 'text', text: 'Medical gas systems supply gases to hospitals, dental and veterinary clinics and laboratories. The standard lists oxygen, nitrogen, vacuum, mixed gases, nitrous oxide and anesthetic gases, and medical air. Because patients depend on these systems, cleanliness, correct labelling and strict testing are required.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Equipment', 'Purpose'],
+                                    rows: [
+                                        ['Valve boxes', 'Let a zone or area be shut off in an emergency or for service'],
+                                        ['Terminal boxes and outlets', 'Where the clinician connects to the gas'],
+                                        ['Compressors and pumps', 'Supply medical air and vacuum'],
+                                        ['Cryogenic tanks', 'Store liquid oxygen or other gas supply'],
+                                        ['Regulators and gauges', 'Control and show line pressure'],
+                                        ['Alarms', 'Warn of low supply, high pressure or system faults'],
+                                        ['Valves', 'Control and isolate flow']
+                                    ]
+                                },
+                                { type: 'text', text: 'Connections are gas-specific so the wrong gas cannot be connected. DISS (Diameter Index Safety System) connections are used on regulators and equipment, and pin-index connections are used on small cylinder yokes. Flow, level, temperature and pressure controls are installed with supports, fasteners and seismic restraints as in other systems.' },
+                                { type: 'callout', style: 'exam-tip', text: 'DISS means Diameter Index Safety System. Its purpose is to make it impossible to connect the wrong gas to a fitting.' }
+                            ]
+                        },
+                        {
+                            id: 'ch27-s2',
+                            title: 'Medical Gas Piping',
+                            content: [
+                                { type: 'text', text: 'Medical gas pipe is copper certified for medical gas service, though the standard also lists carbon steel, stainless steel, tube and tubing. Joining is mostly by brazing, using phosphorus-copper filler rods such as BCuP-3 and BCuP-5 for copper-to-copper joints and silver-bearing BAg-series filler for dissimilar metals, along with mechanical and other approved joining methods.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Requirement', 'Why'],
+                                    rows: [
+                                        ['Pipe, fittings and valves cleaned and capped for oxygen service', 'Oil, grease and debris can ignite in oxygen'],
+                                        ['Brazing with a continuous nitrogen purge inside the pipe', 'Prevents oxide scale that would contaminate the system'],
+                                        ['Supports and restraints at required spacing', 'Keep lines secure'],
+                                        ['Emergency shut-off valves in the correct locations', 'Allow quick isolation in an emergency'],
+                                        ['Labels and identification on pipe and valves', 'Show the gas and direction of flow'],
+                                        ['Pitch where needed and allowance for expansion', 'Control moisture and movement in vacuum lines']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Oxygen makes fires burn violently. Never use oil, grease or ordinary thread sealant on oxygen piping, never allow contaminated tools or gloves to touch cleaned pipe, and keep the system capped when not being worked on.' }
+                            ]
+                        },
+                        {
+                            id: 'ch27-s3',
+                            title: 'Testing and Maintenance',
+                            content: [
+                                { type: 'text', text: 'Medical gas systems have stricter testing than other piping. The standard lists particulate, purification, cross-connection, destructive and operational tests, with nitrogen or the system gas as the test medium. Compressors and cylinders supply the test gas. The system is isolated with valves, plugs and caps, sensitive equipment is protected, and the test results are documented and distributed. Test media are recycled or disposed of properly.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Test', 'What it proves'],
+                                    rows: [
+                                        ['Particulate test', 'Gas at outlets is free of particles from installation'],
+                                        ['Purity (purification) test', 'The gas delivered is the correct gas and is clean'],
+                                        ['Cross-connection test', 'No piping is connected to the wrong gas system'],
+                                        ['Standing pressure test', 'The system holds pressure without leaking for the specified time'],
+                                        ['Operational test', 'Outlets, alarms, valves and supply sources work as designed']
+                                    ]
+                                },
+                                { type: 'text', text: 'Maintenance and repair follow the same sequence as other systems: lock out and tag out where applicable, isolate, repair, reinstate with purging and charging as a closed system, test and document. Final verification of a medical gas system is performed by qualified, independent verifiers to the applicable standard, such as CSA Z7396.1 or NFPA 99.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Cross-connection testing is unique to medical gas. A cross-connection, where oxygen outlets are connected to the nitrous oxide line for example, can kill a patient. Remember the five test categories: particulate, purification, cross-connection, destructive and operational.' }
+                            ]
+                        },
+                        {
+                            id: 'ch27-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Gases include oxygen, nitrogen, vacuum, mixed gases, nitrous oxide and medical air.',
+                                        'DISS and pin-index connections prevent connecting the wrong gas.',
+                                        'Use medical-gas copper, cleaned and capped; braze with BCuP filler and a nitrogen purge.',
+                                        'Never use oil or grease near oxygen piping.',
+                                        'Tests: particulate, purification, cross-connection, destructive and operational.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 28 — FIRE PROTECTION (E-21)
+                // ============================================================
+                {
+                    id: 'ch-28',
+                    number: 28,
+                    title: 'Fire Protection Systems (Not Common Core)',
+                    subtitle: 'Standpipes, hose cabinets, wet, dry, pre-action and deluge systems (E-21)',
+                    isFree: false,
+                    estimatedMinutes: 25,
+
+                    sections: [
+                        {
+                            id: 'ch28-s1',
+                            title: 'Where Task E-21 Applies',
+                            content: [
+                                { type: 'text', text: 'Task E-21 covers installing and testing fire protection systems. It is not common core, so it has no questions on the Interprovincial exam. It applies in the provinces where it is part of the trade (Ontario is one) and is included here for working steamfitters. The standard says maintenance, troubleshooting and repair of these systems is done by sprinkler fitters, so E-21 has installation and testing sub-tasks only.' },
+                                { type: 'callout', style: 'exam-tip', text: 'E-21 is not common core and carries no exam questions. If you are short of study time, put it last. Use this chapter as working knowledge, not exam preparation.' }
+                            ]
+                        },
+                        {
+                            id: 'ch28-s2',
+                            title: 'System Types and Components',
+                            content: [
+                                {
+                                    type: 'table',
+                                    headers: ['System', 'How it works'],
+                                    rows: [
+                                        ['Wet pipe', 'Pipes are full of water; a heat-activated sprinkler head opens and water flows at once'],
+                                        ['Dry pipe', 'Pipes hold pressurized air or nitrogen; a dry valve opens when a head opens and air is lost, then water fills the pipes. Used where freezing is possible'],
+                                        ['Pre-action', 'Pipes are dry; a separate detection system opens a valve and water flows when a head also opens'],
+                                        ['Deluge', 'All heads are open; a detection system opens the valve and water flows through all of them'],
+                                        ['Standpipe and hose cabinets', 'Piping that gives fire fighters and trained occupants a hose connection on each floor']
+                                    ]
+                                },
+                                { type: 'text', text: 'Components include water supply connections and tanks, valves, drains, backflow preventers, detection devices and nozzles. Piping may be carbon steel, copper, plastic, galvanized, copper-nickel, titanium or stainless steel as approved for the system. Dry systems must be pitched so they drain fully, because trapped water can freeze.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Wet pipe: water already in the pipe. Dry pipe: air or nitrogen in the pipe. Pre-action: dry pipe with a separate detection system. Deluge: open heads.' }
+                            ]
+                        },
+                        {
+                            id: 'ch28-s3',
+                            title: 'Testing',
+                            content: [
+                                { type: 'text', text: 'Fire protection systems are tested hydrostatically and pneumatically, using water, glycol, a water and glycol mix, compressed air or inert gases. The standard sequence applies: visual pre-check and punch list, isolate, confirm zero energy, test, document, remove the test medium and reinstate. Many codes, such as NFPA 13, require a hydrostatic test at 200 psi for two hours, or 50 psi above the maximum static pressure where that is higher. Use the value required by the code and the authority having jurisdiction.' },
+                                {
+                                    type: 'list', items: [
+                                        'Flush underground and supply piping before connecting to sprinkler piping.',
+                                        'Verify that valves are supervised (tamper switches) and correctly locked open after commissioning.',
+                                        'Test flow switches, alarms and drains with an inspector test connection.',
+                                        'Document results on the contractor material and test certificate for sign-off.'
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Never leave a fire protection system out of service without notifying the building owner and following the impairment procedure. When a fire system is isolated, the building is unprotected.' }
+                            ]
+                        },
+                        {
+                            id: 'ch28-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'E-21 is not common core and has no exam questions.',
+                                        'Know wet, dry, pre-action and deluge systems and standpipes.',
+                                        'Dry systems must drain fully.',
+                                        'Hydrostatic test: commonly 200 psi for two hours under NFPA 13.',
+                                        'Maintenance and repair belong to sprinkler fitters.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            id: 'part-6',
+            number: 6,
+            title: 'Renewable Energy Systems (MWA F)',
+            description: 'Installing, testing, maintaining, troubleshooting and repairing geo-exchange and geothermal systems, solar heating systems and heat recovery systems.',
+            weight: '8 questions (6.2% of Total Exam)',
+
+            chapters: [
+                // ============================================================
+                // CHAPTER 29 — GEO-EXCHANGE AND GEOTHERMAL (F-22)
+                // ============================================================
+                {
+                    id: 'ch-29',
+                    number: 29,
+                    title: 'Geo-Exchange and Geothermal Systems',
+                    subtitle: 'Heat pumps, earth loops, DX systems, HDPE fusion, loop testing and service (F-22)',
+                    isFree: false,
+                    estimatedMinutes: 50,
+
+                    sections: [
+                        {
+                            id: 'ch29-s1',
+                            title: 'How Geo-Exchange Systems Work',
+                            content: [
+                                { type: 'text', text: 'Geo-exchange and geothermal systems move heat to or from the ground or a body of water. Below the frost line the ground stays close to a steady temperature all year, so it is warmer than the air in winter and cooler than the air in summer. A heat pump uses a refrigeration cycle to lift that heat to a useful temperature in winter and to reject building heat into the ground in summer. Pipefitters install and maintain the piping, components and equipment, and perform scheduled and emergency maintenance.' },
+                                {
+                                    type: 'table',
+                                    headers: ['System type', 'Description'],
+                                    rows: [
+                                        ['Closed loop, horizontal', 'Pipe laid in trenches; needs more land area'],
+                                        ['Closed loop, vertical', 'Pipe in drilled boreholes; used where land area is limited'],
+                                        ['Open loop', 'Groundwater or surface water is pumped through the heat pump and returned or discharged'],
+                                        ['Ground source heat pump', 'Exchanges heat with the ground through an earth loop'],
+                                        ['Water source heat pump', 'Exchanges heat with a water loop or water body'],
+                                        ['Direct exchange (DX)', 'Refrigerant circulates directly in copper tubing buried in the ground, with no intermediate water loop'],
+                                        ['Distribution', 'Domestic hot water, hydronic heating and cooling, and radiant heating']
+                                    ]
+                                },
+                                { type: 'keyTerm', term: 'Heat pump reversing valve', definition: 'A valve that reverses the direction of refrigerant flow so the same equipment can heat in winter and cool in summer.' },
+                                { type: 'text', text: 'A heat pump moves heat rather than making it, so it delivers more heat energy than the electrical energy it uses. In the refrigeration cycle the compressor raises refrigerant pressure, the condenser releases heat, the metering device drops the pressure and the evaporator absorbs heat. The reversing valve swaps the roles of the two heat exchangers.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Know the difference between systems: a closed loop circulates fluid in sealed pipe; an open loop uses groundwater directly; a DX system circulates refrigerant, not water, through the ground piping.' }
+                            ]
+                        },
+                        {
+                            id: 'ch29-s2',
+                            title: 'Installing Equipment and Earth Loop Piping',
+                            content: [
+                                { type: 'text', text: 'Equipment installation follows the same steps as every other system: select and size equipment from drawings, specifications and load calculations, find high and low points, set the location, install supports and fasteners, choose a manual or mechanical installation method, install equipment and controls and complete documentation. Equipment includes heat pumps, circulating pumps, heat exchangers, tanks, valves, expansion joints and water treatment equipment.' },
+                                { type: 'text', text: 'Earth loop piping is usually HDPE (high-density polyethylene), joined by heat fusion, because fused joints are as strong as the pipe and do not leak. Building-side piping may be carbon steel, copper, stainless steel or plastic. Dielectric fittings are used where dissimilar metals meet.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Item', 'Practice'],
+                                    rows: [
+                                        ['HDPE joining', 'Butt, socket or electrofusion, following the pipe maker procedure for heat, pressure and cooling time'],
+                                        ['Pipe cleanliness', 'Keep pipe ends capped; dirt in the loop damages the pump and heat exchanger'],
+                                        ['Vertical bores', 'Loops are lowered into the bore and the bore is grouted to give good heat transfer and protect groundwater'],
+                                        ['Pressure test before backfill', 'Test and inspect the loop before trenches are closed or boreholes are grouted'],
+                                        ['Circuit balancing valves', 'Balance flow between loops and zones'],
+                                        ['Insulation', 'Insulate building-side piping that carries cold fluid to stop condensation'],
+                                        ['Antifreeze', 'Loop fluid is often a water and glycol mix to prevent freezing']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'Test the loop before backfill or grouting. A leak found after the trench is closed means digging it up again, which is why testing comes before covering.' },
+                                { type: 'callout', style: 'warning', text: 'Trench and bore work involves cave-in, underground utility and drilling hazards. Locate utilities before digging, shore or slope trench walls, and follow excavation rules.' }
+                            ]
+                        },
+                        {
+                            id: 'ch29-s3',
+                            title: 'Testing, Purging, Maintenance and Troubleshooting',
+                            content: [
+                                { type: 'text', text: 'Geo-exchange systems are tested hydrostatically or pneumatically with water, a water and glycol mix, air or inert gas, using hand or centrifugal pumps, compressors or gas cylinders. Isolate the heat pump and other components that cannot take the test pressure, install calibrated gauges, confirm zero energy, document and reinstate. Remember that elevation adds 0.433 psi per foot of head, so a deep vertical loop reads higher pressure at the bottom than at the top.' },
+                                { type: 'text', text: 'Trapped air in a ground loop blocks flow and can stop circulation completely. After the loop is filled it is flushed and purged at high flow to push the air out, and the system is then pressurized. Reinstatement after repair means filling, pressurizing, bleeding air and contaminants and checking for leaks.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Low or no loop flow', 'Trapped air, closed valve, failed pump, plugged strainer', 'Purge air, check valves and pump, clean the strainer'],
+                                        ['Poor heating or cooling capacity', 'Low loop temperature difference, fouled heat exchanger, low flow, refrigerant problem', 'Check flow and temperatures, clean heat exchanger'],
+                                        ['Loop pressure dropping', 'Leak, temperature change, air dissolving', 'Check joints and fittings, confirm whether it is a temperature effect'],
+                                        ['Frozen heat exchanger', 'Low flow, too little glycol, very low loop temperature', 'Restore flow, test and correct the glycol concentration'],
+                                        ['Corrosion or scale', 'Poor water quality, dissimilar metals', 'Test the system medium with a kit and treat with chemicals'],
+                                        ['Pump vibration or noise', 'Air, cavitation, worn bearings, loose supports', 'Purge air, check pump and supports']
+                                    ]
+                                },
+                                { type: 'text', text: 'Maintenance follows a schedule: add chemicals and additives, check fluids and glycol concentration, lubricate, clean, inspect for wear and replace worn parts, then perform a medium quality test with a kit and treat the medium as needed. Documentation includes lock-out and tag-out records, the maintenance log and quality control reports.' },
+                                { type: 'callout', style: 'exam-tip', text: 'Two causes appear again and again in renewable systems: trapped air (no flow, noise, poor heat transfer) and wrong glycol concentration (freezing or corrosion).' }
+                            ]
+                        },
+                        {
+                            id: 'ch29-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Ground temperature is steady, so it warms in winter and cools in summer relative to air.',
+                                        'Know closed loop (horizontal, vertical), open loop, water source and DX systems.',
+                                        'The reversing valve switches a heat pump between heating and cooling.',
+                                        'HDPE earth loops are heat fused; test before backfill or grouting.',
+                                        'Purge air after filling; keep glycol at the correct concentration.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 30 — SOLAR HEATING (F-23)
+                // ============================================================
+                {
+                    id: 'ch-30',
+                    number: 30,
+                    title: 'Solar Heating Systems',
+                    subtitle: 'Collectors, direct and indirect systems, overheating protection, testing and service (F-23)',
+                    isFree: false,
+                    estimatedMinutes: 45,
+
+                    sections: [
+                        {
+                            id: 'ch30-s1',
+                            title: 'Solar Heating System Types and Equipment',
+                            content: [
+                                { type: 'text', text: 'Solar heating systems collect solar energy to heat domestic water or buildings. The standard lists domestic water heating and space heating, direct and indirect systems, and closed loop systems. Solar heating applies in residential and industrial, commercial and institutional settings.' },
+                                {
+                                    type: 'table',
+                                    headers: ['System or equipment', 'Description'],
+                                    rows: [
+                                        ['Direct system', 'The water to be used (such as potable water) flows through the collectors'],
+                                        ['Indirect system', 'A heat transfer fluid, usually a water and glycol mix, circulates through the collectors and gives up heat to the water through a heat exchanger'],
+                                        ['Closed loop', 'A sealed loop with an expansion tank, so the fluid is not exposed to air'],
+                                        ['Solar collectors', 'Panels or tubes that absorb sunlight and heat the fluid'],
+                                        ['Indirect water heater', 'A storage tank with an internal heat exchanger coil'],
+                                        ['Heat dissipater', 'Gets rid of excess heat when collectors make more heat than is needed'],
+                                        ['Pump and controls', 'A controller runs the pump when the collector is warmer than the storage'],
+                                        ['Heat exchanger, tank, valves, expansion joints', 'Move, store and control the heat']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'In an indirect system the glycol loop is separate from the potable water, which protects the water supply and prevents freezing in the collectors. In a direct system the collector contains the water itself, so freeze protection is a larger concern.' }
+                            ]
+                        },
+                        {
+                            id: 'ch30-s2',
+                            title: 'Installation Considerations',
+                            content: [
+                                { type: 'text', text: 'Piping is carbon steel, alloy steel, copper, stainless steel, HDPE or plastic, in open or closed configurations. Collector loop piping sees very high temperatures, so the materials, joining methods, insulation and supports must be rated for them. The standard also lists weight and loading as installation considerations, because collectors, tanks and filled piping are heavy and are often fixed to roofs.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Consideration', 'Reason'],
+                                    rows: [
+                                        ['High-temperature materials', 'Collector loops can get hotter than ordinary hot water piping; use rated solder or brazing, fittings, insulation and seals'],
+                                        ['Expansion allowance', 'Large temperature swings move pipe; use loops, joints and flexible connections'],
+                                        ['Expansion tank sized for the fluid', 'Handles fluid expansion and any steam formation in the collector'],
+                                        ['Air elimination', 'Air blocks circulation; use vents and air separators at high points'],
+                                        ['Pitch', 'Pitch lines to drain or to vent depending on system design'],
+                                        ['Insulation and weather protection', 'Protect outdoor piping from UV, wind and mechanical damage'],
+                                        ['Relief valve and safety', 'Protect against overpressure and over-temperature'],
+                                        ['Dielectric fittings', 'Prevent galvanic corrosion between dissimilar metals']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Collectors and piping can be hot enough to cause severe burns even in winter when the pump is off. Roof work needs fall protection and safe access, and the collectors should be covered or the system drained while work is done on the loop.' }
+                            ]
+                        },
+                        {
+                            id: 'ch30-s3',
+                            title: 'Testing, Maintenance and Troubleshooting',
+                            content: [
+                                { type: 'text', text: 'Solar systems are tested hydrostatically or pneumatically with water, a water and glycol mix, air or inert gas. The usual sequence applies: pre-check and punch list, isolate, install calibrated gauges, confirm zero energy, test, document, remove the medium and reinstate. Maintenance covers adding chemicals and additives, checking fluids and glycol, lubricating, cleaning, inspecting for wear and replacing worn parts, plus a medium quality test with a kit.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Collector hot, storage not heating', 'Pump not running, air lock, control or sensor fault, closed valve', 'Check controller, sensors, pump and valves, vent air'],
+                                        ['Pump runs at night and loses heat', 'Failed check valve or control fault', 'Check the check valve and controller'],
+                                        ['Relief valve discharging', 'Overheating, failed expansion tank, overpressure', 'Check tank charge, heat dissipater and system pressure'],
+                                        ['Fluid dark or acidic', 'Overheated glycol breaking down', 'Test the fluid, flush and refill, review overheating protection'],
+                                        ['Leaks at joints', 'Thermal movement, wrong material, failed seal', 'Isolate, repair with correctly rated materials, retest'],
+                                        ['Freezing damage', 'Wrong or diluted glycol, direct system without drainback', 'Test glycol concentration; correct the freeze protection']
+                                    ]
+                                },
+                                { type: 'callout', style: 'exam-tip', text: 'Overheating when the system is not using heat is called stagnation. Heat dissipaters, correctly sized expansion tanks and rated materials all protect against it.' }
+                            ]
+                        },
+                        {
+                            id: 'ch30-s4',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Direct systems heat the water in the collector; indirect systems heat a glycol loop that passes heat to the water.',
+                                        'Use materials rated for high collector temperatures.',
+                                        'Heat dissipaters, expansion tanks and relief valves protect against overheating.',
+                                        'Vent air, keep glycol at the right concentration and watch for burns and fall hazards.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // ============================================================
+                // CHAPTER 31 — HEAT RECOVERY (F-24)
+                // ============================================================
+                {
+                    id: 'ch-31',
+                    number: 31,
+                    title: 'Heat Recovery Systems',
+                    subtitle: 'Recovering heat from refrigerant, steam, waste water, cooling water, HRVs and gland seals (F-24)',
+                    isFree: false,
+                    estimatedMinutes: 40,
+
+                    sections: [
+                        {
+                            id: 'ch31-s1',
+                            title: 'Heat Sources and Equipment',
+                            content: [
+                                { type: 'text', text: 'Heat recovery systems capture heat that would otherwise be wasted and put it to use. The standard lists the sources: refrigerant gas, exhaust steam, flash steam, waste water, cooling water, heat recovery ventilators (HRVs) and gland seals. The recovered heat is used for domestic water heating, process water heating, and heating and cooling.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Heat source', 'How the heat is recovered'],
+                                    rows: [
+                                        ['Refrigerant gas', 'Hot discharge gas gives up heat to water through a heat exchanger or desuperheater'],
+                                        ['Exhaust steam', 'Low pressure steam from turbines or equipment heats water or process fluid'],
+                                        ['Flash steam', 'Steam formed when hot condensate drops pressure is condensed in a heat exchanger or used directly'],
+                                        ['Waste water', 'Warm drain water preheats incoming water'],
+                                        ['Cooling water', 'Warm water from process or equipment cooling is reused'],
+                                        ['HRV', 'A heat recovery ventilator passes exhaust air heat to incoming fresh air'],
+                                        ['Gland seals', 'Steam leaking from turbine gland seals is captured and condensed so its heat is recovered']
+                                    ]
+                                },
+                                { type: 'text', text: 'Equipment listed in the standard includes heat exchangers, pumps, tanks, valves and expansion joints. Heat transfer equipment includes radiators, convectors, pipe coils, unit heaters, radiant panels and heat exchangers. The heat moves by conduction, convection and radiation.' },
+                                { type: 'callout', style: 'exam-tip', text: 'The heat recovered from a water stream can be estimated with the water formula: BTU per hour = 500 × GPM × temperature change. Example: 20 GPM of waste water preheats incoming water by 30 degrees F, so 500 × 20 × 30 = 300 000 BTU per hour.' }
+                            ]
+                        },
+                        {
+                            id: 'ch31-s2',
+                            title: 'Installation, Testing and Service',
+                            content: [
+                                { type: 'text', text: 'Piping is carbon steel, alloy steel, copper, stainless steel, HDPE or plastic, joined by flanging, bonding, grooving, threading, welding, soldering, brazing, mechanical joints or fusion. Components include fittings, dielectric fittings, hangers, brackets, sleeves, anchors, guides, valves, strainers, expansion joints and expansion loops. Allow for expansion and contraction, protect against electrolysis between dissimilar metals and keep piping supported and guided.' },
+                                {
+                                    type: 'list', items: [
+                                        'Where heat exchangers separate potable water from other fluids, use a design that protects the potable supply from contamination, and follow code.',
+                                        'Waste water heat exchangers can foul, so provide access for cleaning and filters or strainers upstream.',
+                                        'Steam and flash steam piping needs pitch, drip legs and traps as in the steam chapters.',
+                                        'Insulate hot piping to save heat and protect people from burns.'
+                                    ]
+                                },
+                                { type: 'text', text: 'Heat recovery systems are tested hydrostatically or pneumatically using water, air or inert gas. Use hand or centrifugal pumps, compressors or gas cylinders, calibrated gauges, testing trees and headers, and relief devices, and isolate sensitive equipment with blinds, spades, plugs and caps or temporary spool pieces. Maintenance and repair follow the standard sequence: consult the operator, troubleshoot, lock out and tag out, isolate, repair, reinstate, test the system medium with a kit, treat it with chemicals if needed and document.' },
+                                {
+                                    type: 'table',
+                                    headers: ['Symptom', 'Possible cause', 'Check or repair'],
+                                    rows: [
+                                        ['Little heat recovered', 'Fouled heat exchanger, low flow, bypass open, air pocket', 'Clean the exchanger, check flow and valves, vent air'],
+                                        ['Steam hammer in recovery piping', 'Condensate not draining, missing trap', 'Check pitch, drip legs and traps'],
+                                        ['Leaks at exchanger gaskets', 'Thermal cycling, worn gaskets', 'Isolate, replace gaskets, retorque, retest'],
+                                        ['Corrosion', 'Aggressive waste water, oxygen, dissimilar metals', 'Check materials and water treatment']
+                                    ]
+                                },
+                                { type: 'callout', style: 'warning', text: 'Waste water and process cooling water can be contaminated. Wear correct PPE, treat the fluid as hazardous until proven otherwise and keep it separate from potable water. Steam and flash steam piping can cause severe burns.' }
+                            ]
+                        },
+                        {
+                            id: 'ch31-s3',
+                            title: 'Chapter Summary',
+                            content: [
+                                {
+                                    type: 'list', items: [
+                                        'Recoverable sources: refrigerant gas, exhaust steam, flash steam, waste water, cooling water, HRVs and gland seals.',
+                                        'Uses: domestic water heating, process water heating and heating and cooling.',
+                                        'Protect potable water from contamination and allow access to clean exchangers.',
+                                        'Steam portions follow steam piping rules: pitch, drip legs and traps.'
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
 
     ]

@@ -1,0 +1,72 @@
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { paths } from '../../utils/routes';
+import { trackEvent } from '../../utils/analytics';
+
+/**
+ * Trade selector — the primary discovery surface on the homepage.
+ * Routes are derived from the existing tradeGuides data so the six live trades
+ * stay in sync with the rest of the site.
+ */
+const TRADES = [
+  { slug: 'hairstylist', code: '332A', icon: '✂️' },
+  { slug: 'carpenter', code: '403A', icon: '🔨' },
+  { slug: 'construction-electrician', code: '309A', icon: '⚡' },
+  { slug: 'plumber', code: '306A', icon: '🔧' },
+  { slug: 'refrigeration-air-conditioning-mechanic', code: '313A', icon: '❄️' },
+  { slug: 'welder', code: '456A', icon: '🔥' },
+];
+
+export default function TradeSelector() {
+  const { t } = useTranslation();
+
+  return (
+    <section id="trades" className="py-16 sm:py-20 bg-bg scroll-mt-20" aria-labelledby="trade-selector-heading">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 text-center">
+          <h2 id="trade-selector-heading" className="text-3xl sm:text-4xl font-display font-bold text-text-primary mb-3">
+            {t('home.tradeSelector.title')}
+          </h2>
+          <p className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto">
+            {t('home.tradeSelector.subtitle')}
+          </p>
+        </div>
+
+        <ul className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          {TRADES.map((trade) => (
+            <li key={trade.slug}>
+              <Link
+                to={paths.practiceTest(trade.slug)}
+                onClick={() => trackEvent('trade_selected', {
+                  trade_name: t(`home.tradeSelector.trades.${trade.slug}.name`),
+                  trade_code: trade.code,
+                  cta_location: 'homepage_trade_selector',
+                })}
+                className="group flex items-center gap-3 sm:gap-4 h-full p-4 sm:p-5 rounded-xl border border-border bg-surface hover:border-accent hover:bg-accent/5 focus-visible:border-accent transition-colors"
+              >
+                <span className="text-2xl sm:text-3xl shrink-0" aria-hidden="true">{trade.icon}</span>
+                <span className="min-w-0">
+                  <span className="block text-sm sm:text-base font-semibold text-text-primary group-hover:text-accent transition-colors">
+                    {t(`home.tradeSelector.trades.${trade.slug}.name`)}
+                  </span>
+                  <span className="block text-xs sm:text-sm text-text-muted">
+                    {t('home.tradeSelector.codeLabel', { code: trade.code })}
+                  </span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 text-center">
+          <Link
+            to={paths.practiceTests}
+            className="inline-flex items-center font-semibold text-accent hover:text-accent/80"
+          >
+            {t('home.tradeSelector.allPracticeTests')} →
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

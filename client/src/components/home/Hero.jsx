@@ -1,39 +1,56 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Button from '../ui/Button';
-import { CertReadyLogoFull } from '../brand/CertReadyLogo';
+import { paths } from '../../utils/routes';
+import { trackEvent } from '../../utils/analytics';
 
+/**
+ * Static hero. Replaces the former rotating HeroCarousel so the value
+ * proposition and calls to action are visible without any interaction.
+ */
 export default function Hero() {
   const { t } = useTranslation();
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image + gradient overlay */}
+    <section className="relative overflow-hidden border-b border-border" aria-labelledby="hero-heading">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/hero-bg.png)' }}
+        aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-bg/95 via-bg/90 to-accent/20" />
-      <div className="absolute inset-0 opacity-40" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23eb8512' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-      }} />
+      <div className="absolute inset-0 bg-bg/95" aria-hidden="true" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 sm:py-24">
-        <CertReadyLogoFull
-          width={560}
-          height={120}
-          className="mx-auto mb-6 max-w-[280px] sm:max-w-[420px] md:max-w-[560px] w-full h-auto"
-        />
-
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-text-primary mb-4 sm:mb-6 leading-tight">
-          {t('hero.title')} <span className="text-accent block sm:inline mt-1 sm:mt-2">— {t('hero.titleHighlight')}</span>
-        </h1>
-        <p className="text-base sm:text-xl md:text-2xl text-text-primary mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed underline-offset-4 decoration-accent/50 decoration-2">
-          {t('hero.subtitle')}
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] text-accent uppercase mb-4">
+          {t('home.hero.eyebrow')}
         </p>
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full max-w-sm sm:max-w-none mx-auto">
-          <Link to="/trades" className="w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto">
-              {t('hero.browseCourses')} →
+        <h1
+          id="hero-heading"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-primary mb-5 leading-tight"
+        >
+          {t('home.hero.title')}
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
+          {t('home.hero.subtitle')}
+        </p>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+          <a href="#trades" className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto"
+              onClick={() => trackEvent('find_trade_clicked', { cta_location: 'hero', cta_text: 'Find Your Trade' })}
+            >
+              {t('home.hero.primaryCta')}
+            </Button>
+          </a>
+          <Link to={paths.practiceTests} className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto"
+              onClick={() => trackEvent('explore_practice_tests_clicked', { cta_location: 'hero', cta_text: 'Explore Practice Tests' })}
+            >
+              {t('home.hero.secondaryCta')}
             </Button>
           </Link>
         </div>
