@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { getGuideBySlug } from '../data/tradeGuides';
 import SEO from '../components/seo/SEO';
 import Breadcrumb from '../components/layout/Breadcrumb';
-import { getPracticePageSEO, getBreadcrumbStructuredData } from '../utils/seo';
+import { getPracticePageSEO, getBreadcrumbStructuredData, getFAQStructuredData } from '../utils/seo';
 import PracticeQuestion from '../components/course/PracticeQuestion';
 import NotFoundPage from './NotFoundPage';
 import Card from '../components/ui/Card';
@@ -127,11 +127,55 @@ export default function PracticePage() {
     { name: t('practicePage.freePracticeQuestions'), url: paths.practiceTest(guide.slug) },
   ];
 
+  const isPlumberOrWelder = tradeSlug === 'plumber' || tradeSlug === 'welder';
+  const tradeFaqs = isPlumberOrWelder
+    ? (tradeSlug === 'plumber'
+      ? [
+        {
+          question: 'What topics are covered on the Plumber Red Seal exam?',
+          answer: 'The Plumber Red Seal exam covers common occupational skills, tube and pipe, drainage, waste and vent (DWV) systems, water service and distribution, fixtures and appliances, low-pressure steam and hydronic systems, and specialized systems. DWV systems carry the highest weighting.',
+        },
+        {
+          question: 'How should I prepare for the Plumber certification exam?',
+          answer: 'Review the official Red Seal Occupational Standard for Plumbers, study the plumbing code references used in your province, practise trade calculations by hand, and test yourself with exam-style practice questions to find and close knowledge gaps.',
+        },
+        {
+          question: 'Are practice questions useful for Red Seal exam preparation?',
+          answer: 'Yes. Working through exam-style questions helps you get comfortable with how questions are worded, strengthens recall under time pressure, and shows you which topic areas need more review before exam day.',
+        },
+        {
+          question: 'Can I use practice tests to identify knowledge gaps?',
+          answer: 'Absolutely. Topic-by-topic feedback shows where your answers are weak, so you can focus your remaining study time on the areas that will move your score the most.',
+        },
+      ]
+      : [
+        {
+          question: 'What topics are covered on the Welder Red Seal exam?',
+          answer: 'The Welder Red Seal exam covers common occupational skills, fabricating activities, thermal cutting and gouging, and welding activities. Fabricating activities carry the highest weighting, followed by welding activities.',
+        },
+        {
+          question: 'What welding processes should I review?',
+          answer: 'Review the common welding processes in the trade, including shielded metal arc welding (SMAW), gas metal arc welding (GMAW), flux-cored arc welding (FCAW), and gas tungsten arc welding (GTAW), along with their parameters, polarity, and typical applications.',
+        },
+        {
+          question: 'How should I prepare for the Welder certification exam?',
+          answer: 'Study the official Red Seal Occupational Standard for Welders, refresh your welding processes, parameters, and weld symbols, drill fabrication and heat-input calculations, and use exam-style practice questions to build speed and target weak areas.',
+        },
+        {
+          question: 'Are practice questions useful for Red Seal exam preparation?',
+          answer: 'Yes. Exam-style questions build familiarity with question wording, improve recall under time pressure, and reveal which areas — such as fabrication math or WPS interpretation — need more study.',
+        },
+      ])
+    : [];
+
   return (
     <>
       <SEO
         {...seo}
-        structuredData={[getBreadcrumbStructuredData(breadcrumbItems)].filter(Boolean)}
+        structuredData={[
+          getBreadcrumbStructuredData(breadcrumbItems),
+          getFAQStructuredData(tradeFaqs),
+        ].filter(Boolean)}
       />
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         <Breadcrumb items={breadcrumbItems} />
@@ -167,6 +211,72 @@ export default function PracticePage() {
                 )}
               </div>
             </Card>
+
+            {isPlumberOrWelder && (
+              <>
+                <section className="mb-10" aria-labelledby="practice-overview-heading">
+                  <h2 id="practice-overview-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
+                    {t(`practicePage.${tradeSlug}.overviewHeading`)}
+                  </h2>
+                  <p className="text-text-muted leading-relaxed">
+                    {t(`practicePage.${tradeSlug}.overviewBody`)}
+                  </p>
+                </section>
+
+                <section className="mb-10" aria-labelledby="practice-topics-heading">
+                  <h2 id="practice-topics-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
+                    {t(`practicePage.${tradeSlug}.topicsHeading`)}
+                  </h2>
+                  <p className="text-text-muted leading-relaxed mb-4">
+                    {t(`practicePage.${tradeSlug}.topicsIntro`)}
+                  </p>
+                  <div className="space-y-2">
+                    {guide.examWeighting.map((row, i) => (
+                      <div key={i} className="flex items-center gap-4">
+                        <div className="flex-1 text-text-primary">{row.area}</div>
+                        <div className="w-32 h-4 bg-surface-2 rounded overflow-hidden">
+                          <div
+                            className="h-full bg-accent rounded"
+                            style={{ width: `${row.percent}%` }}
+                          />
+                        </div>
+                        <span className="w-12 text-right text-text-muted text-sm">{row.percent}%</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section className="mb-10" aria-labelledby="practice-prepare-heading">
+                  <h2 id="practice-prepare-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
+                    {t(`practicePage.${tradeSlug}.prepareHeading`)}
+                  </h2>
+                  <p className="text-text-muted leading-relaxed">
+                    {t(`practicePage.${tradeSlug}.prepareBody`)}
+                  </p>
+                  <Link
+                    to={paths.trade(guide.slug)}
+                    className="inline-flex items-center font-semibold text-accent hover:text-accent/80 mt-4"
+                  >
+                    {t(`practicePage.${tradeSlug}.courseLink`)}
+                  </Link>
+                </section>
+
+                <section className="mb-10" aria-labelledby="practice-faq-heading">
+                  <h2 id="practice-faq-heading" className="text-2xl font-display font-bold text-text-primary mb-4">
+                    {t('practicePage.faqHeading')}
+                  </h2>
+                  <div className="space-y-6">
+                    {tradeFaqs.map((faq, i) => (
+                      <div key={i}>
+                        <h3 className="text-lg font-semibold text-text-primary mb-2">{faq.question}</h3>
+                        <p className="text-text-muted leading-relaxed">{faq.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </>
+            )}
+
             <p className="text-text-muted text-sm">
               {t('practicePage.wantMorePractice', { tradeName: guide.tradeName, count: guide.examQuestions })}
             </p>

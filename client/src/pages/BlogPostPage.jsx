@@ -72,6 +72,18 @@ export default function BlogPostPage({ path }) {
                         </ul>
                       );
                     }
+                    if (block.type === 'link') {
+                      return (
+                        <p key={i} className="leading-relaxed">
+                          <Link
+                            to={block.to}
+                            className="font-semibold text-accent hover:text-accent/80 underline underline-offset-2"
+                          >
+                            {block.text}
+                          </Link>
+                        </p>
+                      );
+                    }
                     return null;
                   })}
                 </div>

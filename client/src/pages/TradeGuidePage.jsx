@@ -9,6 +9,8 @@ import {
   getBreadcrumbStructuredData,
 } from '../utils/seo';
 import NotFoundPage from './NotFoundPage';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 import { paths } from '../utils/routes';
 
 export default function TradeGuidePage({ tradeSlug: tradeSlugProp }) {
@@ -104,6 +106,35 @@ export default function TradeGuidePage({ tradeSlug: tradeSlugProp }) {
           </ul>
         </section>
 
+        {guide.slug === 'hairstylist' && (
+          <section aria-labelledby="practice-cta-heading" className="mb-12">
+            <Card className="bg-accent/5 border-accent/30">
+              <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-2">
+                {t('tradeGuidePage.practiceCtaEyebrow')}
+              </p>
+              <h2 id="practice-cta-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
+                {t('tradeGuidePage.practiceCtaHeading', { tradeName: guide.tradeName })}
+              </h2>
+              <p className="text-text-muted leading-relaxed mb-6 max-w-2xl">
+                {t('tradeGuidePage.practiceCtaBody', { tradeCode: guide.tradeCode })}
+              </p>
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
+                <Link to={paths.practiceTest(guide.slug)} className="w-full sm:w-auto">
+                  <Button className="w-full sm:w-auto">
+                    {t('tradeGuidePage.practiceCtaButton', { tradeName: guide.tradeName })}
+                  </Button>
+                </Link>
+                <Link
+                  to={paths.trade(guide.slug)}
+                  className="inline-flex items-center justify-center font-semibold text-accent hover:text-accent/80"
+                >
+                  {t('tradeGuidePage.practiceCtaSecondary', { tradeName: guide.tradeName })}
+                </Link>
+              </div>
+            </Card>
+          </section>
+        )}
+
         <section className="mb-12" aria-labelledby="faq-heading">
           <h2 id="faq-heading" className="text-2xl font-display font-bold text-text-primary mb-4">
             {t('tradeGuidePage.faqHeading')}
@@ -117,6 +148,32 @@ export default function TradeGuidePage({ tradeSlug: tradeSlugProp }) {
             ))}
           </div>
         </section>
+
+        {guide.slug === 'hairstylist' && (
+          <section aria-labelledby="final-cta-heading" className="mb-12">
+            <Card className="bg-surface border-border">
+              <h2 id="final-cta-heading" className="text-2xl font-display font-bold text-text-primary mb-3">
+                {t('tradeGuidePage.finalCtaHeading', { tradeName: guide.tradeName })}
+              </h2>
+              <p className="text-text-muted leading-relaxed mb-6 max-w-2xl">
+                {t('tradeGuidePage.finalCtaBody', { tradeName: guide.tradeName, count: guide.examQuestions })}
+              </p>
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
+                <Link to={paths.practiceTest(guide.slug)} className="w-full sm:w-auto">
+                  <Button className="w-full sm:w-auto">
+                    {t('tradeGuidePage.finalCtaButton', { tradeName: guide.tradeName })}
+                  </Button>
+                </Link>
+                <Link
+                  to={paths.trade(guide.slug)}
+                  className="inline-flex items-center justify-center font-semibold text-accent hover:text-accent/80"
+                >
+                  {t('tradeGuidePage.finalCtaSecondary', { tradeName: guide.tradeName })}
+                </Link>
+              </div>
+            </Card>
+          </section>
+        )}
 
         <section className="bg-surface border border-border rounded-xl p-8" aria-labelledby="cta-heading">
           <h2 id="cta-heading" className="text-2xl font-display font-bold text-text-primary mb-4">

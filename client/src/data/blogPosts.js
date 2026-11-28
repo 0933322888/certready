@@ -132,15 +132,15 @@ export const blogPosts = [
   {
     path: 'how-hard-is-red-seal-exam',
     title: 'How Hard Is the Red Seal Exam? An Honest Assessment',
-    seoTitle: 'How Hard Is the Red Seal Exam? — Honest Assessment | CertReady',
-    excerpt: 'If you\'re preparing to write your Red Seal exam, you\'ve probably asked how difficult it really is. The honest answer: it depends on your trade, your preparation, and your background. Here\'s a realistic picture of what to expect.',
-    description: 'An honest assessment of Red Seal exam difficulty: pass rates, where candidates struggle, experience vs. exam readiness, and why proper preparation is the key to passing. Canadian trades certification.',
+    seoTitle: 'How Hard Is the Red Seal Exam? What to Expect & How to Prepare',
+    excerpt: 'Wondering how hard the Red Seal exam really is? Get an honest look at what makes it challenging, where candidates struggle, and how practice questions help you prepare to pass. The answer depends on your trade, your background, and your preparation — here is a realistic picture of what to expect.',
+    description: 'How hard is the Red Seal exam? Learn what makes it challenging, where candidates struggle, and how practice questions help you prepare to pass your trade certification.',
     keywords: 'how hard is Red Seal exam, Red Seal exam difficulty, Red Seal pass rate, Red Seal exam preparation, Canadian trades certification',
     sections: [
       {
         heading: 'What Does "Hard" Actually Mean for the Red Seal?',
         content: [
-          { type: 'paragraph', text: 'The difficulty of the Red Seal exam is not arbitrary — it reflects the breadth and depth of knowledge expected at the journey level. A journey-level tradesperson is expected to work independently, solve problems on the job without supervision, and apply both practical skills and theoretical knowledge safely and efficiently.' },
+          { type: 'paragraph', text: 'So how hard is the Red Seal exam, really? The difficulty of the Red Seal exam is not arbitrary — it reflects the breadth and depth of knowledge expected at the journey level. A journey-level tradesperson is expected to work independently, solve problems on the job without supervision, and apply both practical skills and theoretical knowledge safely and efficiently.' },
           { type: 'paragraph', text: 'The exam is designed to assess all of that. It is not a test of whether you\'ve memorized a specific manual — it tests whether you have the comprehensive understanding of a qualified professional.' },
         ],
       },
@@ -210,6 +210,7 @@ export const blogPosts = [
         content: [
           { type: 'paragraph', text: 'The Red Seal exam is difficult in the way that any credentialing exam for a professional qualification should be difficult. It respects the trade. If you\'re asking whether you can pass without studying — probably not. If you\'re asking whether you can pass with solid, structured preparation — yes, absolutely.' },
           { type: 'paragraph', text: 'Start early, study the NOA systematically, practice with real exam-style questions, and go in confident. The credential is worth the effort.' },
+          { type: 'link', text: 'Build your readiness with free Red Seal practice questions →', to: '/practice-tests' },
         ],
       },
     ],

@@ -443,7 +443,16 @@
     "ctaHeading": "Ready to Prepare? Try a Free Chapter",
     "ctaSubtitle": "CertReady offers a comprehensive {{tradeName}} exam prep course — {{count}}+ practice questions, chapter-by-chapter content, and a full mock exam. Explore the first 2 parts free for 5 days after registration.",
     "viewCourseLink": "View the {{tradeName}} Course →",
-    "tryPracticeLink": "Try free practice questions →"
+    "tryPracticeLink": "Try free practice questions →",
+    "practiceCtaEyebrow": "Ready to practise?",
+    "practiceCtaHeading": "Put Your {{tradeName}} Knowledge to the Test",
+    "practiceCtaBody": "Reading about the exam is a start — practising exam-style questions is how you build real readiness. Work through questions written to the {{tradeCode}} Red Seal standard, get instant feedback, and see clear explanations for every answer so you know exactly what to review next.",
+    "practiceCtaButton": "Start {{tradeName}} Practice Test",
+    "practiceCtaSecondary": "Explore the full {{tradeName}} course →",
+    "finalCtaHeading": "Ready to Start Practising for the {{tradeName}} Exam?",
+    "finalCtaBody": "You now know how the {{tradeName}} Red Seal exam is structured and where to focus. The next step is active practice. Try free exam-style questions with instant feedback, or get the complete course with {{count}}+ practice questions, chapter-by-chapter study material, and a full timed mock exam.",
+    "finalCtaButton": "Start {{tradeName}} Practice Test",
+    "finalCtaSecondary": "View the {{tradeName}} course →"
   },
   "practicePage": {
     "home": "Home",
@@ -476,7 +485,26 @@
     "noStrongTopics": "None this session",
     "finishSession": "Finish session",
     "tryAgain": "Try another set",
-    "backToPracticeTests": "Back to Practice Tests"
+    "backToPracticeTests": "Back to Practice Tests",
+    "faqHeading": "Frequently Asked Questions",
+    "plumber": {
+      "overviewHeading": "What to Expect on the Plumber Red Seal Exam",
+      "overviewBody": "The Red Seal Plumber (306A) exam is a multiple-choice examination based on the trade's National Occupational Analysis. It tests the theory, code knowledge, and trade math behind safe, code-compliant plumbing work — from drainage and venting to water distribution and hydronic systems. Practising exam-style questions is one of the most effective ways to get comfortable with how questions are worded before exam day.",
+      "topicsHeading": "Topics Covered in Our Plumber Practice Questions",
+      "topicsIntro": "Our practice questions mirror the Red Seal weighting for Plumbers, so you spend your study time where it matters most:",
+      "prepareHeading": "How to Prepare for the Plumber Certification Exam",
+      "prepareBody": "Start with the official Red Seal Occupational Standard for Plumbers, review the code references used in your province, and work through calculation questions by hand. Then test yourself with exam-style practice questions to find and close knowledge gaps. The full CertReady Plumber course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.",
+      "courseLink": "Explore the full Plumber course →"
+    },
+    "welder": {
+      "overviewHeading": "What to Expect on the Welder Red Seal Exam",
+      "overviewBody": "The Red Seal Welder (456A) exam is a multiple-choice examination based on the trade's National Occupational Analysis. It covers the theory behind fabricating, thermal cutting and gouging, and welding activities — including WPS interpretation, weld symbols, process selection, and heat-input calculations. Practising exam-style questions helps you build the pace and recall the exam demands.",
+      "topicsHeading": "Topics Covered in Our Welding Practice Questions",
+      "topicsIntro": "Our practice questions follow the Red Seal weighting for Welders, with the heaviest emphasis on fabricating and welding activities:",
+      "prepareHeading": "How to Prepare for the Welder Certification Exam",
+      "prepareBody": "Review the official Red Seal Occupational Standard for Welders, refresh your welding processes, parameters, and weld symbols, and drill the fabrication and heat-input math. Then use exam-style practice questions to identify weak areas and build speed. The full CertReady Welder course adds chapter-by-chapter study material, 500+ practice questions, and a timed mock exam.",
+      "courseLink": "Explore the full Welder course →"
+    }
   },
   "freePracticeLanding": {
     "breadcrumb": "Free {{tradeName}} Practice Questions",
